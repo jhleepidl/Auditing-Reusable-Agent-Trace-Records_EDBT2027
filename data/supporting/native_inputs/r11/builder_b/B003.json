@@ -1,0 +1,70 @@
+{
+  "packet_id": "B003",
+  "classification": "state",
+  "classification_reason": "The request is to set up a new recurring scheduled transaction for the iPhone subscription, with the amount matching the user's usual Spotify payment. The initial state provides evidence of the recurring Spotify payment amount (50.0), and the recipient IBAN is specified. A necessary condition is the existence of a new scheduled transaction with these properties.",
+  "state_predicates": [
+    {
+      "path": "/bank_account/scheduled_transactions/*",
+      "operator": "equals",
+      "value": "US122000000121212121212",
+      "requires_new_entity": true,
+      "selector": [
+        {
+          "field": "recipient",
+          "value": "US122000000121212121212"
+        }
+      ],
+      "evidence_paths": [
+        "/bank_account/transactions/2",
+        "/bank_account/scheduled_transactions/0"
+      ],
+      "justification": "The recipient for the new scheduled transaction must be US122000000121212121212 as specified in the request."
+    },
+    {
+      "path": "/bank_account/scheduled_transactions/*/amount",
+      "operator": "equals",
+      "value": 50.0,
+      "requires_new_entity": true,
+      "selector": [
+        {
+          "field": "recipient",
+          "value": "US122000000121212121212"
+        }
+      ],
+      "evidence_paths": [
+        "/bank_account/transactions/2",
+        "/bank_account/scheduled_transactions/0"
+      ],
+      "justification": "The amount must match the user's usual Spotify payment, which is 50.0 as shown in both a past transaction and a scheduled transaction."
+    },
+    {
+      "path": "/bank_account/scheduled_transactions/*/recurring",
+      "operator": "equals",
+      "value": true,
+      "requires_new_entity": true,
+      "selector": [
+        {
+          "field": "recipient",
+          "value": "US122000000121212121212"
+        }
+      ],
+      "evidence_paths": [
+        "/bank_account/transactions/2"
+      ],
+      "justification": "The transaction must be recurring, as specified in the request."
+    }
+  ],
+  "answer_facts": [
+    {
+      "value": 50.0,
+      "evidence_paths": [
+        "/bank_account/transactions/2"
+      ],
+      "justification": "The usual Spotify payment is 50.0, as shown in the recurring transaction with subject 'Spotify Premium'."
+    }
+  ],
+  "ambiguities": [
+    "The subject/description for the new scheduled transaction is not specified in the request or initial state.",
+    "The frequency (e.g., monthly) and start date for the recurring transaction are not specified in the request or initial state."
+  ]
+}

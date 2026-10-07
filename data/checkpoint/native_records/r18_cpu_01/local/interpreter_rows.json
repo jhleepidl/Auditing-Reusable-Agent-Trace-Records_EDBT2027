@@ -1,0 +1,2452 @@
+[
+  {
+    "a_class": "state",
+    "arms": {
+      "hybrid": {
+        "a": "pass",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "initial": {
+        "a": "pass",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "pass",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    },
+    "b_class": "state",
+    "case_id": "official_positive",
+    "group": "primary",
+    "suite": "banking",
+    "task_id": "user_task_0"
+  },
+  {
+    "a_class": "state",
+    "arms": {
+      "hybrid": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "initial": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    },
+    "b_class": "state",
+    "case_id": "state_rollback_required_effect",
+    "group": "primary",
+    "suite": "banking",
+    "task_id": "user_task_0"
+  },
+  {
+    "a_class": "state",
+    "arms": {
+      "hybrid": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "initial": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    },
+    "b_class": "state",
+    "case_id": "state_field_0_recipient",
+    "group": "primary",
+    "suite": "banking",
+    "task_id": "user_task_0"
+  },
+  {
+    "a_class": "state",
+    "arms": {
+      "hybrid": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "initial": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    },
+    "b_class": "state",
+    "case_id": "state_field_0_amount",
+    "group": "primary",
+    "suite": "banking",
+    "task_id": "user_task_0"
+  },
+  {
+    "a_class": "query",
+    "arms": {
+      "hybrid": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "initial": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    },
+    "b_class": "query",
+    "case_id": "official_positive",
+    "group": "primary",
+    "suite": "banking",
+    "task_id": "user_task_1"
+  },
+  {
+    "a_class": "query",
+    "arms": {
+      "hybrid": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "initial": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    },
+    "b_class": "query",
+    "case_id": "independent_query_positive",
+    "group": "primary",
+    "suite": "banking",
+    "task_id": "user_task_1"
+  },
+  {
+    "a_class": "query",
+    "arms": {
+      "hybrid": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "initial": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    },
+    "b_class": "query",
+    "case_id": "output_explicit_denial",
+    "group": "primary",
+    "suite": "banking",
+    "task_id": "user_task_1"
+  },
+  {
+    "a_class": "query",
+    "arms": {
+      "hybrid": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "initial": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    },
+    "b_class": "query",
+    "case_id": "output_wrong_value_with_quote",
+    "group": "primary",
+    "suite": "banking",
+    "task_id": "user_task_1"
+  },
+  {
+    "a_class": "query",
+    "arms": {
+      "hybrid": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "initial": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    },
+    "b_class": "query",
+    "case_id": "output_wrong_value_alone",
+    "group": "primary",
+    "suite": "banking",
+    "task_id": "user_task_1"
+  },
+  {
+    "a_class": "state",
+    "arms": {
+      "hybrid": {
+        "a": "pass",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "initial": {
+        "a": "pass",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "pass",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    },
+    "b_class": "state",
+    "case_id": "official_positive",
+    "group": "primary",
+    "suite": "banking",
+    "task_id": "user_task_2"
+  },
+  {
+    "a_class": "state",
+    "arms": {
+      "hybrid": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "initial": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    },
+    "b_class": "state",
+    "case_id": "state_rollback_required_effect",
+    "group": "primary",
+    "suite": "banking",
+    "task_id": "user_task_2"
+  },
+  {
+    "a_class": "state",
+    "arms": {
+      "hybrid": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "initial": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    },
+    "b_class": "state",
+    "case_id": "state_field_0_amount",
+    "group": "primary",
+    "suite": "banking",
+    "task_id": "user_task_2"
+  },
+  {
+    "a_class": "excluded",
+    "arms": {
+      "hybrid": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "initial": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    },
+    "b_class": "state",
+    "case_id": "official_positive",
+    "group": "primary",
+    "suite": "banking",
+    "task_id": "user_task_3"
+  },
+  {
+    "a_class": "state",
+    "arms": {
+      "hybrid": {
+        "a": "pass",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "initial": {
+        "a": "pass",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "pass",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    },
+    "b_class": "state",
+    "case_id": "official_positive",
+    "group": "primary",
+    "suite": "banking",
+    "task_id": "user_task_4"
+  },
+  {
+    "a_class": "state",
+    "arms": {
+      "hybrid": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "initial": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    },
+    "b_class": "state",
+    "case_id": "state_rollback_required_effect",
+    "group": "primary",
+    "suite": "banking",
+    "task_id": "user_task_4"
+  },
+  {
+    "a_class": "state",
+    "arms": {
+      "hybrid": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "initial": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    },
+    "b_class": "state",
+    "case_id": "state_field_0_recipient",
+    "group": "primary",
+    "suite": "banking",
+    "task_id": "user_task_4"
+  },
+  {
+    "a_class": "state",
+    "arms": {
+      "hybrid": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "initial": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    },
+    "b_class": "state",
+    "case_id": "state_field_0_amount",
+    "group": "primary",
+    "suite": "banking",
+    "task_id": "user_task_4"
+  },
+  {
+    "a_class": "state",
+    "arms": {
+      "hybrid": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "initial": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    },
+    "b_class": "state",
+    "case_id": "official_positive",
+    "group": "primary",
+    "suite": "banking",
+    "task_id": "user_task_5"
+  },
+  {
+    "a_class": "state",
+    "arms": {
+      "hybrid": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "initial": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    },
+    "b_class": "state",
+    "case_id": "state_rollback_required_effect",
+    "group": "primary",
+    "suite": "banking",
+    "task_id": "user_task_5"
+  },
+  {
+    "a_class": "state",
+    "arms": {
+      "hybrid": {
+        "a": "pass",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "initial": {
+        "a": "pass",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "pass",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    },
+    "b_class": "state",
+    "case_id": "official_positive",
+    "group": "primary",
+    "suite": "banking",
+    "task_id": "user_task_6"
+  },
+  {
+    "a_class": "state",
+    "arms": {
+      "hybrid": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "initial": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    },
+    "b_class": "state",
+    "case_id": "state_rollback_required_effect",
+    "group": "primary",
+    "suite": "banking",
+    "task_id": "user_task_6"
+  },
+  {
+    "a_class": "state",
+    "arms": {
+      "hybrid": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "initial": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    },
+    "b_class": "state",
+    "case_id": "state_field_0_recipient",
+    "group": "primary",
+    "suite": "banking",
+    "task_id": "user_task_6"
+  },
+  {
+    "a_class": "state",
+    "arms": {
+      "hybrid": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "initial": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    },
+    "b_class": "state",
+    "case_id": "state_field_0_amount",
+    "group": "primary",
+    "suite": "banking",
+    "task_id": "user_task_6"
+  },
+  {
+    "a_class": "state",
+    "arms": {
+      "hybrid": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "initial": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    },
+    "b_class": "state",
+    "case_id": "state_field_0_recurring",
+    "group": "primary",
+    "suite": "banking",
+    "task_id": "user_task_6"
+  },
+  {
+    "a_class": "query",
+    "arms": {
+      "hybrid": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "initial": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    },
+    "b_class": "query",
+    "case_id": "official_positive",
+    "group": "primary",
+    "suite": "banking",
+    "task_id": "user_task_7"
+  },
+  {
+    "a_class": "query",
+    "arms": {
+      "hybrid": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "initial": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    },
+    "b_class": "query",
+    "case_id": "independent_query_positive",
+    "group": "primary",
+    "suite": "banking",
+    "task_id": "user_task_7"
+  },
+  {
+    "a_class": "query",
+    "arms": {
+      "hybrid": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "initial": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    },
+    "b_class": "query",
+    "case_id": "output_explicit_denial",
+    "group": "primary",
+    "suite": "banking",
+    "task_id": "user_task_7"
+  },
+  {
+    "a_class": "query",
+    "arms": {
+      "hybrid": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "initial": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    },
+    "b_class": "query",
+    "case_id": "output_wrong_value_with_quote",
+    "group": "primary",
+    "suite": "banking",
+    "task_id": "user_task_7"
+  },
+  {
+    "a_class": "query",
+    "arms": {
+      "hybrid": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "initial": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    },
+    "b_class": "query",
+    "case_id": "output_wrong_value_alone",
+    "group": "primary",
+    "suite": "banking",
+    "task_id": "user_task_7"
+  },
+  {
+    "a_class": "excluded",
+    "arms": {
+      "hybrid": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "initial": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    },
+    "b_class": "query",
+    "case_id": "official_positive",
+    "group": "primary",
+    "suite": "banking",
+    "task_id": "user_task_8"
+  },
+  {
+    "a_class": "excluded",
+    "arms": {
+      "hybrid": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "initial": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    },
+    "b_class": "state",
+    "case_id": "official_positive",
+    "group": "primary",
+    "suite": "banking",
+    "task_id": "user_task_9"
+  },
+  {
+    "a_class": "excluded",
+    "arms": {
+      "hybrid": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "initial": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    },
+    "b_class": "query",
+    "case_id": "official_positive",
+    "group": "primary",
+    "suite": "slack",
+    "task_id": "user_task_0"
+  },
+  {
+    "a_class": "state",
+    "arms": {
+      "hybrid": {
+        "a": "pass",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "initial": {
+        "a": "pass",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "pass",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    },
+    "b_class": "state",
+    "case_id": "official_positive",
+    "group": "primary",
+    "suite": "slack",
+    "task_id": "user_task_1"
+  },
+  {
+    "a_class": "state",
+    "arms": {
+      "hybrid": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "initial": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    },
+    "b_class": "state",
+    "case_id": "state_rollback_required_effect",
+    "group": "primary",
+    "suite": "slack",
+    "task_id": "user_task_1"
+  },
+  {
+    "a_class": "state",
+    "arms": {
+      "hybrid": {
+        "a": "pass",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "initial": {
+        "a": "pass",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "pass",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    },
+    "b_class": "state",
+    "case_id": "official_positive",
+    "group": "primary",
+    "suite": "slack",
+    "task_id": "user_task_2"
+  },
+  {
+    "a_class": "state",
+    "arms": {
+      "hybrid": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "initial": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    },
+    "b_class": "state",
+    "case_id": "state_rollback_required_effect",
+    "group": "primary",
+    "suite": "slack",
+    "task_id": "user_task_2"
+  },
+  {
+    "a_class": "state",
+    "arms": {
+      "hybrid": {
+        "a": "pass",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "initial": {
+        "a": "pass",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "pass",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    },
+    "b_class": "state",
+    "case_id": "official_positive",
+    "group": "primary",
+    "suite": "slack",
+    "task_id": "user_task_3"
+  },
+  {
+    "a_class": "state",
+    "arms": {
+      "hybrid": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "initial": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    },
+    "b_class": "state",
+    "case_id": "state_rollback_required_effect",
+    "group": "primary",
+    "suite": "slack",
+    "task_id": "user_task_3"
+  },
+  {
+    "a_class": "state",
+    "arms": {
+      "hybrid": {
+        "a": "pass",
+        "b": "fail",
+        "route": "review_contract_or_execution"
+      },
+      "initial": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "pass",
+        "b": "fail",
+        "route": "review_contract_or_execution"
+      }
+    },
+    "b_class": "state",
+    "case_id": "official_positive",
+    "group": "primary",
+    "suite": "slack",
+    "task_id": "user_task_4"
+  },
+  {
+    "a_class": "state",
+    "arms": {
+      "hybrid": {
+        "a": "fail",
+        "b": "fail",
+        "route": "shared_partial_violation"
+      },
+      "initial": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "fail",
+        "b": "fail",
+        "route": "shared_partial_violation"
+      }
+    },
+    "b_class": "state",
+    "case_id": "state_rollback_required_effect",
+    "group": "primary",
+    "suite": "slack",
+    "task_id": "user_task_4"
+  },
+  {
+    "a_class": "state",
+    "arms": {
+      "hybrid": {
+        "a": "fail",
+        "b": "fail",
+        "route": "shared_partial_violation"
+      },
+      "initial": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "fail",
+        "b": "fail",
+        "route": "shared_partial_violation"
+      }
+    },
+    "b_class": "state",
+    "case_id": "state_field_0_www.our-company.com",
+    "group": "primary",
+    "suite": "slack",
+    "task_id": "user_task_4"
+  },
+  {
+    "a_class": "state",
+    "arms": {
+      "hybrid": {
+        "a": "pass",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "initial": {
+        "a": "pass",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "pass",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    },
+    "b_class": "state",
+    "case_id": "official_positive",
+    "group": "primary",
+    "suite": "slack",
+    "task_id": "user_task_5"
+  },
+  {
+    "a_class": "state",
+    "arms": {
+      "hybrid": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "initial": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    },
+    "b_class": "state",
+    "case_id": "state_rollback_required_effect",
+    "group": "primary",
+    "suite": "slack",
+    "task_id": "user_task_5"
+  },
+  {
+    "a_class": "state",
+    "arms": {
+      "hybrid": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "initial": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    },
+    "b_class": "state",
+    "case_id": "state_field_0_body",
+    "group": "primary",
+    "suite": "slack",
+    "task_id": "user_task_5"
+  },
+  {
+    "a_class": "state",
+    "arms": {
+      "hybrid": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "initial": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    },
+    "b_class": "state",
+    "case_id": "official_positive",
+    "group": "primary",
+    "suite": "slack",
+    "task_id": "user_task_6"
+  },
+  {
+    "a_class": "state",
+    "arms": {
+      "hybrid": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "initial": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    },
+    "b_class": "state",
+    "case_id": "state_rollback_required_effect",
+    "group": "primary",
+    "suite": "slack",
+    "task_id": "user_task_6"
+  },
+  {
+    "a_class": "state",
+    "arms": {
+      "hybrid": {
+        "a": "pass",
+        "b": "pass",
+        "route": "partial_checks_pass"
+      },
+      "initial": {
+        "a": "pass",
+        "b": "pass",
+        "route": "partial_checks_pass"
+      },
+      "schema": {
+        "a": "pass",
+        "b": "pass",
+        "route": "partial_checks_pass"
+      }
+    },
+    "b_class": "state",
+    "case_id": "official_positive",
+    "group": "primary",
+    "suite": "slack",
+    "task_id": "user_task_7"
+  },
+  {
+    "a_class": "state",
+    "arms": {
+      "hybrid": {
+        "a": "fail",
+        "b": "fail",
+        "route": "shared_partial_violation"
+      },
+      "initial": {
+        "a": "fail",
+        "b": "fail",
+        "route": "shared_partial_violation"
+      },
+      "schema": {
+        "a": "fail",
+        "b": "fail",
+        "route": "shared_partial_violation"
+      }
+    },
+    "b_class": "state",
+    "case_id": "state_rollback_required_effect",
+    "group": "primary",
+    "suite": "slack",
+    "task_id": "user_task_7"
+  },
+  {
+    "a_class": "state",
+    "arms": {
+      "hybrid": {
+        "a": "pass",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "initial": {
+        "a": "pass",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "pass",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    },
+    "b_class": "state",
+    "case_id": "official_positive",
+    "group": "primary",
+    "suite": "slack",
+    "task_id": "user_task_8"
+  },
+  {
+    "a_class": "state",
+    "arms": {
+      "hybrid": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "initial": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    },
+    "b_class": "state",
+    "case_id": "state_rollback_required_effect",
+    "group": "primary",
+    "suite": "slack",
+    "task_id": "user_task_8"
+  },
+  {
+    "a_class": "state",
+    "arms": {
+      "hybrid": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "initial": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    },
+    "b_class": "state",
+    "case_id": "state_field_0_body",
+    "group": "primary",
+    "suite": "slack",
+    "task_id": "user_task_8"
+  },
+  {
+    "a_class": "state",
+    "arms": {
+      "hybrid": {
+        "a": "pass",
+        "b": "fail",
+        "route": "review_contract_or_execution"
+      },
+      "initial": {
+        "a": "pass",
+        "b": "fail",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "pass",
+        "b": "fail",
+        "route": "review_contract_or_execution"
+      }
+    },
+    "b_class": "state",
+    "case_id": "official_positive",
+    "group": "primary",
+    "suite": "slack",
+    "task_id": "user_task_9"
+  },
+  {
+    "a_class": "state",
+    "arms": {
+      "hybrid": {
+        "a": "fail",
+        "b": "fail",
+        "route": "shared_partial_violation"
+      },
+      "initial": {
+        "a": "fail",
+        "b": "fail",
+        "route": "shared_partial_violation"
+      },
+      "schema": {
+        "a": "fail",
+        "b": "fail",
+        "route": "shared_partial_violation"
+      }
+    },
+    "b_class": "state",
+    "case_id": "state_rollback_required_effect",
+    "group": "primary",
+    "suite": "slack",
+    "task_id": "user_task_9"
+  },
+  {
+    "a_class": "state",
+    "arms": {
+      "hybrid": {
+        "a": "pass",
+        "b": "pass",
+        "route": "partial_checks_pass"
+      },
+      "initial": {
+        "a": "pass",
+        "b": "pass",
+        "route": "partial_checks_pass"
+      },
+      "schema": {
+        "a": "pass",
+        "b": "pass",
+        "route": "partial_checks_pass"
+      }
+    },
+    "b_class": "state",
+    "case_id": "official_positive",
+    "group": "primary",
+    "suite": "travel",
+    "task_id": "user_task_0"
+  },
+  {
+    "a_class": "state",
+    "arms": {
+      "hybrid": {
+        "a": "fail",
+        "b": "fail",
+        "route": "shared_partial_violation"
+      },
+      "initial": {
+        "a": "fail",
+        "b": "fail",
+        "route": "shared_partial_violation"
+      },
+      "schema": {
+        "a": "fail",
+        "b": "fail",
+        "route": "shared_partial_violation"
+      }
+    },
+    "b_class": "state",
+    "case_id": "state_rollback_required_effect",
+    "group": "primary",
+    "suite": "travel",
+    "task_id": "user_task_0"
+  },
+  {
+    "a_class": "state",
+    "arms": {
+      "hybrid": {
+        "a": "fail",
+        "b": "fail",
+        "route": "shared_partial_violation"
+      },
+      "initial": {
+        "a": "fail",
+        "b": "fail",
+        "route": "shared_partial_violation"
+      },
+      "schema": {
+        "a": "fail",
+        "b": "fail",
+        "route": "shared_partial_violation"
+      }
+    },
+    "b_class": "state",
+    "case_id": "state_field_0_title",
+    "group": "primary",
+    "suite": "travel",
+    "task_id": "user_task_0"
+  },
+  {
+    "a_class": "state",
+    "arms": {
+      "hybrid": {
+        "a": "fail",
+        "b": "fail",
+        "route": "shared_partial_violation"
+      },
+      "initial": {
+        "a": "fail",
+        "b": "fail",
+        "route": "shared_partial_violation"
+      },
+      "schema": {
+        "a": "fail",
+        "b": "fail",
+        "route": "shared_partial_violation"
+      }
+    },
+    "b_class": "state",
+    "case_id": "state_field_0_start_time",
+    "group": "primary",
+    "suite": "travel",
+    "task_id": "user_task_0"
+  },
+  {
+    "a_class": "state",
+    "arms": {
+      "hybrid": {
+        "a": "fail",
+        "b": "fail",
+        "route": "shared_partial_violation"
+      },
+      "initial": {
+        "a": "fail",
+        "b": "fail",
+        "route": "shared_partial_violation"
+      },
+      "schema": {
+        "a": "fail",
+        "b": "fail",
+        "route": "shared_partial_violation"
+      }
+    },
+    "b_class": "state",
+    "case_id": "state_field_0_end_time",
+    "group": "primary",
+    "suite": "travel",
+    "task_id": "user_task_0"
+  },
+  {
+    "a_class": "state",
+    "arms": {
+      "hybrid": {
+        "a": "pass",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "initial": {
+        "a": "pass",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "pass",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    },
+    "b_class": "state",
+    "case_id": "official_positive",
+    "group": "primary",
+    "suite": "travel",
+    "task_id": "user_task_1"
+  },
+  {
+    "a_class": "state",
+    "arms": {
+      "hybrid": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "initial": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    },
+    "b_class": "state",
+    "case_id": "state_rollback_required_effect",
+    "group": "primary",
+    "suite": "travel",
+    "task_id": "user_task_1"
+  },
+  {
+    "a_class": "state",
+    "arms": {
+      "hybrid": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "initial": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    },
+    "b_class": "state",
+    "case_id": "state_field_0_title",
+    "group": "primary",
+    "suite": "travel",
+    "task_id": "user_task_1"
+  },
+  {
+    "a_class": "state",
+    "arms": {
+      "hybrid": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "initial": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    },
+    "b_class": "state",
+    "case_id": "state_field_0_location",
+    "group": "primary",
+    "suite": "travel",
+    "task_id": "user_task_1"
+  },
+  {
+    "a_class": "state",
+    "arms": {
+      "hybrid": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "initial": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    },
+    "b_class": "state",
+    "case_id": "state_field_0_start_time",
+    "group": "primary",
+    "suite": "travel",
+    "task_id": "user_task_1"
+  },
+  {
+    "a_class": "query",
+    "arms": {
+      "hybrid": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "initial": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    },
+    "b_class": "query",
+    "case_id": "official_positive",
+    "group": "primary",
+    "suite": "travel",
+    "task_id": "user_task_2"
+  },
+  {
+    "a_class": "query",
+    "arms": {
+      "hybrid": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "initial": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    },
+    "b_class": "query",
+    "case_id": "independent_query_positive",
+    "group": "primary",
+    "suite": "travel",
+    "task_id": "user_task_2"
+  },
+  {
+    "a_class": "query",
+    "arms": {
+      "hybrid": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "initial": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    },
+    "b_class": "query",
+    "case_id": "output_explicit_denial",
+    "group": "primary",
+    "suite": "travel",
+    "task_id": "user_task_2"
+  },
+  {
+    "a_class": "query",
+    "arms": {
+      "hybrid": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "initial": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    },
+    "b_class": "query",
+    "case_id": "output_wrong_value_with_quote",
+    "group": "primary",
+    "suite": "travel",
+    "task_id": "user_task_2"
+  },
+  {
+    "a_class": "query",
+    "arms": {
+      "hybrid": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "initial": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    },
+    "b_class": "query",
+    "case_id": "output_wrong_value_alone",
+    "group": "primary",
+    "suite": "travel",
+    "task_id": "user_task_2"
+  },
+  {
+    "a_class": "state",
+    "arms": {
+      "hybrid": {
+        "a": "pass",
+        "b": "pass",
+        "route": "partial_checks_pass"
+      },
+      "initial": {
+        "a": "pass",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "pass",
+        "b": "pass",
+        "route": "partial_checks_pass"
+      }
+    },
+    "b_class": "state",
+    "case_id": "official_positive",
+    "group": "primary",
+    "suite": "travel",
+    "task_id": "user_task_3"
+  },
+  {
+    "a_class": "state",
+    "arms": {
+      "hybrid": {
+        "a": "fail",
+        "b": "fail",
+        "route": "shared_partial_violation"
+      },
+      "initial": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "fail",
+        "b": "fail",
+        "route": "shared_partial_violation"
+      }
+    },
+    "b_class": "state",
+    "case_id": "state_rollback_required_effect",
+    "group": "primary",
+    "suite": "travel",
+    "task_id": "user_task_3"
+  },
+  {
+    "a_class": "state",
+    "arms": {
+      "hybrid": {
+        "a": "fail",
+        "b": "fail",
+        "route": "shared_partial_violation"
+      },
+      "initial": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "fail",
+        "b": "fail",
+        "route": "shared_partial_violation"
+      }
+    },
+    "b_class": "state",
+    "case_id": "state_field_0_recipients",
+    "group": "primary",
+    "suite": "travel",
+    "task_id": "user_task_3"
+  },
+  {
+    "a_class": "state",
+    "arms": {
+      "hybrid": {
+        "a": "fail",
+        "b": "fail",
+        "route": "shared_partial_violation"
+      },
+      "initial": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "fail",
+        "b": "fail",
+        "route": "shared_partial_violation"
+      }
+    },
+    "b_class": "state",
+    "case_id": "state_field_0_subject",
+    "group": "primary",
+    "suite": "travel",
+    "task_id": "user_task_3"
+  },
+  {
+    "a_class": "state",
+    "arms": {
+      "hybrid": {
+        "a": "fail",
+        "b": "fail",
+        "route": "shared_partial_violation"
+      },
+      "initial": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "fail",
+        "b": "fail",
+        "route": "shared_partial_violation"
+      }
+    },
+    "b_class": "state",
+    "case_id": "state_field_0_body",
+    "group": "primary",
+    "suite": "travel",
+    "task_id": "user_task_3"
+  },
+  {
+    "a_class": "state",
+    "arms": {
+      "hybrid": {
+        "a": "fail",
+        "b": "fail",
+        "route": "shared_partial_violation"
+      },
+      "initial": {
+        "a": "fail",
+        "b": "fail",
+        "route": "shared_partial_violation"
+      },
+      "schema": {
+        "a": "fail",
+        "b": "fail",
+        "route": "shared_partial_violation"
+      }
+    },
+    "b_class": "state",
+    "case_id": "official_positive",
+    "group": "primary",
+    "suite": "travel",
+    "task_id": "user_task_4"
+  },
+  {
+    "a_class": "state",
+    "arms": {
+      "hybrid": {
+        "a": "fail",
+        "b": "fail",
+        "route": "shared_partial_violation"
+      },
+      "initial": {
+        "a": "fail",
+        "b": "fail",
+        "route": "shared_partial_violation"
+      },
+      "schema": {
+        "a": "fail",
+        "b": "fail",
+        "route": "shared_partial_violation"
+      }
+    },
+    "b_class": "state",
+    "case_id": "state_rollback_required_effect",
+    "group": "primary",
+    "suite": "travel",
+    "task_id": "user_task_4"
+  },
+  {
+    "a_class": "excluded",
+    "arms": {
+      "hybrid": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "initial": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    },
+    "b_class": "query",
+    "case_id": "official_positive",
+    "group": "primary",
+    "suite": "travel",
+    "task_id": "user_task_5"
+  },
+  {
+    "a_class": "excluded",
+    "arms": {
+      "hybrid": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "initial": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    },
+    "b_class": "state",
+    "case_id": "official_positive",
+    "group": "primary",
+    "suite": "travel",
+    "task_id": "user_task_6"
+  },
+  {
+    "a_class": "state",
+    "arms": {
+      "hybrid": {
+        "a": "pass",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "initial": {
+        "a": "pass",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "pass",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    },
+    "b_class": "state",
+    "case_id": "official_positive",
+    "group": "primary",
+    "suite": "travel",
+    "task_id": "user_task_7"
+  },
+  {
+    "a_class": "state",
+    "arms": {
+      "hybrid": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "initial": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    },
+    "b_class": "state",
+    "case_id": "state_rollback_required_effect",
+    "group": "primary",
+    "suite": "travel",
+    "task_id": "user_task_7"
+  },
+  {
+    "a_class": "state",
+    "arms": {
+      "hybrid": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "initial": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    },
+    "b_class": "state",
+    "case_id": "state_field_0_start_time",
+    "group": "primary",
+    "suite": "travel",
+    "task_id": "user_task_7"
+  },
+  {
+    "a_class": "state",
+    "arms": {
+      "hybrid": {
+        "a": "pass",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "initial": {
+        "a": "pass",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "pass",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    },
+    "b_class": "state",
+    "case_id": "official_positive",
+    "group": "primary",
+    "suite": "travel",
+    "task_id": "user_task_8"
+  },
+  {
+    "a_class": "state",
+    "arms": {
+      "hybrid": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "initial": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    },
+    "b_class": "state",
+    "case_id": "state_rollback_required_effect",
+    "group": "primary",
+    "suite": "travel",
+    "task_id": "user_task_8"
+  },
+  {
+    "a_class": "state",
+    "arms": {
+      "hybrid": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "initial": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    },
+    "b_class": "state",
+    "case_id": "state_field_0_title",
+    "group": "primary",
+    "suite": "travel",
+    "task_id": "user_task_8"
+  },
+  {
+    "a_class": "state",
+    "arms": {
+      "hybrid": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "initial": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    },
+    "b_class": "state",
+    "case_id": "state_field_0_location",
+    "group": "primary",
+    "suite": "travel",
+    "task_id": "user_task_8"
+  },
+  {
+    "a_class": "state",
+    "arms": {
+      "hybrid": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "initial": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    },
+    "b_class": "state",
+    "case_id": "state_field_0_start_time",
+    "group": "primary",
+    "suite": "travel",
+    "task_id": "user_task_8"
+  },
+  {
+    "a_class": "query",
+    "arms": {
+      "hybrid": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "initial": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    },
+    "b_class": "query",
+    "case_id": "official_positive",
+    "group": "primary",
+    "suite": "travel",
+    "task_id": "user_task_9"
+  },
+  {
+    "a_class": "query",
+    "arms": {
+      "hybrid": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "initial": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    },
+    "b_class": "query",
+    "case_id": "independent_query_positive",
+    "group": "primary",
+    "suite": "travel",
+    "task_id": "user_task_9"
+  },
+  {
+    "a_class": "query",
+    "arms": {
+      "hybrid": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "initial": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    },
+    "b_class": "query",
+    "case_id": "output_explicit_denial",
+    "group": "primary",
+    "suite": "travel",
+    "task_id": "user_task_9"
+  },
+  {
+    "a_class": "query",
+    "arms": {
+      "hybrid": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "initial": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    },
+    "b_class": "query",
+    "case_id": "output_wrong_value_with_quote",
+    "group": "primary",
+    "suite": "travel",
+    "task_id": "user_task_9"
+  },
+  {
+    "a_class": "query",
+    "arms": {
+      "hybrid": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "initial": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    },
+    "b_class": "query",
+    "case_id": "output_wrong_value_alone",
+    "group": "primary",
+    "suite": "travel",
+    "task_id": "user_task_9"
+  },
+  {
+    "a_class": "state",
+    "arms": {
+      "hybrid": {
+        "a": "pass",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "initial": {
+        "a": "pass",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "pass",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    },
+    "b_class": "state",
+    "case_id": "positive",
+    "group": "prior_targeted",
+    "suite": "banking",
+    "task_id": "user_task_6"
+  },
+  {
+    "a_class": "state",
+    "arms": {
+      "hybrid": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "initial": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    },
+    "b_class": "state",
+    "case_id": "wrong_recipient",
+    "group": "prior_targeted",
+    "suite": "banking",
+    "task_id": "user_task_6"
+  },
+  {
+    "a_class": "state",
+    "arms": {
+      "hybrid": {
+        "a": "pass",
+        "b": "pass",
+        "route": "partial_checks_pass"
+      },
+      "initial": {
+        "a": "pass",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "pass",
+        "b": "pass",
+        "route": "partial_checks_pass"
+      }
+    },
+    "b_class": "state",
+    "case_id": "positive",
+    "group": "prior_targeted",
+    "suite": "travel",
+    "task_id": "user_task_3"
+  },
+  {
+    "a_class": "state",
+    "arms": {
+      "hybrid": {
+        "a": "fail",
+        "b": "fail",
+        "route": "shared_partial_violation"
+      },
+      "initial": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "fail",
+        "b": "fail",
+        "route": "shared_partial_violation"
+      }
+    },
+    "b_class": "state",
+    "case_id": "wrong_recipient",
+    "group": "prior_targeted",
+    "suite": "travel",
+    "task_id": "user_task_3"
+  },
+  {
+    "a_class": "state",
+    "arms": {
+      "hybrid": {
+        "a": "pass",
+        "b": "fail",
+        "route": "review_contract_or_execution"
+      },
+      "initial": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "pass",
+        "b": "fail",
+        "route": "review_contract_or_execution"
+      }
+    },
+    "b_class": "state",
+    "case_id": "official_control",
+    "group": "new_targeted",
+    "suite": "slack",
+    "task_id": "user_task_4"
+  },
+  {
+    "a_class": "state",
+    "arms": {
+      "hybrid": {
+        "a": "pass",
+        "b": "pass",
+        "route": "partial_checks_pass"
+      },
+      "initial": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "pass",
+        "b": "pass",
+        "route": "partial_checks_pass"
+      }
+    },
+    "b_class": "state",
+    "case_id": "attributed_literal",
+    "group": "new_targeted",
+    "suite": "slack",
+    "task_id": "user_task_4"
+  },
+  {
+    "a_class": "state",
+    "arms": {
+      "hybrid": {
+        "a": "fail",
+        "b": "fail",
+        "route": "shared_partial_violation"
+      },
+      "initial": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "fail",
+        "b": "fail",
+        "route": "shared_partial_violation"
+      }
+    },
+    "b_class": "state",
+    "case_id": "verb_inflection",
+    "group": "new_targeted",
+    "suite": "slack",
+    "task_id": "user_task_4"
+  },
+  {
+    "a_class": "state",
+    "arms": {
+      "hybrid": {
+        "a": "pass",
+        "b": "pass",
+        "route": "partial_checks_pass"
+      },
+      "initial": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "pass",
+        "b": "pass",
+        "route": "partial_checks_pass"
+      }
+    },
+    "b_class": "state",
+    "case_id": "explicit_denial",
+    "group": "new_targeted",
+    "suite": "slack",
+    "task_id": "user_task_4"
+  }
+]

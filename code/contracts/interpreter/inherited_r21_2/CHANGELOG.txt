@@ -1,0 +1,5 @@
+# Separate R21.2 measurement repair
+
+R21.1 code, schema, tests, requests, outcomes and source references are immutable. This clone changes only IR version binding, quoted-mention contradiction handling, and currency-plus-person qualifier parsing. Two new behavioral regressions preserve negative controls (quotation-only, unquoted contradiction, wrong count/role, unsupported qualifiers). Existing21 tests remain unchanged within the new test file apart from importing the new method module/version.
+
+An oracle-assisted replay of old frozen cases is development/repair validation, not a new construction confirmation. No source labels, resolved expected operands or candidate model outcomes are imported into the executor. New construction confirmation requires separately frozen source/prompt/plan and new case realizations.

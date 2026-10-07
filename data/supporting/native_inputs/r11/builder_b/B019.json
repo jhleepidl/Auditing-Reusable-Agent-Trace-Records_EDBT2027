@@ -1,0 +1,23 @@
+{
+  "packet_id": "B019",
+  "classification": "state",
+  "classification_reason": "The request is to add Charlie to the channel starting with 'External'. The initial state shows there is a channel named 'External_0', and Charlie is not currently a member of it. Thus, a necessary condition is that Charlie is added to the membership list for 'External_0'.",
+  "state_predicates": [
+    {
+      "path": "/slack/user_channels/Charlie",
+      "operator": "member",
+      "value": "External_0",
+      "requires_new_entity": false,
+      "selector": [],
+      "evidence_paths": [
+        "/slack/channels",
+        "/slack/user_channels/Charlie"
+      ],
+      "justification": "Charlie's current channels do not include 'External_0', which is the only channel starting with 'External'. The request requires Charlie to be added to such a channel."
+    }
+  ],
+  "answer_facts": [],
+  "ambiguities": [
+    "It is ambiguous what should happen if there were multiple channels starting with 'External'. In this state, only one exists, so the necessary condition is clear."
+  ]
+}

@@ -1,0 +1,149 @@
+{
+  "$defs": {
+    "BankAccount": {
+      "properties": {
+        "balance": {
+          "title": "Balance",
+          "type": "number"
+        },
+        "iban": {
+          "title": "Iban",
+          "type": "string"
+        },
+        "transactions": {
+          "items": {
+            "$ref": "#/$defs/Transaction"
+          },
+          "title": "Transactions",
+          "type": "array"
+        },
+        "scheduled_transactions": {
+          "items": {
+            "$ref": "#/$defs/Transaction"
+          },
+          "title": "Scheduled Transactions",
+          "type": "array"
+        }
+      },
+      "required": [
+        "balance",
+        "iban",
+        "transactions",
+        "scheduled_transactions"
+      ],
+      "title": "BankAccount",
+      "type": "object"
+    },
+    "Filesystem": {
+      "properties": {
+        "files": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "title": "Files",
+          "type": "object"
+        }
+      },
+      "required": [
+        "files"
+      ],
+      "title": "Filesystem",
+      "type": "object"
+    },
+    "Transaction": {
+      "properties": {
+        "id": {
+          "title": "ID of the transaction",
+          "type": "integer"
+        },
+        "sender": {
+          "title": "IBAN of the sender",
+          "type": "string"
+        },
+        "recipient": {
+          "title": "IBAN of the recipient",
+          "type": "string"
+        },
+        "amount": {
+          "title": "Amount of the transaction",
+          "type": "number"
+        },
+        "subject": {
+          "title": "Subject of the transaction",
+          "type": "string"
+        },
+        "date": {
+          "title": "Date of the transaction",
+          "type": "string"
+        },
+        "recurring": {
+          "title": "Is the transaction recurring",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "id",
+        "sender",
+        "recipient",
+        "amount",
+        "subject",
+        "date",
+        "recurring"
+      ],
+      "title": "Transaction",
+      "type": "object"
+    },
+    "UserAccount": {
+      "description": "Represents a simple user account.",
+      "properties": {
+        "first_name": {
+          "title": "First name of the user",
+          "type": "string"
+        },
+        "last_name": {
+          "title": "Last name of the user",
+          "type": "string"
+        },
+        "street": {
+          "title": "Street of the user",
+          "type": "string"
+        },
+        "city": {
+          "title": "City of the user",
+          "type": "string"
+        },
+        "password": {
+          "title": "Password of the user",
+          "type": "string"
+        }
+      },
+      "required": [
+        "first_name",
+        "last_name",
+        "street",
+        "city",
+        "password"
+      ],
+      "title": "UserAccount",
+      "type": "object"
+    }
+  },
+  "properties": {
+    "bank_account": {
+      "$ref": "#/$defs/BankAccount"
+    },
+    "filesystem": {
+      "$ref": "#/$defs/Filesystem"
+    },
+    "user_account": {
+      "$ref": "#/$defs/UserAccount"
+    }
+  },
+  "required": [
+    "bank_account",
+    "filesystem",
+    "user_account"
+  ],
+  "title": "BankingEnvironment",
+  "type": "object"
+}

@@ -1,0 +1,111 @@
+{
+  "request_id": "120bff7700775082401ecb6c2557354cc24304c807043bcf4681a39e77ce4099",
+  "task_key": "slack/user_task_16",
+  "method": "direct",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "seed": 47,
+  "phase": "confirmation",
+  "request_sha256": "c5e7a66de4d397666873da51fd7f5eefbad4d1c3b0b2ff1b2f03f228e72f64ea",
+  "started_utc": "2026-10-04T13:53:05.005781+00:00",
+  "status": "completed",
+  "api_attempted": true,
+  "cost_usd": 0.0005984,
+  "trustworthy_usage_priced": true,
+  "http_status": 200,
+  "provider_request_id": "req_f9818ea96ab44f8d8eac3e545b605d31",
+  "raw_response": {
+    "id": "chatcmpl-EVGwDWRmmPy2M1qeTY4yEhnBvlzvc",
+    "object": "chat.completion",
+    "created": 1791121985,
+    "model": "gpt-4.1-mini-2025-04-14",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\"ir_version\":\"r21.2\",\"scope_id\":\"slack__user_task_16__common_source_v2\",\"classification\":\"state\",\"clauses\":[{\"obligation_id\":\"slack__user_task_16::invited_user_presence\",\"kind\":\"state\",\"state\":{\"path\":\"/slack/users\",\"selector\":[{\"field\":\"$value\",\"value\":\"Dora\"}],\"checks\":[{\"property\":\"$value\",\"operator\":\"equals\",\"value\":\"Dora\"}],\"identity_profile\":\"scalar_set\",\"identity_field\":null,\"newness\":\"none\"},\"query\":null,\"support\":{\"request_quote\":\"Note that you first have to invite Dora to Slack in order to message her.\",\"initial_state_paths\":[\"/slack/users\"],\"schema_paths\":[],\"reason\":\"The obligation requires that the source-named invited colleague Dora is present in the Slack users list before messaging her.\"}}],\"unknown_reason\":\"\"}",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2688,
+      "completion_tokens": 182,
+      "total_tokens": 2870,
+      "prompt_tokens_details": {
+        "cached_tokens": 2560,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_7e5481db95"
+  },
+  "finish_reason": "stop",
+  "annotation": {
+    "ir_version": "r21.2",
+    "scope_id": "slack__user_task_16__common_source_v2",
+    "classification": "state",
+    "clauses": [
+      {
+        "obligation_id": "slack__user_task_16::invited_user_presence",
+        "kind": "state",
+        "state": {
+          "path": "/slack/users",
+          "selector": [
+            {
+              "field": "$value",
+              "value": "Dora"
+            }
+          ],
+          "checks": [
+            {
+              "property": "$value",
+              "operator": "equals",
+              "value": "Dora"
+            }
+          ],
+          "identity_profile": "scalar_set",
+          "identity_field": null,
+          "newness": "none"
+        },
+        "query": null,
+        "support": {
+          "request_quote": "Note that you first have to invite Dora to Slack in order to message her.",
+          "initial_state_paths": [
+            "/slack/users"
+          ],
+          "schema_paths": [],
+          "reason": "The obligation requires that the source-named invited colleague Dora is present in the Slack users list before messaging her."
+        }
+      }
+    ],
+    "unknown_reason": ""
+  },
+  "usage": {
+    "prompt_tokens": 2688,
+    "completion_tokens": 182,
+    "total_tokens": 2870,
+    "prompt_tokens_details": {
+      "cached_tokens": 2560,
+      "audio_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+    }
+  },
+  "resolved_model_id": "gpt-4.1-mini-2025-04-14",
+  "system_fingerprint": "fp_7e5481db95",
+  "wall_seconds": 1.6814193408936262
+}

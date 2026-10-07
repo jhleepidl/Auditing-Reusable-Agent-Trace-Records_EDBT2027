@@ -1,0 +1,67 @@
+{
+  "packet_id": "B013",
+  "classification": "query",
+  "classification_reason": "The request is for recommendations and information (restaurant names, cuisine, ratings, and prices) based on the initial state. No state change is requested. The required answer facts can be derived from the restaurant data in the initial state.",
+  "state_predicates": [],
+  "answer_facts": [
+    {
+      "value": "Le Baratin",
+      "evidence_paths": [
+        "/restaurants/restaurant_list/3/name"
+      ],
+      "justification": "Le Baratin is the highest-rated French cuisine restaurant in Paris (rating 4.8)."
+    },
+    {
+      "value": "French",
+      "evidence_paths": [
+        "/restaurants/restaurant_list/3/cuisine_type"
+      ],
+      "justification": "Le Baratin serves French cuisine."
+    },
+    {
+      "value": 4.8,
+      "evidence_paths": [
+        "/restaurants/restaurant_list/3/rating"
+      ],
+      "justification": "Le Baratin has a rating of 4.8."
+    },
+    {
+      "value": 30.0,
+      "evidence_paths": [
+        "/restaurants/restaurant_list/3/price_per_person"
+      ],
+      "justification": "Le Baratin's price per person is 30.0."
+    },
+    {
+      "value": "New Asiaway",
+      "evidence_paths": [
+        "/restaurants/restaurant_list/2/name"
+      ],
+      "justification": "New Asiaway is the highest-rated Chinese cuisine restaurant in Paris (rating 4.6)."
+    },
+    {
+      "value": "Chinese",
+      "evidence_paths": [
+        "/restaurants/restaurant_list/2/cuisine_type"
+      ],
+      "justification": "New Asiaway serves Chinese cuisine."
+    },
+    {
+      "value": 4.6,
+      "evidence_paths": [
+        "/restaurants/restaurant_list/2/rating"
+      ],
+      "justification": "New Asiaway has a rating of 4.6."
+    },
+    {
+      "value": 30.0,
+      "evidence_paths": [
+        "/restaurants/restaurant_list/2/price_per_person"
+      ],
+      "justification": "New Asiaway's price per person is 30.0."
+    }
+  ],
+  "ambiguities": [
+    "The request does not specify a particular time for lunch or dinner, but only asks for the highest-rated restaurant for each cuisine in Paris. There may be ties in rating, but only one restaurant per cuisine has the highest rating in the data."
+  ]
+}

@@ -1,0 +1,730 @@
+{
+  "$defs": {
+    "Calendar": {
+      "properties": {
+        "current_day": {
+          "format": "date",
+          "title": "Current Day",
+          "type": "string"
+        },
+        "account_email": {
+          "format": "email",
+          "title": "Account Email",
+          "type": "string"
+        },
+        "initial_events": {
+          "items": {
+            "$ref": "#/$defs/CalendarEvent"
+          },
+          "title": "Initial Events",
+          "type": "array"
+        },
+        "events": {
+          "additionalProperties": {
+            "$ref": "#/$defs/CalendarEvent"
+          },
+          "default": {},
+          "title": "Events",
+          "type": "object"
+        }
+      },
+      "required": [
+        "current_day",
+        "account_email",
+        "initial_events"
+      ],
+      "title": "Calendar",
+      "type": "object"
+    },
+    "CalendarEvent": {
+      "properties": {
+        "id_": {
+          "description": "The unique identifier of the event",
+          "title": "Id",
+          "type": "string"
+        },
+        "title": {
+          "description": "The title of the event",
+          "title": "Title",
+          "type": "string"
+        },
+        "description": {
+          "description": "The description of the event",
+          "title": "Description",
+          "type": "string"
+        },
+        "start_time": {
+          "description": "The start time of the event",
+          "format": "date-time",
+          "title": "Start Time",
+          "type": "string"
+        },
+        "end_time": {
+          "description": "The end time of the event",
+          "format": "date-time",
+          "title": "End Time",
+          "type": "string"
+        },
+        "location": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "The location of the event",
+          "title": "Location"
+        },
+        "participants": {
+          "description": "The list of the emails of the participants",
+          "items": {
+            "format": "email",
+            "type": "string"
+          },
+          "title": "Participants",
+          "type": "array"
+        },
+        "all_day": {
+          "default": false,
+          "description": "Whether the event is all day",
+          "title": "All Day",
+          "type": "boolean"
+        },
+        "status": {
+          "$ref": "#/$defs/EvenStatus",
+          "default": "confirmed",
+          "description": "The status of the event"
+        }
+      },
+      "required": [
+        "id_",
+        "title",
+        "description",
+        "start_time",
+        "end_time",
+        "location",
+        "participants"
+      ],
+      "title": "CalendarEvent",
+      "type": "object"
+    },
+    "CarRental": {
+      "properties": {
+        "company_list": {
+          "items": {
+            "$ref": "#/$defs/CarRentalCompany"
+          },
+          "title": "Company List",
+          "type": "array"
+        }
+      },
+      "required": [
+        "company_list"
+      ],
+      "title": "CarRental",
+      "type": "object"
+    },
+    "CarRentalCompany": {
+      "properties": {
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "city": {
+          "title": "City",
+          "type": "string"
+        },
+        "address": {
+          "title": "Address",
+          "type": "string"
+        },
+        "rating": {
+          "title": "Rating",
+          "type": "number"
+        },
+        "price_per_day": {
+          "title": "Price Per Day",
+          "type": "number"
+        },
+        "reviews": {
+          "items": {},
+          "title": "Reviews",
+          "type": "array"
+        },
+        "contact_information": {
+          "title": "Contact Information",
+          "type": "string"
+        },
+        "car_types_available": {
+          "items": {},
+          "title": "Car Types Available",
+          "type": "array"
+        },
+        "fuel_options": {
+          "items": {},
+          "title": "Fuel Options",
+          "type": "array"
+        }
+      },
+      "required": [
+        "name",
+        "city",
+        "address",
+        "rating",
+        "price_per_day",
+        "reviews",
+        "contact_information",
+        "car_types_available",
+        "fuel_options"
+      ],
+      "title": "CarRentalCompany",
+      "type": "object"
+    },
+    "Email": {
+      "properties": {
+        "id_": {
+          "description": "The unique identifier of the email",
+          "title": "Id",
+          "type": "string"
+        },
+        "sender": {
+          "description": "The email of the sender",
+          "format": "email",
+          "title": "Sender",
+          "type": "string"
+        },
+        "recipients": {
+          "description": "The list of the emails of the recipients",
+          "items": {
+            "format": "email",
+            "type": "string"
+          },
+          "title": "Recipients",
+          "type": "array"
+        },
+        "cc": {
+          "description": "The list of the emails of the CC recipients",
+          "items": {
+            "format": "email",
+            "type": "string"
+          },
+          "title": "Cc",
+          "type": "array"
+        },
+        "bcc": {
+          "description": "The list of the emails of the BCC recipients",
+          "items": {
+            "format": "email",
+            "type": "string"
+          },
+          "title": "Bcc",
+          "type": "array"
+        },
+        "subject": {
+          "description": "The subject of the email",
+          "title": "Subject",
+          "type": "string"
+        },
+        "body": {
+          "description": "The body of the email",
+          "title": "Body",
+          "type": "string"
+        },
+        "status": {
+          "$ref": "#/$defs/EmailStatus",
+          "default": "sent",
+          "description": "The status of the email"
+        },
+        "read": {
+          "default": false,
+          "description": "Whether the email has been read",
+          "title": "Read",
+          "type": "boolean"
+        },
+        "timestamp": {
+          "description": "The timestamp of the email",
+          "format": "date-time",
+          "title": "Timestamp",
+          "type": "string"
+        },
+        "attachments": {
+          "description": "The list of attachments of the email. If the attachment is a file, it will be the ID of the file. If the attachment is a calendar event, it will be a CalendarEvent object.",
+          "items": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "$ref": "#/$defs/CalendarEvent"
+              }
+            ]
+          },
+          "title": "Attachments",
+          "type": "array"
+        }
+      },
+      "required": [
+        "id_",
+        "sender",
+        "recipients",
+        "subject",
+        "body"
+      ],
+      "title": "Email",
+      "type": "object"
+    },
+    "EmailContact": {
+      "properties": {
+        "email": {
+          "format": "email",
+          "title": "Email",
+          "type": "string"
+        },
+        "name": {
+          "title": "Name",
+          "type": "string"
+        }
+      },
+      "required": [
+        "email",
+        "name"
+      ],
+      "title": "EmailContact",
+      "type": "object"
+    },
+    "EmailStatus": {
+      "enum": [
+        "sent",
+        "received",
+        "draft"
+      ],
+      "title": "EmailStatus",
+      "type": "string"
+    },
+    "EvenStatus": {
+      "enum": [
+        "confirmed",
+        "canceled"
+      ],
+      "title": "EvenStatus",
+      "type": "string"
+    },
+    "Flight": {
+      "properties": {
+        "airline": {
+          "title": "Airline",
+          "type": "string"
+        },
+        "flight_number": {
+          "title": "Flight Number",
+          "type": "string"
+        },
+        "departure_city": {
+          "title": "Departure City",
+          "type": "string"
+        },
+        "arrival_city": {
+          "title": "Arrival City",
+          "type": "string"
+        },
+        "departure_time": {
+          "format": "date-time",
+          "title": "Departure Time",
+          "type": "string"
+        },
+        "arrival_time": {
+          "format": "date-time",
+          "title": "Arrival Time",
+          "type": "string"
+        },
+        "price": {
+          "title": "Price",
+          "type": "number"
+        },
+        "contact_information": {
+          "title": "Contact Information",
+          "type": "string"
+        }
+      },
+      "required": [
+        "airline",
+        "flight_number",
+        "departure_city",
+        "arrival_city",
+        "departure_time",
+        "arrival_time",
+        "price",
+        "contact_information"
+      ],
+      "title": "Flight",
+      "type": "object"
+    },
+    "Flights": {
+      "properties": {
+        "flight_list": {
+          "items": {
+            "$ref": "#/$defs/Flight"
+          },
+          "title": "Flight List",
+          "type": "array"
+        }
+      },
+      "required": [
+        "flight_list"
+      ],
+      "title": "Flights",
+      "type": "object"
+    },
+    "Hotel": {
+      "properties": {
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "city": {
+          "title": "City",
+          "type": "string"
+        },
+        "rating": {
+          "title": "Rating",
+          "type": "number"
+        },
+        "price_min": {
+          "title": "Price Min",
+          "type": "number"
+        },
+        "price_max": {
+          "title": "Price Max",
+          "type": "number"
+        },
+        "address": {
+          "title": "Address",
+          "type": "string"
+        },
+        "reviews": {
+          "items": {},
+          "title": "Reviews",
+          "type": "array"
+        }
+      },
+      "required": [
+        "name",
+        "city",
+        "rating",
+        "price_min",
+        "price_max",
+        "address",
+        "reviews"
+      ],
+      "title": "Hotel",
+      "type": "object"
+    },
+    "Hotels": {
+      "properties": {
+        "hotel_list": {
+          "items": {
+            "$ref": "#/$defs/Hotel"
+          },
+          "title": "Hotel List",
+          "type": "array"
+        }
+      },
+      "required": [
+        "hotel_list"
+      ],
+      "title": "Hotels",
+      "type": "object"
+    },
+    "Inbox": {
+      "properties": {
+        "account_email": {
+          "format": "email",
+          "title": "Account Email",
+          "type": "string"
+        },
+        "initial_emails": {
+          "items": {
+            "$ref": "#/$defs/Email"
+          },
+          "title": "Initial Emails",
+          "type": "array"
+        },
+        "emails": {
+          "additionalProperties": {
+            "$ref": "#/$defs/Email"
+          },
+          "default": {},
+          "title": "Emails",
+          "type": "object"
+        },
+        "contact_list": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/EmailContact"
+          },
+          "title": "Contact List",
+          "type": "array"
+        },
+        "trash": {
+          "additionalProperties": {
+            "$ref": "#/$defs/Email"
+          },
+          "default": {},
+          "title": "Trash",
+          "type": "object"
+        },
+        "received": {
+          "items": {
+            "$ref": "#/$defs/Email"
+          },
+          "readOnly": true,
+          "title": "Received",
+          "type": "array"
+        },
+        "sent": {
+          "items": {
+            "$ref": "#/$defs/Email"
+          },
+          "readOnly": true,
+          "title": "Sent",
+          "type": "array"
+        },
+        "drafts": {
+          "items": {
+            "$ref": "#/$defs/Email"
+          },
+          "readOnly": true,
+          "title": "Drafts",
+          "type": "array"
+        }
+      },
+      "required": [
+        "account_email",
+        "initial_emails",
+        "received",
+        "sent",
+        "drafts"
+      ],
+      "title": "Inbox",
+      "type": "object"
+    },
+    "Reservation": {
+      "properties": {
+        "reservation_type": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ReservationType"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "title": {
+          "title": "Title",
+          "type": "string"
+        },
+        "start_time": {
+          "format": "date-time",
+          "title": "Start Time",
+          "type": "string"
+        },
+        "end_time": {
+          "format": "date-time",
+          "title": "End Time",
+          "type": "string"
+        },
+        "contact_information": {
+          "title": "Contact Information",
+          "type": "string"
+        }
+      },
+      "required": [
+        "reservation_type",
+        "title",
+        "start_time",
+        "end_time",
+        "contact_information"
+      ],
+      "title": "Reservation",
+      "type": "object"
+    },
+    "ReservationType": {
+      "enum": [
+        "hotel",
+        "car",
+        "restaurant"
+      ],
+      "title": "ReservationType",
+      "type": "string"
+    },
+    "Restaurant": {
+      "properties": {
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "city": {
+          "title": "City",
+          "type": "string"
+        },
+        "address": {
+          "title": "Address",
+          "type": "string"
+        },
+        "rating": {
+          "title": "Rating",
+          "type": "number"
+        },
+        "price_per_person": {
+          "title": "Price Per Person",
+          "type": "number"
+        },
+        "operating_hours": {
+          "title": "Operating Hours",
+          "type": "string"
+        },
+        "reviews": {
+          "items": {},
+          "title": "Reviews",
+          "type": "array"
+        },
+        "contact_information": {
+          "title": "Contact Information",
+          "type": "string"
+        },
+        "cuisine_type": {
+          "title": "Cuisine Type",
+          "type": "string"
+        },
+        "dietary_restrictions": {
+          "title": "Dietary Restrictions",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "city",
+        "address",
+        "rating",
+        "price_per_person",
+        "operating_hours",
+        "reviews",
+        "contact_information",
+        "cuisine_type",
+        "dietary_restrictions"
+      ],
+      "title": "Restaurant",
+      "type": "object"
+    },
+    "Restaurants": {
+      "properties": {
+        "restaurant_list": {
+          "items": {
+            "$ref": "#/$defs/Restaurant"
+          },
+          "title": "Restaurant List",
+          "type": "array"
+        }
+      },
+      "required": [
+        "restaurant_list"
+      ],
+      "title": "Restaurants",
+      "type": "object"
+    },
+    "User": {
+      "properties": {
+        "first_name": {
+          "title": "First Name",
+          "type": "string"
+        },
+        "last_name": {
+          "title": "Last Name",
+          "type": "string"
+        },
+        "ID_number": {
+          "title": "Id Number",
+          "type": "string"
+        },
+        "email": {
+          "title": "Email",
+          "type": "string"
+        },
+        "phone_number": {
+          "title": "Phone Number",
+          "type": "string"
+        },
+        "address": {
+          "title": "Address",
+          "type": "string"
+        },
+        "passport_number": {
+          "title": "Passport Number",
+          "type": "string"
+        },
+        "bank_account_number": {
+          "title": "Bank Account Number",
+          "type": "string"
+        },
+        "credit_card_number": {
+          "title": "Credit Card Number",
+          "type": "string"
+        }
+      },
+      "required": [
+        "first_name",
+        "last_name",
+        "ID_number",
+        "email",
+        "phone_number",
+        "address",
+        "passport_number",
+        "bank_account_number",
+        "credit_card_number"
+      ],
+      "title": "User",
+      "type": "object"
+    }
+  },
+  "properties": {
+    "hotels": {
+      "$ref": "#/$defs/Hotels"
+    },
+    "restaurants": {
+      "$ref": "#/$defs/Restaurants"
+    },
+    "car_rental": {
+      "$ref": "#/$defs/CarRental"
+    },
+    "flights": {
+      "$ref": "#/$defs/Flights"
+    },
+    "user": {
+      "$ref": "#/$defs/User"
+    },
+    "calendar": {
+      "$ref": "#/$defs/Calendar"
+    },
+    "reservation": {
+      "$ref": "#/$defs/Reservation"
+    },
+    "inbox": {
+      "$ref": "#/$defs/Inbox"
+    }
+  },
+  "required": [
+    "hotels",
+    "restaurants",
+    "car_rental",
+    "flights",
+    "user",
+    "calendar",
+    "reservation",
+    "inbox"
+  ],
+  "title": "TravelEnvironment",
+  "type": "object"
+}

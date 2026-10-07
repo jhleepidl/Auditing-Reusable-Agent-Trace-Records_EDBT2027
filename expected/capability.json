@@ -1,0 +1,122 @@
+{
+  "prediction_sha256": "e6b157f335a3a0814d45ad5b0940581165496f3b9b7b248b5a239c262b31aa86",
+  "designation": "expert-authored capability not model performance",
+  "cases": 384,
+  "agreement": 380,
+  "per_task": {
+    "banking/user_task_1": {
+      "cases": 48,
+      "agreement": 48,
+      "valid_retention": 1.0,
+      "false_pass": 0.0,
+      "unknown_promotions": 0
+    },
+    "banking/user_task_11": {
+      "cases": 48,
+      "agreement": 44,
+      "valid_retention": 0.6666666666666666,
+      "false_pass": 0.0,
+      "unknown_promotions": 0
+    },
+    "banking/user_task_4": {
+      "cases": 48,
+      "agreement": 48,
+      "valid_retention": 1.0,
+      "false_pass": 0.0,
+      "unknown_promotions": 0
+    },
+    "banking/user_task_5": {
+      "cases": 48,
+      "agreement": 48,
+      "valid_retention": 1.0,
+      "false_pass": 0.0,
+      "unknown_promotions": 0
+    },
+    "slack/user_task_10": {
+      "cases": 48,
+      "agreement": 48,
+      "valid_retention": 1.0,
+      "false_pass": 0.0,
+      "unknown_promotions": 0
+    },
+    "slack/user_task_13": {
+      "cases": 48,
+      "agreement": 48,
+      "valid_retention": 1.0,
+      "false_pass": 0.0,
+      "unknown_promotions": 0
+    },
+    "slack/user_task_14": {
+      "cases": 48,
+      "agreement": 48,
+      "valid_retention": 1.0,
+      "false_pass": 0.0,
+      "unknown_promotions": 0
+    },
+    "travel/user_task_14": {
+      "cases": 48,
+      "agreement": 48,
+      "valid_retention": 1.0,
+      "false_pass": 0.0,
+      "unknown_promotions": 0
+    }
+  },
+  "mismatches": [
+    {
+      "case_id": "banking__user_task_11__w3__c01_valid",
+      "task_key": "banking/user_task_11",
+      "world_id": 3,
+      "scope_id": "banking__user_task_11__r22_world_3__view_v2",
+      "scope_sha256": "661126c613e3ec3b839f8a5b8b8911c2ca33e0764cd1d68a9dabed31c1aefa2e",
+      "source_packet_sha256": "fb9b81dd702a832e9c814013ef4a085aaf89311e97c25b7da69b7a4ab9a46122",
+      "input_sha256": "fa859734881dc82430bf6b45b4968abbd6861b67a6dd23eba6d798e515e85708",
+      "method": "expert_capability",
+      "model": "none",
+      "repeat": 1,
+      "status": "fail",
+      "reference": "pass"
+    },
+    {
+      "case_id": "banking__user_task_11__w3__c02_valid_order",
+      "task_key": "banking/user_task_11",
+      "world_id": 3,
+      "scope_id": "banking__user_task_11__r22_world_3__view_v2",
+      "scope_sha256": "661126c613e3ec3b839f8a5b8b8911c2ca33e0764cd1d68a9dabed31c1aefa2e",
+      "source_packet_sha256": "fb9b81dd702a832e9c814013ef4a085aaf89311e97c25b7da69b7a4ab9a46122",
+      "input_sha256": "fa859734881dc82430bf6b45b4968abbd6861b67a6dd23eba6d798e515e85708",
+      "method": "expert_capability",
+      "model": "none",
+      "repeat": 1,
+      "status": "fail",
+      "reference": "pass"
+    },
+    {
+      "case_id": "banking__user_task_11__w4__c01_valid",
+      "task_key": "banking/user_task_11",
+      "world_id": 4,
+      "scope_id": "banking__user_task_11__r22_world_4__view_v2",
+      "scope_sha256": "5b9f111d0a54d6418ef463435a29e76cd9953254730cbb2ff2d08298f9d971d6",
+      "source_packet_sha256": "d870dbc8a678f6cf99f9463b0c0f1e4b359074e257225e0fb465a951f862383c",
+      "input_sha256": "d6c5bc46af872614fa3f04897115d1253e39f56aecc05ddd738e6ded10399635",
+      "method": "expert_capability",
+      "model": "none",
+      "repeat": 1,
+      "status": "fail",
+      "reference": "pass"
+    },
+    {
+      "case_id": "banking__user_task_11__w4__c02_valid_order",
+      "task_key": "banking/user_task_11",
+      "world_id": 4,
+      "scope_id": "banking__user_task_11__r22_world_4__view_v2",
+      "scope_sha256": "5b9f111d0a54d6418ef463435a29e76cd9953254730cbb2ff2d08298f9d971d6",
+      "source_packet_sha256": "d870dbc8a678f6cf99f9463b0c0f1e4b359074e257225e0fb465a951f862383c",
+      "input_sha256": "d6c5bc46af872614fa3f04897115d1253e39f56aecc05ddd738e6ded10399635",
+      "method": "expert_capability",
+      "model": "none",
+      "repeat": 1,
+      "status": "fail",
+      "reference": "pass"
+    }
+  ]
+}

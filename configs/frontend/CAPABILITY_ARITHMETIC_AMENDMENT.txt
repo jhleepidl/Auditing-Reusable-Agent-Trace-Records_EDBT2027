@@ -1,0 +1,12 @@
+# Capability arithmetic correction (development only)
+The initial expert controls used implicit currency rounding to two places. This
+was an authoring assumption not required by the frozen selected field condition.
+It caused four false rejections (VAT worlds 3 and 4, two fixtures each): exact
+297.751 / 86.254 were rounded to 297.75 / 86.25. All 48 programs did compile.
+
+The exact variant removes the unspecified quantize operation from ALL three
+monetary arithmetic templates, not just failing cases; uses the original exact
+Decimal operations and JSON representability check; inserts no reference scalar.
+Every intermediate, initial result (380/384), and corrected program is preserved.
+The correction is selected using exposed development outcomes and is NOT a held-
+out success. Subsequent scoring uses the same 384 fixed cases for regression.

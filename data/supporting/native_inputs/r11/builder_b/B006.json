@@ -1,0 +1,47 @@
+{
+  "packet_id": "B006",
+  "classification": "state",
+  "classification_reason": "The request is to check and update the rent payment for the next month. The initial state contains a scheduled rent payment for 1100.0, but a landlord notice indicates the rent will increase by 100.0 starting next month. A necessary condition is that a scheduled transaction for rent for the next month must exist and reflect the increased amount. The recipient and subject must match the existing rent payment, but the exact date for 'next month' is ambiguous.",
+  "state_predicates": [
+    {
+      "path": "/bank_account/scheduled_transactions/*",
+      "operator": "equals",
+      "value": "Rent",
+      "requires_new_entity": false,
+      "selector": [
+        {
+          "field": "subject",
+          "value": "Rent"
+        }
+      ],
+      "evidence_paths": [
+        "/bank_account/scheduled_transactions/1",
+        "/filesystem/landlord-notices.txt"
+      ],
+      "justification": "There must be a scheduled transaction for rent, as the user requests to update the rent payment."
+    },
+    {
+      "path": "/bank_account/scheduled_transactions/*/amount",
+      "operator": "equals",
+      "value": 1200.0,
+      "requires_new_entity": false,
+      "selector": [
+        {
+          "field": "subject",
+          "value": "Rent"
+        }
+      ],
+      "evidence_paths": [
+        "/bank_account/scheduled_transactions/1",
+        "/filesystem/landlord-notices.txt"
+      ],
+      "justification": "The landlord notice states the rent increases by 100.0 starting next month, so the scheduled rent payment must be updated to 1200.0."
+    }
+  ],
+  "answer_facts": [],
+  "ambiguities": [
+    "The exact date for the next month's rent payment is ambiguous; the scheduled transaction is for 2022-04-04, but the request does not specify the intended month or year.",
+    "It is unclear whether the existing scheduled transaction should be updated or replaced, or if a new one should be created if none exists for the next month.",
+    "The recipient IBAN for the rent payment is not explicitly confirmed as correct for the landlord; it is inferred from the existing scheduled transaction."
+  ]
+}

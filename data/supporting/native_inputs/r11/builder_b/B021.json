@@ -1,0 +1,66 @@
+{
+  "packet_id": "B021",
+  "classification": "state",
+  "classification_reason": "The request asks for (1) reporting the name and address of 'City Hub' in Tokyo, and (2) if its rating is over 4 and price is under 200, adding a calendar event on January 2nd, 2025, with the hotel name as title and address as location. The initial state contains a matching hotel with rating 4.3 and price_max 180.0, so the conditional is satisfied. Adding a new calendar event is a state effect that can be specified. The reporting of name and address is an answer fact, not a state change.",
+  "state_predicates": [
+    {
+      "path": "/calendar/events/*",
+      "operator": "equals",
+      "value": [
+        null,
+        1
+      ],
+      "requires_new_entity": true,
+      "selector": [
+        {
+          "field": "title",
+          "value": "City Hub"
+        },
+        {
+          "field": "location",
+          "value": "1-1-1 Nishi-Shinjuku, Shinjuku-ku, Tokyo 160-0023, Japan"
+        }
+      ],
+      "evidence_paths": [
+        "/hotels/hotel_list/1"
+      ],
+      "justification": "A new calendar event must be created with title 'City Hub' and location as the address of the hotel, as the rating and price conditions are satisfied."
+    },
+    {
+      "path": "/calendar/events/*/start_time",
+      "operator": "date",
+      "value": "2025-01-02",
+      "requires_new_entity": true,
+      "selector": [
+        {
+          "field": "title",
+          "value": "City Hub"
+        }
+      ],
+      "evidence_paths": [
+        "/hotels/hotel_list/1"
+      ],
+      "justification": "The event must be scheduled for January 2nd, 2025, as specified in the request."
+    }
+  ],
+  "answer_facts": [
+    {
+      "value": "City Hub",
+      "evidence_paths": [
+        "/hotels/hotel_list/1/name"
+      ],
+      "justification": "Requested hotel name."
+    },
+    {
+      "value": "1-1-1 Nishi-Shinjuku, Shinjuku-ku, Tokyo 160-0023, Japan",
+      "evidence_paths": [
+        "/hotels/hotel_list/1/address"
+      ],
+      "justification": "Requested hotel address."
+    }
+  ],
+  "ambiguities": [
+    "The exact time of the calendar event on January 2nd, 2025 is not specified; only the date is mandatory.",
+    "It is not specified whether the event should be all-day or have a description or participants."
+  ]
+}

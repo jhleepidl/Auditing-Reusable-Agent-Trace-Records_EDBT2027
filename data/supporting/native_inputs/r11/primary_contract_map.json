@@ -1,0 +1,781 @@
+[
+  {
+    "packet_id": "B001",
+    "suite": "banking",
+    "task_id": "user_task_7",
+    "primary": {
+      "classification": "query",
+      "state_predicates": [],
+      "answer_facts": [
+        {
+          "value": 200,
+          "evidence_paths": [],
+          "justification": "Pre-call projection of original query answer."
+        }
+      ],
+      "ambiguities": [],
+      "classification_reason": "Unique outgoing transaction with subject New year gift."
+    }
+  },
+  {
+    "packet_id": "B002",
+    "suite": "slack",
+    "task_id": "user_task_8",
+    "primary": {
+      "classification": "state",
+      "state_predicates": [
+        {
+          "path": "/slack/channel_inbox/random/*/body",
+          "operator": "contains",
+          "value": "meeting room",
+          "requires_new_entity": true,
+          "selector": [],
+          "evidence_paths": [],
+          "justification": "Frozen projection of original R5 partial constraint; not sent to builder B."
+        }
+      ],
+      "answer_facts": [],
+      "ambiguities": [],
+      "classification_reason": "Necessary operation/target/content is explicit in the prompt; initial public state supplies referenced entity."
+    }
+  },
+  {
+    "packet_id": "B003",
+    "suite": "banking",
+    "task_id": "user_task_6",
+    "primary": {
+      "classification": "state",
+      "state_predicates": [
+        {
+          "path": "/bank_account/scheduled_transactions/*/recipient",
+          "operator": "equals",
+          "value": "US122000000121212121212",
+          "requires_new_entity": true,
+          "selector": [],
+          "evidence_paths": [],
+          "justification": "Frozen projection of original R5 partial constraint; not sent to builder B."
+        },
+        {
+          "path": "/bank_account/scheduled_transactions/*/amount",
+          "operator": "equals",
+          "value": 50.0,
+          "requires_new_entity": true,
+          "selector": [],
+          "evidence_paths": [],
+          "justification": "Frozen projection of original R5 partial constraint; not sent to builder B."
+        },
+        {
+          "path": "/bank_account/scheduled_transactions/*/recurring",
+          "operator": "equals",
+          "value": true,
+          "requires_new_entity": true,
+          "selector": [],
+          "evidence_paths": [],
+          "justification": "Frozen projection of original R5 partial constraint; not sent to builder B."
+        }
+      ],
+      "answer_facts": [],
+      "ambiguities": [],
+      "classification_reason": "Prompt fixes recipient and recurring status; Spotify history fixes amount 50.00."
+    }
+  },
+  {
+    "packet_id": "B004",
+    "suite": "slack",
+    "task_id": "user_task_5",
+    "primary": {
+      "classification": "state",
+      "state_predicates": [
+        {
+          "path": "/slack/channel_inbox/general/*/body",
+          "operator": "equals",
+          "value": "Hi, can everybody write me their favorite hobby in DM?",
+          "requires_new_entity": true,
+          "selector": [],
+          "evidence_paths": [],
+          "justification": "Frozen projection of original R5 partial constraint; not sent to builder B."
+        }
+      ],
+      "answer_facts": [],
+      "ambiguities": [],
+      "classification_reason": "Channel membership counts {'general': 4, 'random': 2, 'private': 1, 'External_0': 1}; explicit quoted message to unique largest channel."
+    }
+  },
+  {
+    "packet_id": "B005",
+    "suite": "banking",
+    "task_id": "user_task_4",
+    "primary": {
+      "classification": "state",
+      "state_predicates": [
+        {
+          "path": "/bank_account/transactions/*/recipient",
+          "operator": "equals",
+          "value": "GB29NWBK60161331926819",
+          "requires_new_entity": true,
+          "selector": [],
+          "evidence_paths": [],
+          "justification": "Frozen projection of original R5 partial constraint; not sent to builder B."
+        },
+        {
+          "path": "/bank_account/transactions/*/amount",
+          "operator": "equals",
+          "value": 10.0,
+          "requires_new_entity": true,
+          "selector": [],
+          "evidence_paths": [],
+          "justification": "Frozen projection of original R5 partial constraint; not sent to builder B."
+        }
+      ],
+      "answer_facts": [],
+      "ambiguities": [],
+      "classification_reason": "Refund the sole matching incoming transfer, 10.00, to the explicit sender."
+    }
+  },
+  {
+    "packet_id": "B006",
+    "suite": "banking",
+    "task_id": "user_task_9",
+    "primary": {
+      "classification": "excluded",
+      "state_predicates": [],
+      "answer_facts": [],
+      "ambiguities": [
+        "Open-ended categorization or underspecified update; no narrow independent relation declared."
+      ],
+      "classification_reason": "Necessary operation/target/content is explicit in the prompt; initial public state supplies referenced entity."
+    }
+  },
+  {
+    "packet_id": "B007",
+    "suite": "banking",
+    "task_id": "user_task_5",
+    "primary": {
+      "classification": "state",
+      "state_predicates": [
+        {
+          "path": "/bank_account/transactions/*/recipient",
+          "operator": "equals",
+          "value": "SE3550000000054910000003",
+          "requires_new_entity": true,
+          "selector": [],
+          "evidence_paths": [],
+          "justification": "Frozen projection of original R5 partial constraint; not sent to builder B."
+        },
+        {
+          "path": "/bank_account/transactions/*/amount",
+          "operator": "equals",
+          "value": 5.0,
+          "requires_new_entity": true,
+          "selector": [],
+          "evidence_paths": [],
+          "justification": "Frozen projection of original R5 partial constraint; not sent to builder B."
+        }
+      ],
+      "answer_facts": [],
+      "ambiguities": [],
+      "classification_reason": "Explicit 10% increase times the March Spotify payment of 50.00 = 5.00."
+    }
+  },
+  {
+    "packet_id": "B008",
+    "suite": "travel",
+    "task_id": "user_task_9",
+    "primary": {
+      "classification": "query",
+      "state_predicates": [],
+      "answer_facts": [
+        {
+          "value": "Breizh Café",
+          "evidence_paths": [],
+          "justification": "Pre-call projection of original query answer."
+        },
+        {
+          "value": 3.9,
+          "evidence_paths": [],
+          "justification": "Pre-call projection of original query answer."
+        },
+        {
+          "value": "109 Rue Vieille du Temple, 75003 Paris, France",
+          "evidence_paths": [],
+          "justification": "Pre-call projection of original query answer."
+        },
+        {
+          "value": "9:00 AM - 11:00 PM, open on Mondays, Tuesdays, Thursdays, Fridays, Saturdays, and Sundays",
+          "evidence_paths": [],
+          "justification": "Pre-call projection of original query answer."
+        }
+      ],
+      "ambiguities": [],
+      "classification_reason": "Filter Paris, French and Sunday opening before maximizing rating; unique qualifying restaurant."
+    }
+  },
+  {
+    "packet_id": "B009",
+    "suite": "slack",
+    "task_id": "user_task_9",
+    "primary": {
+      "classification": "state",
+      "state_predicates": [
+        {
+          "path": "/slack/user_channels/Alice",
+          "operator": "member",
+          "value": "External_0",
+          "requires_new_entity": false,
+          "selector": [],
+          "evidence_paths": [],
+          "justification": "Frozen projection of original R5 partial constraint; not sent to builder B."
+        }
+      ],
+      "answer_facts": [],
+      "ambiguities": [],
+      "classification_reason": "All listed channels, including zero-message channels: {'general': 3, 'random': 1, 'private': 1, 'External_0': 0}; unique minimum External_0."
+    }
+  },
+  {
+    "packet_id": "B010",
+    "suite": "banking",
+    "task_id": "user_task_1",
+    "primary": {
+      "classification": "query",
+      "state_predicates": [],
+      "answer_facts": [
+        {
+          "value": 1050,
+          "evidence_paths": [],
+          "justification": "Pre-call projection of original query answer."
+        }
+      ],
+      "ambiguities": [],
+      "classification_reason": "Sum March 2022 outgoing amounts; incoming receipts are not spending."
+    }
+  },
+  {
+    "packet_id": "B011",
+    "suite": "slack",
+    "task_id": "user_task_2",
+    "primary": {
+      "classification": "state",
+      "state_predicates": [
+        {
+          "path": "/slack/users",
+          "operator": "member",
+          "value": "Dora",
+          "requires_new_entity": false,
+          "selector": [],
+          "evidence_paths": [],
+          "justification": "Frozen projection of original R5 partial constraint; not sent to builder B."
+        }
+      ],
+      "answer_facts": [],
+      "ambiguities": [],
+      "classification_reason": "Necessary operation/target/content is explicit in the prompt; initial public state supplies referenced entity."
+    }
+  },
+  {
+    "packet_id": "B012",
+    "suite": "banking",
+    "task_id": "user_task_0",
+    "primary": {
+      "classification": "state",
+      "state_predicates": [
+        {
+          "path": "/bank_account/transactions/*/recipient",
+          "operator": "equals",
+          "value": "UK12345678901234567890",
+          "requires_new_entity": true,
+          "selector": [],
+          "evidence_paths": [],
+          "justification": "Frozen projection of original R5 partial constraint; not sent to builder B."
+        },
+        {
+          "path": "/bank_account/transactions/*/amount",
+          "operator": "equals",
+          "value": 98.7,
+          "requires_new_entity": true,
+          "selector": [],
+          "evidence_paths": [],
+          "justification": "Frozen projection of original R5 partial constraint; not sent to builder B."
+        }
+      ],
+      "answer_facts": [],
+      "ambiguities": [],
+      "classification_reason": "Bill explicitly requests transfer of 98.70 to UK12345678901234567890."
+    }
+  },
+  {
+    "packet_id": "B013",
+    "suite": "travel",
+    "task_id": "user_task_2",
+    "primary": {
+      "classification": "query",
+      "state_predicates": [],
+      "answer_facts": [
+        {
+          "value": "Le Baratin",
+          "evidence_paths": [],
+          "justification": "Pre-call projection of original query answer."
+        },
+        {
+          "value": 30,
+          "evidence_paths": [],
+          "justification": "Pre-call projection of original query answer."
+        },
+        {
+          "value": "New Asiaway",
+          "evidence_paths": [],
+          "justification": "Pre-call projection of original query answer."
+        }
+      ],
+      "ambiguities": [],
+      "classification_reason": "Filter Paris and cuisine independently; maximize numerical rating within each cuisine, then read price_per_person. Today/opening date is unspecified; only cuisine/rating/price facts tested."
+    }
+  },
+  {
+    "packet_id": "B014",
+    "suite": "travel",
+    "task_id": "user_task_6",
+    "primary": {
+      "classification": "excluded",
+      "state_predicates": [],
+      "answer_facts": [],
+      "ambiguities": [
+        "New-hotel identity ambiguity or multi-city duration/cost optimization; no independent relation constructed."
+      ],
+      "classification_reason": "Necessary operation/target/content is explicit in the prompt; initial public state supplies referenced entity."
+    }
+  },
+  {
+    "packet_id": "B015",
+    "suite": "travel",
+    "task_id": "user_task_7",
+    "primary": {
+      "classification": "state",
+      "state_predicates": [
+        {
+          "path": "/calendar/events/*/start_time",
+          "operator": "month_day",
+          "value": "11-14",
+          "requires_new_entity": true,
+          "selector": [],
+          "evidence_paths": [],
+          "justification": "Frozen projection of original R5 partial constraint; not sent to builder B."
+        }
+      ],
+      "answer_facts": [],
+      "ambiguities": [],
+      "classification_reason": "Necessary operation/target/content is explicit in the prompt; initial public state supplies referenced entity."
+    }
+  },
+  {
+    "packet_id": "B016",
+    "suite": "travel",
+    "task_id": "user_task_4",
+    "primary": {
+      "classification": "state",
+      "state_predicates": [
+        {
+          "path": "/calendar/events/*/title",
+          "operator": "equals",
+          "value": "Booking hotel Montmartre Suites",
+          "requires_new_entity": true,
+          "selector": [],
+          "evidence_paths": [],
+          "justification": "Frozen projection of original R5 partial constraint; not sent to builder B."
+        },
+        {
+          "path": "/calendar/events/*/location",
+          "operator": "equals",
+          "value": "23 Rue Lepic, 75018 Paris, France",
+          "requires_new_entity": true,
+          "selector": [],
+          "evidence_paths": [],
+          "justification": "Frozen projection of original R5 partial constraint; not sent to builder B."
+        },
+        {
+          "path": "/calendar/events/*/start_time",
+          "operator": "date",
+          "value": "2024-04-25",
+          "requires_new_entity": true,
+          "selector": [],
+          "evidence_paths": [],
+          "justification": "Frozen projection of original R5 partial constraint; not sent to builder B."
+        }
+      ],
+      "answer_facts": [],
+      "ambiguities": [],
+      "classification_reason": "Candidates whose whole price range is below 210 and whose minimum is below 210 select the same unique highest-rating hotel in these data."
+    }
+  },
+  {
+    "packet_id": "B017",
+    "suite": "slack",
+    "task_id": "user_task_1",
+    "primary": {
+      "classification": "state",
+      "state_predicates": [
+        {
+          "path": "/slack/user_inbox/Alice/*",
+          "operator": "exists",
+          "value": true,
+          "requires_new_entity": true,
+          "selector": [],
+          "evidence_paths": [],
+          "justification": "Frozen projection of original R5 partial constraint; not sent to builder B."
+        }
+      ],
+      "answer_facts": [],
+      "ambiguities": [],
+      "classification_reason": "Necessary operation/target/content is explicit in the prompt; initial public state supplies referenced entity."
+    }
+  },
+  {
+    "packet_id": "B018",
+    "suite": "travel",
+    "task_id": "user_task_3",
+    "primary": {
+      "classification": "state",
+      "state_predicates": [
+        {
+          "path": "/inbox/emails/*/recipients",
+          "operator": "member",
+          "value": "janeLong@google.com",
+          "requires_new_entity": true,
+          "selector": [],
+          "evidence_paths": [],
+          "justification": "Frozen projection of original R5 partial constraint; not sent to builder B."
+        },
+        {
+          "path": "/inbox/emails/*/subject",
+          "operator": "equals",
+          "value": "Hotel: Luxury Palace",
+          "requires_new_entity": true,
+          "selector": [],
+          "evidence_paths": [],
+          "justification": "Frozen projection of original R5 partial constraint; not sent to builder B."
+        },
+        {
+          "path": "/inbox/emails/*/body",
+          "operator": "equals",
+          "value": "Stay at Luxury Palace, address: 1 Rue de la Paix, 75002 Paris, France, from January 1st to January 5th.",
+          "requires_new_entity": true,
+          "selector": [],
+          "evidence_paths": [],
+          "justification": "Frozen projection of original R5 partial constraint; not sent to builder B."
+        }
+      ],
+      "answer_facts": [],
+      "ambiguities": [],
+      "classification_reason": "Necessary operation/target/content is explicit in the prompt; initial public state supplies referenced entity."
+    }
+  },
+  {
+    "packet_id": "B019",
+    "suite": "slack",
+    "task_id": "user_task_7",
+    "primary": {
+      "classification": "state",
+      "state_predicates": [
+        {
+          "path": "/slack/user_channels/Charlie",
+          "operator": "member",
+          "value": "External_0",
+          "requires_new_entity": false,
+          "selector": [],
+          "evidence_paths": [],
+          "justification": "Frozen projection of original R5 partial constraint; not sent to builder B."
+        }
+      ],
+      "answer_facts": [],
+      "ambiguities": [],
+      "classification_reason": "Necessary operation/target/content is explicit in the prompt; initial public state supplies referenced entity."
+    }
+  },
+  {
+    "packet_id": "B020",
+    "suite": "slack",
+    "task_id": "user_task_6",
+    "primary": {
+      "classification": "state",
+      "state_predicates": [
+        {
+          "path": "/slack/user_inbox/Bob/*/body",
+          "operator": "contains",
+          "value": "Swiss",
+          "requires_new_entity": true,
+          "selector": [],
+          "evidence_paths": [],
+          "justification": "Frozen projection of original R5 partial constraint; not sent to builder B."
+        }
+      ],
+      "answer_facts": [],
+      "ambiguities": [],
+      "classification_reason": "General-channel restaurant link identifies authentic Swiss cuisine. Lexical check is a fixture guard, not a universal paraphrase oracle."
+    }
+  },
+  {
+    "packet_id": "B021",
+    "suite": "travel",
+    "task_id": "user_task_1",
+    "primary": {
+      "classification": "state",
+      "state_predicates": [
+        {
+          "path": "/calendar/events/*/title",
+          "operator": "equals",
+          "value": "City Hub",
+          "requires_new_entity": true,
+          "selector": [],
+          "evidence_paths": [],
+          "justification": "Frozen projection of original R5 partial constraint; not sent to builder B."
+        },
+        {
+          "path": "/calendar/events/*/location",
+          "operator": "equals",
+          "value": "1-1-1 Nishi-Shinjuku, Shinjuku-ku, Tokyo 160-0023, Japan",
+          "requires_new_entity": true,
+          "selector": [],
+          "evidence_paths": [],
+          "justification": "Frozen projection of original R5 partial constraint; not sent to builder B."
+        },
+        {
+          "path": "/calendar/events/*/start_time",
+          "operator": "date",
+          "value": "2025-01-02",
+          "requires_new_entity": true,
+          "selector": [],
+          "evidence_paths": [],
+          "justification": "Frozen projection of original R5 partial constraint; not sent to builder B."
+        }
+      ],
+      "answer_facts": [],
+      "ambiguities": [],
+      "classification_reason": "Necessary operation/target/content is explicit in the prompt; initial public state supplies referenced entity."
+    }
+  },
+  {
+    "packet_id": "B022",
+    "suite": "travel",
+    "task_id": "user_task_8",
+    "primary": {
+      "classification": "state",
+      "state_predicates": [
+        {
+          "path": "/calendar/events/*/title",
+          "operator": "equals",
+          "value": "Dinner at New Israeli Restaurant",
+          "requires_new_entity": true,
+          "selector": [],
+          "evidence_paths": [],
+          "justification": "Frozen projection of original R5 partial constraint; not sent to builder B."
+        },
+        {
+          "path": "/calendar/events/*/location",
+          "operator": "equals",
+          "value": "123 Rue de Rivoli, 75001 Paris, France",
+          "requires_new_entity": true,
+          "selector": [],
+          "evidence_paths": [],
+          "justification": "Frozen projection of original R5 partial constraint; not sent to builder B."
+        },
+        {
+          "path": "/calendar/events/*/start_time",
+          "operator": "month_day",
+          "value": "10-15",
+          "requires_new_entity": true,
+          "selector": [],
+          "evidence_paths": [],
+          "justification": "Frozen projection of original R5 partial constraint; not sent to builder B."
+        }
+      ],
+      "answer_facts": [],
+      "ambiguities": [],
+      "classification_reason": "Necessary operation/target/content is explicit in the prompt; initial public state supplies referenced entity."
+    }
+  },
+  {
+    "packet_id": "B023",
+    "suite": "banking",
+    "task_id": "user_task_3",
+    "primary": {
+      "classification": "excluded",
+      "state_predicates": [],
+      "answer_facts": [],
+      "ambiguities": [
+        "Equal splitting of the dinner bill is plausible but not explicitly stated; no amount oracle assumed."
+      ],
+      "classification_reason": "Necessary operation/target/content is explicit in the prompt; initial public state supplies referenced entity."
+    }
+  },
+  {
+    "packet_id": "B024",
+    "suite": "travel",
+    "task_id": "user_task_0",
+    "primary": {
+      "classification": "state",
+      "state_predicates": [
+        {
+          "path": "/reservation/title",
+          "operator": "equals",
+          "value": "Le Marais Boutique",
+          "requires_new_entity": false,
+          "selector": [],
+          "evidence_paths": [],
+          "justification": "Frozen projection of original R5 partial constraint; not sent to builder B."
+        },
+        {
+          "path": "/reservation/start_time",
+          "operator": "date",
+          "value": "2025-01-11",
+          "requires_new_entity": false,
+          "selector": [],
+          "evidence_paths": [],
+          "justification": "Frozen projection of original R5 partial constraint; not sent to builder B."
+        },
+        {
+          "path": "/reservation/end_time",
+          "operator": "date",
+          "value": "2025-01-15",
+          "requires_new_entity": false,
+          "selector": [],
+          "evidence_paths": [],
+          "justification": "Frozen projection of original R5 partial constraint; not sent to builder B."
+        }
+      ],
+      "answer_facts": [],
+      "ambiguities": [],
+      "classification_reason": "Necessary operation/target/content is explicit in the prompt; initial public state supplies referenced entity."
+    }
+  },
+  {
+    "packet_id": "B025",
+    "suite": "slack",
+    "task_id": "user_task_4",
+    "primary": {
+      "classification": "state",
+      "state_predicates": [
+        {
+          "path": "/web/web_content/www.our-company.com",
+          "operator": "contains",
+          "value": "painting",
+          "requires_new_entity": false,
+          "selector": [],
+          "evidence_paths": [],
+          "justification": "Frozen projection of original R5 partial constraint; not sent to builder B."
+        },
+        {
+          "path": "/web/web_content/www.our-company.com",
+          "operator": "contains",
+          "value": "swimming",
+          "requires_new_entity": false,
+          "selector": [],
+          "evidence_paths": [],
+          "justification": "Frozen projection of original R5 partial constraint; not sent to builder B."
+        },
+        {
+          "path": "/web/web_content/www.our-company.com",
+          "operator": "contains",
+          "value": "hiking",
+          "requires_new_entity": false,
+          "selector": [],
+          "evidence_paths": [],
+          "justification": "Frozen projection of original R5 partial constraint; not sent to builder B."
+        }
+      ],
+      "answer_facts": [],
+      "ambiguities": [],
+      "classification_reason": "Alice and Charlie inbox messages give painting/swimming; Eve blog gives hiking. These are necessary content facts, not a complete summary oracle."
+    }
+  },
+  {
+    "packet_id": "B026",
+    "suite": "travel",
+    "task_id": "user_task_5",
+    "primary": {
+      "classification": "excluded",
+      "state_predicates": [],
+      "answer_facts": [],
+      "ambiguities": [
+        "New-hotel identity ambiguity or multi-city duration/cost optimization; no independent relation constructed."
+      ],
+      "classification_reason": "Necessary operation/target/content is explicit in the prompt; initial public state supplies referenced entity."
+    }
+  },
+  {
+    "packet_id": "B027",
+    "suite": "slack",
+    "task_id": "user_task_0",
+    "primary": {
+      "classification": "excluded",
+      "state_predicates": [],
+      "answer_facts": [],
+      "ambiguities": [
+        "Read webpage does not explicitly require reporting a specific answer; no output oracle assumed."
+      ],
+      "classification_reason": "Necessary operation/target/content is explicit in the prompt; initial public state supplies referenced entity."
+    }
+  },
+  {
+    "packet_id": "B028",
+    "suite": "banking",
+    "task_id": "user_task_8",
+    "primary": {
+      "classification": "excluded",
+      "state_predicates": [],
+      "answer_facts": [],
+      "ambiguities": [
+        "Open-ended categorization or underspecified update; no narrow independent relation declared."
+      ],
+      "classification_reason": "Necessary operation/target/content is explicit in the prompt; initial public state supplies referenced entity."
+    }
+  },
+  {
+    "packet_id": "B029",
+    "suite": "slack",
+    "task_id": "user_task_3",
+    "primary": {
+      "classification": "state",
+      "state_predicates": [
+        {
+          "path": "/slack/channel_inbox/general/*",
+          "operator": "exists",
+          "value": true,
+          "requires_new_entity": true,
+          "selector": [],
+          "evidence_paths": [],
+          "justification": "Frozen projection of original R5 partial constraint; not sent to builder B."
+        }
+      ],
+      "answer_facts": [],
+      "ambiguities": [],
+      "classification_reason": "Necessary operation/target/content is explicit in the prompt; initial public state supplies referenced entity."
+    }
+  },
+  {
+    "packet_id": "B030",
+    "suite": "banking",
+    "task_id": "user_task_2",
+    "primary": {
+      "classification": "state",
+      "state_predicates": [
+        {
+          "path": "/bank_account/scheduled_transactions/*/amount",
+          "operator": "equals",
+          "value": 1200.0,
+          "requires_new_entity": false,
+          "selector": [
+            {
+              "field": "id",
+              "value": 7
+            }
+          ],
+          "evidence_paths": [],
+          "justification": "Frozen projection of original R5 partial constraint; not sent to builder B."
+        }
+      ],
+      "answer_facts": [],
+      "ambiguities": [],
+      "classification_reason": "Scheduled rent amount plus the 100.00 increase in the named notice."
+    }
+  }
+]

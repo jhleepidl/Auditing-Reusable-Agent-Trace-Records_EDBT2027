@@ -1,0 +1,33 @@
+{
+  "status": "FROZEN_AFTER_EXPOSED_POLICY_REGRESSIONS_BEFORE_RETAINED_CANDIDATE_REPLAY_OR_NEW_MODEL_CALLS",
+  "utc": "2026-10-04T15:26:06.287212+00:00",
+  "IR_version": "r22.1",
+  "baseline_r21_2_executor_sha256": "9963d1280ca1ad0946a902b88778bdd5c527ad32ca2efb1456edcbfa18871199",
+  "changes": [
+    "entity/property collection precedes explicit-role contradiction qualification",
+    "quoted polarity survives three existing negation positions"
+  ],
+  "semantic_operands_source_reference_admission_state_semantics_unchanged": true,
+  "new_grammar_forms": 0,
+  "regressions": {
+    "methods_passed": 32,
+    "inherited_methods": 23,
+    "new_methods": 9,
+    "targeted_old_controls_passed": 7
+  },
+  "prior_attempts_retained": [
+    "../attempt_v1_role_only",
+    "../attempt_v2_quote_precedence",
+    "../quote_probe_attempt1"
+  ],
+  "files": {
+    "contract_executor.py": "bb0f645072196200c05929499e8088a947323997f5e64eff5a15028b46e6b8e5",
+    "output_schema.json": "42ab5ed9501925e99e37826607002967f4af75c9fa7f6cb6c791aad382ed31b0",
+    "test_executor.py": "cce8ed75f3ffa12dc974a2a8b034b527ffb34b445b607c0dc570e460150edac4",
+    "IR_SPEC.md": "a86b8e7bbb1f185a8612e531abcb12cba2c35e46ed6575945b3789ae4ce8bea6",
+    "run_checks.py": "c83bf712df50578fb63ffcba952bdb567bcbb4b1a6017322c3fce28b40d2e7fc",
+    "CHANGELOG_R22.md": "4d5195da7d51cb850c4181ef76c8477b4fbf86aeacc3330f28c075f6b4030768"
+  },
+  "plan_sha256": "20b32d638692618a9a4a01ef4d6a7f10190ed44e7691d47785af0c2b57e33467",
+  "new_API_calls": 0
+}

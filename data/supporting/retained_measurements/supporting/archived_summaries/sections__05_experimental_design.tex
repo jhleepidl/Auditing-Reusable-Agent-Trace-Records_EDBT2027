@@ -1,0 +1,58 @@
+\section{Experimental Design}
+\label{sec:design}
+The studies answer different audit questions and are not pooled into one accuracy estimate. Table~\ref{tab:studies} records model identity because the protocols use different snapshots.
+
+\begin{table*}[t]
+\centering
+\small
+\caption{Six evidence blocks. Studies answer different questions and are never pooled into one accuracy or failure-rate estimate.}
+\label{tab:studies}
+\begin{tabular}{@{}p{0.22\textwidth}p{0.20\textwidth}p{0.17\textwidth}p{0.32\textwidth}@{}}
+\toprule
+Evidence block & Unit / size & Model / execution & Audit question \\
+\midrule
+Controlled evaluator diagnostics & 6 terminal cells; 4,104 mutations & gpt-5.4-mini + API-free & can semantic, provenance, aggregation, and evaluator failures be isolated? \\
+Public relation transfer & 24 BFCL/$\tau$ records; 152 mutations; 36-task bank & API-free + gpt-5.6-sol probe & do disclosed public relations expose singleton fragility; do models naturally exercise alternatives? \\
+Interface and protocol controls & 48 explicit-target; 48 target-hidden; 96 defective-replication requests & gpt-5.4-mini & does success survive deterministic shortcuts and representation audits? \\
+Versioned public trajectories & 40 historical + 20 fresh AgentDojo traces & gpt-4o replay; gpt-4.1-mini collection & can endpoint, independent semantics, evaluator version, and protocol witnesses be separated on real executions? \\
+Cross-suite partial constraints & 30 tasks; 90 primary cases; 4 targeted tool confirmations & API-free & can incomplete public specifications yield bounded counterexamples while unsupported regions remain unknown? \\
+Specification robustness and execution & 30 source-masked annotations; 94 replayed + 4 targeted contract executions & gpt-4.1 builder + API-free & how sensitive are candidate constraints to builder, interpreter, admission policy, and schema evidence? \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+\subsection{Evidence authority and provenance boundary}
+We keep evidence authorities separate. \textbf{Tier A} is the frozen result registry and copied source artifacts for inherited controlled claims. \textbf{Tier B} contains later public adapters, the pinned AgentDojo execution snapshot, cross-suite partial-contract cases, and their versioned builder/interpreter follow-ups. Each derived analysis records the upstream archive hash and does not overwrite earlier labels. \textbf{Tier C} is an artifact-only historical precursor whose policy-balance gate failed and whose planned corruption pilot was never executed; no headline result depends on it. API-free verifiers enforce these boundaries and bind manuscript counts to their source artifacts.
+
+\subsection{Controlled boundaries and core metamorphic suite}
+Deterministic fixtures cover singleton, set-valued, empty, contradictory, and temporally inconsistent certificates. Four sequential controlled studies are retained at pre-specified stopping points; their terminal cells expose semantic ambiguity, contract mismatch, opaque-identifier transcription, and redundant aggregate inconsistency. Because stopping depends on earlier outcomes, the resulting 6 cells and 18 model calls are diagnostic cases, not prevalence estimates.
+
+The core metamorphic benchmark contains 1,260 preserving and 2,844 corrupting transformations generated before evaluator scoring. Its purpose is evaluator characterization, so no model inference is required.
+
+\subsection{Public benchmark transfer}
+We use two API-free public adapters and one curated native-task bank. The BFCL adapter uses 16 public metadata records covering missing-function and missing-parameter cases, with 48 preserving and 48 corrupting mutations. The $\tau$-bench adapter uses eight public airline task abstractions and the documented outcome-based evaluation semantics, with 32 preserving and 24 corrupting mutations. These adapters test relation semantics only; they do not execute benchmark environments or report benchmark model scores.
+
+The native bank freezes 36 prompt-level task excerpts: 12 AgentDojo, 12 BFCL, and 12 $\tau$-bench. A 216-case API-free gate tests whether the contract is reconstructable without hidden labels. A separate one-shot probe then consumes each task once using the model snapshot listed in Table~\ref{tab:studies}. This probe asks whether models naturally realize non-singleton valid alternatives; it is not a cross-model comparison and it does not authorize a benchmark leaderboard claim. The bank is content-hashed, but its recorded upstream URLs point to moving \texttt{main} branches for some sources; we therefore treat the frozen excerpts and their hashes as authoritative and do not claim an immutable full-upstream snapshot.
+
+\subsection{Interface studies and deterministic baselines}
+The explicit-target factorial crosses target assignment with presentation order over 12 families and four cells per family. The request includes the target label and exact action arrays. A deterministic copier selects the named alternative and serializes its actions.
+
+The target-hidden feasibility study removes the target label, exact target array, and list of valid plans. Twelve new task families cross two state conditions with two information-equivalent surfaces, yielding 48 requests. The same task, catalog, identifiers, and catalog order are held fixed within matched state pairs. We evaluate decision category, complete action relation, evidence coverage, matched-state pairs, and complete four-cell families. Four cells share a family, so family counts are the primary unit for uncertainty; a single realization per cell cannot estimate stochastic reliability.
+
+The declared state-blind baseline family includes constant decisions, catalog-first/last policies, lexical overlap, keyword rules, and a safety-lexical composition rule. The best relation-valid score is 12/48 (25.0\%) in the feasibility study. The theoretical ceiling for a state-blind fixed output on a matched pair whose two valid-output sets are disjoint is 1/2, but our empirical claim is restricted to the enumerated baseline family. Merely changing the relation is insufficient for this ceiling if the two sets overlap; scores against the enumerated baselines are reported separately from such a bound.
+
+A second 96-request study uses disjoint families, but post-run auditing finds that 18 requests encoded an intended sentence as a character array. The defect is confounded with task family. We therefore treat this study as a protocol-integrity case, not as confirmatory evidence for the intended interface.
+
+\subsection{Cross-suite partial-contract stress}
+To test whether partial contracts are operational outside the previously inspected workspace tasks, we freeze AgentDojo \texttt{v1} task IDs 0--9 in banking, Slack, and travel, together with a generic mutation grammar, before inspecting those task prompts in this execution. We then read only each prompt and initial public state to propose candidate post-state or answer constraints. The constraint builder does not import AgentDojo task implementations. Twenty tasks yield state predicates, four yield query-answer predicates, and six remain excluded because a narrow relation cannot be justified from the visible information.
+
+After these constraints, inputs, harness, and source revision are hashed, we execute official benchmark positives and constructive negative fixtures against the native evaluators. Positive controls are internal-consistency checks, not semantic oracles. Single-field final-state mutants are evaluator-input probes rather than claimed trajectories; when two such recipient mutants are accepted, we run a separately frozen, explicitly outcome-selected confirmation that changes the corresponding argument before the real upstream tool executes. The confirmation is reported separately and is never pooled into the primary denominator. This ordering supports constructive counterexamples and partial-relation feasibility, not an untouched-holdout or prevalence claim.
+
+\subsection{Actual public trajectory intake}
+We freeze an outcome-blind selection of 40 existing AgentDojo logs and their publication commit before reading the selected outcomes. Missing historical request and version evidence remains unknown; these records are not prospective inputs. A subsequent protocol freezes 20 benign requests, model snapshot, initial states, auditor, and finite evaluator probes. After an unfunded attempt and a separately preserved state-loading defect, a fresh version collects the intended native-state trajectories. Every request, response-derived trace, pre/post state, evaluator input, and native label is replayed offline.
+
+For this prospective study we do \emph{not} reconstruct an independent semantic oracle for the 20 tasks. The \texttt{v1} utility is therefore stored as a native benchmark endpoint and does not populate the semantic audit field; $a_M$ remains unknown for all 20 records. Evaluator relation evidence is separate: predeclared positive and must-reject probes test the pinned \texttt{v1} utility itself. A registered secondary comparison regrades the identical stored traces under official \texttt{v1.1.1} without replacing the primary labels. Previously inspected tasks and known evaluator defects prevent holdout or blinded-discovery claims.
+
+\paragraph{Specification robustness and execution.} A separate GPT-4.1 builder (2025-04-14 snapshot) reconstructs task types and partial specifications for the same 30 tasks from source-masked prompts and initial states. Original classifications, predicates, evaluator/solution code, and outcomes are withheld; normalization and comparison code are frozen before one call per task. The original process is a comparison target, not semantic truth, and this is not human inter-annotator reliability.
+
+After inspecting that comparison, we freeze a literal interpreter and replay all 94 existing inputs, plus four outcome-informed Slack tool executions that test lexical preservation and denial. A subsequent hash-frozen ablation keeps both candidate sets, native labels, and interpreter semantics fixed on the same 98 inputs while varying only gate evidence $s_G$: initial examples, declared serialization schemas, or their hybrid. The hybrid may discharge missing-path or missing-selector evidence but never an observed type conflict. These retrospective studies measure decision sensitivity and structural admission, not independent replication or semantic accuracy.

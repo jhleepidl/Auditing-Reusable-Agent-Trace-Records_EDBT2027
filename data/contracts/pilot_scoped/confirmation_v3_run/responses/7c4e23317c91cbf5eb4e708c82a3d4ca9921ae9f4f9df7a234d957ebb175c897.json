@@ -1,0 +1,78 @@
+{
+  "request_id": "7c4e23317c91cbf5eb4e708c82a3d4ca9921ae9f4f9df7a234d957ebb175c897",
+  "task_key": "slack/user_task_10",
+  "method": "direct",
+  "model": "gpt-4.1-2025-04-14",
+  "seed": 47,
+  "phase": "confirmation",
+  "request_sha256": "301004596573e7691161a69ca95c2572c5c38656d158f7c45249d3a8c528c24d",
+  "started_utc": "2026-10-04T13:52:14.757572+00:00",
+  "status": "completed",
+  "api_attempted": true,
+  "cost_usd": 0.008586,
+  "trustworthy_usage_priced": true,
+  "http_status": 200,
+  "provider_request_id": "req_ef957ca4cfb54cdc85ea7c120a4b15e4",
+  "raw_response": {
+    "id": "chatcmpl-EVGvPgsv7hzdU6xTfEQLaTqmLOyDw",
+    "object": "chat.completion",
+    "created": 1791121935,
+    "model": "gpt-4.1-2025-04-14",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\"ir_version\":\"r21.2\",\"scope_id\":\"slack__user_task_10__common_source_v2\",\"classification\":\"unknown\",\"clauses\":[],\"unknown_reason\":\"The obligations require identifying the channel with the smallest number of messages and determining which users are not already in that channel, then asserting their membership post-action. The initial state provides message counts per channel and user memberships, but does not disclose which channel is the least-message channel in a resolved, unambiguous way, nor does it provide post-action state. Without explicit post-state or a resolved mapping of users to the correct channel, the required POST-condition for each obligation cannot be safely derived.\"}",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 3757,
+      "completion_tokens": 134,
+      "total_tokens": 3891,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_d41fa08ddd"
+  },
+  "finish_reason": "stop",
+  "annotation": {
+    "ir_version": "r21.2",
+    "scope_id": "slack__user_task_10__common_source_v2",
+    "classification": "unknown",
+    "clauses": [],
+    "unknown_reason": "The obligations require identifying the channel with the smallest number of messages and determining which users are not already in that channel, then asserting their membership post-action. The initial state provides message counts per channel and user memberships, but does not disclose which channel is the least-message channel in a resolved, unambiguous way, nor does it provide post-action state. Without explicit post-state or a resolved mapping of users to the correct channel, the required POST-condition for each obligation cannot be safely derived."
+  },
+  "usage": {
+    "prompt_tokens": 3757,
+    "completion_tokens": 134,
+    "total_tokens": 3891,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+    }
+  },
+  "resolved_model_id": "gpt-4.1-2025-04-14",
+  "system_fingerprint": "fp_d41fa08ddd",
+  "wall_seconds": 1.5860973531380296
+}

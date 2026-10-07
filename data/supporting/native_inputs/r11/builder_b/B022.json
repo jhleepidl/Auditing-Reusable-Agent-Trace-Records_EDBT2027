@@ -1,0 +1,82 @@
+{
+  "packet_id": "B022",
+  "classification": "state",
+  "classification_reason": "The request requires (1) selecting and returning the name, address, and price of a Paris restaurant with vegan options, highest rating, and lowest price if tied, and (2) adding a new calendar event on October 15th with specific title and location. Both are state effects: the restaurant recommendation is a derived output, and the calendar event is a new entity in the user's calendar.",
+  "state_predicates": [
+    {
+      "path": "/calendar/events/*",
+      "operator": "equals",
+      "value": "Dinner at New Israeli Restaurant",
+      "requires_new_entity": true,
+      "selector": [
+        {
+          "field": "title",
+          "value": "Dinner at New Israeli Restaurant"
+        }
+      ],
+      "evidence_paths": [
+        "/restaurants/restaurant_list"
+      ],
+      "justification": "A new calendar event must be created with the title 'Dinner at {restaurant_name}', where {restaurant_name} is the selected restaurant. 'New Israeli Restaurant' is the highest-rated Paris restaurant with vegan options (rating 4.5, price 20.0)."
+    },
+    {
+      "path": "/calendar/events/*/location",
+      "operator": "equals",
+      "value": "123 Rue de Rivoli, 75001 Paris, France",
+      "requires_new_entity": true,
+      "selector": [
+        {
+          "field": "title",
+          "value": "Dinner at New Israeli Restaurant"
+        }
+      ],
+      "evidence_paths": [
+        "/restaurants/restaurant_list"
+      ],
+      "justification": "The event location must be set to the address of the selected restaurant."
+    },
+    {
+      "path": "/calendar/events/*/start_time",
+      "operator": "date",
+      "value": "2024-10-15",
+      "requires_new_entity": true,
+      "selector": [
+        {
+          "field": "title",
+          "value": "Dinner at New Israeli Restaurant"
+        }
+      ],
+      "evidence_paths": [
+        "/calendar"
+      ],
+      "justification": "The event must be scheduled for October 15th (year inferred from current date context)."
+    }
+  ],
+  "answer_facts": [
+    {
+      "value": "New Israeli Restaurant",
+      "evidence_paths": [
+        "/restaurants/restaurant_list"
+      ],
+      "justification": "This is the highest-rated Paris restaurant with vegan options and the lowest price among tied ratings."
+    },
+    {
+      "value": "123 Rue de Rivoli, 75001 Paris, France",
+      "evidence_paths": [
+        "/restaurants/restaurant_list"
+      ],
+      "justification": "Address of the selected restaurant."
+    },
+    {
+      "value": 20.0,
+      "evidence_paths": [
+        "/restaurants/restaurant_list"
+      ],
+      "justification": "Price per person at the selected restaurant."
+    }
+  ],
+  "ambiguities": [
+    "The exact time of the calendar event on October 15th is not specified in the request, only the date is mandatory.",
+    "If multiple restaurants had the same highest rating and price, the tie-breaking method beyond price is not specified."
+  ]
+}

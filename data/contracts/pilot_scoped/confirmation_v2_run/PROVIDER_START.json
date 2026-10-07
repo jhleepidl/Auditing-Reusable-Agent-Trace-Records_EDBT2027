@@ -1,0 +1,34 @@
+{
+  "utc": "2026-10-04T13:37:46.819754+00:00",
+  "requests_sha256": "699dd1eb65aa04dc6328826ff13a870d41dea4b44b87f039bed499402d0525a5",
+  "request_inventory_relative_path": "e2/confirmation_v2_requests/requests.jsonl",
+  "request_freeze_sha256": "8cb9d5769aa333c6bc39358384bb289f978b1c327def2f9e34424d4e11e28c0f",
+  "runner_sha256": "2c54ec1663ef286ebd8fbc0c79ece344d634cedb3517aa8c7262b660c3588bec",
+  "requested_calls": 486,
+  "temperature": 0.2,
+  "workers": 6,
+  "cost_ceiling_usd": 30,
+  "prior_spent_or_reserved_usd": 10.641792800000001,
+  "run_worst_case_usd": 11.220026399999972,
+  "rates_per_million_tokens": {
+    "gpt-4.1-mini-2025-04-14": [
+      0.4,
+      0.1,
+      1.6
+    ],
+    "gpt-4.1-2025-04-14": [
+      2,
+      0.5,
+      8
+    ]
+  },
+  "pricing_sources": [
+    "https://developers.openai.com/api/docs/models/gpt-4.1-mini",
+    "https://developers.openai.com/api/docs/models/gpt-4.1"
+  ],
+  "pricing_checked_utc": "2026-10-04",
+  "no_retries": true,
+  "same_call_budget_all_arms": true,
+  "visible_source": "value-free common scope and immutable request/initial packet; no reference decisions, poststate or native utility labels",
+  "seed_policy": "best-effort API seed; seeds are repeats within a task, not independent tasks"
+}

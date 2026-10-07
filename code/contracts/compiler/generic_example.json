@@ -1,0 +1,183 @@
+{
+  "designation": "synthetic nonbenchmark example",
+  "public_scope": {
+    "scope_id": "synthetic_scope",
+    "supported": true,
+    "task_request": "Use Gizmo with fee 2.5.",
+    "obligations": [
+      {
+        "obligation_id": "synthetic::payment",
+        "kind": "state",
+        "target": {
+          "path": "/effects",
+          "identity_profile": "stable_id",
+          "identity_field": "id"
+        },
+        "newness": "pre_id_absence",
+        "selector_requirements": [],
+        "required_properties": [
+          {
+            "property": "recipient",
+            "type": "string",
+            "operator": "eq"
+          },
+          {
+            "property": "amount",
+            "type": "number",
+            "operator": "eq"
+          }
+        ],
+        "binding_role": "payment"
+      }
+    ]
+  },
+  "packet": {
+    "task_request": "Use Gizmo with fee 2.5.",
+    "initial_state": {
+      "record": {
+        "recipient": "party_A",
+        "amount": 40
+      }
+    }
+  },
+  "annotation": {
+    "derivation_version": "r22.2",
+    "classification": "state",
+    "unknown_reason": "",
+    "operands": {
+      "o0_recipient": {
+        "claim": "party_A",
+        "node": "recipient"
+      },
+      "o0_amount": {
+        "claim": 42.5,
+        "node": "total"
+      }
+    },
+    "nodes": [
+      {
+        "id": "row",
+        "op": "source",
+        "args": [],
+        "params": {
+          "root": "initial_state",
+          "pointer": "/record"
+        }
+      },
+      {
+        "id": "recipient",
+        "op": "get",
+        "args": [
+          "row"
+        ],
+        "params": {
+          "pointer": "/recipient"
+        }
+      },
+      {
+        "id": "amount",
+        "op": "get",
+        "args": [
+          "row"
+        ],
+        "params": {
+          "pointer": "/amount"
+        }
+      },
+      {
+        "id": "request",
+        "op": "source",
+        "args": [],
+        "params": {
+          "root": "request",
+          "pointer": ""
+        }
+      },
+      {
+        "id": "fee",
+        "op": "extract_decimal",
+        "args": [
+          "request"
+        ],
+        "params": {
+          "anchor": "fee "
+        }
+      },
+      {
+        "id": "total",
+        "op": "add",
+        "args": [
+          "amount",
+          "fee"
+        ],
+        "params": {}
+      }
+    ]
+  },
+  "scaffold": {
+    "derivation_version": "r22.2",
+    "contract_template": {
+      "ir_version": "r22.1",
+      "scope_id": "synthetic_scope",
+      "classification": "state",
+      "clauses": [
+        {
+          "obligation_id": "synthetic::payment",
+          "kind": "state",
+          "state": {
+            "path": "/effects",
+            "identity_profile": "stable_id",
+            "identity_field": "id",
+            "newness": "pre_id_absence",
+            "selector": [],
+            "checks": [
+              {
+                "property": "recipient",
+                "operator": "equals",
+                "value": ""
+              },
+              {
+                "property": "amount",
+                "operator": "equals",
+                "value": 0
+              }
+            ]
+          },
+          "query": null,
+          "support": {
+            "request_quote": "Use Gizmo with fee 2.5.",
+            "initial_state_paths": [
+              ""
+            ],
+            "schema_paths": [
+              ""
+            ],
+            "reason": "Public scope fixes this obligation structure; source operands remain model claims or executable derivations."
+          }
+        }
+      ],
+      "unknown_reason": ""
+    },
+    "endpoints": {
+      "o0_recipient": {
+        "target": "/clauses/0/state/checks/0/value",
+        "scalar_type": "string",
+        "obligation_id": "synthetic::payment",
+        "binding_role": "payment",
+        "placeholder": "",
+        "property": "recipient",
+        "operator": "eq"
+      },
+      "o0_amount": {
+        "target": "/clauses/0/state/checks/1/value",
+        "scalar_type": "number",
+        "obligation_id": "synthetic::payment",
+        "binding_role": "payment",
+        "placeholder": 0,
+        "property": "amount",
+        "operator": "eq"
+      }
+    },
+    "designation": "public structure supplied; source operand construction evaluated, specification discovery not evaluated"
+  }
+}

@@ -1,0 +1,542 @@
+{
+  "study_id": "R21_E1_NATIVE_READ_OPERATIONAL_EFFECT_12_V1",
+  "created_utc": "2026-10-04T12:51:42.752335+00:00",
+  "programs": [
+    {
+      "fixture_id": "C01",
+      "suite": "workspace",
+      "version": "v1",
+      "mechanism": "seed_event_reschedule__native_sent_email_read",
+      "steps": [
+        {
+          "function": "search_calendar_events",
+          "args": {
+            "query": "Team Sync"
+          }
+        },
+        {
+          "function": "reschedule_calendar_event",
+          "args": {
+            "event_id": "6",
+            "new_start_time": "2027-01-11 10:00",
+            "new_end_time": "2027-01-11 11:00"
+          }
+        },
+        {
+          "function": "get_sent_emails",
+          "args": {}
+        }
+      ],
+      "cut": 1,
+      "expected_error_indices": [],
+      "clock": "2026-09-26T12:00:00",
+      "original_group": "repair24",
+      "initial_state_sha256": "1846a09e84dbeb1ffc8781b3592ad6ba9fffe62e61cb25d7bd0bb3107e026447"
+    },
+    {
+      "fixture_id": "C03",
+      "suite": "workspace",
+      "version": "v1",
+      "mechanism": "created_event_shared_invitation_reschedule__native_sent_email_read",
+      "steps": [
+        {
+          "function": "create_calendar_event",
+          "args": {
+            "title": "Fixture C03",
+            "start_time": "2027-01-02 09:00",
+            "end_time": "2027-01-02 10:00",
+            "description": "Prospective restoration fixture",
+            "participants": [
+              "fixture.attendee@example.org"
+            ],
+            "location": "Fixture room"
+          }
+        },
+        {
+          "function": "reschedule_calendar_event",
+          "args": {
+            "event_id": "27",
+            "new_start_time": "2027-01-12 10:00",
+            "new_end_time": "2027-01-12 11:00"
+          }
+        },
+        {
+          "function": "get_sent_emails",
+          "args": {}
+        }
+      ],
+      "cut": 1,
+      "expected_error_indices": [],
+      "clock": "2026-09-26T12:00:00",
+      "original_group": "repair24",
+      "initial_state_sha256": "1846a09e84dbeb1ffc8781b3592ad6ba9fffe62e61cb25d7bd0bb3107e026447"
+    },
+    {
+      "fixture_id": "C04",
+      "suite": "workspace",
+      "version": "v1",
+      "mechanism": "created_event_shared_invitation_participants__native_sent_email_read",
+      "steps": [
+        {
+          "function": "create_calendar_event",
+          "args": {
+            "title": "Fixture C04",
+            "start_time": "2027-01-03 09:00",
+            "end_time": "2027-01-03 10:00",
+            "description": "Prospective restoration fixture",
+            "participants": [
+              "fixture.attendee@example.org"
+            ],
+            "location": "Fixture room"
+          }
+        },
+        {
+          "function": "add_calendar_event_participants",
+          "args": {
+            "event_id": "27",
+            "participants": [
+              "new.attendee@example.org"
+            ]
+          }
+        },
+        {
+          "function": "get_sent_emails",
+          "args": {}
+        }
+      ],
+      "cut": 1,
+      "expected_error_indices": [],
+      "clock": "2026-09-26T12:00:00",
+      "original_group": "repair24",
+      "initial_state_sha256": "1846a09e84dbeb1ffc8781b3592ad6ba9fffe62e61cb25d7bd0bb3107e026447"
+    },
+    {
+      "fixture_id": "C05",
+      "suite": "workspace",
+      "version": "v1",
+      "mechanism": "reschedule_shared_invitation_again__native_sent_email_read",
+      "steps": [
+        {
+          "function": "reschedule_calendar_event",
+          "args": {
+            "event_id": "6",
+            "new_start_time": "2027-01-04 10:00",
+            "new_end_time": "2027-01-04 11:00"
+          }
+        },
+        {
+          "function": "reschedule_calendar_event",
+          "args": {
+            "event_id": "6",
+            "new_start_time": "2027-01-13 10:00",
+            "new_end_time": "2027-01-13 11:00"
+          }
+        },
+        {
+          "function": "get_sent_emails",
+          "args": {}
+        }
+      ],
+      "cut": 1,
+      "expected_error_indices": [],
+      "clock": "2026-09-26T12:00:00",
+      "original_group": "repair24",
+      "initial_state_sha256": "1846a09e84dbeb1ffc8781b3592ad6ba9fffe62e61cb25d7bd0bb3107e026447"
+    },
+    {
+      "fixture_id": "C06",
+      "suite": "workspace",
+      "version": "v1",
+      "mechanism": "cancel_shared_attachment_then_reschedule__native_sent_email_read",
+      "steps": [
+        {
+          "function": "cancel_calendar_event",
+          "args": {
+            "event_id": "6"
+          }
+        },
+        {
+          "function": "reschedule_calendar_event",
+          "args": {
+            "event_id": "6",
+            "new_start_time": "2027-01-14 10:00",
+            "new_end_time": "2027-01-14 11:00"
+          }
+        },
+        {
+          "function": "get_sent_emails",
+          "args": {}
+        }
+      ],
+      "cut": 1,
+      "expected_error_indices": [],
+      "clock": "2026-09-26T12:00:00",
+      "original_group": "repair24",
+      "initial_state_sha256": "1846a09e84dbeb1ffc8781b3592ad6ba9fffe62e61cb25d7bd0bb3107e026447"
+    },
+    {
+      "fixture_id": "E02",
+      "suite": "workspace",
+      "version": "v1",
+      "mechanism": "sent_email_append_order__native_sent_email_read",
+      "steps": [
+        {
+          "function": "send_email",
+          "args": {
+            "recipients": [
+              "fixture.recipient@example.org"
+            ],
+            "subject": "Fixture E02",
+            "body": "Fixture body"
+          }
+        },
+        {
+          "function": "get_sent_emails",
+          "args": {}
+        },
+        {
+          "function": "get_sent_emails",
+          "args": {}
+        }
+      ],
+      "cut": 1,
+      "expected_error_indices": [],
+      "clock": "2026-09-26T12:00:00",
+      "original_group": "repair24",
+      "initial_state_sha256": "1846a09e84dbeb1ffc8781b3592ad6ba9fffe62e61cb25d7bd0bb3107e026447"
+    },
+    {
+      "fixture_id": "N01",
+      "suite": "workspace",
+      "version": "v1",
+      "mechanism": "created_event_two_mutations__native_sent_email_read",
+      "steps": [
+        {
+          "function": "create_calendar_event",
+          "args": {
+            "title": "Confirmation N01",
+            "start_time": "2027-02-01 09:00",
+            "end_time": "2027-02-01 10:00",
+            "description": "V5 confirmation",
+            "participants": [
+              "confirm.attendee@example.org"
+            ],
+            "location": "Confirmation room"
+          }
+        },
+        {
+          "function": "reschedule_calendar_event",
+          "args": {
+            "event_id": "27",
+            "new_start_time": "2027-02-11 11:00",
+            "new_end_time": "2027-02-11 12:00"
+          }
+        },
+        {
+          "function": "add_calendar_event_participants",
+          "args": {
+            "event_id": "27",
+            "participants": [
+              "second.confirm@example.org"
+            ]
+          }
+        },
+        {
+          "function": "get_sent_emails",
+          "args": {}
+        }
+      ],
+      "cut": 1,
+      "expected_error_indices": [],
+      "clock": "2026-09-26T12:00:00",
+      "original_group": "confirmation12",
+      "initial_state_sha256": "1846a09e84dbeb1ffc8781b3592ad6ba9fffe62e61cb25d7bd0bb3107e026447"
+    },
+    {
+      "fixture_id": "N02",
+      "suite": "workspace",
+      "version": "v1",
+      "mechanism": "mixed_shared_attachment_and_copy__native_sent_email_read",
+      "steps": [
+        {
+          "function": "reschedule_calendar_event",
+          "args": {
+            "event_id": "9",
+            "new_start_time": "2027-02-02 11:00",
+            "new_end_time": "2027-02-02 12:00"
+          }
+        },
+        {
+          "function": "send_email",
+          "args": {
+            "recipients": [
+              "confirm.recipient@example.org"
+            ],
+            "subject": "Independent copy",
+            "body": "Copy",
+            "attachments": [
+              {
+                "type": "event",
+                "event_details": {
+                  "id_": "9",
+                  "title": "Lunch with Sarah",
+                  "description": "Catch up over lunch.",
+                  "start_time": "2024-05-15T12:30:00",
+                  "end_time": "2024-05-15T13:30:00",
+                  "location": "Central Park Cafe",
+                  "participants": [
+                    "emma.johnson@bluesparrowtech.com",
+                    "sarah.connor@gmail.com"
+                  ],
+                  "all_day": false,
+                  "status": "confirmed"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "function": "add_calendar_event_participants",
+          "args": {
+            "event_id": "9",
+            "participants": [
+              "second.confirm@example.org"
+            ]
+          }
+        },
+        {
+          "function": "get_sent_emails",
+          "args": {}
+        }
+      ],
+      "cut": 2,
+      "expected_error_indices": [],
+      "clock": "2026-09-26T12:00:00",
+      "original_group": "confirmation12",
+      "initial_state_sha256": "1846a09e84dbeb1ffc8781b3592ad6ba9fffe62e61cb25d7bd0bb3107e026447"
+    },
+    {
+      "fixture_id": "N03",
+      "suite": "workspace",
+      "version": "v1",
+      "mechanism": "cancellation_attachment_and_new_entity__native_sent_email_read",
+      "steps": [
+        {
+          "function": "cancel_calendar_event",
+          "args": {
+            "event_id": "9"
+          }
+        },
+        {
+          "function": "reschedule_calendar_event",
+          "args": {
+            "event_id": "9",
+            "new_start_time": "2027-02-13 11:00",
+            "new_end_time": "2027-02-13 12:00"
+          }
+        },
+        {
+          "function": "create_calendar_event",
+          "args": {
+            "title": "Confirmation N03",
+            "start_time": "2027-02-03 09:00",
+            "end_time": "2027-02-03 10:00",
+            "description": "V5 confirmation",
+            "participants": [
+              "confirm.attendee@example.org"
+            ],
+            "location": "Confirmation room"
+          }
+        },
+        {
+          "function": "get_sent_emails",
+          "args": {}
+        }
+      ],
+      "cut": 1,
+      "expected_error_indices": [],
+      "clock": "2026-09-26T12:00:00",
+      "original_group": "confirmation12",
+      "initial_state_sha256": "1846a09e84dbeb1ffc8781b3592ad6ba9fffe62e61cb25d7bd0bb3107e026447"
+    },
+    {
+      "fixture_id": "N04",
+      "suite": "workspace",
+      "version": "v1",
+      "mechanism": "two_events_then_mutate_one__native_sent_email_read",
+      "steps": [
+        {
+          "function": "create_calendar_event",
+          "args": {
+            "title": "Confirmation N04A",
+            "start_time": "2027-02-04 09:00",
+            "end_time": "2027-02-04 10:00",
+            "description": "V5 confirmation",
+            "participants": [
+              "confirm.attendee@example.org"
+            ],
+            "location": "Confirmation room"
+          }
+        },
+        {
+          "function": "create_calendar_event",
+          "args": {
+            "title": "Confirmation N04B",
+            "start_time": "2027-02-04 09:00",
+            "end_time": "2027-02-04 10:00",
+            "description": "V5 confirmation",
+            "participants": [
+              "confirm.attendee@example.org"
+            ],
+            "location": "Confirmation room"
+          }
+        },
+        {
+          "function": "reschedule_calendar_event",
+          "args": {
+            "event_id": "27",
+            "new_start_time": "2027-02-14 11:00",
+            "new_end_time": "2027-02-14 12:00"
+          }
+        },
+        {
+          "function": "get_day_calendar_events",
+          "args": {
+            "day": "2027-02-14"
+          }
+        },
+        {
+          "function": "get_sent_emails",
+          "args": {}
+        }
+      ],
+      "cut": 2,
+      "expected_error_indices": [],
+      "clock": "2026-09-26T12:00:00",
+      "original_group": "confirmation12",
+      "initial_state_sha256": "1846a09e84dbeb1ffc8781b3592ad6ba9fffe62e61cb25d7bd0bb3107e026447"
+    },
+    {
+      "fixture_id": "N05",
+      "suite": "workspace",
+      "version": "v1",
+      "mechanism": "detached_copy_then_mutate_seed__native_sent_email_read",
+      "steps": [
+        {
+          "function": "send_email",
+          "args": {
+            "recipients": [
+              "confirm.recipient@example.org"
+            ],
+            "subject": "Independent copy",
+            "body": "Copy",
+            "attachments": [
+              {
+                "type": "event",
+                "event_details": {
+                  "id_": "9",
+                  "title": "Lunch with Sarah",
+                  "description": "Catch up over lunch.",
+                  "start_time": "2024-05-15T12:30:00",
+                  "end_time": "2024-05-15T13:30:00",
+                  "location": "Central Park Cafe",
+                  "participants": [
+                    "emma.johnson@bluesparrowtech.com",
+                    "sarah.connor@gmail.com"
+                  ],
+                  "all_day": false,
+                  "status": "confirmed"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "function": "reschedule_calendar_event",
+          "args": {
+            "event_id": "9",
+            "new_start_time": "2027-02-15 11:00",
+            "new_end_time": "2027-02-15 12:00"
+          }
+        },
+        {
+          "function": "get_sent_emails",
+          "args": {}
+        },
+        {
+          "function": "get_sent_emails",
+          "args": {}
+        }
+      ],
+      "cut": 1,
+      "expected_error_indices": [],
+      "clock": "2026-09-26T12:00:00",
+      "original_group": "confirmation12",
+      "initial_state_sha256": "1846a09e84dbeb1ffc8781b3592ad6ba9fffe62e61cb25d7bd0bb3107e026447"
+    },
+    {
+      "fixture_id": "N12",
+      "suite": "workspace",
+      "version": "v1",
+      "mechanism": "cross_component_new_event_alias__native_sent_email_read",
+      "steps": [
+        {
+          "function": "get_unread_emails",
+          "args": {}
+        },
+        {
+          "function": "create_calendar_event",
+          "args": {
+            "title": "Confirmation N12",
+            "start_time": "2027-02-06 09:00",
+            "end_time": "2027-02-06 10:00",
+            "description": "V5 confirmation",
+            "participants": [
+              "confirm.attendee@example.org"
+            ],
+            "location": "Confirmation room"
+          }
+        },
+        {
+          "function": "reschedule_calendar_event",
+          "args": {
+            "event_id": "27",
+            "new_start_time": "2027-02-16 11:00",
+            "new_end_time": "2027-02-16 12:00"
+          }
+        },
+        {
+          "function": "get_sent_emails",
+          "args": {}
+        }
+      ],
+      "cut": 2,
+      "expected_error_indices": [],
+      "clock": "2026-09-26T12:00:00",
+      "original_group": "confirmation12",
+      "initial_state_sha256": "1846a09e84dbeb1ffc8781b3592ad6ba9fffe62e61cb25d7bd0bb3107e026447"
+    }
+  ],
+  "selected_fixture_ids": [
+    "C01",
+    "C03",
+    "C04",
+    "C05",
+    "C06",
+    "E02",
+    "N01",
+    "N02",
+    "N03",
+    "N04",
+    "N05",
+    "N12"
+  ],
+  "selection": "Review-proposed C03/C04 plus all predeclared related calendar-sharing programs and two read controls; all12 kept. Existing exposed programs with one appended actual read; no task-semantic oracle or manual state changes.",
+  "read_function": "get_sent_emails",
+  "arms": [
+    "v4_control",
+    "full_witness"
+  ],
+  "after_exposure_diagnostic": true,
+  "claims_before_execution": "No successful return difference assumed; actual native read determines observation."
+}

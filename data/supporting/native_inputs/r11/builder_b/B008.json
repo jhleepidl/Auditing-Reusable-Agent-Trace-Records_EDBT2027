@@ -1,0 +1,39 @@
+{
+  "packet_id": "B008",
+  "classification": "query",
+  "classification_reason": "The request is for information: the best-rated French restaurant in Paris that is open on Sunday, with specific details (name, rating, address, operating hours). This can be answered from the supplied restaurant data. No state change is requested.",
+  "state_predicates": [],
+  "answer_facts": [
+    {
+      "value": "Breizh Café",
+      "evidence_paths": [
+        "/restaurants/restaurant_list/1/name"
+      ],
+      "justification": "It is a French restaurant in Paris open on Sunday."
+    },
+    {
+      "value": 3.9,
+      "evidence_paths": [
+        "/restaurants/restaurant_list/1/rating"
+      ],
+      "justification": "This is the rating for Breizh Café."
+    },
+    {
+      "value": "109 Rue Vieille du Temple, 75003 Paris, France",
+      "evidence_paths": [
+        "/restaurants/restaurant_list/1/address"
+      ],
+      "justification": "This is the address for Breizh Café."
+    },
+    {
+      "value": "9:00 AM - 11:00 PM, open on Mondays, Tuesdays, Thursdays, Fridays, Saturdays, and Sundays",
+      "evidence_paths": [
+        "/restaurants/restaurant_list/1/operating_hours"
+      ],
+      "justification": "This is the operating hours for Breizh Café."
+    }
+  ],
+  "ambiguities": [
+    "No French restaurant in Paris listed as open on Sunday has a rating higher than 3.9. The best-rated French restaurants (Le Baratin, Bistrot Paul Bert, Chez L'Ami Jean) are not open on Sunday. If a higher-rated French restaurant open on Sunday existed, it would be preferred, but only Breizh Café meets all criteria."
+  ]
+}

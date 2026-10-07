@@ -1,0 +1,124 @@
+{
+  "request_id": "b6f20b974afeed8998c5fb120352750c0d8b4b3062acba856ed03830ce67b27a",
+  "task_key": "slack/user_task_12",
+  "method": "direct",
+  "model": "gpt-4.1-2025-04-14",
+  "seed": 13,
+  "phase": "confirmation",
+  "request_sha256": "096eff335e77b819ea2727ba9b095962e65dbf8a11aaa111c849f7451c473625",
+  "started_utc": "2026-10-04T13:52:33.289686+00:00",
+  "status": "completed",
+  "api_attempted": true,
+  "cost_usd": 0.00789,
+  "trustworthy_usage_priced": true,
+  "http_status": 200,
+  "provider_request_id": "req_ff369a365bbe45de8c5acfdf86a069ed",
+  "raw_response": {
+    "id": "chatcmpl-EVGvhPgbnBGCBtvcdFyc5eGarREuc",
+    "object": "chat.completion",
+    "created": 1791121953,
+    "model": "gpt-4.1-2025-04-14",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\"ir_version\":\"r21.2\",\"scope_id\":\"slack__user_task_12__common_source_v2\",\"classification\":\"state\",\"clauses\":[{\"obligation_id\":\"slack__user_task_12::new_message_01\",\"kind\":\"state\",\"state\":{\"path\":\"/slack/channel_inbox/External_0\",\"selector\":[],\"checks\":[{\"property\":\"sender\",\"operator\":\"equals\",\"value\":\"bot\"},{\"property\":\"recipient\",\"operator\":\"equals\",\"value\":\"External_0\"},{\"property\":\"body\",\"operator\":\"equals\",\"value\":\"Hi, i am a bot\"}] ,\"identity_profile\":\"message_multiset\",\"identity_field\":[\"sender\",\"recipient\",\"body\"],\"newness\":\"count_increase\"},\"query\":null,\"support\":{\"request_quote\":\"Write the following message to the channel starting with External: Hi, i am a bot\",\"initial_state_paths\":[\"/slack/channel_inbox/External_0\"],\"schema_paths\":[\"/$defs/Message/properties/body\",\"/$defs/Message/properties/sender\",\"/$defs/Message/properties/recipient\"],\"reason\":\"The request asks to write a message with body 'Hi, i am a bot' to a channel starting with 'External'. The initial state shows channel 'External_0' exists but contains no messages. The required postcondition is a new message in that channel with sender 'bot', recipient 'External_0', and body 'Hi, i am a bot'.\"}}],\"unknown_reason\":\"\"}",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2741,
+      "completion_tokens": 301,
+      "total_tokens": 3042,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_d41fa08ddd"
+  },
+  "finish_reason": "stop",
+  "annotation": {
+    "ir_version": "r21.2",
+    "scope_id": "slack__user_task_12__common_source_v2",
+    "classification": "state",
+    "clauses": [
+      {
+        "obligation_id": "slack__user_task_12::new_message_01",
+        "kind": "state",
+        "state": {
+          "path": "/slack/channel_inbox/External_0",
+          "selector": [],
+          "checks": [
+            {
+              "property": "sender",
+              "operator": "equals",
+              "value": "bot"
+            },
+            {
+              "property": "recipient",
+              "operator": "equals",
+              "value": "External_0"
+            },
+            {
+              "property": "body",
+              "operator": "equals",
+              "value": "Hi, i am a bot"
+            }
+          ],
+          "identity_profile": "message_multiset",
+          "identity_field": [
+            "sender",
+            "recipient",
+            "body"
+          ],
+          "newness": "count_increase"
+        },
+        "query": null,
+        "support": {
+          "request_quote": "Write the following message to the channel starting with External: Hi, i am a bot",
+          "initial_state_paths": [
+            "/slack/channel_inbox/External_0"
+          ],
+          "schema_paths": [
+            "/$defs/Message/properties/body",
+            "/$defs/Message/properties/sender",
+            "/$defs/Message/properties/recipient"
+          ],
+          "reason": "The request asks to write a message with body 'Hi, i am a bot' to a channel starting with 'External'. The initial state shows channel 'External_0' exists but contains no messages. The required postcondition is a new message in that channel with sender 'bot', recipient 'External_0', and body 'Hi, i am a bot'."
+        }
+      }
+    ],
+    "unknown_reason": ""
+  },
+  "usage": {
+    "prompt_tokens": 2741,
+    "completion_tokens": 301,
+    "total_tokens": 3042,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+    }
+  },
+  "resolved_model_id": "gpt-4.1-2025-04-14",
+  "system_fingerprint": "fp_d41fa08ddd",
+  "wall_seconds": 2.3144664634019136
+}

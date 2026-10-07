@@ -1,0 +1,540 @@
+{
+  "designation": "Synthetic generic arithmetic/filter/projection example; no benchmark values or task IDs",
+  "packet": {
+    "task_request": "Use the Widget payment plus an additional 12.5% and fee 1.75.",
+    "initial_state": {
+      "records": [
+        {
+          "subject": "Wrong item",
+          "amount": 80,
+          "recipient": "Decoy",
+          "sender": "Buyer"
+        },
+        {
+          "subject": "Widget",
+          "amount": 80,
+          "recipient": "Vendor",
+          "sender": "Buyer"
+        }
+      ]
+    }
+  },
+  "public_scope": {
+    "scope_id": "synthetic_scope",
+    "obligations": [
+      {
+        "obligation_id": "synthetic::effect",
+        "target": {
+          "path": "/effects"
+        },
+        "required_properties": []
+      }
+    ]
+  },
+  "public_facts": {},
+  "annotation": {
+    "derivation_version": "r22.1",
+    "contract": {
+      "ir_version": "r22.1",
+      "scope_id": "synthetic_scope",
+      "classification": "state",
+      "clauses": [
+        {
+          "obligation_id": "synthetic::effect",
+          "kind": "state",
+          "state": {
+            "path": "/effects",
+            "selector": [],
+            "checks": [
+              {
+                "property": "amount",
+                "operator": "equals",
+                "value": 0
+              },
+              {
+                "property": "recipient",
+                "operator": "equals",
+                "value": 0
+              }
+            ],
+            "identity_profile": "stable_id",
+            "identity_field": "id",
+            "newness": "pre_id_absence"
+          },
+          "query": null,
+          "support": {
+            "request_quote": "synthetic request",
+            "initial_state_paths": [
+              "/records"
+            ],
+            "schema_paths": [],
+            "reason": "synthetic generic example"
+          }
+        }
+      ],
+      "unknown_reason": ""
+    },
+    "nodes": [
+      {
+        "id": "records",
+        "op": "source",
+        "args": [],
+        "params": {
+          "root": "initial_state",
+          "pointer": "/records"
+        }
+      },
+      {
+        "id": "request",
+        "op": "source",
+        "args": [],
+        "params": {
+          "root": "request",
+          "pointer": ""
+        }
+      },
+      {
+        "id": "label",
+        "op": "text_between",
+        "args": [
+          "request"
+        ],
+        "params": {
+          "left": "the ",
+          "right": " payment",
+          "trim": true
+        }
+      },
+      {
+        "id": "selected",
+        "op": "filter",
+        "args": [
+          "records",
+          "label"
+        ],
+        "params": {
+          "pointer": "/subject",
+          "relation": "equals",
+          "casefold": false
+        }
+      },
+      {
+        "id": "one",
+        "op": "unique",
+        "args": [
+          "selected"
+        ],
+        "params": {}
+      },
+      {
+        "id": "base",
+        "op": "get",
+        "args": [
+          "one"
+        ],
+        "params": {
+          "pointer": "/amount"
+        }
+      },
+      {
+        "id": "recipient",
+        "op": "get",
+        "args": [
+          "one"
+        ],
+        "params": {
+          "pointer": "/recipient"
+        }
+      },
+      {
+        "id": "percent",
+        "op": "extract_decimal",
+        "args": [
+          "request"
+        ],
+        "params": {
+          "anchor": "additional "
+        }
+      },
+      {
+        "id": "hundred",
+        "op": "constant",
+        "args": [],
+        "params": {
+          "value": 100
+        }
+      },
+      {
+        "id": "fraction",
+        "op": "divide",
+        "args": [
+          "percent",
+          "hundred"
+        ],
+        "params": {}
+      },
+      {
+        "id": "part",
+        "op": "multiply",
+        "args": [
+          "base",
+          "fraction"
+        ],
+        "params": {}
+      },
+      {
+        "id": "fee",
+        "op": "extract_decimal",
+        "args": [
+          "request"
+        ],
+        "params": {
+          "anchor": "fee "
+        }
+      },
+      {
+        "id": "result",
+        "op": "add",
+        "args": [
+          "part",
+          "fee"
+        ],
+        "params": {}
+      }
+    ],
+    "bindings": [
+      {
+        "target": "/clauses/0/state/checks/0/value",
+        "node": "result"
+      },
+      {
+        "target": "/clauses/0/state/checks/1/value",
+        "node": "recipient"
+      }
+    ]
+  },
+  "compilation": {
+    "status": "ok",
+    "contract": {
+      "ir_version": "r22.1",
+      "scope_id": "synthetic_scope",
+      "classification": "state",
+      "clauses": [
+        {
+          "obligation_id": "synthetic::effect",
+          "kind": "state",
+          "state": {
+            "path": "/effects",
+            "selector": [],
+            "checks": [
+              {
+                "property": "amount",
+                "operator": "equals",
+                "value": 11.75
+              },
+              {
+                "property": "recipient",
+                "operator": "equals",
+                "value": "Vendor"
+              }
+            ],
+            "identity_profile": "stable_id",
+            "identity_field": "id",
+            "newness": "pre_id_absence"
+          },
+          "query": null,
+          "support": {
+            "request_quote": "synthetic request",
+            "initial_state_paths": [
+              "/records"
+            ],
+            "schema_paths": [],
+            "reason": "synthetic generic example"
+          }
+        }
+      ],
+      "unknown_reason": ""
+    },
+    "provenance": {
+      "packet_sha256": "f65eae5235d0b5a3278ff02eb16e6b85de2ca88032ad95f0e6f004ba9b68285e",
+      "scope_input_sha256": "1d493f75156a9bfb59bb429dc8346502d6faafeac5aa7dbb876bbb107659e61a",
+      "public_facts_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "annotation_sha256": "93fc1893b41811fd5e008ecaed26709aa44a2e48a220b5112f569747eb53c99b",
+      "mode": "derived",
+      "nodes": [
+        {
+          "id": "records",
+          "op": "source",
+          "args": [],
+          "params": {
+            "root": "initial_state",
+            "pointer": "/records"
+          },
+          "depth": 1,
+          "source_dependencies": [
+            "initial_state:/records"
+          ],
+          "value": [
+            {
+              "subject": "Wrong item",
+              "amount": 80,
+              "recipient": "Decoy",
+              "sender": "Buyer"
+            },
+            {
+              "subject": "Widget",
+              "amount": 80,
+              "recipient": "Vendor",
+              "sender": "Buyer"
+            }
+          ],
+          "value_sha256": "f8d0f1d7af504f656561c62f152265f962637111427f3ff2792a2fd1a6a366ef"
+        },
+        {
+          "id": "request",
+          "op": "source",
+          "args": [],
+          "params": {
+            "root": "request",
+            "pointer": ""
+          },
+          "depth": 1,
+          "source_dependencies": [
+            "request:"
+          ],
+          "value": "Use the Widget payment plus an additional 12.5% and fee 1.75.",
+          "value_sha256": "524e2ffe273adb4558a564cf925a3513269659e3bd438daf066be60af54230a7"
+        },
+        {
+          "id": "label",
+          "op": "text_between",
+          "args": [
+            "request"
+          ],
+          "params": {
+            "left": "the ",
+            "right": " payment",
+            "trim": true
+          },
+          "depth": 2,
+          "source_dependencies": [
+            "request:"
+          ],
+          "value": "Widget",
+          "value_sha256": "06e28244fbdb03f6eb16280df4ca0709208e569042704e58155be7fe54042200"
+        },
+        {
+          "id": "selected",
+          "op": "filter",
+          "args": [
+            "records",
+            "label"
+          ],
+          "params": {
+            "pointer": "/subject",
+            "relation": "equals",
+            "casefold": false
+          },
+          "depth": 3,
+          "source_dependencies": [
+            "initial_state:/records",
+            "request:"
+          ],
+          "value": [
+            {
+              "subject": "Widget",
+              "amount": 80,
+              "recipient": "Vendor",
+              "sender": "Buyer"
+            }
+          ],
+          "value_sha256": "eba640be4c1c10a8a01773282d101f351296199bae09e0be99dfe9ca74451a54"
+        },
+        {
+          "id": "one",
+          "op": "unique",
+          "args": [
+            "selected"
+          ],
+          "params": {},
+          "depth": 4,
+          "source_dependencies": [
+            "initial_state:/records",
+            "request:"
+          ],
+          "value": {
+            "subject": "Widget",
+            "amount": 80,
+            "recipient": "Vendor",
+            "sender": "Buyer"
+          },
+          "value_sha256": "8600b6a9bb15e3ecd37bb2ae809c4641ccbe02af9e8ed7218fb92c3c9106d8db"
+        },
+        {
+          "id": "base",
+          "op": "get",
+          "args": [
+            "one"
+          ],
+          "params": {
+            "pointer": "/amount"
+          },
+          "depth": 5,
+          "source_dependencies": [
+            "initial_state:/records",
+            "request:"
+          ],
+          "value": 80,
+          "value_sha256": "48449a14a4ff7d79bb7a1b6f3d488eba397c36ef25634c111b49baf362511afc"
+        },
+        {
+          "id": "recipient",
+          "op": "get",
+          "args": [
+            "one"
+          ],
+          "params": {
+            "pointer": "/recipient"
+          },
+          "depth": 5,
+          "source_dependencies": [
+            "initial_state:/records",
+            "request:"
+          ],
+          "value": "Vendor",
+          "value_sha256": "97b4c11a470ac0fccbdaa7b2c502ccf37cc30fa916baaa62804c3657bf2c1113"
+        },
+        {
+          "id": "percent",
+          "op": "extract_decimal",
+          "args": [
+            "request"
+          ],
+          "params": {
+            "anchor": "additional "
+          },
+          "depth": 2,
+          "source_dependencies": [
+            "request:"
+          ],
+          "value": {
+            "decimal": "12.5"
+          },
+          "value_sha256": "52cdea4ead6ff7d089820660513962fe4f3271ef0dfddbef9eb87ab223045832"
+        },
+        {
+          "id": "hundred",
+          "op": "constant",
+          "args": [],
+          "params": {
+            "value": 100
+          },
+          "depth": 1,
+          "source_dependencies": [],
+          "value": 100,
+          "value_sha256": "ad57366865126e55649ecb23ae1d48887544976efea46a48eb5d85a6eeb4d306"
+        },
+        {
+          "id": "fraction",
+          "op": "divide",
+          "args": [
+            "percent",
+            "hundred"
+          ],
+          "params": {},
+          "depth": 3,
+          "source_dependencies": [
+            "request:"
+          ],
+          "value": {
+            "decimal": "0.125"
+          },
+          "value_sha256": "2b48ec1ad57b67ee2761ed858fc4eead4f185fa3d76a37db6a12fbccbd71de3c"
+        },
+        {
+          "id": "part",
+          "op": "multiply",
+          "args": [
+            "base",
+            "fraction"
+          ],
+          "params": {},
+          "depth": 6,
+          "source_dependencies": [
+            "initial_state:/records",
+            "request:"
+          ],
+          "value": {
+            "decimal": "10.000"
+          },
+          "value_sha256": "c8d917f6f787e4a97d24ee8774ebc573e4e98955fcd09637f8cba4f16aa5f721"
+        },
+        {
+          "id": "fee",
+          "op": "extract_decimal",
+          "args": [
+            "request"
+          ],
+          "params": {
+            "anchor": "fee "
+          },
+          "depth": 2,
+          "source_dependencies": [
+            "request:"
+          ],
+          "value": {
+            "decimal": "1.75"
+          },
+          "value_sha256": "d800822bf1f12f27f1133ad6618dc114c4f1f90fe84201b5ffefd8aca53145d5"
+        },
+        {
+          "id": "result",
+          "op": "add",
+          "args": [
+            "part",
+            "fee"
+          ],
+          "params": {},
+          "depth": 7,
+          "source_dependencies": [
+            "initial_state:/records",
+            "request:"
+          ],
+          "value": {
+            "decimal": "11.750"
+          },
+          "value_sha256": "212b285810424f1dc06d0af25e6ca3e5de1d980b225db242b28f4df4a65f5248"
+        }
+      ],
+      "binding_results": [
+        {
+          "target": "/clauses/0/state/checks/0/value",
+          "node": "result",
+          "claimed": 0,
+          "derived": 11.75,
+          "claim_matches": false,
+          "source_dependencies": [
+            "initial_state:/records",
+            "request:"
+          ]
+        },
+        {
+          "target": "/clauses/0/state/checks/1/value",
+          "node": "recipient",
+          "claimed": 0,
+          "derived": "Vendor",
+          "claim_matches": false,
+          "source_dependencies": [
+            "initial_state:/records",
+            "request:"
+          ]
+        }
+      ],
+      "budget": {
+        "row_visits": 2,
+        "intermediate_items": 32
+      }
+    },
+    "diagnostics": []
+  }
+}

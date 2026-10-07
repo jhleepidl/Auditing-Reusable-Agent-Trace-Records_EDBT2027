@@ -1,0 +1,32 @@
+\subsection{Partial contracts are operational but incomplete}
+\label{sec:cross-suite-stress}
+We fix AgentDojo \texttt{v1} tasks 0--9 in banking, Slack, and travel with no outcome-dependent replacement. Using only each prompt and initial public state, the original specification process constructs task-grounded partial checks for 24/30 tasks: 20 state-oriented and four query-oriented specifications. Six tasks remain excluded because a narrow relation would require an unstated assumption or a broader semantic oracle. This 24/30 is a feasibility count within the fixed selection, not a benchmark-wide estimate.
+
+After freezing these constraints and the executable harness, we evaluate 30 official positive controls, four independently constructed query positives, and 56 predeclared must-reject fixtures. All 34 positive controls are accepted. Eleven negatives are also accepted. The failures occur in seven task IDs---four banking and three travel---while none of the tested Slack negatives is accepted. Table~\ref{tab:cross-suite-mechanism} shows that the strongest mechanism is not merely a wrong token: all four wrong-answer-only controls are rejected, whereas all four explicit denials and all four wrong answers that quote the correct value are accepted. The paired contrast isolates assertion polarity/quotation as the missing distinction for these evaluators.
+
+\begin{table}[t]
+\centering\small
+\caption{Pre-frozen cross-suite stress by fixture mechanism. ``False accept'' is defined only for the declared must-reject fixtures; counts are constructive tests, not defect-rate estimates or prevalence estimates.}
+\label{tab:cross-suite-mechanism}
+\begin{tabular}{@{}lrr@{}}
+\toprule
+Fixture & Must reject & False accept \\
+\midrule
+Explicit denial containing correct answer & 4 & 4 \\
+Wrong answer + quoted correct answer & 4 & 4 \\
+Wrong answer only (contrast) & 4 & 0 \\
+Required state effect absent (no-op) & 20 & 1 \\
+One required state field corrupted & 24 & 2 \\
+\midrule
+Total & 56 & 11 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The state failures are also concrete. Banking task 5 requests an \emph{additional} 5.00 Spotify payment, yet an unchanged state passes because the utility finds the pre-existing 50.00 transaction. Banking task 6 does not check the scheduled-transfer recipient, and travel task 3 does not check the email recipient. The latter two counterexamples are first detected with synthetic final-state mutations, so we do not initially call them tool-realizable trajectories. In a separately frozen, outcome-selected follow-up, we change only the recipient argument before the actual benchmark tool executes. Both wrong-recipient runs violate the previously frozen recipient constraints and both are still accepted; both unmodified controls also pass and no tool error occurs. The 2/2 targeted confirmation is not added to the primary 56-case denominator.
+
+Positive scaffolds expose a second reason not to equate native ground truth with independent semantics. Three state-task scaffolds fail the declared partial checks, so six planned field mutations are skipped rather than manufactured from an invalid positive scaffold. Banking task 5 has an alias/identifier mismatch that we conservatively leave unresolved. Slack task 6 sends the literal body \texttt{...} although the prompt asks for cuisine information, while its utility checks only that a direct message was added after the webpage was accessed. Travel task 4 explicitly requests April 25, 2024; the official action creates April 25, 2023, and the utility compares only month and day. These are reported as scaffold diagnostics, not retroactively inserted into the negative denominator.
+
+The operational lesson is the partial-contract one: a practitioner need not possess a complete admissible-output relation to find sound counterexamples. Necessary predicates can reject a specific corrupted state or assertion; unsupported regions remain unknown. Conversely, passing a partial predicate or an official positive control cannot certify complete semantics.
+
+Construction feasibility does not certify every proposed predicate as necessary over all paraphrases or implementations. Section~\ref{sec:second-builder} audits this specification boundary separately; the original finite counterexamples and counts remain unchanged.

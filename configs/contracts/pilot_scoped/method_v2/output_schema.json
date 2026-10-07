@@ -1,0 +1,306 @@
+{
+  "type": "object",
+  "properties": {
+    "ir_version": {
+      "type": "string",
+      "enum": [
+        "r21.2"
+      ]
+    },
+    "scope_id": {
+      "type": "string"
+    },
+    "classification": {
+      "type": "string",
+      "enum": [
+        "state",
+        "query",
+        "unknown"
+      ]
+    },
+    "clauses": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "obligation_id": {
+            "type": "string"
+          },
+          "kind": {
+            "type": "string",
+            "enum": [
+              "state",
+              "query"
+            ]
+          },
+          "state": {
+            "anyOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "path": {
+                    "type": "string"
+                  },
+                  "selector": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "field": {
+                          "type": "string"
+                        },
+                        "value": {
+                          "anyOf": [
+                            {
+                              "type": [
+                                "string",
+                                "number",
+                                "boolean",
+                                "null"
+                              ]
+                            },
+                            {
+                              "type": "array",
+                              "items": {
+                                "type": [
+                                  "string",
+                                  "number",
+                                  "boolean",
+                                  "null"
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      "required": [
+                        "field",
+                        "value"
+                      ],
+                      "additionalProperties": false
+                    }
+                  },
+                  "checks": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "property": {
+                          "type": "string"
+                        },
+                        "operator": {
+                          "type": "string",
+                          "enum": [
+                            "absent",
+                            "changed",
+                            "contains",
+                            "date",
+                            "equals",
+                            "exists",
+                            "ge",
+                            "gt",
+                            "le",
+                            "lt",
+                            "member",
+                            "month_day",
+                            "not_member"
+                          ]
+                        },
+                        "value": {
+                          "anyOf": [
+                            {
+                              "type": [
+                                "string",
+                                "number",
+                                "boolean",
+                                "null"
+                              ]
+                            },
+                            {
+                              "type": "array",
+                              "items": {
+                                "type": [
+                                  "string",
+                                  "number",
+                                  "boolean",
+                                  "null"
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      "required": [
+                        "property",
+                        "operator",
+                        "value"
+                      ],
+                      "additionalProperties": false
+                    }
+                  },
+                  "identity_profile": {
+                    "type": "string",
+                    "enum": [
+                      "dict_key",
+                      "message_multiset",
+                      "position",
+                      "scalar_set",
+                      "singleton",
+                      "stable_id"
+                    ]
+                  },
+                  "identity_field": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "newness": {
+                    "type": "string",
+                    "enum": [
+                      "count_increase",
+                      "index_absence",
+                      "none",
+                      "pre_id_absence",
+                      "pre_key_absence"
+                    ]
+                  }
+                },
+                "required": [
+                  "path",
+                  "selector",
+                  "checks",
+                  "identity_profile",
+                  "identity_field",
+                  "newness"
+                ],
+                "additionalProperties": false
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "query": {
+            "anyOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "entity": {
+                    "type": "string"
+                  },
+                  "property": {
+                    "type": "string"
+                  },
+                  "value": {
+                    "type": [
+                      "string",
+                      "number",
+                      "boolean",
+                      "null"
+                    ]
+                  },
+                  "unit": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "temporal_scope": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "role": {
+                    "type": "string"
+                  },
+                  "polarity": {
+                    "type": "string",
+                    "enum": [
+                      "positive",
+                      "negative"
+                    ]
+                  }
+                },
+                "required": [
+                  "entity",
+                  "property",
+                  "value",
+                  "unit",
+                  "temporal_scope",
+                  "role",
+                  "polarity"
+                ],
+                "additionalProperties": false
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "support": {
+            "type": "object",
+            "properties": {
+              "request_quote": {
+                "type": "string"
+              },
+              "initial_state_paths": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "schema_paths": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "reason": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "request_quote",
+              "initial_state_paths",
+              "schema_paths",
+              "reason"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "obligation_id",
+          "kind",
+          "state",
+          "query",
+          "support"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "unknown_reason": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "ir_version",
+    "scope_id",
+    "classification",
+    "clauses",
+    "unknown_reason"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

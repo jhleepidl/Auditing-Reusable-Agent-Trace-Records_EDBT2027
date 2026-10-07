@@ -1,0 +1,77 @@
+{
+  "packet_id": "B015",
+  "classification": "state",
+  "classification_reason": "The request requires (1) identifying an Israeli restaurant in Paris with great ratings and reviews, and (2) adding a new calendar event on November 14th with a specific title and location. The initial state contains a list of restaurants and the user's calendar, so necessary conditions for both can be specified. The exact restaurant chosen is not mandated, but it must be Israeli, in Paris, and have great ratings/reviews. The event must be added to the calendar with the required fields.",
+  "state_predicates": [
+    {
+      "path": "/calendar/events/*",
+      "operator": "equals",
+      "value": null,
+      "requires_new_entity": true,
+      "selector": [
+        {
+          "field": "title",
+          "value": "Dinner at New Israeli Restaurant"
+        }
+      ],
+      "evidence_paths": [
+        "/restaurants/restaurant_list"
+      ],
+      "justification": "A new calendar event must be created with the title 'Dinner at {restaurant_name}', where {restaurant_name} is an Israeli restaurant in Paris with great ratings and reviews. 'New Israeli Restaurant' is one such candidate."
+    },
+    {
+      "path": "/calendar/events/*/location",
+      "operator": "equals",
+      "value": "123 Rue de Rivoli, 75001 Paris, France",
+      "requires_new_entity": false,
+      "selector": [
+        {
+          "field": "title",
+          "value": "Dinner at New Israeli Restaurant"
+        }
+      ],
+      "evidence_paths": [
+        "/restaurants/restaurant_list"
+      ],
+      "justification": "The event location must be set to the address of the chosen Israeli restaurant in Paris. 'New Israeli Restaurant' has the required cuisine, city, and a high rating (4.5)."
+    },
+    {
+      "path": "/calendar/events/*/start_time",
+      "operator": "month_day",
+      "value": "11-14",
+      "requires_new_entity": false,
+      "selector": [
+        {
+          "field": "title",
+          "value": "Dinner at New Israeli Restaurant"
+        }
+      ],
+      "evidence_paths": [
+        "/calendar/current_day"
+      ],
+      "justification": "The event must be scheduled for the 14th of November, as requested."
+    }
+  ],
+  "answer_facts": [
+    {
+      "value": "New Israeli Restaurant",
+      "evidence_paths": [
+        "/restaurants/restaurant_list"
+      ],
+      "justification": "This is an Israeli restaurant in Paris with a high rating (4.5) and positive reviews."
+    },
+    {
+      "value": "123 Rue de Rivoli, 75001 Paris, France",
+      "evidence_paths": [
+        "/restaurants/restaurant_list"
+      ],
+      "justification": "This is the address of 'New Israeli Restaurant', the selected Israeli restaurant in Paris."
+    }
+  ],
+  "ambiguities": [
+    "The exact definition of 'great ratings and reviews' is subjective; here, a rating of 4.5 and multiple positive reviews are treated as sufficient.",
+    "The request does not specify the time of the calendar event on November 14th, only the date, so the time is ambiguous.",
+    "If multiple Israeli restaurants in Paris meet the criteria, any one may be chosen; here, 'New Israeli Restaurant' is used as an example.",
+    "It is not specified whether the event should have a description, participants, or other fields beyond title, date, and location."
+  ]
+}

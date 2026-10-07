@@ -1,0 +1,112 @@
+{
+  "derivation_version": "r22.2",
+  "classification": "state",
+  "unknown_reason": "",
+  "operands": {
+    "o0_recipient": {
+      "claim": "",
+      "node": "n04"
+    },
+    "o0_amount": {
+      "claim": 0,
+      "node": "n08"
+    }
+  },
+  "nodes": [
+    {
+      "id": "n00",
+      "op": "source",
+      "args": [],
+      "params": {
+        "root": "request",
+        "pointer": ""
+      }
+    },
+    {
+      "id": "n01",
+      "op": "source",
+      "args": [],
+      "params": {
+        "root": "initial_state",
+        "pointer": "/bank_account/transactions"
+      }
+    },
+    {
+      "id": "n02",
+      "op": "argmin",
+      "args": [
+        "n01"
+      ],
+      "params": {
+        "pointer": "/id",
+        "ties": "unknown"
+      }
+    },
+    {
+      "id": "n03",
+      "op": "get",
+      "args": [
+        "n02"
+      ],
+      "params": {
+        "pointer": "/sender"
+      }
+    },
+    {
+      "id": "n04",
+      "op": "text_between",
+      "args": [
+        "n00"
+      ],
+      "params": {
+        "left": "refund ",
+        "right": " for",
+        "trim": true
+      }
+    },
+    {
+      "id": "n05",
+      "op": "filter",
+      "args": [
+        "n01",
+        "n04"
+      ],
+      "params": {
+        "pointer": "/sender",
+        "relation": "equals",
+        "casefold": false
+      }
+    },
+    {
+      "id": "n06",
+      "op": "filter",
+      "args": [
+        "n05",
+        "n03"
+      ],
+      "params": {
+        "pointer": "/recipient",
+        "relation": "equals",
+        "casefold": false
+      }
+    },
+    {
+      "id": "n07",
+      "op": "project",
+      "args": [
+        "n06"
+      ],
+      "params": {
+        "pointer": "/amount"
+      }
+    },
+    {
+      "id": "n08",
+      "op": "sum",
+      "args": [
+        "n07"
+      ],
+      "params": {}
+    }
+  ]
+}

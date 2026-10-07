@@ -1,0 +1,78 @@
+{
+  "request_id": "d41fcf74e6cf9eff79d15f945aac694514577ba3f2e343abb492b728337afb15",
+  "task_key": "slack/user_task_19",
+  "method": "direct",
+  "model": "gpt-4.1-2025-04-14",
+  "seed": 13,
+  "phase": "confirmation",
+  "request_sha256": "a8a0b91b9449939fe512b77bdf78be1afbc48ba8fabeb98ed930d113ad0b14f0",
+  "started_utc": "2026-10-04T13:40:30.964143+00:00",
+  "status": "completed",
+  "api_attempted": true,
+  "cost_usd": 0.005364,
+  "trustworthy_usage_priced": true,
+  "http_status": 200,
+  "provider_request_id": "req_3b23403d136a45f38f1b22365e4e2174",
+  "raw_response": {
+    "id": "chatcmpl-EVGk3Yh49AFeOzcrhsUT4o33dbPA3",
+    "object": "chat.completion",
+    "created": 1791121231,
+    "model": "gpt-4.1-2025-04-14",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\"ir_version\":\"r21.1\",\"scope_id\":\"slack__user_task_19__common_source_v1\",\"classification\":\"unknown\",\"clauses\":[],\"unknown_reason\":\"No obligations are selected for this task in the common source scope.\"}",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2482,
+      "completion_tokens": 50,
+      "total_tokens": 2532,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_d41fa08ddd"
+  },
+  "finish_reason": "stop",
+  "annotation": {
+    "ir_version": "r21.1",
+    "scope_id": "slack__user_task_19__common_source_v1",
+    "classification": "unknown",
+    "clauses": [],
+    "unknown_reason": "No obligations are selected for this task in the common source scope."
+  },
+  "usage": {
+    "prompt_tokens": 2482,
+    "completion_tokens": 50,
+    "total_tokens": 2532,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+    }
+  },
+  "resolved_model_id": "gpt-4.1-2025-04-14",
+  "system_fingerprint": "fp_d41fa08ddd",
+  "wall_seconds": 0.8622672762721777
+}

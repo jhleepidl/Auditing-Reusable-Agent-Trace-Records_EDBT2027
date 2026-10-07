@@ -1,0 +1,116 @@
+R22.2 SCALAR OPERAND INTERFACE
+
+Both experimental arms receive the same public scope, source packet, native
+state schema, public facts, this manual, generated scaffold and output schema.
+The scaffold supplies public obligation structure. This experiment evaluates
+source operand construction; it does not evaluate specification discovery.
+
+Return exactly {derivation_version:"r22.2", classification, unknown_reason,
+operands:{<fixed endpoint>:{claim:<typed scalar>,node:<ID or null>}},nodes:[]}.
+Use every endpoint key shown in the scaffold. Do not emit a contract, bindings,
+scope_id, extra endpoint, Python, or a partial supported classification.
+classification matches the scaffold's state/query classification, or unknown.
+For state/query, unknown_reason="". For unknown, explain the ambiguity, keep
+nodes=[], and set every node=null; typed placeholder claims are permissible.
+
+LITERAL ARM: compute each operand from the source and put it in claim. Every
+node=null and nodes=[]. DERIVATION ARM: put a typed scalar claim at every
+endpoint, and bind every endpoint to a node ID. Claims can be typed placeholders
+0/""/false when necessary; the primary derivation uses executed node results.
+The secondary verified control additionally compares claims to node results.
+One node may serve multiple endpoints. Never duplicate a node ID. The compiler
+mechanically inserts all endpoints into the public ordinary-contract skeleton.
+There is no hidden selection correction: a program reading a wrong source field
+can execute successfully and still produce the wrong task operand.
+
+NODES: {id:"lowercase_id",op:"operation",args:["earlier_id",...],params:{...}}.
+Nodes occur in topological execution order. IDs match [a-z][a-z0-9_]{0,31}.
+Arguments are node IDs, not inline constants. Every endpoint result must depend
+on a source read. Structural constants are only 0, 1, 100, true, false.
+Missing source and ambiguous unique selection/ties yield construction UNKNOWN;
+bad types, invalid operations or references yield construction ERROR. Neither
+is a task FAIL; the separate ordinary interpreter evaluates observed effects.
+
+SOURCE AND TEXT OPERATIONS (argument order and result types)
+source() params {root:"initial_state"|"request"|"scope"|"facts",pointer:"..."}
+  -> JSON value. RFC6901 pointer "" means the whole root; object keys and array
+  indexes follow the actual source layout. The request root is a STRING, so read
+  it with pointer="", then use text operations. It has no child JSON fields.
+request_span() params {start:N,end:N} -> exact request STRING by character span.
+text_between(text) params {left:"literal anchor",right:"literal anchor",trim:bool}
+  -> STRING between anchors. Each nonempty delimiter must be unique; "" denotes
+  the start/end boundary. Use delimiters, not an intended answer as the anchor.
+extract_decimal(text) params {anchor:"unique literal before number"} -> NUMBER.
+  This ALREADY parses the adjacent numeric token. Do NOT parse_decimal again.
+parse_decimal(text) params {} -> NUMBER; input must be a complete numeric STRING.
+string(number_or_string) params {} -> STRING (no implicit Boolean conversion).
+constant() params {value:0|1|100|true|false} -> structural scalar.
+get(value) params {pointer:"..."} -> child JSON value ("" keeps whole value).
+at(array) params {index:N} -> one element; indexes zero-based, permitted 0..31.
+unique(array) params {} -> element only when array has EXACTLY one element.
+
+COLLECTION OPERATIONS
+filter(records,needle) params {pointer:"/field",relation:"equals"|"not_equals"|
+  "contains"|"not_contains"|"prefix"|"gt"|"ge"|"lt"|"le",casefold:bool}
+  -> ARRAY of original records. pointer reads each record's compared field.
+project(records) params {pointer:"/field"} -> ARRAY of field values.
+lookup_many(map,keys) params {missing:"unknown"|"empty_array"} -> ARRAY of map
+  values, one per key in order. For message maps these are ARRAYS of messages.
+  Apply flatten next before counting messages. empty_array is only for absent
+  keys in an observed map, never unavailable/None data.
+flatten(arrays) params {} -> single ARRAY; each child must be an ARRAY.
+zip(left_array,right_array) params {left_name:"...",right_name:"..."}
+  -> ARRAY of records with these named fields; lengths must match.
+group_count(records,domain) params {pointer:"/grouping_field",unmatched:"ignore"|
+  "unknown"} -> ARRAY of {key:<domain scalar>,count:<NUMBER>} records. EVERY key
+  in the explicit domain appears, including count=0. Domain duplicates abstain.
+count(array) params {} -> NUMBER. sum(numbers) params {} -> NUMBER.
+argmin(records)/argmax(records) params {pointer:"/numeric_or_string_field",
+  ties:"unknown"} -> winning RECORD. Empty or tied optimum abstains.
+sort(records) params {keys:[{pointer:"/field",direction:"asc"|"desc"},...]}
+  -> sorted ARRAY, 1..3 keys. Use explicit secondary keys for declared tie rules.
+  Duplicate complete sort keys abstain.
+enumerate(records) params {index_name:"rank"} -> ARRAY of records with one-based
+  numeric rank. Read /key or /count or /rank from selected records using get.
+
+ARITHMETIC AND COMPOSITION
+add(a,b), subtract(a,b), multiply(a,b), divide(a,b): params {}, NUMBER->NUMBER.
+  Decimal arithmetic; divide by zero abstains. Nonterminating decimals require
+  explicit quantize before final JSON conversion.
+quantize(number) params {places:0..6,rounding:"half_even"|"half_up"} -> NUMBER.
+concat(text1,...,textN) params {} -> STRING; N=2..8; all inputs are strings.
+replace_once(template,replacement) params {needle:"unique literal"} -> STRING;
+  the first input contains needle exactly once, second input is replacement text.
+
+DYNAMIC PUBLIC FIELDS ARE OPERANDS TOO
+Read a public path_pattern from root="scope"; replace_once(template,recipient)
+with needle="{recipient}" to derive the dynamic_path endpoint. Likewise read
+property_pattern and replace_once(template,user) with needle="{user}" to derive
+dynamic_property. The resulting field must also satisfy public capture bindings.
+Do not leave the braces in the resulting operand. Reuse the same source-selected
+user/recipient node for its ordinary value and its dynamic field construction.
+For query task-subject names, read the declared public entity_label from scope;
+for source-derived entities, read the chosen record's required source name.
+Generic facts can be read through root="facts"; they are identical for both arms.
+
+SYNTHETIC EXAMPLES (not benchmark answers)
+Given source {records:[{item:"Gizmo",amount:40,recipient:"party_A"}]} and request
+"Refund Gizmo with fee 2.5.": source(initial_state,/records) -> rows;
+source(request,"") -> req; text_between(req,{left:"Refund ",right:" with",trim:true})
+-> item; filter(rows,item,{pointer:"/item",relation:"equals",casefold:false}) ->
+matches; unique(matches) -> record; get(record,/recipient) -> recipient;
+get(record,/amount) -> amount; extract_decimal(req,{anchor:"fee "}) -> fee;
+add(amount,fee) -> total. Bind recipient and total to their scalar endpoints.
+
+Given domain ["A","B"] and map {A:[{sender:"U"}],B:[]}:
+lookup_many(map,domain,{missing:"empty_array"}) -> [[{sender:"U"}],[]]; flatten
+-> [{sender:"U"}]. To count by sender, supply an explicit USER domain to
+group_count(records,users,{pointer:"/sender",unmatched:"ignore"}). To count
+channel messages, zip channel domain and per-channel count results is unnecessary
+when each message has its channel recipient: group_count(flattened,channels,
+{pointer:"/recipient",unmatched:"unknown"}) preserves empty channel zero counts.
+
+BUDGETS: 64 nodes, 128 bindings/endpoints, DAG depth16, 10,000 row visits and
+intermediate items, 1MiB aggregate source, strings16,384 chars, Decimal40 digits,
+numeric magnitude<=1e12. Output schema gives exact per-operation parameter keys.
+The underlying V1 DAG operations and constants are unchanged and hash-pinned.

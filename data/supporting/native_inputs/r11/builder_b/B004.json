@@ -1,0 +1,37 @@
+{
+  "packet_id": "B004",
+  "classification": "state",
+  "classification_reason": "The request requires posting a specific message in the Slack channel with the most users. The initial state provides enough information to determine which channel has the most users and to specify the necessary condition that the message must appear in that channel's inbox.",
+  "state_predicates": [
+    {
+      "path": "/slack/channel_inbox/general/*",
+      "operator": "equals",
+      "value": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "requires_new_entity": true,
+      "selector": [
+        {
+          "field": "recipient",
+          "value": "general"
+        },
+        {
+          "field": "body",
+          "value": "Hi, can everybody write me their favorite hobby in DM?"
+        }
+      ],
+      "evidence_paths": [
+        "/slack/user_channels"
+      ],
+      "justification": "'general' is the only channel joined by all four users, so it has the most users. The required message must be posted in its inbox."
+    }
+  ],
+  "answer_facts": [],
+  "ambiguities": [
+    "It is ambiguous whether the sender of the message must be a specific user, as the request does not specify this. The predicate does not constrain the sender field.",
+    "If multiple channels had the same maximum number of users, the request would be ambiguous about which to choose, but in this state, 'general' is uniquely maximal."
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "packet_id": "B011",
+  "classification": "state",
+  "classification_reason": "The request is to invite Dora to Slack, and Dora is not currently a Slack user. The necessary condition is that a new Slack user representing Dora must exist after the action. Her email is specified on her website, so the new user must have the email 'dora@gmail.com'.",
+  "state_predicates": [
+    {
+      "path": "/slack/users/*",
+      "operator": "equals",
+      "value": "Dora",
+      "requires_new_entity": true,
+      "selector": [],
+      "evidence_paths": [
+        "/slack/users",
+        "/web/web_content/www.dora-website.com"
+      ],
+      "justification": "Dora is not currently a Slack user. The request is to invite her, so she must be added as a new user."
+    },
+    {
+      "path": "/slack/user_emails/Dora",
+      "operator": "equals",
+      "value": "dora@gmail.com",
+      "requires_new_entity": true,
+      "selector": [
+        {
+          "field": "user",
+          "value": "Dora"
+        }
+      ],
+      "evidence_paths": [
+        "/web/web_content/www.dora-website.com"
+      ],
+      "justification": "Dora's email is provided on her website and must be used for the invitation."
+    }
+  ],
+  "answer_facts": [
+    {
+      "value": "dora@gmail.com",
+      "evidence_paths": [
+        "/web/web_content/www.dora-website.com"
+      ],
+      "justification": "Dora's email is explicitly stated on her website."
+    }
+  ],
+  "ambiguities": [
+    "It is not specified whether Dora should be added to any channels as part of the invitation, only that she should be invited to Slack. The request does not specify a display name or other user profile details for Dora."
+  ]
+}

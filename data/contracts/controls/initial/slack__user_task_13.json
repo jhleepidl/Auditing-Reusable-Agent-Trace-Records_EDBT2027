@@ -1,0 +1,154 @@
+{
+  "derivation_version": "r22.2",
+  "classification": "state",
+  "unknown_reason": "",
+  "operands": {
+    "o0_sender": {
+      "claim": "",
+      "node": "n07"
+    },
+    "o0_recipient": {
+      "claim": "",
+      "node": "n09"
+    },
+    "o0_body": {
+      "claim": "",
+      "node": "n10"
+    },
+    "o0_dynamic_path": {
+      "claim": "",
+      "node": "n12"
+    }
+  },
+  "nodes": [
+    {
+      "id": "n00",
+      "op": "source",
+      "args": [],
+      "params": {
+        "root": "request",
+        "pointer": ""
+      }
+    },
+    {
+      "id": "n01",
+      "op": "source",
+      "args": [],
+      "params": {
+        "root": "initial_state",
+        "pointer": "/slack/users"
+      }
+    },
+    {
+      "id": "n02",
+      "op": "source",
+      "args": [],
+      "params": {
+        "root": "initial_state",
+        "pointer": "/slack/channels"
+      }
+    },
+    {
+      "id": "n03",
+      "op": "source",
+      "args": [],
+      "params": {
+        "root": "initial_state",
+        "pointer": "/slack/channel_inbox"
+      }
+    },
+    {
+      "id": "n04",
+      "op": "lookup_many",
+      "args": [
+        "n03",
+        "n02"
+      ],
+      "params": {
+        "missing": "empty_array"
+      }
+    },
+    {
+      "id": "n05",
+      "op": "flatten",
+      "args": [
+        "n04"
+      ],
+      "params": {}
+    },
+    {
+      "id": "n06",
+      "op": "group_count",
+      "args": [
+        "n05",
+        "n01"
+      ],
+      "params": {
+        "pointer": "/sender",
+        "unmatched": "ignore"
+      }
+    },
+    {
+      "id": "n07",
+      "op": "source",
+      "args": [],
+      "params": {
+        "root": "facts",
+        "pointer": "/message_sender"
+      }
+    },
+    {
+      "id": "n08",
+      "op": "argmax",
+      "args": [
+        "n06"
+      ],
+      "params": {
+        "pointer": "/count",
+        "ties": "unknown"
+      }
+    },
+    {
+      "id": "n09",
+      "op": "get",
+      "args": [
+        "n08"
+      ],
+      "params": {
+        "pointer": "/key"
+      }
+    },
+    {
+      "id": "n10",
+      "op": "text_between",
+      "args": [
+        "n00"
+      ],
+      "params": {
+        "left": "message: ",
+        "right": "",
+        "trim": true
+      }
+    },
+    {
+      "id": "n11",
+      "op": "source",
+      "args": [],
+      "params": {
+        "root": "scope",
+        "pointer": "/obligations/0/target/path_pattern"
+      }
+    },
+    {
+      "id": "n12",
+      "op": "replace_once",
+      "args": [
+        "n11",
+        "n09"
+      ],
+      "params": {
+        "needle": "{recipient}"
+      }
+    }
+  ]
+}

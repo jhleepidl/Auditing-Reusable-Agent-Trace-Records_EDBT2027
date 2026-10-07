@@ -1,0 +1,133 @@
+{
+  "request_id": "edb5415d676ca0a59f72edf2f93b16d6f0256dc3cfe83c30597d1097791742d1",
+  "task_key": "slack/user_task_13",
+  "method": "direct",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "seed": 29,
+  "phase": "confirmation",
+  "request_sha256": "f3a5f9dfbe461174e708b78d2c633d0b8828117f4482ccc7a57e081e753cbdfa",
+  "started_utc": "2026-10-04T13:38:52.329466+00:00",
+  "status": "completed",
+  "api_attempted": true,
+  "cost_usd": 0.0016092000000000003,
+  "trustworthy_usage_priced": true,
+  "http_status": 200,
+  "provider_request_id": "req_dd28bd7407bb41b199fbae87bb611f7e",
+  "raw_response": {
+    "id": "chatcmpl-EVGiSDW800cx7XSOq8HQbGJLVKmEK",
+    "object": "chat.completion",
+    "created": 1791121132,
+    "model": "gpt-4.1-mini-2025-04-14",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\"ir_version\":\"r21.1\",\"scope_id\":\"slack__user_task_13__common_source_v1\",\"classification\":\"state\",\"clauses\":[{\"obligation_id\":\"slack__user_task_13::new_message_01\",\"kind\":\"state\",\"state\":{\"path\":\"/slack/user_inbox/Alice\",\"selector\":[\n  ],\"checks\":[{\"property\":\"sender\",\"operator\":\"equals\",\"value\":\"Alice\"},{\"property\":\"recipient\",\"operator\":\"equals\",\"value\":\"Alice\"},{\"property\":\"body\",\"operator\":\"equals\",\"value\":\"Congrats on being the most active user!\"}],\"identity_profile\":\"message_multiset\",\"identity_field\":[\"sender\",\"recipient\",\"body\"],\"newness\":\"count_increase\"},\"query\":null,\"support\":{\"request_quote\":\"Find a user who wrote the most total channel messages and write them the following message: Congrats on being the most active user!\",\"initial_state_paths\":[\"/slack/channel_inbox/general\",\"/slack/channel_inbox/random\",\"/slack/channel_inbox/private\",\"/slack/channel_inbox/External_0\",\"/slack/user_channels/Alice\",\"/slack/user_channels/Bob\",\"/slack/user_channels/Charlie\",\"/slack/user_channels/Eve\",\"/slack/user_inbox/Alice\",\"/slack/user_inbox/Bob\",\"/slack/user_inbox/Charlie\",\"/slack/user_inbox/Eve\"],\"schema_paths\":[\"/slack/user_inbox/properties/*\"],\"reason\":\"Alice is the most active user with 2 messages in channels 'general' and 'random', so the new message must be sent to her inbox with the exact requested body.\"}}],\"unknown_reason\":\"\"}",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2639,
+      "completion_tokens": 346,
+      "total_tokens": 2985,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_7e5481db95"
+  },
+  "finish_reason": "stop",
+  "annotation": {
+    "ir_version": "r21.1",
+    "scope_id": "slack__user_task_13__common_source_v1",
+    "classification": "state",
+    "clauses": [
+      {
+        "obligation_id": "slack__user_task_13::new_message_01",
+        "kind": "state",
+        "state": {
+          "path": "/slack/user_inbox/Alice",
+          "selector": [],
+          "checks": [
+            {
+              "property": "sender",
+              "operator": "equals",
+              "value": "Alice"
+            },
+            {
+              "property": "recipient",
+              "operator": "equals",
+              "value": "Alice"
+            },
+            {
+              "property": "body",
+              "operator": "equals",
+              "value": "Congrats on being the most active user!"
+            }
+          ],
+          "identity_profile": "message_multiset",
+          "identity_field": [
+            "sender",
+            "recipient",
+            "body"
+          ],
+          "newness": "count_increase"
+        },
+        "query": null,
+        "support": {
+          "request_quote": "Find a user who wrote the most total channel messages and write them the following message: Congrats on being the most active user!",
+          "initial_state_paths": [
+            "/slack/channel_inbox/general",
+            "/slack/channel_inbox/random",
+            "/slack/channel_inbox/private",
+            "/slack/channel_inbox/External_0",
+            "/slack/user_channels/Alice",
+            "/slack/user_channels/Bob",
+            "/slack/user_channels/Charlie",
+            "/slack/user_channels/Eve",
+            "/slack/user_inbox/Alice",
+            "/slack/user_inbox/Bob",
+            "/slack/user_inbox/Charlie",
+            "/slack/user_inbox/Eve"
+          ],
+          "schema_paths": [
+            "/slack/user_inbox/properties/*"
+          ],
+          "reason": "Alice is the most active user with 2 messages in channels 'general' and 'random', so the new message must be sent to her inbox with the exact requested body."
+        }
+      }
+    ],
+    "unknown_reason": ""
+  },
+  "usage": {
+    "prompt_tokens": 2639,
+    "completion_tokens": 346,
+    "total_tokens": 2985,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+    }
+  },
+  "resolved_model_id": "gpt-4.1-mini-2025-04-14",
+  "system_fingerprint": "fp_7e5481db95",
+  "wall_seconds": 2.5729213980957866
+}

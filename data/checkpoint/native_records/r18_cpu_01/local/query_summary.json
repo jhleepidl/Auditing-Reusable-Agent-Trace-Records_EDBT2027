@@ -1,0 +1,157 @@
+{
+  "by_task": {
+    "10": {
+      "finite_canonical_domain": {
+        "n": 100,
+        "native_kernel": {
+          "false_accept": 18,
+          "false_reject": 0,
+          "true_positive_retained": 1,
+          "unknown": 0
+        },
+        "patched_scoped": {
+          "false_accept": 0,
+          "false_reject": 0,
+          "true_positive_retained": 1,
+          "unknown": 0
+        },
+        "reference_negative": 99,
+        "reference_positive": 1
+      }
+    },
+    "2": {
+      "finite_canonical_domain": {
+        "n": 1488,
+        "native_kernel": {
+          "false_accept": 0,
+          "false_reject": 0,
+          "true_positive_retained": 1,
+          "unknown": 0
+        },
+        "patched_scoped": {
+          "false_accept": 0,
+          "false_reject": 0,
+          "true_positive_retained": 1,
+          "unknown": 0
+        },
+        "reference_negative": 1487,
+        "reference_positive": 1
+      },
+      "strict_whole_output_profile": {
+        "n": 8,
+        "native_kernel": {
+          "false_accept": 8,
+          "false_reject": 0,
+          "true_positive_retained": 0,
+          "unknown": 0
+        },
+        "patched_scoped": {
+          "false_accept": 0,
+          "false_reject": 0,
+          "true_positive_retained": 0,
+          "unknown": 0
+        },
+        "reference_negative": 8,
+        "reference_positive": 0
+      }
+    },
+    "5": {
+      "finite_canonical_domain": {
+        "n": 1440,
+        "native_kernel": {
+          "false_accept": 2,
+          "false_reject": 0,
+          "true_positive_retained": 1,
+          "unknown": 0
+        },
+        "patched_scoped": {
+          "false_accept": 0,
+          "false_reject": 0,
+          "true_positive_retained": 1,
+          "unknown": 0
+        },
+        "reference_negative": 1439,
+        "reference_positive": 1
+      },
+      "strict_whole_output_profile": {
+        "n": 8,
+        "native_kernel": {
+          "false_accept": 8,
+          "false_reject": 0,
+          "true_positive_retained": 0,
+          "unknown": 0
+        },
+        "patched_scoped": {
+          "false_accept": 0,
+          "false_reject": 0,
+          "true_positive_retained": 0,
+          "unknown": 0
+        },
+        "reference_negative": 8,
+        "reference_positive": 0
+      }
+    }
+  },
+  "claim_limit": "Restricted answer-language repair, not unrestricted natural-language semantic judging; task5 uses explicitly documented calendar-gap interpretation.",
+  "generated_cases": 3044,
+  "kernel_provenance": {
+    "2": {
+      "method": "unmodified_utility_body_empty_base_literal_constants",
+      "native_engine_replay": false,
+      "source_file_sha256": "d2a550b812b7f40ee2dea17ac19d44f2dd063d103524118216b563eca6e44171",
+      "utility_ast_sha256": "dba0490a985801c2cfe4ba010da57a067877d94b15acf804f8c6472bcb88f9fc"
+    },
+    "5": {
+      "method": "unmodified_utility_body_empty_base_literal_constants",
+      "native_engine_replay": false,
+      "source_file_sha256": "d2a550b812b7f40ee2dea17ac19d44f2dd063d103524118216b563eca6e44171",
+      "utility_ast_sha256": "df0c6231c2afe83674c414a9e1ea7a2b75b00593f544de8e42203576f3d11337"
+    },
+    "10": {
+      "method": "unmodified_utility_body_empty_base_literal_constants",
+      "native_engine_replay": false,
+      "source_file_sha256": "d2a550b812b7f40ee2dea17ac19d44f2dd063d103524118216b563eca6e44171",
+      "utility_ast_sha256": "f1704058844bfe61f7ec1092390140422e38979bac4c63dad320174061654235"
+    }
+  },
+  "selection": "Known exposed fixed tasks; finite parameter enumeration and strict-format profile, not held-out discovery",
+  "specs": {
+    "2": {
+      "basis": "Prompt title and chronological selection from stored public state; no utility constants or official output used.",
+      "expected": "2024-05-21 18:00",
+      "format": "datetime",
+      "scope": "next-event timestamp under strict whole-answer YYYY-MM-DD HH:MM profile",
+      "task_id": 2,
+      "witnesses": [
+        "/calendar/current_day",
+        "/calendar/events/2/start_time"
+      ]
+    },
+    "5": {
+      "basis": "Declared operationalization of time available after the explicit preceding meeting. Not travel-time estimation or a general oracle.",
+      "expected": "01:30",
+      "format": "duration",
+      "scope": "calendar gap between the sole preceding meeting end and lunch start; strict whole-answer HH:MM profile",
+      "task_id": 5,
+      "witnesses": [
+        "/calendar/events/6/end_time",
+        "/calendar/events/9/start_time"
+      ]
+    },
+    "10": {
+      "basis": "Count calendar intervals overlapping current day; no summary obligation in this task.",
+      "expected": "3",
+      "format": "count",
+      "scope": "number of events on current day; decimal-only answer sublanguage",
+      "task_id": 10,
+      "witnesses": [
+        "/calendar/current_day",
+        "/calendar/events/6",
+        "/calendar/events/9",
+        "/calendar/events/24"
+      ]
+    }
+  },
+  "status": "EXECUTED_EXTRACTED_OFFICIAL_UTILITY_BODIES_NOT_FULL_NATIVE_RUNTIME",
+  "task_count": 3
+}

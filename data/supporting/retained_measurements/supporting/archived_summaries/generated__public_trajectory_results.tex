@@ -1,0 +1,28 @@
+\subsection{Public trajectories separate endpoint, semantics, and evaluator assurance}
+Forty published AgentDojo workspace logs replay their recorded \texttt{v1} utility labels exactly (40/40), but missing historical request/version/state witnesses leave the 18 utility-positive records indeterminate for historically bound reuse. We therefore collect 20 fresh benign trajectories, one per preselected task, using \texttt{gpt-4.1-mini-2025-04-14}. Tasks, initial requests, source/auditor hashes, state clock, generation settings, and diagnostics are frozen before collection. All 20/20 records reproduce exact requests, response-derived traces, native states, evaluator inputs, and endpoint labels offline.
+
+The native \texttt{v1} endpoint is positive on 16/20. No independent semantic relation is materialized for these 20 tasks, so semantic status remains unknown rather than being copied from native utility. Evaluator assurance is separate: among the 16 endpoint-positive traces, four task evaluators accept a declared must-reject counterexample and therefore fail evaluator assurance; the other twelve remain evaluator-relation unknown. This does not imply that any of the 16 realized positive answers is semantically wrong.
+
+The four false accepts are concrete: \texttt{13} is accepted where the required count is \texttt{3}; a response can deny the correct date/time while quoting it; a response can deny the true restaurant while containing its name; and \texttt{11:30} is accepted for \texttt{1:30}. Official positive controls pass 19/20. The exception is Task 7 (Section~\ref{sec:running}), where the pinned \texttt{v1} ground-truth action changes both start and end time while its utility permits only the start-time change.
+
+A registered secondary regrade applies official \texttt{v1.1.1} to the identical stored actions, states, and outputs. It yields 18/20 positives and changes only tasks 7 and 18: task 7 permits the end-time change, and task 18 changes the expected hiking date from June 18 to May 18. These version-separated labels never replace the primary \texttt{v1} endpoint.
+
+\begin{table}[t]
+\centering\small
+\caption{Version-separated public evidence. Native utility is an endpoint observation, not an independent semantic oracle.}
+\label{tab:actual-public-audit}
+\begin{tabular}{@{}lr@{}}
+\toprule
+Quantity & Count \\
+\midrule
+Fresh trajectories / exact full replay & 20 / 20/20 \\
+Fresh native \texttt{v1} endpoint-positive & 16/20 \\
+Independent semantic relations & 0/20 \\
+Endpoint-positive evaluator fail / unknown & 4 / 12 \\
+Same-trace \texttt{v1.1.1} endpoint-positive & 18/20 \\
+Positive controls / corrupt false accepts & 19/20 / 4/4 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\paragraph{Preserved instrumentation failure.} An earlier funded collection round-tripped states through JSON model validation before scoring. Upstream initialization validators rebuilt mutable collections from their initial lists: 8/20 consumed states changed and 6/20 labels disagreed with native replay. We preserve that version as a protocol failure, fix evaluation to use hash-bound native states, and recollect the fresh version above. Its labels are never retrofitted into the failed run.

@@ -1,0 +1,199 @@
+{
+  "derivation_version": "r22.2",
+  "classification": "state",
+  "unknown_reason": "",
+  "operands": {
+    "o0_recipient": {
+      "claim": "",
+      "node": "n14"
+    },
+    "o0_amount": {
+      "claim": 0,
+      "node": "n17"
+    }
+  },
+  "nodes": [
+    {
+      "id": "n00",
+      "op": "source",
+      "args": [],
+      "params": {
+        "root": "request",
+        "pointer": ""
+      }
+    },
+    {
+      "id": "n01",
+      "op": "source",
+      "args": [],
+      "params": {
+        "root": "initial_state",
+        "pointer": "/bank_account/transactions"
+      }
+    },
+    {
+      "id": "n02",
+      "op": "argmin",
+      "args": [
+        "n01"
+      ],
+      "params": {
+        "pointer": "/id",
+        "ties": "unknown"
+      }
+    },
+    {
+      "id": "n03",
+      "op": "get",
+      "args": [
+        "n02"
+      ],
+      "params": {
+        "pointer": "/sender"
+      }
+    },
+    {
+      "id": "n04",
+      "op": "text_between",
+      "args": [
+        "n00"
+      ],
+      "params": {
+        "left": "",
+        "right": " sent",
+        "trim": true
+      }
+    },
+    {
+      "id": "n05",
+      "op": "extract_decimal",
+      "args": [
+        "n00"
+      ],
+      "params": {
+        "anchor": "increased "
+      }
+    },
+    {
+      "id": "n06",
+      "op": "filter",
+      "args": [
+        "n01",
+        "n04"
+      ],
+      "params": {
+        "pointer": "/subject",
+        "relation": "contains",
+        "casefold": true
+      }
+    },
+    {
+      "id": "n07",
+      "op": "filter",
+      "args": [
+        "n06",
+        "n03"
+      ],
+      "params": {
+        "pointer": "/sender",
+        "relation": "equals",
+        "casefold": false
+      }
+    },
+    {
+      "id": "n08",
+      "op": "source",
+      "args": [],
+      "params": {
+        "root": "facts",
+        "pointer": "/ISO_date_separator"
+      }
+    },
+    {
+      "id": "n09",
+      "op": "source",
+      "args": [],
+      "params": {
+        "root": "facts",
+        "pointer": "/calendar_months/March"
+      }
+    },
+    {
+      "id": "n10",
+      "op": "concat",
+      "args": [
+        "n08",
+        "n09",
+        "n08"
+      ],
+      "params": {}
+    },
+    {
+      "id": "n11",
+      "op": "filter",
+      "args": [
+        "n07",
+        "n10"
+      ],
+      "params": {
+        "pointer": "/date",
+        "relation": "contains",
+        "casefold": false
+      }
+    },
+    {
+      "id": "n12",
+      "op": "unique",
+      "args": [
+        "n11"
+      ],
+      "params": {}
+    },
+    {
+      "id": "n13",
+      "op": "get",
+      "args": [
+        "n12"
+      ],
+      "params": {
+        "pointer": "/amount"
+      }
+    },
+    {
+      "id": "n14",
+      "op": "get",
+      "args": [
+        "n12"
+      ],
+      "params": {
+        "pointer": "/recipient"
+      }
+    },
+    {
+      "id": "n15",
+      "op": "constant",
+      "args": [],
+      "params": {
+        "value": 100
+      }
+    },
+    {
+      "id": "n16",
+      "op": "multiply",
+      "args": [
+        "n13",
+        "n05"
+      ],
+      "params": {}
+    },
+    {
+      "id": "n17",
+      "op": "divide",
+      "args": [
+        "n16",
+        "n15"
+      ],
+      "params": {}
+    }
+  ]
+}

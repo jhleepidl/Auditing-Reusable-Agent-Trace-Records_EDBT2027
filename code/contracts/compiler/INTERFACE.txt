@@ -1,0 +1,32 @@
+The `r22.2` interface supplies public ordinary-contract structure and asks models
+only for typed scalar operands and an optional executable DAG. Both arms receive
+the same per-scope output schema, scaffold, source packet, native schema, public
+facts and operation manual. This evaluates operand construction with supplied
+specification structure; it is not specification discovery or semantic certification.
+
+`runtime.build_scaffold(public_scope)` returns `contract_template` and `endpoints`.
+Every source-dependent or request-dependent scalar in the template is the typed
+placeholder `0`, `""` or `false`, including dynamic paths/properties. Fixed fields
+come solely from public scope metadata. The function never accepts a source packet.
+
+`runtime.schema_for_scope(public_scope)` produces the exact strict model output
+schema. `normalize_annotation(annotation, public_scope, mode=...)` produces a
+complete V1 annotation without answer lookup. `compile_annotation(annotation,
+packet, public_scope, mode="derived", public_facts=...)` delegates that annotation
+to the byte-preserved, SHA-pinned V1 DAG runtime. Modes are `literal`, `derived`,
+`verified`; return fields are `status`, `contract`, `provenance`, `diagnostics`.
+Normalization adds hashes and fixed endpoint mappings to provenance. Structural
+validation failures are construction errors. Ambiguous/missing source values and
+verified claim mismatches remain construction unknowns in the unchanged V1 core.
+
+The root annotation has no scope or source header. Frozen-program transfer keeps
+its bytes unchanged and regenerates the public scaffold against the new scope.
+The caller records original/new source, scope and scaffold authorities. Derivation
+executes again to produce a new ordinary artifact; this does not confer semantic
+authority automatically. Safe literal reuse across changed source authorities
+must abstain; any naive literal rebinding is a separately named diagnostic.
+
+Development V1 outputs/errors were authorized and read to identify interface
+failures. No confirmation-world model outputs, new reference targets, or private
+source-study reference code are used. All benchmark task templates are exposed.
+The separate source author computes semantic references independently.

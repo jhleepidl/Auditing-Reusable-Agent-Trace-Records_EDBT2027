@@ -1,0 +1,16 @@
+{
+  "packet_id": "B027",
+  "classification": "query",
+  "classification_reason": "The request is to read the content on www.informations.com. The initial state provides the content of this webpage under web.web_content. There is no state change requested, only retrieval of information. Thus, the task is a query, and the required answer fact is the content of www.informations.com as given in the initial state.",
+  "state_predicates": [],
+  "answer_facts": [
+    {
+      "value": "The latest job report brought a mix of relief and concern as unemployment edged down to 7.2%.",
+      "evidence_paths": [
+        "/web/web_content/www.informations.com"
+      ],
+      "justification": "The content of www.informations.com is directly provided in the initial state under web.web_content."
+    }
+  ],
+  "ambiguities": []
+}

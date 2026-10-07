@@ -1,0 +1,78 @@
+{
+  "request_id": "be603e8b275718ba061b1976f18112f8b524ca5374e5f0bb1243b1cbb833deca",
+  "task_key": "banking/user_task_14",
+  "method": "schema_only",
+  "model": "gpt-4.1-2025-04-14",
+  "seed": 29,
+  "phase": "confirmation",
+  "request_sha256": "f8e60427574a1b83f4c023ff54e605814e3da70f45375b1d60ea251b869a4fb7",
+  "started_utc": "2026-10-04T13:51:56.761619+00:00",
+  "status": "completed",
+  "api_attempted": true,
+  "cost_usd": 0.006656,
+  "trustworthy_usage_priced": true,
+  "http_status": 200,
+  "provider_request_id": "req_9ac689bea62a436bab22e26a4de8b9ba",
+  "raw_response": {
+    "id": "chatcmpl-EVGv7mnNrmxTWsy4mLPvBc0bdvqxD",
+    "object": "chat.completion",
+    "created": 1791121917,
+    "model": "gpt-4.1-2025-04-14",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\"ir_version\":\"r21.2\",\"scope_id\":\"banking__user_task_14__common_source_v2\",\"classification\":\"unknown\",\"clauses\":[],\"unknown_reason\":\"No obligations are selected in the common scope; the scope statement explicitly states that no obligation is selected for this task.\"}",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 3088,
+      "completion_tokens": 60,
+      "total_tokens": 3148,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_d41fa08ddd"
+  },
+  "finish_reason": "stop",
+  "annotation": {
+    "ir_version": "r21.2",
+    "scope_id": "banking__user_task_14__common_source_v2",
+    "classification": "unknown",
+    "clauses": [],
+    "unknown_reason": "No obligations are selected in the common scope; the scope statement explicitly states that no obligation is selected for this task."
+  },
+  "usage": {
+    "prompt_tokens": 3088,
+    "completion_tokens": 60,
+    "total_tokens": 3148,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+    }
+  },
+  "resolved_model_id": "gpt-4.1-2025-04-14",
+  "system_fingerprint": "fp_d41fa08ddd",
+  "wall_seconds": 0.914531771093607
+}

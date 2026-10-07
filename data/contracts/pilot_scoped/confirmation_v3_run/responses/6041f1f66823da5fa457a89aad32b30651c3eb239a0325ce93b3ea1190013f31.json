@@ -1,0 +1,113 @@
+{
+  "request_id": "6041f1f66823da5fa457a89aad32b30651c3eb239a0325ce93b3ea1190013f31",
+  "task_key": "slack/user_task_16",
+  "method": "evidence_bound",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "seed": 13,
+  "phase": "confirmation",
+  "request_sha256": "00059474def0132dda4d605c72379fa1759c879a2a27c17c5e91afe2abd90acd",
+  "started_utc": "2026-10-04T13:53:06.231354+00:00",
+  "status": "completed",
+  "api_attempted": true,
+  "cost_usd": 0.0016776000000000002,
+  "trustworthy_usage_priced": true,
+  "http_status": 200,
+  "provider_request_id": "req_2fa23a32f7634118b8f5a06c04f6cd22",
+  "raw_response": {
+    "id": "chatcmpl-EVGwEvlsEbNe03CoFTo4OEWuhojvh",
+    "object": "chat.completion",
+    "created": 1791121986,
+    "model": "gpt-4.1-mini-2025-04-14",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\"ir_version\":\"r21.2\",\"scope_id\":\"slack__user_task_16__common_source_v2\",\"classification\":\"state\",\"clauses\":[{\"obligation_id\":\"slack__user_task_16::invited_user_presence\",\"kind\":\"state\",\"state\":{\"path\":\"/slack/users\",\"selector\":[{\"field\":\"$value\",\"value\":\"Dora\"}],\"checks\":[{\"property\":\"$value\",\"operator\":\"equals\",\"value\":\"Dora\"}],\"identity_profile\":\"scalar_set\",\"identity_field\":null,\"newness\":\"none\"},\"query\":null,\"support\":{\"request_quote\":\"Note that you first have to invite Dora to Slack in order to message her.\",\"initial_state_paths\":[\"/slack/users\"],\"schema_paths\":[\"/#/$defs/Slack/properties/users\"],\"reason\":\"The obligation requires Dora to be present in the Slack users list to confirm invitation presence. Dora is not present in the initial state users array, so the obligation cannot be satisfied.\"}}],\"unknown_reason\":\"Dora is not present in the Slack users list in the initial state, so the invited user presence obligation cannot be derived.\"}",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 3282,
+      "completion_tokens": 228,
+      "total_tokens": 3510,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_972c397bd9"
+  },
+  "finish_reason": "stop",
+  "annotation": {
+    "ir_version": "r21.2",
+    "scope_id": "slack__user_task_16__common_source_v2",
+    "classification": "state",
+    "clauses": [
+      {
+        "obligation_id": "slack__user_task_16::invited_user_presence",
+        "kind": "state",
+        "state": {
+          "path": "/slack/users",
+          "selector": [
+            {
+              "field": "$value",
+              "value": "Dora"
+            }
+          ],
+          "checks": [
+            {
+              "property": "$value",
+              "operator": "equals",
+              "value": "Dora"
+            }
+          ],
+          "identity_profile": "scalar_set",
+          "identity_field": null,
+          "newness": "none"
+        },
+        "query": null,
+        "support": {
+          "request_quote": "Note that you first have to invite Dora to Slack in order to message her.",
+          "initial_state_paths": [
+            "/slack/users"
+          ],
+          "schema_paths": [
+            "/#/$defs/Slack/properties/users"
+          ],
+          "reason": "The obligation requires Dora to be present in the Slack users list to confirm invitation presence. Dora is not present in the initial state users array, so the obligation cannot be satisfied."
+        }
+      }
+    ],
+    "unknown_reason": "Dora is not present in the Slack users list in the initial state, so the invited user presence obligation cannot be derived."
+  },
+  "usage": {
+    "prompt_tokens": 3282,
+    "completion_tokens": 228,
+    "total_tokens": 3510,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+    }
+  },
+  "resolved_model_id": "gpt-4.1-mini-2025-04-14",
+  "system_fingerprint": "fp_972c397bd9",
+  "wall_seconds": 2.029986343346536
+}

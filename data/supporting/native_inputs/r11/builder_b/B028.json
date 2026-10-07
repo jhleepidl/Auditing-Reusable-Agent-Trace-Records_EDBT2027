@@ -1,0 +1,19 @@
+{
+  "packet_id": "B028",
+  "classification": "query",
+  "classification_reason": "The request is for a summary (information) about the user's 100 most recent transactions this year, categorized by category and amount. The initial state contains only 5 transactions, all from 2022, so only those can be summarized. No state change is requested or implied, only information extraction and aggregation.",
+  "state_predicates": [],
+  "answer_facts": [
+    {
+      "value": 5,
+      "evidence_paths": [
+        "/bank_account/transactions"
+      ],
+      "justification": "There are only 5 transactions present in the initial state."
+    }
+  ],
+  "ambiguities": [
+    "The meaning of 'categories' is ambiguous: no explicit category field exists, so categorization would have to be inferred from the 'subject' field, but no specific categorization scheme is provided.",
+    "'This year' is ambiguous because all transactions are from 2022, and the current year is not specified in the state."
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "utc": "2026-10-04T15:50:44.540339+00:00",
+  "requested_calls": 32,
+  "requests_sha256": "3ed13aabf256d53488cf264698b62f20b05d01a231372b55f7d6812404d1d477",
+  "request_inventory_relative_path": "requests/development_v2/requests.jsonl",
+  "request_freeze_sha256": "05d205a5529954cdb9a3ffab1a222488eb242d8794e3cd3741a1847bb77eaa7f",
+  "runner_sha256": "6aa0dd9967da30a4c8338fd79e22aa1918d0daa089e20a11cc12786848e2fd27",
+  "cost_ceiling_usd": 30,
+  "prior_spent_or_reserved_usd": 17.15665555,
+  "run_worst_case_usd": 0.665604,
+  "rates_per_million_tokens": {
+    "gpt-6-luna": [
+      0.1,
+      0.01,
+      0.125,
+      0.5
+    ],
+    "gpt-5.4-mini-2026-03-17": [
+      0.75,
+      0.075,
+      0.75,
+      4.5
+    ]
+  },
+  "rate_order": [
+    "uncached_input",
+    "cached_input",
+    "cache_write_input",
+    "output_including_reasoning"
+  ],
+  "pricing_sources": [
+    "https://developers.openai.com/api/docs/pricing",
+    "https://developers.openai.com/api/docs/models/gpt-6-luna",
+    "https://developers.openai.com/api/docs/models/gpt-5.4-mini"
+  ],
+  "pricing_checked_date": "2026-10-05",
+  "endpoint": "https://api.openai.com/v1/responses",
+  "reasoning_effort": "low",
+  "max_output_tokens": 6000,
+  "no_retries": true,
+  "repeat_ids_are_not_api_seeds": true,
+  "snapshot_policy": "GPT-5.4 mini fixed date snapshot; GPT-6 Luna only documented alias available, raw resolved model ID and timestamps retained",
+  "cache_policy": "GPT-6 explicit-only with no breakpoints to avoid cache writes; GPT-5.4 automatic caching; actual usage accounted",
+  "all_attempts_retained": true
+}

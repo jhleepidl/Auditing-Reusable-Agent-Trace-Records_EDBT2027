@@ -1,0 +1,139 @@
+{
+  "packet_id": "B014",
+  "classification": "state",
+  "classification_reason": "The request requires booking a hotel in Paris and a hotel in London for specific dates, with a budget constraint and a preference for the highest-rated hotel in each city. The initial state does not contain any such reservations, so new reservation entities are required. The necessary conditions can be specified for the existence of these reservations, their city, hotel name, and price constraints. The exact split of days between Paris and London is ambiguous, but at least 2 days in Paris and 2 in London are required, with the remaining day assigned based on price (which is ambiguous).",
+  "state_predicates": [
+    {
+      "path": "/reservation_list/*",
+      "operator": "equals",
+      "value": "Paris",
+      "requires_new_entity": true,
+      "selector": [
+        {
+          "field": "city",
+          "value": "Paris"
+        }
+      ],
+      "evidence_paths": [
+        "/hotels/hotel_list"
+      ],
+      "justification": "A hotel reservation in Paris is required."
+    },
+    {
+      "path": "/reservation_list/*",
+      "operator": "equals",
+      "value": "London",
+      "requires_new_entity": true,
+      "selector": [
+        {
+          "field": "city",
+          "value": "London"
+        }
+      ],
+      "evidence_paths": [
+        "/hotels/hotel_list"
+      ],
+      "justification": "A hotel reservation in London is required."
+    },
+    {
+      "path": "/reservation_list/*/price_per_night",
+      "operator": "le",
+      "value": 500,
+      "requires_new_entity": true,
+      "selector": [
+        {
+          "field": "city",
+          "value": "Paris"
+        }
+      ],
+      "evidence_paths": [
+        "/hotels/hotel_list"
+      ],
+      "justification": "Paris hotel must not exceed 500 per night."
+    },
+    {
+      "path": "/reservation_list/*/price_per_night",
+      "operator": "le",
+      "value": 500,
+      "requires_new_entity": true,
+      "selector": [
+        {
+          "field": "city",
+          "value": "London"
+        }
+      ],
+      "evidence_paths": [
+        "/hotels/hotel_list"
+      ],
+      "justification": "London hotel must not exceed 500 per night."
+    },
+    {
+      "path": "/reservation_list/*/hotel_name",
+      "operator": "equals",
+      "value": "Good Night",
+      "requires_new_entity": true,
+      "selector": [
+        {
+          "field": "city",
+          "value": "Paris"
+        }
+      ],
+      "evidence_paths": [
+        "/hotels/hotel_list"
+      ],
+      "justification": "'Good Night' is the highest-rated Paris hotel within budget (rating 5.0, price_min 240)."
+    },
+    {
+      "path": "/reservation_list/*/hotel_name",
+      "operator": "equals",
+      "value": "London Luxury",
+      "requires_new_entity": true,
+      "selector": [
+        {
+          "field": "city",
+          "value": "London"
+        }
+      ],
+      "evidence_paths": [
+        "/hotels/hotel_list"
+      ],
+      "justification": "'London Luxury' is the highest-rated London hotel within budget (rating 5.0, price_min 80)."
+    }
+  ],
+  "answer_facts": [
+    {
+      "value": "Good Night",
+      "evidence_paths": [
+        "/hotels/hotel_list"
+      ],
+      "justification": "Highest-rated Paris hotel within budget."
+    },
+    {
+      "value": 240.0,
+      "evidence_paths": [
+        "/hotels/hotel_list"
+      ],
+      "justification": "Minimal price per night for 'Good Night'."
+    },
+    {
+      "value": "London Luxury",
+      "evidence_paths": [
+        "/hotels/hotel_list"
+      ],
+      "justification": "Highest-rated London hotel within budget."
+    },
+    {
+      "value": 80.0,
+      "evidence_paths": [
+        "/hotels/hotel_list"
+      ],
+      "justification": "Minimal price per night for 'London Luxury'."
+    }
+  ],
+  "ambiguities": [
+    "The split between Paris and London (2/3 or 3/2 days) is not uniquely determined and depends on price, but both splits are possible within the constraints.",
+    "Currency is not specified; assumed to be the same for both cities, but not explicit.",
+    "It is not specified whether the user wants to book the minimal price room or any room up to 500 per night; minimal price is assumed as per request.",
+    "No explicit reservation entity structure is defined in the initial state, so the path /reservation_list/* is hypothetical."
+  ]
+}

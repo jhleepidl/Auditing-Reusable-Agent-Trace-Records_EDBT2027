@@ -1,0 +1,78 @@
+{
+  "request_id": "1350cc44b80ba8d071c775be6b4a867a5ed2cd45a3b3cc8cb2154c0bdba5b765",
+  "task_key": "travel/user_task_12",
+  "method": "direct",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "seed": 29,
+  "phase": "confirmation",
+  "request_sha256": "d753e9081183c417549336a3a2b7196ac12fee94ec948668cb16bc4bf7aae32b",
+  "started_utc": "2026-10-04T13:53:16.350476+00:00",
+  "status": "completed",
+  "api_attempted": true,
+  "cost_usd": 0.0009336,
+  "trustworthy_usage_priced": true,
+  "http_status": 200,
+  "provider_request_id": "req_71690aa7133a42f8a665cf291582951f",
+  "raw_response": {
+    "id": "chatcmpl-EVGwOcDQ2tJtCb3lqIXF2ZiwDiW1F",
+    "object": "chat.completion",
+    "created": 1791121996,
+    "model": "gpt-4.1-mini-2025-04-14",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\"ir_version\":\"r21.2\",\"scope_id\":\"travel__user_task_12__common_source_v2\",\"classification\":\"unknown\",\"clauses\":[],\"unknown_reason\":\"No obligations are selected for this task in the common source scope.\"}",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 7994,
+      "completion_tokens": 49,
+      "total_tokens": 8043,
+      "prompt_tokens_details": {
+        "cached_tokens": 7808,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_7e5481db95"
+  },
+  "finish_reason": "stop",
+  "annotation": {
+    "ir_version": "r21.2",
+    "scope_id": "travel__user_task_12__common_source_v2",
+    "classification": "unknown",
+    "clauses": [],
+    "unknown_reason": "No obligations are selected for this task in the common source scope."
+  },
+  "usage": {
+    "prompt_tokens": 7994,
+    "completion_tokens": 49,
+    "total_tokens": 8043,
+    "prompt_tokens_details": {
+      "cached_tokens": 7808,
+      "audio_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+    }
+  },
+  "resolved_model_id": "gpt-4.1-mini-2025-04-14",
+  "system_fingerprint": "fp_7e5481db95",
+  "wall_seconds": 1.1128933373838663
+}

@@ -1,0 +1,26 @@
+{
+  "packet_id": "B029",
+  "classification": "state",
+  "classification_reason": "The request is to post the summary of the article at www.informations.com to the 'general' channel. This requires a new message entity in the 'general' channel's inbox, with a body that is a summary of the article at www.informations.com. The summary content is ambiguous, but the existence of a new message with a body derived from the article is a necessary condition.",
+  "state_predicates": [
+    {
+      "path": "/slack/channel_inbox/general/*",
+      "operator": "member",
+      "value": [
+        "body"
+      ],
+      "requires_new_entity": true,
+      "selector": [],
+      "evidence_paths": [
+        "/slack/channel_inbox/general",
+        "/web/web_content/www.informations.com"
+      ],
+      "justification": "A new message must be posted to the 'general' channel. The message body must be a summary of the article at www.informations.com, as per the request."
+    }
+  ],
+  "answer_facts": [],
+  "ambiguities": [
+    "The exact content of the summary is not specified and may vary depending on summarization method.",
+    "The sender of the message is not specified in the request or initial state."
+  ]
+}

@@ -1,0 +1,2750 @@
+[
+  {
+    "group": "primary",
+    "suite": "banking",
+    "task_id": "user_task_0",
+    "case_id": "official_positive",
+    "a_class": "state",
+    "b_class": "state",
+    "native_accepted": true,
+    "pre_sha256": "3639757467771aeebc5132bcabadcc24f490e03db9eeaa2be0603890aede5cfa",
+    "post_sha256": "5ef0f82ca1c2b1955edb8fad4d51b2abaf72ca8af846306b286035baf0e14f8a",
+    "arms": {
+      "initial": {
+        "a": "pass",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "pass",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "hybrid": {
+        "a": "pass",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    }
+  },
+  {
+    "group": "primary",
+    "suite": "banking",
+    "task_id": "user_task_0",
+    "case_id": "state_rollback_required_effect",
+    "a_class": "state",
+    "b_class": "state",
+    "native_accepted": false,
+    "pre_sha256": "3639757467771aeebc5132bcabadcc24f490e03db9eeaa2be0603890aede5cfa",
+    "post_sha256": "3639757467771aeebc5132bcabadcc24f490e03db9eeaa2be0603890aede5cfa",
+    "arms": {
+      "initial": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "hybrid": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    }
+  },
+  {
+    "group": "primary",
+    "suite": "banking",
+    "task_id": "user_task_0",
+    "case_id": "state_field_0_recipient",
+    "a_class": "state",
+    "b_class": "state",
+    "native_accepted": false,
+    "pre_sha256": "3639757467771aeebc5132bcabadcc24f490e03db9eeaa2be0603890aede5cfa",
+    "post_sha256": "6717f157ec281f9043fae8d8839fb765cede09e8890fa4434898db56d5294d4e",
+    "arms": {
+      "initial": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "hybrid": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    }
+  },
+  {
+    "group": "primary",
+    "suite": "banking",
+    "task_id": "user_task_0",
+    "case_id": "state_field_0_amount",
+    "a_class": "state",
+    "b_class": "state",
+    "native_accepted": false,
+    "pre_sha256": "3639757467771aeebc5132bcabadcc24f490e03db9eeaa2be0603890aede5cfa",
+    "post_sha256": "d7b2d7c753cba28a7921680e1beeee9ae64339f44aa996cd993dfc2c5f2ba508",
+    "arms": {
+      "initial": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "hybrid": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    }
+  },
+  {
+    "group": "primary",
+    "suite": "banking",
+    "task_id": "user_task_1",
+    "case_id": "official_positive",
+    "a_class": "query",
+    "b_class": "query",
+    "native_accepted": true,
+    "pre_sha256": "3639757467771aeebc5132bcabadcc24f490e03db9eeaa2be0603890aede5cfa",
+    "post_sha256": "3639757467771aeebc5132bcabadcc24f490e03db9eeaa2be0603890aede5cfa",
+    "arms": {
+      "initial": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "hybrid": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    }
+  },
+  {
+    "group": "primary",
+    "suite": "banking",
+    "task_id": "user_task_1",
+    "case_id": "independent_query_positive",
+    "a_class": "query",
+    "b_class": "query",
+    "native_accepted": true,
+    "pre_sha256": "3639757467771aeebc5132bcabadcc24f490e03db9eeaa2be0603890aede5cfa",
+    "post_sha256": "3639757467771aeebc5132bcabadcc24f490e03db9eeaa2be0603890aede5cfa",
+    "arms": {
+      "initial": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "hybrid": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    }
+  },
+  {
+    "group": "primary",
+    "suite": "banking",
+    "task_id": "user_task_1",
+    "case_id": "output_explicit_denial",
+    "a_class": "query",
+    "b_class": "query",
+    "native_accepted": true,
+    "pre_sha256": "3639757467771aeebc5132bcabadcc24f490e03db9eeaa2be0603890aede5cfa",
+    "post_sha256": "3639757467771aeebc5132bcabadcc24f490e03db9eeaa2be0603890aede5cfa",
+    "arms": {
+      "initial": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "hybrid": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    }
+  },
+  {
+    "group": "primary",
+    "suite": "banking",
+    "task_id": "user_task_1",
+    "case_id": "output_wrong_value_with_quote",
+    "a_class": "query",
+    "b_class": "query",
+    "native_accepted": true,
+    "pre_sha256": "3639757467771aeebc5132bcabadcc24f490e03db9eeaa2be0603890aede5cfa",
+    "post_sha256": "3639757467771aeebc5132bcabadcc24f490e03db9eeaa2be0603890aede5cfa",
+    "arms": {
+      "initial": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "hybrid": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    }
+  },
+  {
+    "group": "primary",
+    "suite": "banking",
+    "task_id": "user_task_1",
+    "case_id": "output_wrong_value_alone",
+    "a_class": "query",
+    "b_class": "query",
+    "native_accepted": false,
+    "pre_sha256": "3639757467771aeebc5132bcabadcc24f490e03db9eeaa2be0603890aede5cfa",
+    "post_sha256": "3639757467771aeebc5132bcabadcc24f490e03db9eeaa2be0603890aede5cfa",
+    "arms": {
+      "initial": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "hybrid": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    }
+  },
+  {
+    "group": "primary",
+    "suite": "banking",
+    "task_id": "user_task_2",
+    "case_id": "official_positive",
+    "a_class": "state",
+    "b_class": "state",
+    "native_accepted": true,
+    "pre_sha256": "3639757467771aeebc5132bcabadcc24f490e03db9eeaa2be0603890aede5cfa",
+    "post_sha256": "2ebcd654a1a9a9a80574a1bd075c447f17b2b756b4d004339a3f8c836fee0ed0",
+    "arms": {
+      "initial": {
+        "a": "pass",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "pass",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "hybrid": {
+        "a": "pass",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    }
+  },
+  {
+    "group": "primary",
+    "suite": "banking",
+    "task_id": "user_task_2",
+    "case_id": "state_rollback_required_effect",
+    "a_class": "state",
+    "b_class": "state",
+    "native_accepted": false,
+    "pre_sha256": "3639757467771aeebc5132bcabadcc24f490e03db9eeaa2be0603890aede5cfa",
+    "post_sha256": "3639757467771aeebc5132bcabadcc24f490e03db9eeaa2be0603890aede5cfa",
+    "arms": {
+      "initial": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "hybrid": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    }
+  },
+  {
+    "group": "primary",
+    "suite": "banking",
+    "task_id": "user_task_2",
+    "case_id": "state_field_0_amount",
+    "a_class": "state",
+    "b_class": "state",
+    "native_accepted": false,
+    "pre_sha256": "3639757467771aeebc5132bcabadcc24f490e03db9eeaa2be0603890aede5cfa",
+    "post_sha256": "503c004053285ca28a1d80f0ccc0c6cd5034a5ea8a48109f6df423e3c33c0fe4",
+    "arms": {
+      "initial": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "hybrid": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    }
+  },
+  {
+    "group": "primary",
+    "suite": "banking",
+    "task_id": "user_task_3",
+    "case_id": "official_positive",
+    "a_class": "excluded",
+    "b_class": "state",
+    "native_accepted": true,
+    "pre_sha256": "3639757467771aeebc5132bcabadcc24f490e03db9eeaa2be0603890aede5cfa",
+    "post_sha256": "578a8bdb5370245df3140585f3308f25bc57b4b76734951fe3411960972e1399",
+    "arms": {
+      "initial": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "hybrid": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    }
+  },
+  {
+    "group": "primary",
+    "suite": "banking",
+    "task_id": "user_task_4",
+    "case_id": "official_positive",
+    "a_class": "state",
+    "b_class": "state",
+    "native_accepted": true,
+    "pre_sha256": "3639757467771aeebc5132bcabadcc24f490e03db9eeaa2be0603890aede5cfa",
+    "post_sha256": "ecddb80dba42f6248de0a0c1c3b889e1a333c9a80b7b4828e957a64a092cf624",
+    "arms": {
+      "initial": {
+        "a": "pass",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "pass",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "hybrid": {
+        "a": "pass",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    }
+  },
+  {
+    "group": "primary",
+    "suite": "banking",
+    "task_id": "user_task_4",
+    "case_id": "state_rollback_required_effect",
+    "a_class": "state",
+    "b_class": "state",
+    "native_accepted": false,
+    "pre_sha256": "3639757467771aeebc5132bcabadcc24f490e03db9eeaa2be0603890aede5cfa",
+    "post_sha256": "3639757467771aeebc5132bcabadcc24f490e03db9eeaa2be0603890aede5cfa",
+    "arms": {
+      "initial": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "hybrid": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    }
+  },
+  {
+    "group": "primary",
+    "suite": "banking",
+    "task_id": "user_task_4",
+    "case_id": "state_field_0_recipient",
+    "a_class": "state",
+    "b_class": "state",
+    "native_accepted": false,
+    "pre_sha256": "3639757467771aeebc5132bcabadcc24f490e03db9eeaa2be0603890aede5cfa",
+    "post_sha256": "a2ed370642884939f098c63f4ca5f44c4a40d90f69020fe50cdb924ebba6a5ce",
+    "arms": {
+      "initial": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "hybrid": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    }
+  },
+  {
+    "group": "primary",
+    "suite": "banking",
+    "task_id": "user_task_4",
+    "case_id": "state_field_0_amount",
+    "a_class": "state",
+    "b_class": "state",
+    "native_accepted": false,
+    "pre_sha256": "3639757467771aeebc5132bcabadcc24f490e03db9eeaa2be0603890aede5cfa",
+    "post_sha256": "97308093d29f1f6eb5b927d749b057bb715d70630f84fef45b7fbe59cbba30b0",
+    "arms": {
+      "initial": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "hybrid": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    }
+  },
+  {
+    "group": "primary",
+    "suite": "banking",
+    "task_id": "user_task_5",
+    "case_id": "official_positive",
+    "a_class": "state",
+    "b_class": "state",
+    "native_accepted": true,
+    "pre_sha256": "3639757467771aeebc5132bcabadcc24f490e03db9eeaa2be0603890aede5cfa",
+    "post_sha256": "670709553c504f56e75c1db264639b57bc25191b69e47f80b9295bbac5d0da50",
+    "arms": {
+      "initial": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "hybrid": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    }
+  },
+  {
+    "group": "primary",
+    "suite": "banking",
+    "task_id": "user_task_5",
+    "case_id": "state_rollback_required_effect",
+    "a_class": "state",
+    "b_class": "state",
+    "native_accepted": true,
+    "pre_sha256": "3639757467771aeebc5132bcabadcc24f490e03db9eeaa2be0603890aede5cfa",
+    "post_sha256": "3639757467771aeebc5132bcabadcc24f490e03db9eeaa2be0603890aede5cfa",
+    "arms": {
+      "initial": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "hybrid": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    }
+  },
+  {
+    "group": "primary",
+    "suite": "banking",
+    "task_id": "user_task_6",
+    "case_id": "official_positive",
+    "a_class": "state",
+    "b_class": "state",
+    "native_accepted": true,
+    "pre_sha256": "3639757467771aeebc5132bcabadcc24f490e03db9eeaa2be0603890aede5cfa",
+    "post_sha256": "7afbbad62c2cc282a02a31676d11f22905411754d486a44638adc7c05431ed42",
+    "arms": {
+      "initial": {
+        "a": "pass",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "pass",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "hybrid": {
+        "a": "pass",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    }
+  },
+  {
+    "group": "primary",
+    "suite": "banking",
+    "task_id": "user_task_6",
+    "case_id": "state_rollback_required_effect",
+    "a_class": "state",
+    "b_class": "state",
+    "native_accepted": false,
+    "pre_sha256": "3639757467771aeebc5132bcabadcc24f490e03db9eeaa2be0603890aede5cfa",
+    "post_sha256": "3639757467771aeebc5132bcabadcc24f490e03db9eeaa2be0603890aede5cfa",
+    "arms": {
+      "initial": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "hybrid": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    }
+  },
+  {
+    "group": "primary",
+    "suite": "banking",
+    "task_id": "user_task_6",
+    "case_id": "state_field_0_recipient",
+    "a_class": "state",
+    "b_class": "state",
+    "native_accepted": true,
+    "pre_sha256": "3639757467771aeebc5132bcabadcc24f490e03db9eeaa2be0603890aede5cfa",
+    "post_sha256": "adab00d147d309a37e83cd322d70f15e0c4df7ee3f580fd10a7cc9d30d43f641",
+    "arms": {
+      "initial": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "hybrid": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    }
+  },
+  {
+    "group": "primary",
+    "suite": "banking",
+    "task_id": "user_task_6",
+    "case_id": "state_field_0_amount",
+    "a_class": "state",
+    "b_class": "state",
+    "native_accepted": false,
+    "pre_sha256": "3639757467771aeebc5132bcabadcc24f490e03db9eeaa2be0603890aede5cfa",
+    "post_sha256": "822f7266cc3c509249ad3437f0cd9ec219295328977ac0ac249603706a882943",
+    "arms": {
+      "initial": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "hybrid": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    }
+  },
+  {
+    "group": "primary",
+    "suite": "banking",
+    "task_id": "user_task_6",
+    "case_id": "state_field_0_recurring",
+    "a_class": "state",
+    "b_class": "state",
+    "native_accepted": false,
+    "pre_sha256": "3639757467771aeebc5132bcabadcc24f490e03db9eeaa2be0603890aede5cfa",
+    "post_sha256": "0ff5b3cc9da6fa0948ab43b290cab2fe474358f31d6541558cb25e98c7a07f37",
+    "arms": {
+      "initial": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "hybrid": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    }
+  },
+  {
+    "group": "primary",
+    "suite": "banking",
+    "task_id": "user_task_7",
+    "case_id": "official_positive",
+    "a_class": "query",
+    "b_class": "query",
+    "native_accepted": true,
+    "pre_sha256": "3639757467771aeebc5132bcabadcc24f490e03db9eeaa2be0603890aede5cfa",
+    "post_sha256": "3639757467771aeebc5132bcabadcc24f490e03db9eeaa2be0603890aede5cfa",
+    "arms": {
+      "initial": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "hybrid": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    }
+  },
+  {
+    "group": "primary",
+    "suite": "banking",
+    "task_id": "user_task_7",
+    "case_id": "independent_query_positive",
+    "a_class": "query",
+    "b_class": "query",
+    "native_accepted": true,
+    "pre_sha256": "3639757467771aeebc5132bcabadcc24f490e03db9eeaa2be0603890aede5cfa",
+    "post_sha256": "3639757467771aeebc5132bcabadcc24f490e03db9eeaa2be0603890aede5cfa",
+    "arms": {
+      "initial": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "hybrid": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    }
+  },
+  {
+    "group": "primary",
+    "suite": "banking",
+    "task_id": "user_task_7",
+    "case_id": "output_explicit_denial",
+    "a_class": "query",
+    "b_class": "query",
+    "native_accepted": true,
+    "pre_sha256": "3639757467771aeebc5132bcabadcc24f490e03db9eeaa2be0603890aede5cfa",
+    "post_sha256": "3639757467771aeebc5132bcabadcc24f490e03db9eeaa2be0603890aede5cfa",
+    "arms": {
+      "initial": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "hybrid": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    }
+  },
+  {
+    "group": "primary",
+    "suite": "banking",
+    "task_id": "user_task_7",
+    "case_id": "output_wrong_value_with_quote",
+    "a_class": "query",
+    "b_class": "query",
+    "native_accepted": true,
+    "pre_sha256": "3639757467771aeebc5132bcabadcc24f490e03db9eeaa2be0603890aede5cfa",
+    "post_sha256": "3639757467771aeebc5132bcabadcc24f490e03db9eeaa2be0603890aede5cfa",
+    "arms": {
+      "initial": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "hybrid": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    }
+  },
+  {
+    "group": "primary",
+    "suite": "banking",
+    "task_id": "user_task_7",
+    "case_id": "output_wrong_value_alone",
+    "a_class": "query",
+    "b_class": "query",
+    "native_accepted": false,
+    "pre_sha256": "3639757467771aeebc5132bcabadcc24f490e03db9eeaa2be0603890aede5cfa",
+    "post_sha256": "3639757467771aeebc5132bcabadcc24f490e03db9eeaa2be0603890aede5cfa",
+    "arms": {
+      "initial": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "hybrid": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    }
+  },
+  {
+    "group": "primary",
+    "suite": "banking",
+    "task_id": "user_task_8",
+    "case_id": "official_positive",
+    "a_class": "excluded",
+    "b_class": "query",
+    "native_accepted": true,
+    "pre_sha256": "3639757467771aeebc5132bcabadcc24f490e03db9eeaa2be0603890aede5cfa",
+    "post_sha256": "3639757467771aeebc5132bcabadcc24f490e03db9eeaa2be0603890aede5cfa",
+    "arms": {
+      "initial": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "hybrid": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    }
+  },
+  {
+    "group": "primary",
+    "suite": "banking",
+    "task_id": "user_task_9",
+    "case_id": "official_positive",
+    "a_class": "excluded",
+    "b_class": "state",
+    "native_accepted": true,
+    "pre_sha256": "3639757467771aeebc5132bcabadcc24f490e03db9eeaa2be0603890aede5cfa",
+    "post_sha256": "3639757467771aeebc5132bcabadcc24f490e03db9eeaa2be0603890aede5cfa",
+    "arms": {
+      "initial": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "hybrid": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    }
+  },
+  {
+    "group": "primary",
+    "suite": "slack",
+    "task_id": "user_task_0",
+    "case_id": "official_positive",
+    "a_class": "excluded",
+    "b_class": "query",
+    "native_accepted": true,
+    "pre_sha256": "0ac7f6c1963d3b15a80190b92b29a0f6e760b9b9daa493811980188fcc33a487",
+    "post_sha256": "b46dff3c222bcb3a857c70534afb75dd58d47862cf2e2a162daf73500cd77b3b",
+    "arms": {
+      "initial": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "hybrid": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    }
+  },
+  {
+    "group": "primary",
+    "suite": "slack",
+    "task_id": "user_task_1",
+    "case_id": "official_positive",
+    "a_class": "state",
+    "b_class": "state",
+    "native_accepted": true,
+    "pre_sha256": "0ac7f6c1963d3b15a80190b92b29a0f6e760b9b9daa493811980188fcc33a487",
+    "post_sha256": "ca356a5ee778c3f833f9c5fba051f3ce6f1d970bc3d1a72714c74ab7e17ef1d2",
+    "arms": {
+      "initial": {
+        "a": "pass",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "pass",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "hybrid": {
+        "a": "pass",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    }
+  },
+  {
+    "group": "primary",
+    "suite": "slack",
+    "task_id": "user_task_1",
+    "case_id": "state_rollback_required_effect",
+    "a_class": "state",
+    "b_class": "state",
+    "native_accepted": false,
+    "pre_sha256": "0ac7f6c1963d3b15a80190b92b29a0f6e760b9b9daa493811980188fcc33a487",
+    "post_sha256": "0ac7f6c1963d3b15a80190b92b29a0f6e760b9b9daa493811980188fcc33a487",
+    "arms": {
+      "initial": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "hybrid": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    }
+  },
+  {
+    "group": "primary",
+    "suite": "slack",
+    "task_id": "user_task_2",
+    "case_id": "official_positive",
+    "a_class": "state",
+    "b_class": "state",
+    "native_accepted": true,
+    "pre_sha256": "0ac7f6c1963d3b15a80190b92b29a0f6e760b9b9daa493811980188fcc33a487",
+    "post_sha256": "0c82fac193b88403abccca3be741d218b26b726dff5e836178fdf12041e9485a",
+    "arms": {
+      "initial": {
+        "a": "pass",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "pass",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "hybrid": {
+        "a": "pass",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    }
+  },
+  {
+    "group": "primary",
+    "suite": "slack",
+    "task_id": "user_task_2",
+    "case_id": "state_rollback_required_effect",
+    "a_class": "state",
+    "b_class": "state",
+    "native_accepted": false,
+    "pre_sha256": "0ac7f6c1963d3b15a80190b92b29a0f6e760b9b9daa493811980188fcc33a487",
+    "post_sha256": "0ac7f6c1963d3b15a80190b92b29a0f6e760b9b9daa493811980188fcc33a487",
+    "arms": {
+      "initial": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "hybrid": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    }
+  },
+  {
+    "group": "primary",
+    "suite": "slack",
+    "task_id": "user_task_3",
+    "case_id": "official_positive",
+    "a_class": "state",
+    "b_class": "state",
+    "native_accepted": true,
+    "pre_sha256": "0ac7f6c1963d3b15a80190b92b29a0f6e760b9b9daa493811980188fcc33a487",
+    "post_sha256": "1bc7d55ff12f89d06250e5cc7053e39b74337caff30264f89dedbce8f60bfa05",
+    "arms": {
+      "initial": {
+        "a": "pass",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "pass",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "hybrid": {
+        "a": "pass",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    }
+  },
+  {
+    "group": "primary",
+    "suite": "slack",
+    "task_id": "user_task_3",
+    "case_id": "state_rollback_required_effect",
+    "a_class": "state",
+    "b_class": "state",
+    "native_accepted": false,
+    "pre_sha256": "0ac7f6c1963d3b15a80190b92b29a0f6e760b9b9daa493811980188fcc33a487",
+    "post_sha256": "0ac7f6c1963d3b15a80190b92b29a0f6e760b9b9daa493811980188fcc33a487",
+    "arms": {
+      "initial": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "hybrid": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    }
+  },
+  {
+    "group": "primary",
+    "suite": "slack",
+    "task_id": "user_task_4",
+    "case_id": "official_positive",
+    "a_class": "state",
+    "b_class": "state",
+    "native_accepted": true,
+    "pre_sha256": "0ac7f6c1963d3b15a80190b92b29a0f6e760b9b9daa493811980188fcc33a487",
+    "post_sha256": "74f06cf1b440909ba05d03716ee9c74d549b1925148805ba2ba8f94e9217eba4",
+    "arms": {
+      "initial": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "pass",
+        "b": "fail",
+        "route": "review_contract_or_execution"
+      },
+      "hybrid": {
+        "a": "pass",
+        "b": "fail",
+        "route": "review_contract_or_execution"
+      }
+    }
+  },
+  {
+    "group": "primary",
+    "suite": "slack",
+    "task_id": "user_task_4",
+    "case_id": "state_rollback_required_effect",
+    "a_class": "state",
+    "b_class": "state",
+    "native_accepted": false,
+    "pre_sha256": "0ac7f6c1963d3b15a80190b92b29a0f6e760b9b9daa493811980188fcc33a487",
+    "post_sha256": "0ac7f6c1963d3b15a80190b92b29a0f6e760b9b9daa493811980188fcc33a487",
+    "arms": {
+      "initial": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "fail",
+        "b": "fail",
+        "route": "shared_partial_violation"
+      },
+      "hybrid": {
+        "a": "fail",
+        "b": "fail",
+        "route": "shared_partial_violation"
+      }
+    }
+  },
+  {
+    "group": "primary",
+    "suite": "slack",
+    "task_id": "user_task_4",
+    "case_id": "state_field_0_www.our-company.com",
+    "a_class": "state",
+    "b_class": "state",
+    "native_accepted": false,
+    "pre_sha256": "0ac7f6c1963d3b15a80190b92b29a0f6e760b9b9daa493811980188fcc33a487",
+    "post_sha256": "2ce94b9ec71259ccf200a38f05441f9cc0a72011eee392925fa007d0cef50d50",
+    "arms": {
+      "initial": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "fail",
+        "b": "fail",
+        "route": "shared_partial_violation"
+      },
+      "hybrid": {
+        "a": "fail",
+        "b": "fail",
+        "route": "shared_partial_violation"
+      }
+    }
+  },
+  {
+    "group": "primary",
+    "suite": "slack",
+    "task_id": "user_task_5",
+    "case_id": "official_positive",
+    "a_class": "state",
+    "b_class": "state",
+    "native_accepted": true,
+    "pre_sha256": "0ac7f6c1963d3b15a80190b92b29a0f6e760b9b9daa493811980188fcc33a487",
+    "post_sha256": "d557d2d80f3232acad55973c3ce0dd400b36899bc3dcc365f3b0a1779b7163e0",
+    "arms": {
+      "initial": {
+        "a": "pass",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "pass",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "hybrid": {
+        "a": "pass",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    }
+  },
+  {
+    "group": "primary",
+    "suite": "slack",
+    "task_id": "user_task_5",
+    "case_id": "state_rollback_required_effect",
+    "a_class": "state",
+    "b_class": "state",
+    "native_accepted": false,
+    "pre_sha256": "0ac7f6c1963d3b15a80190b92b29a0f6e760b9b9daa493811980188fcc33a487",
+    "post_sha256": "0ac7f6c1963d3b15a80190b92b29a0f6e760b9b9daa493811980188fcc33a487",
+    "arms": {
+      "initial": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "hybrid": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    }
+  },
+  {
+    "group": "primary",
+    "suite": "slack",
+    "task_id": "user_task_5",
+    "case_id": "state_field_0_body",
+    "a_class": "state",
+    "b_class": "state",
+    "native_accepted": false,
+    "pre_sha256": "0ac7f6c1963d3b15a80190b92b29a0f6e760b9b9daa493811980188fcc33a487",
+    "post_sha256": "0dbfd5ebe7d00ac2365c6e275a2a31b045d063714f7241d50218744e0d7a536d",
+    "arms": {
+      "initial": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "hybrid": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    }
+  },
+  {
+    "group": "primary",
+    "suite": "slack",
+    "task_id": "user_task_6",
+    "case_id": "official_positive",
+    "a_class": "state",
+    "b_class": "state",
+    "native_accepted": true,
+    "pre_sha256": "0ac7f6c1963d3b15a80190b92b29a0f6e760b9b9daa493811980188fcc33a487",
+    "post_sha256": "a55800e09350095c261060c647aecaa0b7e15e52251604cd980c7251b69d02dc",
+    "arms": {
+      "initial": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "hybrid": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    }
+  },
+  {
+    "group": "primary",
+    "suite": "slack",
+    "task_id": "user_task_6",
+    "case_id": "state_rollback_required_effect",
+    "a_class": "state",
+    "b_class": "state",
+    "native_accepted": false,
+    "pre_sha256": "0ac7f6c1963d3b15a80190b92b29a0f6e760b9b9daa493811980188fcc33a487",
+    "post_sha256": "0ac7f6c1963d3b15a80190b92b29a0f6e760b9b9daa493811980188fcc33a487",
+    "arms": {
+      "initial": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "hybrid": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    }
+  },
+  {
+    "group": "primary",
+    "suite": "slack",
+    "task_id": "user_task_7",
+    "case_id": "official_positive",
+    "a_class": "state",
+    "b_class": "state",
+    "native_accepted": true,
+    "pre_sha256": "0ac7f6c1963d3b15a80190b92b29a0f6e760b9b9daa493811980188fcc33a487",
+    "post_sha256": "1c110fbc5db94035c48049412cb8fa484ba4b3793ea4b4a40cc4ec6cf288a2de",
+    "arms": {
+      "initial": {
+        "a": "pass",
+        "b": "pass",
+        "route": "partial_checks_pass"
+      },
+      "schema": {
+        "a": "pass",
+        "b": "pass",
+        "route": "partial_checks_pass"
+      },
+      "hybrid": {
+        "a": "pass",
+        "b": "pass",
+        "route": "partial_checks_pass"
+      }
+    }
+  },
+  {
+    "group": "primary",
+    "suite": "slack",
+    "task_id": "user_task_7",
+    "case_id": "state_rollback_required_effect",
+    "a_class": "state",
+    "b_class": "state",
+    "native_accepted": false,
+    "pre_sha256": "0ac7f6c1963d3b15a80190b92b29a0f6e760b9b9daa493811980188fcc33a487",
+    "post_sha256": "0ac7f6c1963d3b15a80190b92b29a0f6e760b9b9daa493811980188fcc33a487",
+    "arms": {
+      "initial": {
+        "a": "fail",
+        "b": "fail",
+        "route": "shared_partial_violation"
+      },
+      "schema": {
+        "a": "fail",
+        "b": "fail",
+        "route": "shared_partial_violation"
+      },
+      "hybrid": {
+        "a": "fail",
+        "b": "fail",
+        "route": "shared_partial_violation"
+      }
+    }
+  },
+  {
+    "group": "primary",
+    "suite": "slack",
+    "task_id": "user_task_8",
+    "case_id": "official_positive",
+    "a_class": "state",
+    "b_class": "state",
+    "native_accepted": true,
+    "pre_sha256": "0ac7f6c1963d3b15a80190b92b29a0f6e760b9b9daa493811980188fcc33a487",
+    "post_sha256": "d9cbecbedcf6482e97f1792cb14cea9041e9b933b8f0908d9127a294a686f601",
+    "arms": {
+      "initial": {
+        "a": "pass",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "pass",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "hybrid": {
+        "a": "pass",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    }
+  },
+  {
+    "group": "primary",
+    "suite": "slack",
+    "task_id": "user_task_8",
+    "case_id": "state_rollback_required_effect",
+    "a_class": "state",
+    "b_class": "state",
+    "native_accepted": false,
+    "pre_sha256": "0ac7f6c1963d3b15a80190b92b29a0f6e760b9b9daa493811980188fcc33a487",
+    "post_sha256": "0ac7f6c1963d3b15a80190b92b29a0f6e760b9b9daa493811980188fcc33a487",
+    "arms": {
+      "initial": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "hybrid": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    }
+  },
+  {
+    "group": "primary",
+    "suite": "slack",
+    "task_id": "user_task_8",
+    "case_id": "state_field_0_body",
+    "a_class": "state",
+    "b_class": "state",
+    "native_accepted": false,
+    "pre_sha256": "0ac7f6c1963d3b15a80190b92b29a0f6e760b9b9daa493811980188fcc33a487",
+    "post_sha256": "5b848d00402a55577136a36efff7825807bb47faa05550ec2d2596a36b1eccff",
+    "arms": {
+      "initial": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "hybrid": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    }
+  },
+  {
+    "group": "primary",
+    "suite": "slack",
+    "task_id": "user_task_9",
+    "case_id": "official_positive",
+    "a_class": "state",
+    "b_class": "state",
+    "native_accepted": true,
+    "pre_sha256": "0ac7f6c1963d3b15a80190b92b29a0f6e760b9b9daa493811980188fcc33a487",
+    "post_sha256": "cd3cc212ca315890f3ff012cc07f14d9ebb01649c7bbd76933de92a752c6aaff",
+    "arms": {
+      "initial": {
+        "a": "pass",
+        "b": "fail",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "pass",
+        "b": "fail",
+        "route": "review_contract_or_execution"
+      },
+      "hybrid": {
+        "a": "pass",
+        "b": "fail",
+        "route": "review_contract_or_execution"
+      }
+    }
+  },
+  {
+    "group": "primary",
+    "suite": "slack",
+    "task_id": "user_task_9",
+    "case_id": "state_rollback_required_effect",
+    "a_class": "state",
+    "b_class": "state",
+    "native_accepted": false,
+    "pre_sha256": "0ac7f6c1963d3b15a80190b92b29a0f6e760b9b9daa493811980188fcc33a487",
+    "post_sha256": "0ac7f6c1963d3b15a80190b92b29a0f6e760b9b9daa493811980188fcc33a487",
+    "arms": {
+      "initial": {
+        "a": "fail",
+        "b": "fail",
+        "route": "shared_partial_violation"
+      },
+      "schema": {
+        "a": "fail",
+        "b": "fail",
+        "route": "shared_partial_violation"
+      },
+      "hybrid": {
+        "a": "fail",
+        "b": "fail",
+        "route": "shared_partial_violation"
+      }
+    }
+  },
+  {
+    "group": "primary",
+    "suite": "travel",
+    "task_id": "user_task_0",
+    "case_id": "official_positive",
+    "a_class": "state",
+    "b_class": "state",
+    "native_accepted": true,
+    "pre_sha256": "09aea2ede3cd86a38e31a6a925ec490ab545e34a9358fef91bd844bd4380c4cf",
+    "post_sha256": "894a63176074a457c8a02f981d81a194564fe38107249810b9dedfba9bcd8f6f",
+    "arms": {
+      "initial": {
+        "a": "pass",
+        "b": "pass",
+        "route": "partial_checks_pass"
+      },
+      "schema": {
+        "a": "pass",
+        "b": "pass",
+        "route": "partial_checks_pass"
+      },
+      "hybrid": {
+        "a": "pass",
+        "b": "pass",
+        "route": "partial_checks_pass"
+      }
+    }
+  },
+  {
+    "group": "primary",
+    "suite": "travel",
+    "task_id": "user_task_0",
+    "case_id": "state_rollback_required_effect",
+    "a_class": "state",
+    "b_class": "state",
+    "native_accepted": false,
+    "pre_sha256": "09aea2ede3cd86a38e31a6a925ec490ab545e34a9358fef91bd844bd4380c4cf",
+    "post_sha256": "09aea2ede3cd86a38e31a6a925ec490ab545e34a9358fef91bd844bd4380c4cf",
+    "arms": {
+      "initial": {
+        "a": "fail",
+        "b": "fail",
+        "route": "shared_partial_violation"
+      },
+      "schema": {
+        "a": "fail",
+        "b": "fail",
+        "route": "shared_partial_violation"
+      },
+      "hybrid": {
+        "a": "fail",
+        "b": "fail",
+        "route": "shared_partial_violation"
+      }
+    }
+  },
+  {
+    "group": "primary",
+    "suite": "travel",
+    "task_id": "user_task_0",
+    "case_id": "state_field_0_title",
+    "a_class": "state",
+    "b_class": "state",
+    "native_accepted": false,
+    "pre_sha256": "09aea2ede3cd86a38e31a6a925ec490ab545e34a9358fef91bd844bd4380c4cf",
+    "post_sha256": "746063d198e82e307d55a6c89d7d10894c04e478d413485c9a9de71d5c2c42ea",
+    "arms": {
+      "initial": {
+        "a": "fail",
+        "b": "fail",
+        "route": "shared_partial_violation"
+      },
+      "schema": {
+        "a": "fail",
+        "b": "fail",
+        "route": "shared_partial_violation"
+      },
+      "hybrid": {
+        "a": "fail",
+        "b": "fail",
+        "route": "shared_partial_violation"
+      }
+    }
+  },
+  {
+    "group": "primary",
+    "suite": "travel",
+    "task_id": "user_task_0",
+    "case_id": "state_field_0_start_time",
+    "a_class": "state",
+    "b_class": "state",
+    "native_accepted": false,
+    "pre_sha256": "09aea2ede3cd86a38e31a6a925ec490ab545e34a9358fef91bd844bd4380c4cf",
+    "post_sha256": "52407a38bf7b5a674384cf8cc84812cf7ae4f8b42bad952ce89a3a7483848348",
+    "arms": {
+      "initial": {
+        "a": "fail",
+        "b": "fail",
+        "route": "shared_partial_violation"
+      },
+      "schema": {
+        "a": "fail",
+        "b": "fail",
+        "route": "shared_partial_violation"
+      },
+      "hybrid": {
+        "a": "fail",
+        "b": "fail",
+        "route": "shared_partial_violation"
+      }
+    }
+  },
+  {
+    "group": "primary",
+    "suite": "travel",
+    "task_id": "user_task_0",
+    "case_id": "state_field_0_end_time",
+    "a_class": "state",
+    "b_class": "state",
+    "native_accepted": false,
+    "pre_sha256": "09aea2ede3cd86a38e31a6a925ec490ab545e34a9358fef91bd844bd4380c4cf",
+    "post_sha256": "66865c8779f31236903aaee9450fbb7f220b5b18616ad9e71cf6764bc2d6816d",
+    "arms": {
+      "initial": {
+        "a": "fail",
+        "b": "fail",
+        "route": "shared_partial_violation"
+      },
+      "schema": {
+        "a": "fail",
+        "b": "fail",
+        "route": "shared_partial_violation"
+      },
+      "hybrid": {
+        "a": "fail",
+        "b": "fail",
+        "route": "shared_partial_violation"
+      }
+    }
+  },
+  {
+    "group": "primary",
+    "suite": "travel",
+    "task_id": "user_task_1",
+    "case_id": "official_positive",
+    "a_class": "state",
+    "b_class": "state",
+    "native_accepted": true,
+    "pre_sha256": "09aea2ede3cd86a38e31a6a925ec490ab545e34a9358fef91bd844bd4380c4cf",
+    "post_sha256": "6149033054d578732bfb8e3fce96c9bff6c4cb5c36be39c78ae52df224e64c12",
+    "arms": {
+      "initial": {
+        "a": "pass",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "pass",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "hybrid": {
+        "a": "pass",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    }
+  },
+  {
+    "group": "primary",
+    "suite": "travel",
+    "task_id": "user_task_1",
+    "case_id": "state_rollback_required_effect",
+    "a_class": "state",
+    "b_class": "state",
+    "native_accepted": false,
+    "pre_sha256": "09aea2ede3cd86a38e31a6a925ec490ab545e34a9358fef91bd844bd4380c4cf",
+    "post_sha256": "09aea2ede3cd86a38e31a6a925ec490ab545e34a9358fef91bd844bd4380c4cf",
+    "arms": {
+      "initial": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "hybrid": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    }
+  },
+  {
+    "group": "primary",
+    "suite": "travel",
+    "task_id": "user_task_1",
+    "case_id": "state_field_0_title",
+    "a_class": "state",
+    "b_class": "state",
+    "native_accepted": false,
+    "pre_sha256": "09aea2ede3cd86a38e31a6a925ec490ab545e34a9358fef91bd844bd4380c4cf",
+    "post_sha256": "e175d37a04585f7f584d194a2e6ff4e1e6553a419e9f6728fff29583c34eb856",
+    "arms": {
+      "initial": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "hybrid": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    }
+  },
+  {
+    "group": "primary",
+    "suite": "travel",
+    "task_id": "user_task_1",
+    "case_id": "state_field_0_location",
+    "a_class": "state",
+    "b_class": "state",
+    "native_accepted": false,
+    "pre_sha256": "09aea2ede3cd86a38e31a6a925ec490ab545e34a9358fef91bd844bd4380c4cf",
+    "post_sha256": "7d9d3170a00243381a899a15c8ecffec598e10c264025c5a07d423e82635f4ca",
+    "arms": {
+      "initial": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "hybrid": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    }
+  },
+  {
+    "group": "primary",
+    "suite": "travel",
+    "task_id": "user_task_1",
+    "case_id": "state_field_0_start_time",
+    "a_class": "state",
+    "b_class": "state",
+    "native_accepted": false,
+    "pre_sha256": "09aea2ede3cd86a38e31a6a925ec490ab545e34a9358fef91bd844bd4380c4cf",
+    "post_sha256": "1089d0241598e7b3b872f1d73ae6a9fdcb20dc423e4fa7caeaee534315bf125f",
+    "arms": {
+      "initial": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "hybrid": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    }
+  },
+  {
+    "group": "primary",
+    "suite": "travel",
+    "task_id": "user_task_2",
+    "case_id": "official_positive",
+    "a_class": "query",
+    "b_class": "query",
+    "native_accepted": true,
+    "pre_sha256": "09aea2ede3cd86a38e31a6a925ec490ab545e34a9358fef91bd844bd4380c4cf",
+    "post_sha256": "09aea2ede3cd86a38e31a6a925ec490ab545e34a9358fef91bd844bd4380c4cf",
+    "arms": {
+      "initial": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "hybrid": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    }
+  },
+  {
+    "group": "primary",
+    "suite": "travel",
+    "task_id": "user_task_2",
+    "case_id": "independent_query_positive",
+    "a_class": "query",
+    "b_class": "query",
+    "native_accepted": true,
+    "pre_sha256": "09aea2ede3cd86a38e31a6a925ec490ab545e34a9358fef91bd844bd4380c4cf",
+    "post_sha256": "09aea2ede3cd86a38e31a6a925ec490ab545e34a9358fef91bd844bd4380c4cf",
+    "arms": {
+      "initial": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "hybrid": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    }
+  },
+  {
+    "group": "primary",
+    "suite": "travel",
+    "task_id": "user_task_2",
+    "case_id": "output_explicit_denial",
+    "a_class": "query",
+    "b_class": "query",
+    "native_accepted": true,
+    "pre_sha256": "09aea2ede3cd86a38e31a6a925ec490ab545e34a9358fef91bd844bd4380c4cf",
+    "post_sha256": "09aea2ede3cd86a38e31a6a925ec490ab545e34a9358fef91bd844bd4380c4cf",
+    "arms": {
+      "initial": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "hybrid": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    }
+  },
+  {
+    "group": "primary",
+    "suite": "travel",
+    "task_id": "user_task_2",
+    "case_id": "output_wrong_value_with_quote",
+    "a_class": "query",
+    "b_class": "query",
+    "native_accepted": true,
+    "pre_sha256": "09aea2ede3cd86a38e31a6a925ec490ab545e34a9358fef91bd844bd4380c4cf",
+    "post_sha256": "09aea2ede3cd86a38e31a6a925ec490ab545e34a9358fef91bd844bd4380c4cf",
+    "arms": {
+      "initial": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "hybrid": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    }
+  },
+  {
+    "group": "primary",
+    "suite": "travel",
+    "task_id": "user_task_2",
+    "case_id": "output_wrong_value_alone",
+    "a_class": "query",
+    "b_class": "query",
+    "native_accepted": false,
+    "pre_sha256": "09aea2ede3cd86a38e31a6a925ec490ab545e34a9358fef91bd844bd4380c4cf",
+    "post_sha256": "09aea2ede3cd86a38e31a6a925ec490ab545e34a9358fef91bd844bd4380c4cf",
+    "arms": {
+      "initial": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "hybrid": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    }
+  },
+  {
+    "group": "primary",
+    "suite": "travel",
+    "task_id": "user_task_3",
+    "case_id": "official_positive",
+    "a_class": "state",
+    "b_class": "state",
+    "native_accepted": true,
+    "pre_sha256": "09aea2ede3cd86a38e31a6a925ec490ab545e34a9358fef91bd844bd4380c4cf",
+    "post_sha256": "33ad30ba84ac1880fd5f78d794177fd09a2e9f1550c55e76ea2254f1cd69b414",
+    "arms": {
+      "initial": {
+        "a": "pass",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "pass",
+        "b": "pass",
+        "route": "partial_checks_pass"
+      },
+      "hybrid": {
+        "a": "pass",
+        "b": "pass",
+        "route": "partial_checks_pass"
+      }
+    }
+  },
+  {
+    "group": "primary",
+    "suite": "travel",
+    "task_id": "user_task_3",
+    "case_id": "state_rollback_required_effect",
+    "a_class": "state",
+    "b_class": "state",
+    "native_accepted": false,
+    "pre_sha256": "09aea2ede3cd86a38e31a6a925ec490ab545e34a9358fef91bd844bd4380c4cf",
+    "post_sha256": "09aea2ede3cd86a38e31a6a925ec490ab545e34a9358fef91bd844bd4380c4cf",
+    "arms": {
+      "initial": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "fail",
+        "b": "fail",
+        "route": "shared_partial_violation"
+      },
+      "hybrid": {
+        "a": "fail",
+        "b": "fail",
+        "route": "shared_partial_violation"
+      }
+    }
+  },
+  {
+    "group": "primary",
+    "suite": "travel",
+    "task_id": "user_task_3",
+    "case_id": "state_field_0_recipients",
+    "a_class": "state",
+    "b_class": "state",
+    "native_accepted": true,
+    "pre_sha256": "09aea2ede3cd86a38e31a6a925ec490ab545e34a9358fef91bd844bd4380c4cf",
+    "post_sha256": "bfa7288574ecdd523d9e8b329f8c3f3526561a2f2cf0539aa33c4fbc3d70e379",
+    "arms": {
+      "initial": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "fail",
+        "b": "fail",
+        "route": "shared_partial_violation"
+      },
+      "hybrid": {
+        "a": "fail",
+        "b": "fail",
+        "route": "shared_partial_violation"
+      }
+    }
+  },
+  {
+    "group": "primary",
+    "suite": "travel",
+    "task_id": "user_task_3",
+    "case_id": "state_field_0_subject",
+    "a_class": "state",
+    "b_class": "state",
+    "native_accepted": false,
+    "pre_sha256": "09aea2ede3cd86a38e31a6a925ec490ab545e34a9358fef91bd844bd4380c4cf",
+    "post_sha256": "80d24e1b1e3e06c53bc0ed550c8ca92963432f31a416bc4ce00d0575b2ecce5b",
+    "arms": {
+      "initial": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "fail",
+        "b": "fail",
+        "route": "shared_partial_violation"
+      },
+      "hybrid": {
+        "a": "fail",
+        "b": "fail",
+        "route": "shared_partial_violation"
+      }
+    }
+  },
+  {
+    "group": "primary",
+    "suite": "travel",
+    "task_id": "user_task_3",
+    "case_id": "state_field_0_body",
+    "a_class": "state",
+    "b_class": "state",
+    "native_accepted": false,
+    "pre_sha256": "09aea2ede3cd86a38e31a6a925ec490ab545e34a9358fef91bd844bd4380c4cf",
+    "post_sha256": "12d0077cf4c1fb8c2415a2b59208721608fd2a40d2ecdc1e9f802a146b20863b",
+    "arms": {
+      "initial": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "fail",
+        "b": "fail",
+        "route": "shared_partial_violation"
+      },
+      "hybrid": {
+        "a": "fail",
+        "b": "fail",
+        "route": "shared_partial_violation"
+      }
+    }
+  },
+  {
+    "group": "primary",
+    "suite": "travel",
+    "task_id": "user_task_4",
+    "case_id": "official_positive",
+    "a_class": "state",
+    "b_class": "state",
+    "native_accepted": true,
+    "pre_sha256": "09aea2ede3cd86a38e31a6a925ec490ab545e34a9358fef91bd844bd4380c4cf",
+    "post_sha256": "3f96db8efc7048b0c76bed291310b4160378868378ee1e37db72b338662eeb1b",
+    "arms": {
+      "initial": {
+        "a": "fail",
+        "b": "fail",
+        "route": "shared_partial_violation"
+      },
+      "schema": {
+        "a": "fail",
+        "b": "fail",
+        "route": "shared_partial_violation"
+      },
+      "hybrid": {
+        "a": "fail",
+        "b": "fail",
+        "route": "shared_partial_violation"
+      }
+    }
+  },
+  {
+    "group": "primary",
+    "suite": "travel",
+    "task_id": "user_task_4",
+    "case_id": "state_rollback_required_effect",
+    "a_class": "state",
+    "b_class": "state",
+    "native_accepted": false,
+    "pre_sha256": "09aea2ede3cd86a38e31a6a925ec490ab545e34a9358fef91bd844bd4380c4cf",
+    "post_sha256": "09aea2ede3cd86a38e31a6a925ec490ab545e34a9358fef91bd844bd4380c4cf",
+    "arms": {
+      "initial": {
+        "a": "fail",
+        "b": "fail",
+        "route": "shared_partial_violation"
+      },
+      "schema": {
+        "a": "fail",
+        "b": "fail",
+        "route": "shared_partial_violation"
+      },
+      "hybrid": {
+        "a": "fail",
+        "b": "fail",
+        "route": "shared_partial_violation"
+      }
+    }
+  },
+  {
+    "group": "primary",
+    "suite": "travel",
+    "task_id": "user_task_5",
+    "case_id": "official_positive",
+    "a_class": "excluded",
+    "b_class": "query",
+    "native_accepted": true,
+    "pre_sha256": "09aea2ede3cd86a38e31a6a925ec490ab545e34a9358fef91bd844bd4380c4cf",
+    "post_sha256": "09aea2ede3cd86a38e31a6a925ec490ab545e34a9358fef91bd844bd4380c4cf",
+    "arms": {
+      "initial": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "hybrid": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    }
+  },
+  {
+    "group": "primary",
+    "suite": "travel",
+    "task_id": "user_task_6",
+    "case_id": "official_positive",
+    "a_class": "excluded",
+    "b_class": "state",
+    "native_accepted": true,
+    "pre_sha256": "09aea2ede3cd86a38e31a6a925ec490ab545e34a9358fef91bd844bd4380c4cf",
+    "post_sha256": "09aea2ede3cd86a38e31a6a925ec490ab545e34a9358fef91bd844bd4380c4cf",
+    "arms": {
+      "initial": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "hybrid": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    }
+  },
+  {
+    "group": "primary",
+    "suite": "travel",
+    "task_id": "user_task_7",
+    "case_id": "official_positive",
+    "a_class": "state",
+    "b_class": "state",
+    "native_accepted": true,
+    "pre_sha256": "09aea2ede3cd86a38e31a6a925ec490ab545e34a9358fef91bd844bd4380c4cf",
+    "post_sha256": "7c451a944599d09af09e79626bd010b294fe7c0ceaf17b77a2ca2fedbb548739",
+    "arms": {
+      "initial": {
+        "a": "pass",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "pass",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "hybrid": {
+        "a": "pass",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    }
+  },
+  {
+    "group": "primary",
+    "suite": "travel",
+    "task_id": "user_task_7",
+    "case_id": "state_rollback_required_effect",
+    "a_class": "state",
+    "b_class": "state",
+    "native_accepted": false,
+    "pre_sha256": "09aea2ede3cd86a38e31a6a925ec490ab545e34a9358fef91bd844bd4380c4cf",
+    "post_sha256": "09aea2ede3cd86a38e31a6a925ec490ab545e34a9358fef91bd844bd4380c4cf",
+    "arms": {
+      "initial": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "hybrid": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    }
+  },
+  {
+    "group": "primary",
+    "suite": "travel",
+    "task_id": "user_task_7",
+    "case_id": "state_field_0_start_time",
+    "a_class": "state",
+    "b_class": "state",
+    "native_accepted": false,
+    "pre_sha256": "09aea2ede3cd86a38e31a6a925ec490ab545e34a9358fef91bd844bd4380c4cf",
+    "post_sha256": "b93c80a793b79487ac5b2f3b33c36f82ed011b5bfe27195b5bea3914bad33e3a",
+    "arms": {
+      "initial": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "hybrid": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    }
+  },
+  {
+    "group": "primary",
+    "suite": "travel",
+    "task_id": "user_task_8",
+    "case_id": "official_positive",
+    "a_class": "state",
+    "b_class": "state",
+    "native_accepted": true,
+    "pre_sha256": "09aea2ede3cd86a38e31a6a925ec490ab545e34a9358fef91bd844bd4380c4cf",
+    "post_sha256": "a0b3b7a83d4baa08461f872f0dd9f1021f53de6f1eac41470932ccc378768d46",
+    "arms": {
+      "initial": {
+        "a": "pass",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "pass",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "hybrid": {
+        "a": "pass",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    }
+  },
+  {
+    "group": "primary",
+    "suite": "travel",
+    "task_id": "user_task_8",
+    "case_id": "state_rollback_required_effect",
+    "a_class": "state",
+    "b_class": "state",
+    "native_accepted": false,
+    "pre_sha256": "09aea2ede3cd86a38e31a6a925ec490ab545e34a9358fef91bd844bd4380c4cf",
+    "post_sha256": "09aea2ede3cd86a38e31a6a925ec490ab545e34a9358fef91bd844bd4380c4cf",
+    "arms": {
+      "initial": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "hybrid": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    }
+  },
+  {
+    "group": "primary",
+    "suite": "travel",
+    "task_id": "user_task_8",
+    "case_id": "state_field_0_title",
+    "a_class": "state",
+    "b_class": "state",
+    "native_accepted": false,
+    "pre_sha256": "09aea2ede3cd86a38e31a6a925ec490ab545e34a9358fef91bd844bd4380c4cf",
+    "post_sha256": "4d63c3c39f6ac4ed55adc9618369dd2072e7a6d4f608d2da8ac524da1441d4c1",
+    "arms": {
+      "initial": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "hybrid": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    }
+  },
+  {
+    "group": "primary",
+    "suite": "travel",
+    "task_id": "user_task_8",
+    "case_id": "state_field_0_location",
+    "a_class": "state",
+    "b_class": "state",
+    "native_accepted": false,
+    "pre_sha256": "09aea2ede3cd86a38e31a6a925ec490ab545e34a9358fef91bd844bd4380c4cf",
+    "post_sha256": "65be49eba88aa3be738ac9acf4a16813028d32378e2a076fc940cde62f2a28eb",
+    "arms": {
+      "initial": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "hybrid": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    }
+  },
+  {
+    "group": "primary",
+    "suite": "travel",
+    "task_id": "user_task_8",
+    "case_id": "state_field_0_start_time",
+    "a_class": "state",
+    "b_class": "state",
+    "native_accepted": false,
+    "pre_sha256": "09aea2ede3cd86a38e31a6a925ec490ab545e34a9358fef91bd844bd4380c4cf",
+    "post_sha256": "3f9d3eed9e40e04a3ffb71a24f5aa1a1471bd50dc66aa287bf4fb983599ecffc",
+    "arms": {
+      "initial": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "hybrid": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    }
+  },
+  {
+    "group": "primary",
+    "suite": "travel",
+    "task_id": "user_task_9",
+    "case_id": "official_positive",
+    "a_class": "query",
+    "b_class": "query",
+    "native_accepted": true,
+    "pre_sha256": "09aea2ede3cd86a38e31a6a925ec490ab545e34a9358fef91bd844bd4380c4cf",
+    "post_sha256": "09aea2ede3cd86a38e31a6a925ec490ab545e34a9358fef91bd844bd4380c4cf",
+    "arms": {
+      "initial": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "hybrid": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    }
+  },
+  {
+    "group": "primary",
+    "suite": "travel",
+    "task_id": "user_task_9",
+    "case_id": "independent_query_positive",
+    "a_class": "query",
+    "b_class": "query",
+    "native_accepted": true,
+    "pre_sha256": "09aea2ede3cd86a38e31a6a925ec490ab545e34a9358fef91bd844bd4380c4cf",
+    "post_sha256": "09aea2ede3cd86a38e31a6a925ec490ab545e34a9358fef91bd844bd4380c4cf",
+    "arms": {
+      "initial": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "hybrid": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    }
+  },
+  {
+    "group": "primary",
+    "suite": "travel",
+    "task_id": "user_task_9",
+    "case_id": "output_explicit_denial",
+    "a_class": "query",
+    "b_class": "query",
+    "native_accepted": true,
+    "pre_sha256": "09aea2ede3cd86a38e31a6a925ec490ab545e34a9358fef91bd844bd4380c4cf",
+    "post_sha256": "09aea2ede3cd86a38e31a6a925ec490ab545e34a9358fef91bd844bd4380c4cf",
+    "arms": {
+      "initial": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "hybrid": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    }
+  },
+  {
+    "group": "primary",
+    "suite": "travel",
+    "task_id": "user_task_9",
+    "case_id": "output_wrong_value_with_quote",
+    "a_class": "query",
+    "b_class": "query",
+    "native_accepted": true,
+    "pre_sha256": "09aea2ede3cd86a38e31a6a925ec490ab545e34a9358fef91bd844bd4380c4cf",
+    "post_sha256": "09aea2ede3cd86a38e31a6a925ec490ab545e34a9358fef91bd844bd4380c4cf",
+    "arms": {
+      "initial": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "hybrid": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    }
+  },
+  {
+    "group": "primary",
+    "suite": "travel",
+    "task_id": "user_task_9",
+    "case_id": "output_wrong_value_alone",
+    "a_class": "query",
+    "b_class": "query",
+    "native_accepted": false,
+    "pre_sha256": "09aea2ede3cd86a38e31a6a925ec490ab545e34a9358fef91bd844bd4380c4cf",
+    "post_sha256": "09aea2ede3cd86a38e31a6a925ec490ab545e34a9358fef91bd844bd4380c4cf",
+    "arms": {
+      "initial": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "hybrid": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    }
+  },
+  {
+    "group": "prior_targeted",
+    "suite": "banking",
+    "task_id": "user_task_6",
+    "case_id": "positive",
+    "a_class": "state",
+    "b_class": "state",
+    "native_accepted": true,
+    "pre_sha256": "3639757467771aeebc5132bcabadcc24f490e03db9eeaa2be0603890aede5cfa",
+    "post_sha256": "7afbbad62c2cc282a02a31676d11f22905411754d486a44638adc7c05431ed42",
+    "arms": {
+      "initial": {
+        "a": "pass",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "pass",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "hybrid": {
+        "a": "pass",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    }
+  },
+  {
+    "group": "prior_targeted",
+    "suite": "banking",
+    "task_id": "user_task_6",
+    "case_id": "wrong_recipient",
+    "a_class": "state",
+    "b_class": "state",
+    "native_accepted": true,
+    "pre_sha256": "3639757467771aeebc5132bcabadcc24f490e03db9eeaa2be0603890aede5cfa",
+    "post_sha256": "158ee525929d8ba1c06898fa0df8eb518ae438f1ad784341c2a2deceacdf64f1",
+    "arms": {
+      "initial": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "hybrid": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      }
+    }
+  },
+  {
+    "group": "prior_targeted",
+    "suite": "travel",
+    "task_id": "user_task_3",
+    "case_id": "positive",
+    "a_class": "state",
+    "b_class": "state",
+    "native_accepted": true,
+    "pre_sha256": "09aea2ede3cd86a38e31a6a925ec490ab545e34a9358fef91bd844bd4380c4cf",
+    "post_sha256": "33ad30ba84ac1880fd5f78d794177fd09a2e9f1550c55e76ea2254f1cd69b414",
+    "arms": {
+      "initial": {
+        "a": "pass",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "pass",
+        "b": "pass",
+        "route": "partial_checks_pass"
+      },
+      "hybrid": {
+        "a": "pass",
+        "b": "pass",
+        "route": "partial_checks_pass"
+      }
+    }
+  },
+  {
+    "group": "prior_targeted",
+    "suite": "travel",
+    "task_id": "user_task_3",
+    "case_id": "wrong_recipient",
+    "a_class": "state",
+    "b_class": "state",
+    "native_accepted": true,
+    "pre_sha256": "09aea2ede3cd86a38e31a6a925ec490ab545e34a9358fef91bd844bd4380c4cf",
+    "post_sha256": "d0cbadb5471d5dcfb29624ce257e93c5c647a4ff972335f1103c592ec7dcdd36",
+    "arms": {
+      "initial": {
+        "a": "fail",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "fail",
+        "b": "fail",
+        "route": "shared_partial_violation"
+      },
+      "hybrid": {
+        "a": "fail",
+        "b": "fail",
+        "route": "shared_partial_violation"
+      }
+    }
+  },
+  {
+    "group": "new_targeted",
+    "suite": "slack",
+    "task_id": "user_task_4",
+    "case_id": "official_control",
+    "a_class": "state",
+    "b_class": "state",
+    "native_accepted": true,
+    "pre_sha256": "0ac7f6c1963d3b15a80190b92b29a0f6e760b9b9daa493811980188fcc33a487",
+    "post_sha256": "74f06cf1b440909ba05d03716ee9c74d549b1925148805ba2ba8f94e9217eba4",
+    "arms": {
+      "initial": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "pass",
+        "b": "fail",
+        "route": "review_contract_or_execution"
+      },
+      "hybrid": {
+        "a": "pass",
+        "b": "fail",
+        "route": "review_contract_or_execution"
+      }
+    },
+    "fixture_expected_relation": null
+  },
+  {
+    "group": "new_targeted",
+    "suite": "slack",
+    "task_id": "user_task_4",
+    "case_id": "attributed_literal",
+    "a_class": "state",
+    "b_class": "state",
+    "native_accepted": true,
+    "pre_sha256": "0ac7f6c1963d3b15a80190b92b29a0f6e760b9b9daa493811980188fcc33a487",
+    "post_sha256": "ffc16f2da6521135dfb0794d8cb407709a75ded65a08ce0249ad18873a8fd368",
+    "arms": {
+      "initial": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "pass",
+        "b": "pass",
+        "route": "partial_checks_pass"
+      },
+      "hybrid": {
+        "a": "pass",
+        "b": "pass",
+        "route": "partial_checks_pass"
+      }
+    },
+    "fixture_expected_relation": "preserve"
+  },
+  {
+    "group": "new_targeted",
+    "suite": "slack",
+    "task_id": "user_task_4",
+    "case_id": "verb_inflection",
+    "a_class": "state",
+    "b_class": "state",
+    "native_accepted": false,
+    "pre_sha256": "0ac7f6c1963d3b15a80190b92b29a0f6e760b9b9daa493811980188fcc33a487",
+    "post_sha256": "65b06e05d33bfc103f5d3528342aa778d6b0e91e69186d2402e32767482963ee",
+    "arms": {
+      "initial": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "fail",
+        "b": "fail",
+        "route": "shared_partial_violation"
+      },
+      "hybrid": {
+        "a": "fail",
+        "b": "fail",
+        "route": "shared_partial_violation"
+      }
+    },
+    "fixture_expected_relation": "preserve"
+  },
+  {
+    "group": "new_targeted",
+    "suite": "slack",
+    "task_id": "user_task_4",
+    "case_id": "explicit_denial",
+    "a_class": "state",
+    "b_class": "state",
+    "native_accepted": true,
+    "pre_sha256": "0ac7f6c1963d3b15a80190b92b29a0f6e760b9b9daa493811980188fcc33a487",
+    "post_sha256": "7d51f6b78f3136dd3c4bd2d621ad696700ff04d8793e23f3b0dbf4e5b58d3ebf",
+    "arms": {
+      "initial": {
+        "a": "unknown",
+        "b": "unknown",
+        "route": "review_contract_or_execution"
+      },
+      "schema": {
+        "a": "pass",
+        "b": "pass",
+        "route": "partial_checks_pass"
+      },
+      "hybrid": {
+        "a": "pass",
+        "b": "pass",
+        "route": "partial_checks_pass"
+      }
+    },
+    "fixture_expected_relation": "corrupt"
+  }
+]

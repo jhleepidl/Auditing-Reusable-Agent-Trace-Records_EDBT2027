@@ -1,0 +1,178 @@
+{
+  "utc": "2026-10-04T13:31:01.594913+00:00",
+  "designation": "development selection; no confirmation outcomes available",
+  "protocol_sha256": "14fe894a339e84ead8c703f9aef02e4f8aa66dd5affcc7eae277122df7a6b6eb",
+  "selection_rule": "equal-model mean task-macro retention minus false-pass rate; higher retention then earlier version break ties",
+  "versions": [
+    {
+      "version": "v1",
+      "order": 1,
+      "utility": 0.4027777777777778,
+      "valid_retention": 0.45833333333333337,
+      "joint_direction_target_met": false,
+      "per_model_contrasts": [
+        {
+          "model": "gpt-4.1-2025-04-14",
+          "policy": "scope",
+          "contrast": "evidence_bound - direct",
+          "false_pass_rate": {
+            "difference": 0.0,
+            "paired_task_bootstrap_95_percent_ci": [
+              0.0,
+              0.0
+            ],
+            "tasks": 12,
+            "resamples": 10000,
+            "seed": 20261004
+          },
+          "valid_retention": {
+            "difference": -0.25,
+            "paired_task_bootstrap_95_percent_ci": [
+              -0.5833333333333334,
+              0.08333333333333333
+            ],
+            "tasks": 12,
+            "resamples": 10000,
+            "seed": 20261004
+          },
+          "decisive_coverage": {
+            "difference": -0.11666666666666667,
+            "paired_task_bootstrap_95_percent_ci": [
+              -0.25952380952380943,
+              0.0
+            ],
+            "tasks": 30,
+            "resamples": 10000,
+            "seed": 20261004
+          },
+          "joint_direction_gain": false
+        },
+        {
+          "model": "gpt-4.1-mini-2025-04-14",
+          "policy": "scope",
+          "contrast": "evidence_bound - direct",
+          "false_pass_rate": {
+            "difference": 0.0,
+            "paired_task_bootstrap_95_percent_ci": [
+              0.0,
+              0.0
+            ],
+            "tasks": 12,
+            "resamples": 10000,
+            "seed": 20261004
+          },
+          "valid_retention": {
+            "difference": 0.25,
+            "paired_task_bootstrap_95_percent_ci": [
+              -0.08333333333333333,
+              0.5833333333333334
+            ],
+            "tasks": 12,
+            "resamples": 10000,
+            "seed": 20261004
+          },
+          "decisive_coverage": {
+            "difference": 0.05952380952380952,
+            "paired_task_bootstrap_95_percent_ci": [
+              -0.1095238095238095,
+              0.2309523809523809
+            ],
+            "tasks": 30,
+            "resamples": 10000,
+            "seed": 20261004
+          },
+          "joint_direction_gain": true
+        }
+      ],
+      "metrics_sha256": "56212e4ed116aa153f418a6de0865b7ecceeb01f6887dded8d5cadc668b2b271"
+    },
+    {
+      "version": "v2",
+      "order": 2,
+      "utility": 0.8472222222222222,
+      "valid_retention": 0.875,
+      "joint_direction_target_met": true,
+      "per_model_contrasts": [
+        {
+          "model": "gpt-4.1-2025-04-14",
+          "policy": "scope",
+          "contrast": "evidence_bound - direct",
+          "false_pass_rate": {
+            "difference": 0.0,
+            "paired_task_bootstrap_95_percent_ci": [
+              0.0,
+              0.0
+            ],
+            "tasks": 12,
+            "resamples": 10000,
+            "seed": 20261004
+          },
+          "valid_retention": {
+            "difference": 0.08333333333333333,
+            "paired_task_bootstrap_95_percent_ci": [
+              0.0,
+              0.25
+            ],
+            "tasks": 12,
+            "resamples": 10000,
+            "seed": 20261004
+          },
+          "decisive_coverage": {
+            "difference": 0.0,
+            "paired_task_bootstrap_95_percent_ci": [
+              0.0,
+              0.0
+            ],
+            "tasks": 30,
+            "resamples": 10000,
+            "seed": 20261004
+          },
+          "nonblanket_retention": true,
+          "joint_direction_gain": true
+        },
+        {
+          "model": "gpt-4.1-mini-2025-04-14",
+          "policy": "scope",
+          "contrast": "evidence_bound - direct",
+          "false_pass_rate": {
+            "difference": 0.0,
+            "paired_task_bootstrap_95_percent_ci": [
+              0.0,
+              0.0
+            ],
+            "tasks": 12,
+            "resamples": 10000,
+            "seed": 20261004
+          },
+          "valid_retention": {
+            "difference": 0.16666666666666666,
+            "paired_task_bootstrap_95_percent_ci": [
+              0.0,
+              0.4166666666666667
+            ],
+            "tasks": 12,
+            "resamples": 10000,
+            "seed": 20261004
+          },
+          "decisive_coverage": {
+            "difference": 0.0023809523809523838,
+            "paired_task_bootstrap_95_percent_ci": [
+              -0.08333333333333333,
+              0.0857142857142857
+            ],
+            "tasks": 30,
+            "resamples": 10000,
+            "seed": 20261004
+          },
+          "nonblanket_retention": true,
+          "joint_direction_gain": true
+        }
+      ],
+      "metrics_sha256": "0b69c004ce1f9318d5f0355cab63814d2cc5c64e5616cc4a72d14ecacffea666"
+    }
+  ],
+  "selected_version": "v2",
+  "selected_joint_direction_target_met": true,
+  "no_claim_of_confirmed_improvement": true,
+  "third_version_not_needed_if_target_met": true
+}

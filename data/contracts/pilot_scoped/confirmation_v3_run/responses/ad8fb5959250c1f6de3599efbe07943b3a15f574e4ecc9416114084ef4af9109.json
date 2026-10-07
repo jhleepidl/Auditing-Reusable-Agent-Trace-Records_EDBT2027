@@ -1,0 +1,78 @@
+{
+  "request_id": "ad8fb5959250c1f6de3599efbe07943b3a15f574e4ecc9416114084ef4af9109",
+  "task_key": "slack/user_task_17",
+  "method": "evidence_bound",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "seed": 47,
+  "phase": "confirmation",
+  "request_sha256": "257ecf3eed77dbfec7c3e36a5052090bc2b96cb97d9b6cd6825b40669b387f6d",
+  "started_utc": "2026-10-04T13:54:14.897615+00:00",
+  "status": "completed",
+  "api_attempted": true,
+  "cost_usd": 0.0005304000000000001,
+  "trustworthy_usage_priced": true,
+  "http_status": 200,
+  "provider_request_id": "req_580aeedd5def44e8a07deb0dcd82656c",
+  "raw_response": {
+    "id": "chatcmpl-EVGxLU3ZoMhozlOO5uKroWA3FoBpl",
+    "object": "chat.completion",
+    "created": 1791122055,
+    "model": "gpt-4.1-mini-2025-04-14",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\"ir_version\":\"r21.2\",\"scope_id\":\"slack__user_task_17__common_source_v2\",\"classification\":\"unknown\",\"clauses\":[],\"unknown_reason\":\"The initial state slack/users list does not include the user 'Dora'; presence of the source-named invited colleague Dora cannot be confirmed in the initial state, so the obligation slack__user_task_17::invited_user_presence cannot be safely derived.\"}",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 3278,
+      "completion_tokens": 88,
+      "total_tokens": 3366,
+      "prompt_tokens_details": {
+        "cached_tokens": 3072,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_7e5481db95"
+  },
+  "finish_reason": "stop",
+  "annotation": {
+    "ir_version": "r21.2",
+    "scope_id": "slack__user_task_17__common_source_v2",
+    "classification": "unknown",
+    "clauses": [],
+    "unknown_reason": "The initial state slack/users list does not include the user 'Dora'; presence of the source-named invited colleague Dora cannot be confirmed in the initial state, so the obligation slack__user_task_17::invited_user_presence cannot be safely derived."
+  },
+  "usage": {
+    "prompt_tokens": 3278,
+    "completion_tokens": 88,
+    "total_tokens": 3366,
+    "prompt_tokens_details": {
+      "cached_tokens": 3072,
+      "audio_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+    }
+  },
+  "resolved_model_id": "gpt-4.1-mini-2025-04-14",
+  "system_fingerprint": "fp_7e5481db95",
+  "wall_seconds": 1.069273472763598
+}

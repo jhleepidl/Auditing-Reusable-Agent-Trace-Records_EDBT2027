@@ -1,0 +1,188 @@
+{
+  "derivation_version": "r22.2",
+  "classification": "state",
+  "unknown_reason": "",
+  "operands": {
+    "o0_recipient": {
+      "claim": "",
+      "node": "n10"
+    },
+    "o0_amount": {
+      "claim": 0,
+      "node": "n16"
+    }
+  },
+  "nodes": [
+    {
+      "id": "n00",
+      "op": "source",
+      "args": [],
+      "params": {
+        "root": "request",
+        "pointer": ""
+      }
+    },
+    {
+      "id": "n01",
+      "op": "source",
+      "args": [],
+      "params": {
+        "root": "initial_state",
+        "pointer": "/bank_account/transactions"
+      }
+    },
+    {
+      "id": "n02",
+      "op": "argmin",
+      "args": [
+        "n01"
+      ],
+      "params": {
+        "pointer": "/id",
+        "ties": "unknown"
+      }
+    },
+    {
+      "id": "n03",
+      "op": "get",
+      "args": [
+        "n02"
+      ],
+      "params": {
+        "pointer": "/sender"
+      }
+    },
+    {
+      "id": "n04",
+      "op": "text_between",
+      "args": [
+        "n00"
+      ],
+      "params": {
+        "left": "for the ",
+        "right": " was",
+        "trim": true
+      }
+    },
+    {
+      "id": "n05",
+      "op": "extract_decimal",
+      "args": [
+        "n00"
+      ],
+      "params": {
+        "anchor": "additional "
+      }
+    },
+    {
+      "id": "n06",
+      "op": "filter",
+      "args": [
+        "n01",
+        "n04"
+      ],
+      "params": {
+        "pointer": "/subject",
+        "relation": "contains",
+        "casefold": true
+      }
+    },
+    {
+      "id": "n07",
+      "op": "filter",
+      "args": [
+        "n06",
+        "n03"
+      ],
+      "params": {
+        "pointer": "/sender",
+        "relation": "equals",
+        "casefold": false
+      }
+    },
+    {
+      "id": "n08",
+      "op": "unique",
+      "args": [
+        "n07"
+      ],
+      "params": {}
+    },
+    {
+      "id": "n09",
+      "op": "get",
+      "args": [
+        "n08"
+      ],
+      "params": {
+        "pointer": "/amount"
+      }
+    },
+    {
+      "id": "n10",
+      "op": "get",
+      "args": [
+        "n08"
+      ],
+      "params": {
+        "pointer": "/recipient"
+      }
+    },
+    {
+      "id": "n11",
+      "op": "constant",
+      "args": [],
+      "params": {
+        "value": 100
+      }
+    },
+    {
+      "id": "n12",
+      "op": "multiply",
+      "args": [
+        "n09",
+        "n05"
+      ],
+      "params": {}
+    },
+    {
+      "id": "n13",
+      "op": "divide",
+      "args": [
+        "n12",
+        "n11"
+      ],
+      "params": {}
+    },
+    {
+      "id": "n14",
+      "op": "extract_decimal",
+      "args": [
+        "n00"
+      ],
+      "params": {
+        "anchor": "a fee of "
+      }
+    },
+    {
+      "id": "n15",
+      "op": "add",
+      "args": [
+        "n13",
+        "n14"
+      ],
+      "params": {}
+    },
+    {
+      "id": "n16",
+      "op": "quantize",
+      "args": [
+        "n15"
+      ],
+      "params": {
+        "places": 2,
+        "rounding": "half_even"
+      }
+    }
+  ]
+}

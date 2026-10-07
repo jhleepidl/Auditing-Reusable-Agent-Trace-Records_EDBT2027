@@ -1,0 +1,26 @@
+\subsection{Execution turns specification differences into different decisions}
+\label{sec:contract-execution}
+We freeze a literal interpreter and replay the existing 90 primary inputs plus four targeted tool runs. This is retrospective and informed by the preceding diagnostics. Among 64 primary inputs for the 20 common state tasks, literal A/B decisions differ on 15; 14 disagreements occur on the 20 official state controls. These controls are consistency probes, not semantic ground truth, and A-authored negative fixtures cannot rank the builders.
+
+Admission separates a candidate contract from the evidence needed to execute it safely. With initial-state evidence $s_G$, A admits 19/20 state contracts and B 4/23; on official controls B's 16 literal failures become two gated failures and 16 unknowns. Thirteen withholds correspond to value types already incompatible with observed initial objects. A also withholds one legitimate new website key, exposing the cost of conservative abstention.
+
+We then vary only $s_G$ while keeping contracts, interpreter, native labels, and all 98 inputs fixed. Pinned serialization schemas recover exactly three task--builder pairs: both builders for the new website key and B for an initially empty sent-email collection. All 15 observed type-conflict pairs remain withheld. The hybrid gate therefore recovers \emph{structural admissibility}, not semantic authority (Table~\ref{tab:contract-execution}); schema-only and hybrid happen to coincide on this corpus, which does not establish policy equivalence. All 196 consumed pre/post snapshots satisfy structural JSON-Schema validation, a representation-consistency check rather than evidence of task correctness.
+
+\begin{table}[t]
+\centering\small
+\caption{Official state controls ($n=20$) and state-contract admission. P/F/U denotes satisfaction of a candidate partial contract, not full task correctness.}
+\label{tab:contract-execution}
+\begin{tabular}{@{}lccrr@{}}
+\toprule
+Decision view & A P/F/U & B P/F/U & A admitted & B admitted \\
+\midrule
+Literal & 17/3/0 & 3/16/1 & -- & -- \\
+Initial gate & 16/3/1 & 2/2/16 & 19/20 & 4/23 \\
+Hybrid gate & 17/3/0 & 3/3/14 & 20/20 & 6/23 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The extra admission does not simply create more passes. Across the 90 primary cases, initial $\rightarrow$ hybrid moves A from 16/45/29 to 17/47/26 P/F/U and B from 2/9/79 to 3/16/71; the shared routing changes from 80 review, 2 partial-pass, and 8 partial-violation cases to 73, 3, and 14. In the previously frozen travel recipient pair, B changes from unknown/unknown to pass/fail, while its banking pair remains unknown.
+
+Most importantly, the recovered Slack website contract exposes a semantic failure that initial admission had hidden. A meaning-preserving verb-inflection fixture is rejected by the native evaluator and both candidate contracts, while an explicit denial containing the original hobby words is accepted by all three. Thus two agreeing executable contracts can share the same lexical blind spot. Representation support is not semantic certification, and agreement is corroboration only. A prior tool-return serialization failure remains preserved as an incomplete version; no new model calls or human annotations are introduced by this admission ablation.

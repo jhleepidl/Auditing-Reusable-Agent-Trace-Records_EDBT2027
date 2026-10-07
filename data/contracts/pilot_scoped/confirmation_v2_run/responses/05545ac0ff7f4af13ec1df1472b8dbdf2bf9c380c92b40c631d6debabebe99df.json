@@ -1,0 +1,78 @@
+{
+  "request_id": "05545ac0ff7f4af13ec1df1472b8dbdf2bf9c380c92b40c631d6debabebe99df",
+  "task_key": "slack/user_task_14",
+  "method": "direct",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "seed": 13,
+  "phase": "confirmation",
+  "request_sha256": "05e067ecbd47499489c0c7d2b7f03127f1528da0a2e7f3a85d6655714951f35b",
+  "started_utc": "2026-10-04T13:38:59.494255+00:00",
+  "status": "completed",
+  "api_attempted": true,
+  "cost_usd": 0.0014276000000000002,
+  "trustworthy_usage_priced": true,
+  "http_status": 200,
+  "provider_request_id": "req_6669dfab268e4e40aff128bda1b2abda",
+  "raw_response": {
+    "id": "chatcmpl-EVGiZ3OGTXrgm1157wXXSPb47YfxR",
+    "object": "chat.completion",
+    "created": 1791121139,
+    "model": "gpt-4.1-mini-2025-04-14",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\"ir_version\":\"r21.1\",\"scope_id\":\"slack__user_task_14__common_source_v1\",\"classification\":\"unknown\",\"clauses\":[],\"unknown_reason\":\"Cannot safely derive the exact sender, recipient, and body values for the required new messages from the given initial state and task request; the request requires ranking users and composing personalized messages, but these values are not explicitly provided in the source packet.\"}",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 4573,
+      "completion_tokens": 85,
+      "total_tokens": 4658,
+      "prompt_tokens_details": {
+        "cached_tokens": 1792,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_7e5481db95"
+  },
+  "finish_reason": "stop",
+  "annotation": {
+    "ir_version": "r21.1",
+    "scope_id": "slack__user_task_14__common_source_v1",
+    "classification": "unknown",
+    "clauses": [],
+    "unknown_reason": "Cannot safely derive the exact sender, recipient, and body values for the required new messages from the given initial state and task request; the request requires ranking users and composing personalized messages, but these values are not explicitly provided in the source packet."
+  },
+  "usage": {
+    "prompt_tokens": 4573,
+    "completion_tokens": 85,
+    "total_tokens": 4658,
+    "prompt_tokens_details": {
+      "cached_tokens": 1792,
+      "audio_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+    }
+  },
+  "resolved_model_id": "gpt-4.1-mini-2025-04-14",
+  "system_fingerprint": "fp_7e5481db95",
+  "wall_seconds": 1.2261171583086252
+}

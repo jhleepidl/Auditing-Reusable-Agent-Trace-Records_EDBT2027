@@ -1,0 +1,25 @@
+\subsection{Source-masked reconstruction is asymmetric}
+\label{sec:second-builder}
+A separate source-masked \texttt{gpt-4.1-2025-04-14} builder completes all 30 fixed tasks from only an opaque ID, prompt, initial public state, common instructions, and typed output schema. Original classifications, predicates, evaluator/solution code, and outcomes are withheld. Overall coarse-type agreement is 24/30 (descriptive $\kappa=0.563$), but the structure is asymmetric: all 20 original state tasks and all four query tasks retain their type, whereas none of the six original exclusions remains excluded (three become state and three query). Thus prior inclusion is stable here, but the abstention boundary is builder-sensitive.
+
+State-predicate detail is much less reproducible (Table~\ref{tab:second-builder}). Across the 20 original state tasks, only 9/37 exact path/operator/value/new-entity atoms recur; 8/20 tasks recover at least one exact atom, 3/20 recover all, and 12/20 recover none. Path overlap is higher (18/35), so literal mismatch mixes representation choices with semantic differences. The gap is not only multi-predicate complexity: among ten one-atom state tasks, only three reproduce that atom exactly. By contrast, all nine registered answer values recur across the four original query tasks. These are fixed-task comparisons, not error rates.
+
+\begin{table}[t]
+\centering\small
+\caption{Source-masked builder comparison. Neither builder is semantic ground truth.}
+\label{tab:second-builder}
+\begin{tabular}{@{}lr@{}}
+\toprule
+Quantity & Result \\
+\midrule
+Annotations completed & 30/30 \\
+Original state/query type retained & 24/24 \\
+Original exclusions retained & 0/6 \\
+State tasks with $\geq$1 / all exact atoms & 8/20 / 3/20 \\
+Exact state atom / path overlap & 9/37 / 18/35 \\
+Query values recovered & 9/9 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Post-result diagnostics reinforce the need for abstention rather than automatic promotion: 15/49 second-builder state predicates conflict with types visible in the supplied initial objects and six use an unrepresented reservation-list root; qualitative inspection also finds arithmetic, state-reading, and hypothetical-path errors. The original process is not an oracle either: one hobby-word guard is fixture-specific rather than a universal semantic predicate. No diagnosis relabels the frozen comparison. Candidate contracts therefore remain versioned data products; disagreement routes to review or \emph{unknown}. Human reconstruction has not been collected.

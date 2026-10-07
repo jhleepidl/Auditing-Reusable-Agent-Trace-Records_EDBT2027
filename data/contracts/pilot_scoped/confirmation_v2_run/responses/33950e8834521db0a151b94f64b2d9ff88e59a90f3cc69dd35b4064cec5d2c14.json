@@ -1,0 +1,78 @@
+{
+  "request_id": "33950e8834521db0a151b94f64b2d9ff88e59a90f3cc69dd35b4064cec5d2c14",
+  "task_key": "slack/user_task_14",
+  "method": "evidence_bound",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "seed": 29,
+  "phase": "confirmation",
+  "request_sha256": "b545b91d92aee766daf8a1b5d92016fc98b18c8ade2308c187dff59cc013c9db",
+  "started_utc": "2026-10-04T13:39:00.696206+00:00",
+  "status": "completed",
+  "api_attempted": true,
+  "cost_usd": 0.0010796000000000002,
+  "trustworthy_usage_priced": true,
+  "http_status": 200,
+  "provider_request_id": "req_30eb9d4f92cd4f66b4210cf0903a5be9",
+  "raw_response": {
+    "id": "chatcmpl-EVGib3dEOlXAWNeCFpM2Mvz9UdEfu",
+    "object": "chat.completion",
+    "created": 1791121141,
+    "model": "gpt-4.1-mini-2025-04-14",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\"ir_version\":\"r21.1\",\"scope_id\":\"slack__user_task_14__common_source_v1\",\"classification\":\"unknown\",\"clauses\":[],\"unknown_reason\":\"The request requires sending new messages with bodies containing user-specific rank information, but the source packet and initial state do not provide the exact expected message bodies for each user or the exact sender identity for these new messages. Without concrete values for sender, recipient, and body for each new message, the obligations cannot be safely derived or constructed.\"}",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 5167,
+      "completion_tokens": 103,
+      "total_tokens": 5270,
+      "prompt_tokens_details": {
+        "cached_tokens": 3840,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_7e5481db95"
+  },
+  "finish_reason": "stop",
+  "annotation": {
+    "ir_version": "r21.1",
+    "scope_id": "slack__user_task_14__common_source_v1",
+    "classification": "unknown",
+    "clauses": [],
+    "unknown_reason": "The request requires sending new messages with bodies containing user-specific rank information, but the source packet and initial state do not provide the exact expected message bodies for each user or the exact sender identity for these new messages. Without concrete values for sender, recipient, and body for each new message, the obligations cannot be safely derived or constructed."
+  },
+  "usage": {
+    "prompt_tokens": 5167,
+    "completion_tokens": 103,
+    "total_tokens": 5270,
+    "prompt_tokens_details": {
+      "cached_tokens": 3840,
+      "audio_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+    }
+  },
+  "resolved_model_id": "gpt-4.1-mini-2025-04-14",
+  "system_fingerprint": "fp_7e5481db95",
+  "wall_seconds": 1.3289740197360516
+}

@@ -1,0 +1,78 @@
+{
+  "request_id": "c73bc56afb37cfb1a76a997041b8dfef32f00384d06d272c58bdadfced6867f3",
+  "task_key": "slack/user_task_17",
+  "method": "direct",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "seed": 29,
+  "phase": "confirmation",
+  "request_sha256": "2f64e5656c9d1cf0339ba6ae301904eae1455ffd5a54d4a08389ce006f81d034",
+  "started_utc": "2026-10-04T13:40:22.359656+00:00",
+  "status": "completed",
+  "api_attempted": true,
+  "cost_usd": 0.0011352,
+  "trustworthy_usage_priced": true,
+  "http_status": 200,
+  "provider_request_id": "req_b1c8cb095bde4359b57015aa1bc66594",
+  "raw_response": {
+    "id": "chatcmpl-EVGjuO569Ck6Lg5mg67azsLsWwiuj",
+    "object": "chat.completion",
+    "created": 1791121222,
+    "model": "gpt-4.1-mini-2025-04-14",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\"ir_version\":\"r21.1\",\"scope_id\":\"slack__user_task_17__common_source_v1\",\"classification\":\"unknown\",\"clauses\":[],\"unknown_reason\":\"Cannot confirm presence of invited user Dora in /slack/users from initial state; no user named Dora or email dora@gmail.com present.\"}",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2578,
+      "completion_tokens": 65,
+      "total_tokens": 2643,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_972c397bd9"
+  },
+  "finish_reason": "stop",
+  "annotation": {
+    "ir_version": "r21.1",
+    "scope_id": "slack__user_task_17__common_source_v1",
+    "classification": "unknown",
+    "clauses": [],
+    "unknown_reason": "Cannot confirm presence of invited user Dora in /slack/users from initial state; no user named Dora or email dora@gmail.com present."
+  },
+  "usage": {
+    "prompt_tokens": 2578,
+    "completion_tokens": 65,
+    "total_tokens": 2643,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+    }
+  },
+  "resolved_model_id": "gpt-4.1-mini-2025-04-14",
+  "system_fingerprint": "fp_972c397bd9",
+  "wall_seconds": 0.9468595432117581
+}

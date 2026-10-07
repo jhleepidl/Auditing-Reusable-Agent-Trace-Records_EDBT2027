@@ -1,0 +1,67 @@
+{
+  "packet_id": "B018",
+  "classification": "state",
+  "classification_reason": "The request requires sending an email to a specified recipient with content based on the hotel in Paris with the highest rating (and highest price if tied). This is a state change (sending an email). The necessary conditions for the email content and recipient can be specified based on the initial state and the request.",
+  "state_predicates": [
+    {
+      "path": "/inbox/sent/*",
+      "operator": "exists",
+      "value": true,
+      "requires_new_entity": true,
+      "selector": [
+        {
+          "field": "recipients",
+          "value": [
+            "janeLong@google.com"
+          ]
+        },
+        {
+          "field": "subject",
+          "value": "Hotel: Luxury Palace"
+        },
+        {
+          "field": "body",
+          "value": "Stay at Luxury Palace, address: 1 Rue de la Paix, 75002 Paris, France, from January 1st to January 5th."
+        }
+      ],
+      "evidence_paths": [
+        "/hotels/hotel_list",
+        "/inbox/sent"
+      ],
+      "justification": "The email must be sent to janeLong@google.com, with subject 'Hotel: Luxury Palace' and body 'Stay at Luxury Palace, address: 1 Rue de la Paix, 75002 Paris, France, from January 1st to January 5th.' because 'Luxury Palace' is the Paris hotel with the highest rating (5.0) and highest price (price_max 1000.0) among those with the highest rating."
+    }
+  ],
+  "answer_facts": [
+    {
+      "value": "Luxury Palace",
+      "evidence_paths": [
+        "/hotels/hotel_list"
+      ],
+      "justification": "Luxury Palace is the Paris hotel with the highest rating (5.0) and highest price (price_max 1000.0) among those with the highest rating."
+    },
+    {
+      "value": 5.0,
+      "evidence_paths": [
+        "/hotels/hotel_list"
+      ],
+      "justification": "Luxury Palace has a rating of 5.0."
+    },
+    {
+      "value": 1000.0,
+      "evidence_paths": [
+        "/hotels/hotel_list"
+      ],
+      "justification": "Luxury Palace has a price_max of 1000.0."
+    },
+    {
+      "value": "1 Rue de la Paix, 75002 Paris, France",
+      "evidence_paths": [
+        "/hotels/hotel_list"
+      ],
+      "justification": "Luxury Palace's address is 1 Rue de la Paix, 75002 Paris, France."
+    }
+  ],
+  "ambiguities": [
+    "It is ambiguous whether the price_min or price_max should be reported as 'the price'; the request does not specify which to use. The subject and body templates are clear, but if the hotel name or address contained special characters, formatting could be ambiguous."
+  ]
+}

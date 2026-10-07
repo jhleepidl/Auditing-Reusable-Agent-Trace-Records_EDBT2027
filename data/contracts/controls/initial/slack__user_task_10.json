@@ -1,0 +1,313 @@
+{
+  "derivation_version": "r22.2",
+  "classification": "state",
+  "unknown_reason": "",
+  "operands": {
+    "o0_users": {
+      "claim": "",
+      "node": "n15"
+    },
+    "o0_user_channels": {
+      "claim": "",
+      "node": "n08"
+    },
+    "o0_dynamic_property": {
+      "claim": "",
+      "node": "n17"
+    },
+    "o1_users": {
+      "claim": "",
+      "node": "n19"
+    },
+    "o1_user_channels": {
+      "claim": "",
+      "node": "n08"
+    },
+    "o1_dynamic_property": {
+      "claim": "",
+      "node": "n21"
+    },
+    "o2_users": {
+      "claim": "",
+      "node": "n23"
+    },
+    "o2_user_channels": {
+      "claim": "",
+      "node": "n08"
+    },
+    "o2_dynamic_property": {
+      "claim": "",
+      "node": "n25"
+    }
+  },
+  "nodes": [
+    {
+      "id": "n00",
+      "op": "source",
+      "args": [],
+      "params": {
+        "root": "request",
+        "pointer": ""
+      }
+    },
+    {
+      "id": "n01",
+      "op": "source",
+      "args": [],
+      "params": {
+        "root": "initial_state",
+        "pointer": "/slack/users"
+      }
+    },
+    {
+      "id": "n02",
+      "op": "source",
+      "args": [],
+      "params": {
+        "root": "initial_state",
+        "pointer": "/slack/channels"
+      }
+    },
+    {
+      "id": "n03",
+      "op": "source",
+      "args": [],
+      "params": {
+        "root": "initial_state",
+        "pointer": "/slack/channel_inbox"
+      }
+    },
+    {
+      "id": "n04",
+      "op": "lookup_many",
+      "args": [
+        "n03",
+        "n02"
+      ],
+      "params": {
+        "missing": "empty_array"
+      }
+    },
+    {
+      "id": "n05",
+      "op": "flatten",
+      "args": [
+        "n04"
+      ],
+      "params": {}
+    },
+    {
+      "id": "n06",
+      "op": "group_count",
+      "args": [
+        "n05",
+        "n02"
+      ],
+      "params": {
+        "pointer": "/recipient",
+        "unmatched": "unknown"
+      }
+    },
+    {
+      "id": "n07",
+      "op": "argmin",
+      "args": [
+        "n06"
+      ],
+      "params": {
+        "pointer": "/count",
+        "ties": "unknown"
+      }
+    },
+    {
+      "id": "n08",
+      "op": "get",
+      "args": [
+        "n07"
+      ],
+      "params": {
+        "pointer": "/key"
+      }
+    },
+    {
+      "id": "n09",
+      "op": "source",
+      "args": [],
+      "params": {
+        "root": "initial_state",
+        "pointer": "/slack/user_channels"
+      }
+    },
+    {
+      "id": "n10",
+      "op": "lookup_many",
+      "args": [
+        "n09",
+        "n01"
+      ],
+      "params": {
+        "missing": "unknown"
+      }
+    },
+    {
+      "id": "n11",
+      "op": "zip",
+      "args": [
+        "n01",
+        "n10"
+      ],
+      "params": {
+        "left_name": "user",
+        "right_name": "channels"
+      }
+    },
+    {
+      "id": "n12",
+      "op": "filter",
+      "args": [
+        "n11",
+        "n08"
+      ],
+      "params": {
+        "pointer": "/channels",
+        "relation": "not_contains",
+        "casefold": false
+      }
+    },
+    {
+      "id": "n13",
+      "op": "sort",
+      "args": [
+        "n12"
+      ],
+      "params": {
+        "keys": [
+          {
+            "pointer": "/user",
+            "direction": "asc"
+          }
+        ]
+      }
+    },
+    {
+      "id": "n14",
+      "op": "at",
+      "args": [
+        "n13"
+      ],
+      "params": {
+        "index": 0
+      }
+    },
+    {
+      "id": "n15",
+      "op": "get",
+      "args": [
+        "n14"
+      ],
+      "params": {
+        "pointer": "/user"
+      }
+    },
+    {
+      "id": "n16",
+      "op": "source",
+      "args": [],
+      "params": {
+        "root": "scope",
+        "pointer": "/obligations/0/required_properties/1/property_pattern"
+      }
+    },
+    {
+      "id": "n17",
+      "op": "replace_once",
+      "args": [
+        "n16",
+        "n15"
+      ],
+      "params": {
+        "needle": "{user}"
+      }
+    },
+    {
+      "id": "n18",
+      "op": "at",
+      "args": [
+        "n13"
+      ],
+      "params": {
+        "index": 1
+      }
+    },
+    {
+      "id": "n19",
+      "op": "get",
+      "args": [
+        "n18"
+      ],
+      "params": {
+        "pointer": "/user"
+      }
+    },
+    {
+      "id": "n20",
+      "op": "source",
+      "args": [],
+      "params": {
+        "root": "scope",
+        "pointer": "/obligations/1/required_properties/1/property_pattern"
+      }
+    },
+    {
+      "id": "n21",
+      "op": "replace_once",
+      "args": [
+        "n20",
+        "n19"
+      ],
+      "params": {
+        "needle": "{user}"
+      }
+    },
+    {
+      "id": "n22",
+      "op": "at",
+      "args": [
+        "n13"
+      ],
+      "params": {
+        "index": 2
+      }
+    },
+    {
+      "id": "n23",
+      "op": "get",
+      "args": [
+        "n22"
+      ],
+      "params": {
+        "pointer": "/user"
+      }
+    },
+    {
+      "id": "n24",
+      "op": "source",
+      "args": [],
+      "params": {
+        "root": "scope",
+        "pointer": "/obligations/2/required_properties/1/property_pattern"
+      }
+    },
+    {
+      "id": "n25",
+      "op": "replace_once",
+      "args": [
+        "n24",
+        "n23"
+      ],
+      "params": {
+        "needle": "{user}"
+      }
+    }
+  ]
+}

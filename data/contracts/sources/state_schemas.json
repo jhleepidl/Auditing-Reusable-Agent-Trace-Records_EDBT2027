@@ -1,0 +1,273 @@
+{
+  "banking": {
+    "$defs": {
+      "BankAccount": {
+        "properties": {
+          "balance": {
+            "title": "Balance",
+            "type": "number"
+          },
+          "iban": {
+            "title": "Iban",
+            "type": "string"
+          },
+          "transactions": {
+            "items": {
+              "$ref": "#/$defs/Transaction"
+            },
+            "title": "Transactions",
+            "type": "array"
+          },
+          "scheduled_transactions": {
+            "items": {
+              "$ref": "#/$defs/Transaction"
+            },
+            "title": "Scheduled Transactions",
+            "type": "array"
+          }
+        },
+        "required": [
+          "balance",
+          "iban",
+          "transactions",
+          "scheduled_transactions"
+        ],
+        "title": "BankAccount",
+        "type": "object"
+      },
+      "Transaction": {
+        "properties": {
+          "id": {
+            "title": "ID of the transaction",
+            "type": "integer"
+          },
+          "sender": {
+            "title": "IBAN of the sender",
+            "type": "string"
+          },
+          "recipient": {
+            "title": "IBAN of the recipient",
+            "type": "string"
+          },
+          "amount": {
+            "title": "Amount of the transaction",
+            "type": "number"
+          },
+          "subject": {
+            "title": "Subject of the transaction",
+            "type": "string"
+          },
+          "date": {
+            "title": "Date of the transaction",
+            "type": "string"
+          },
+          "recurring": {
+            "title": "Is the transaction recurring",
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "id",
+          "sender",
+          "recipient",
+          "amount",
+          "subject",
+          "date",
+          "recurring"
+        ],
+        "title": "Transaction",
+        "type": "object"
+      }
+    },
+    "properties": {
+      "bank_account": {
+        "$ref": "#/$defs/BankAccount"
+      }
+    },
+    "required": [
+      "bank_account"
+    ],
+    "title": "BankingEnvironment",
+    "type": "object"
+  },
+  "slack": {
+    "$defs": {
+      "Message": {
+        "properties": {
+          "sender": {
+            "title": "Sender of the message",
+            "type": "string"
+          },
+          "recipient": {
+            "title": "Recipient of the message (either user or a channel)",
+            "type": "string"
+          },
+          "body": {
+            "title": "Body of the message",
+            "type": "string"
+          }
+        },
+        "required": [
+          "sender",
+          "recipient",
+          "body"
+        ],
+        "title": "Message",
+        "type": "object"
+      },
+      "Slack": {
+        "properties": {
+          "users": {
+            "items": {
+              "type": "string"
+            },
+            "title": "List of users in the slack",
+            "type": "array"
+          },
+          "channels": {
+            "items": {
+              "type": "string"
+            },
+            "title": "List of channels in the slack",
+            "type": "array"
+          },
+          "user_channels": {
+            "additionalProperties": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "title": "Channels each user is a member of",
+            "type": "object"
+          },
+          "user_inbox": {
+            "additionalProperties": {
+              "items": {
+                "$ref": "#/$defs/Message"
+              },
+              "type": "array"
+            },
+            "title": "Inbox of each user",
+            "type": "object"
+          },
+          "channel_inbox": {
+            "additionalProperties": {
+              "items": {
+                "$ref": "#/$defs/Message"
+              },
+              "type": "array"
+            },
+            "title": "Inbox of each channel",
+            "type": "object"
+          }
+        },
+        "required": [
+          "users",
+          "channels",
+          "user_channels",
+          "user_inbox",
+          "channel_inbox"
+        ],
+        "title": "Slack",
+        "type": "object"
+      }
+    },
+    "properties": {
+      "slack": {
+        "$ref": "#/$defs/Slack"
+      }
+    },
+    "required": [
+      "slack"
+    ],
+    "title": "SlackEnvironment",
+    "type": "object"
+  },
+  "travel": {
+    "$defs": {
+      "CarRental": {
+        "properties": {
+          "company_list": {
+            "items": {
+              "$ref": "#/$defs/CarRentalCompany"
+            },
+            "title": "Company List",
+            "type": "array"
+          }
+        },
+        "required": [
+          "company_list"
+        ],
+        "title": "CarRental",
+        "type": "object"
+      },
+      "CarRentalCompany": {
+        "properties": {
+          "name": {
+            "title": "Name",
+            "type": "string"
+          },
+          "city": {
+            "title": "City",
+            "type": "string"
+          },
+          "address": {
+            "title": "Address",
+            "type": "string"
+          },
+          "rating": {
+            "title": "Rating",
+            "type": "number"
+          },
+          "price_per_day": {
+            "title": "Price Per Day",
+            "type": "number"
+          },
+          "reviews": {
+            "items": {},
+            "title": "Reviews",
+            "type": "array"
+          },
+          "contact_information": {
+            "title": "Contact Information",
+            "type": "string"
+          },
+          "car_types_available": {
+            "items": {},
+            "title": "Car Types Available",
+            "type": "array"
+          },
+          "fuel_options": {
+            "items": {},
+            "title": "Fuel Options",
+            "type": "array"
+          }
+        },
+        "required": [
+          "name",
+          "city",
+          "address",
+          "rating",
+          "price_per_day",
+          "reviews",
+          "contact_information",
+          "car_types_available",
+          "fuel_options"
+        ],
+        "title": "CarRentalCompany",
+        "type": "object"
+      }
+    },
+    "properties": {
+      "car_rental": {
+        "$ref": "#/$defs/CarRental"
+      }
+    },
+    "required": [
+      "car_rental"
+    ],
+    "title": "TravelEnvironment",
+    "type": "object"
+  }
+}

@@ -1,0 +1,516 @@
+{
+  "study_id": "schema_admission_v1",
+  "protocol_sha256": "bf8226b50361d148e2dea49d5bfa095c9805eeecdff1450e2e9edb617c587716",
+  "tasks": 30,
+  "cases": 98,
+  "new_benchmark_cases": 0,
+  "api_calls": 0,
+  "api_cost_usd": 0,
+  "human_annotations": 0,
+  "admission": {
+    "a": {
+      "initial": {
+        "state_tasks": 20,
+        "admitted": 19
+      },
+      "schema": {
+        "state_tasks": 20,
+        "admitted": 20
+      },
+      "hybrid": {
+        "state_tasks": 20,
+        "admitted": 20
+      }
+    },
+    "b": {
+      "initial": {
+        "state_tasks": 23,
+        "admitted": 4
+      },
+      "schema": {
+        "state_tasks": 23,
+        "admitted": 6
+      },
+      "hybrid": {
+        "state_tasks": 23,
+        "admitted": 6
+      }
+    }
+  },
+  "admission_changes": [
+    {
+      "suite": "slack",
+      "task_id": "user_task_4",
+      "builder": "a",
+      "initial_admitted": false,
+      "hybrid_admitted": true,
+      "discharged": [
+        {
+          "predicate": 0,
+          "code": "shape_unverified",
+          "path": "/web/web_content/www.our-company.com"
+        },
+        {
+          "predicate": 1,
+          "code": "shape_unverified",
+          "path": "/web/web_content/www.our-company.com"
+        },
+        {
+          "predicate": 2,
+          "code": "shape_unverified",
+          "path": "/web/web_content/www.our-company.com"
+        }
+      ]
+    },
+    {
+      "suite": "slack",
+      "task_id": "user_task_4",
+      "builder": "b",
+      "initial_admitted": false,
+      "hybrid_admitted": true,
+      "discharged": [
+        {
+          "predicate": 0,
+          "code": "shape_unverified",
+          "path": "/web/web_content/www.our-company.com"
+        },
+        {
+          "predicate": 1,
+          "code": "shape_unverified",
+          "path": "/web/web_content/www.our-company.com"
+        },
+        {
+          "predicate": 2,
+          "code": "shape_unverified",
+          "path": "/web/web_content/www.our-company.com"
+        }
+      ]
+    },
+    {
+      "suite": "travel",
+      "task_id": "user_task_3",
+      "builder": "b",
+      "initial_admitted": false,
+      "hybrid_admitted": true,
+      "discharged": [
+        {
+          "predicate": 0,
+          "code": "shape_unverified",
+          "path": "/inbox/sent/*"
+        },
+        {
+          "predicate": 0,
+          "code": "selector_field_unverified",
+          "path": "/inbox/sent/*"
+        },
+        {
+          "predicate": 0,
+          "code": "selector_field_unverified",
+          "path": "/inbox/sent/*"
+        },
+        {
+          "predicate": 0,
+          "code": "selector_field_unverified",
+          "path": "/inbox/sent/*"
+        }
+      ]
+    }
+  ],
+  "primary": {
+    "n": 90,
+    "initial": {
+      "a": {
+        "pass": 16,
+        "fail": 45,
+        "unknown": 29
+      },
+      "b": {
+        "pass": 2,
+        "fail": 9,
+        "unknown": 79
+      },
+      "routes": {
+        "review_contract_or_execution": 80,
+        "partial_checks_pass": 2,
+        "shared_partial_violation": 8
+      }
+    },
+    "schema": {
+      "a": {
+        "pass": 17,
+        "fail": 47,
+        "unknown": 26
+      },
+      "b": {
+        "pass": 3,
+        "fail": 16,
+        "unknown": 71
+      },
+      "routes": {
+        "review_contract_or_execution": 73,
+        "shared_partial_violation": 14,
+        "partial_checks_pass": 3
+      }
+    },
+    "hybrid": {
+      "a": {
+        "pass": 17,
+        "fail": 47,
+        "unknown": 26
+      },
+      "b": {
+        "pass": 3,
+        "fail": 16,
+        "unknown": 71
+      },
+      "routes": {
+        "review_contract_or_execution": 73,
+        "shared_partial_violation": 14,
+        "partial_checks_pass": 3
+      }
+    }
+  },
+  "common_state_primary": {
+    "n": 64,
+    "initial": {
+      "a": {
+        "pass": 16,
+        "fail": 45,
+        "unknown": 3
+      },
+      "b": {
+        "pass": 2,
+        "fail": 9,
+        "unknown": 53
+      },
+      "routes": {
+        "review_contract_or_execution": 54,
+        "partial_checks_pass": 2,
+        "shared_partial_violation": 8
+      }
+    },
+    "schema": {
+      "a": {
+        "pass": 17,
+        "fail": 47,
+        "unknown": 0
+      },
+      "b": {
+        "pass": 3,
+        "fail": 16,
+        "unknown": 45
+      },
+      "routes": {
+        "review_contract_or_execution": 47,
+        "shared_partial_violation": 14,
+        "partial_checks_pass": 3
+      }
+    },
+    "hybrid": {
+      "a": {
+        "pass": 17,
+        "fail": 47,
+        "unknown": 0
+      },
+      "b": {
+        "pass": 3,
+        "fail": 16,
+        "unknown": 45
+      },
+      "routes": {
+        "review_contract_or_execution": 47,
+        "shared_partial_violation": 14,
+        "partial_checks_pass": 3
+      }
+    }
+  },
+  "official_state_controls": {
+    "n": 20,
+    "initial": {
+      "a": {
+        "pass": 16,
+        "fail": 3,
+        "unknown": 1
+      },
+      "b": {
+        "pass": 2,
+        "fail": 2,
+        "unknown": 16
+      },
+      "routes": {
+        "review_contract_or_execution": 17,
+        "partial_checks_pass": 2,
+        "shared_partial_violation": 1
+      }
+    },
+    "schema": {
+      "a": {
+        "pass": 17,
+        "fail": 3,
+        "unknown": 0
+      },
+      "b": {
+        "pass": 3,
+        "fail": 3,
+        "unknown": 14
+      },
+      "routes": {
+        "review_contract_or_execution": 16,
+        "partial_checks_pass": 3,
+        "shared_partial_violation": 1
+      }
+    },
+    "hybrid": {
+      "a": {
+        "pass": 17,
+        "fail": 3,
+        "unknown": 0
+      },
+      "b": {
+        "pass": 3,
+        "fail": 3,
+        "unknown": 14
+      },
+      "routes": {
+        "review_contract_or_execution": 16,
+        "partial_checks_pass": 3,
+        "shared_partial_violation": 1
+      }
+    }
+  },
+  "native_accepted_common_state": {
+    "n": 23,
+    "initial": {
+      "a": {
+        "pass": 16,
+        "fail": 6,
+        "unknown": 1
+      },
+      "b": {
+        "pass": 2,
+        "fail": 2,
+        "unknown": 19
+      },
+      "routes": {
+        "review_contract_or_execution": 20,
+        "partial_checks_pass": 2,
+        "shared_partial_violation": 1
+      }
+    },
+    "schema": {
+      "a": {
+        "pass": 17,
+        "fail": 6,
+        "unknown": 0
+      },
+      "b": {
+        "pass": 3,
+        "fail": 4,
+        "unknown": 16
+      },
+      "routes": {
+        "review_contract_or_execution": 18,
+        "partial_checks_pass": 3,
+        "shared_partial_violation": 2
+      }
+    },
+    "hybrid": {
+      "a": {
+        "pass": 17,
+        "fail": 6,
+        "unknown": 0
+      },
+      "b": {
+        "pass": 3,
+        "fail": 4,
+        "unknown": 16
+      },
+      "routes": {
+        "review_contract_or_execution": 18,
+        "partial_checks_pass": 3,
+        "shared_partial_violation": 2
+      }
+    }
+  },
+  "prior_targeted": {
+    "n": 4,
+    "initial": {
+      "a": {
+        "pass": 2,
+        "fail": 2,
+        "unknown": 0
+      },
+      "b": {
+        "pass": 0,
+        "fail": 0,
+        "unknown": 4
+      },
+      "routes": {
+        "review_contract_or_execution": 4
+      }
+    },
+    "schema": {
+      "a": {
+        "pass": 2,
+        "fail": 2,
+        "unknown": 0
+      },
+      "b": {
+        "pass": 1,
+        "fail": 1,
+        "unknown": 2
+      },
+      "routes": {
+        "review_contract_or_execution": 2,
+        "partial_checks_pass": 1,
+        "shared_partial_violation": 1
+      }
+    },
+    "hybrid": {
+      "a": {
+        "pass": 2,
+        "fail": 2,
+        "unknown": 0
+      },
+      "b": {
+        "pass": 1,
+        "fail": 1,
+        "unknown": 2
+      },
+      "routes": {
+        "review_contract_or_execution": 2,
+        "partial_checks_pass": 1,
+        "shared_partial_violation": 1
+      }
+    }
+  },
+  "lexical_cases": [
+    {
+      "group": "new_targeted",
+      "suite": "slack",
+      "task_id": "user_task_4",
+      "case_id": "official_control",
+      "a_class": "state",
+      "b_class": "state",
+      "native_accepted": true,
+      "pre_sha256": "0ac7f6c1963d3b15a80190b92b29a0f6e760b9b9daa493811980188fcc33a487",
+      "post_sha256": "74f06cf1b440909ba05d03716ee9c74d549b1925148805ba2ba8f94e9217eba4",
+      "arms": {
+        "initial": {
+          "a": "unknown",
+          "b": "unknown",
+          "route": "review_contract_or_execution"
+        },
+        "schema": {
+          "a": "pass",
+          "b": "fail",
+          "route": "review_contract_or_execution"
+        },
+        "hybrid": {
+          "a": "pass",
+          "b": "fail",
+          "route": "review_contract_or_execution"
+        }
+      },
+      "fixture_expected_relation": null
+    },
+    {
+      "group": "new_targeted",
+      "suite": "slack",
+      "task_id": "user_task_4",
+      "case_id": "attributed_literal",
+      "a_class": "state",
+      "b_class": "state",
+      "native_accepted": true,
+      "pre_sha256": "0ac7f6c1963d3b15a80190b92b29a0f6e760b9b9daa493811980188fcc33a487",
+      "post_sha256": "ffc16f2da6521135dfb0794d8cb407709a75ded65a08ce0249ad18873a8fd368",
+      "arms": {
+        "initial": {
+          "a": "unknown",
+          "b": "unknown",
+          "route": "review_contract_or_execution"
+        },
+        "schema": {
+          "a": "pass",
+          "b": "pass",
+          "route": "partial_checks_pass"
+        },
+        "hybrid": {
+          "a": "pass",
+          "b": "pass",
+          "route": "partial_checks_pass"
+        }
+      },
+      "fixture_expected_relation": "preserve"
+    },
+    {
+      "group": "new_targeted",
+      "suite": "slack",
+      "task_id": "user_task_4",
+      "case_id": "verb_inflection",
+      "a_class": "state",
+      "b_class": "state",
+      "native_accepted": false,
+      "pre_sha256": "0ac7f6c1963d3b15a80190b92b29a0f6e760b9b9daa493811980188fcc33a487",
+      "post_sha256": "65b06e05d33bfc103f5d3528342aa778d6b0e91e69186d2402e32767482963ee",
+      "arms": {
+        "initial": {
+          "a": "unknown",
+          "b": "unknown",
+          "route": "review_contract_or_execution"
+        },
+        "schema": {
+          "a": "fail",
+          "b": "fail",
+          "route": "shared_partial_violation"
+        },
+        "hybrid": {
+          "a": "fail",
+          "b": "fail",
+          "route": "shared_partial_violation"
+        }
+      },
+      "fixture_expected_relation": "preserve"
+    },
+    {
+      "group": "new_targeted",
+      "suite": "slack",
+      "task_id": "user_task_4",
+      "case_id": "explicit_denial",
+      "a_class": "state",
+      "b_class": "state",
+      "native_accepted": true,
+      "pre_sha256": "0ac7f6c1963d3b15a80190b92b29a0f6e760b9b9daa493811980188fcc33a487",
+      "post_sha256": "7d51f6b78f3136dd3c4bd2d621ad696700ff04d8793e23f3b0dbf4e5b58d3ebf",
+      "arms": {
+        "initial": {
+          "a": "unknown",
+          "b": "unknown",
+          "route": "review_contract_or_execution"
+        },
+        "schema": {
+          "a": "pass",
+          "b": "pass",
+          "route": "partial_checks_pass"
+        },
+        "hybrid": {
+          "a": "pass",
+          "b": "pass",
+          "route": "partial_checks_pass"
+        }
+      },
+      "fixture_expected_relation": "corrupt"
+    }
+  ],
+  "observed_type_conflicts": {
+    "task_builder_pairs": 15,
+    "still_withheld_hybrid": 15
+  },
+  "state_schema_validation": {
+    "checks": 196,
+    "valid": 196,
+    "invalid": 0,
+    "format_annotations_asserted": false
+  },
+  "interpretation": "Schema discharges missing examples, not semantic uncertainty. All contracts, interpreter, native labels and fixture meaning judgments are unchanged. Post-result fixed-corpus sensitivity analysis, not an independent sample."
+}

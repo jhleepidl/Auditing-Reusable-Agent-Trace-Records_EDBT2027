@@ -1,0 +1,1605 @@
+{
+  "request_id": "6f79055f9999d8b334acdb1007c9862ca9d34a1a7a4098fc8270f7e2e7f311e3",
+  "task_key": "banking/user_task_1",
+  "method": "derived",
+  "model": "gpt-5.4-mini-2026-03-17",
+  "repeat": 3,
+  "phase": "feedback_round1",
+  "world_id": 4,
+  "request_sha256": "4f3e2b79db52068ba69c49834fe07416a1b8f63f779a7901462af1e22d223c0e",
+  "started_utc": "2026-10-04T16:10:43.548278+00:00",
+  "status": "completed",
+  "api_attempted": true,
+  "cost_usd": 0.01240785,
+  "trustworthy_usage_priced": true,
+  "http_status": 200,
+  "provider_request_id": "req_b52bf626c1a8461fabb711a72338daa2",
+  "raw_response": {
+    "id": "resp_008e1ca746030193016ac27a83c65087d09e8fbd9f9bad45f3",
+    "object": "response",
+    "created_at": 1791130243,
+    "status": "completed",
+    "access_programs": null,
+    "background": false,
+    "billing": {
+      "payer": "developer"
+    },
+    "completed_at": 1791130260,
+    "error": null,
+    "frequency_penalty": 0.0,
+    "incomplete_details": null,
+    "instructions": null,
+    "max_output_tokens": 6000,
+    "max_tool_calls": null,
+    "model": "gpt-5.4-mini-2026-03-17",
+    "moderation": null,
+    "output": [
+      {
+        "id": "rs_008e1ca746030193016ac27a84247087d098aba1e6443c035f",
+        "type": "reasoning",
+        "content": [],
+        "encrypted_content": "gAAAAABqwnqU4TuM86-RYK4xtBzkvrRspLBdCrimpMRqkcm-sKYRCgau223m0TVfhdrY5N1vQZpieuISFws1R2va8BAhcXMhlAbvihRN5p-LG9LELtY_t1EzZneK_5it5itwQal-Enr1qT1eLIE3BTfewipAcfARm8B9A2TKpNXeAKIcCGw4iUOq2SAEYsgoWJbsIYz5HRLo9feUUM6jtmdqaWo2eJlQaJDboO1dM-xnNZRnv0cGvICwlImsnf0suBidjJMiCcTe18TUuz0P0ezgjI63-lAmnxDlePNE-Dxplo2O_FFYR8DoAqyvP6GzGGoCtfHhJ0MJJPvIZzNT2VvgNhwexZpo5Bk_huN2pw_b6-9Nyj_DN5YqQgN606sp5R-mZYLLrMIvjHs-RCwAgPjBcr3MA-5rFwF_as0295Gwu6fnDFAuUgoBs5eiddJvZ27EX7AUh3mpFgenXFJgbL4KVzcARYcZ3qSGrQAn3bkv8HXVKRF3LeGNFnU3fmFLmmliFpYVmEeQX7IdXi2ZGKZe4xpmUCOciye3xrkgjS2UGeCZhVz06YJp8kdpQOLINRE7tiY7hq6p7UQmltbQg99K75M5tnmVCbb7wAedoiOEDnRiqeT1V5sRSq9esB7F5lpFFx4KcHmdq3UcFDYNjVH_8Pgc_-Dw7PIwEGR5L9vx6CrRRu2Ouk23vRrcK0OQP8LJrYqLaHgFH9Sjwax1jGBfvCnwZmyGhcK8is4QNjCRng-flhUt4iJOXm1IqPmjAhasKTIYe8YqGbH-eCV_4gHFqu08Md9XgfpZ-bWCyXGzQnvocGhsLs9Y-Y0UJt6lTNyeMAb-MH8P1Rc9yRx4FYQfZg_tR2P8nNopEK8XThSfEouMNk9grpMlM5vS7MBK5qU81lpGhIGPxbSUeXduV71X_gDJ3ZjZgaaaTuzK4_1YLzaG7Vp1guFMjy6btbWvINsKpyEndu8ix_1ucmkacgX4Nm4vu0z7Dz-q0cDGy7z7z2qFcR7PnxMrJ8ZgK_YSgykr4rfoDKNxnKpc5MOZgIJb96I8GO84GDeDvQtkFq8HHFDu5ZzcZM3fSPvuU6J1XxqZqMUxytKt3X9P2xJ9aBgInAp5fsvt2BEG91xA0Z-pCCP_CG6D5vvjqrxLhu0vhaWbISE8GyEnqCM5ebEf059O3UytBUcD4BUBBFHOLsrWu3qd4-tWPrJ_UyhzhhVQOEJiH7ezvm0S5Hysou05H0137quCivkZ8ALvf-93FpFCJpv2srs1R8_C7_Vp_3yh3QID7zUd82PZ-HkfDo21M_cSaxjgbAZ-aBvQzlMfpBXPKca9FvfVTVK3g3U5kiuUck6DvPuFMt22qE69RjlXViyyoGyRmEsIkx3wiwKMiYVqkhHrEaJVSZpCGqap8JLG9h7Up1jaCZzuyUm1qdw9k7SEREHcgROGukYOZYB_XZgIh6WQlRJcKHgf3DFoyWjONJioe3yTtxL98hTnnKOoOZXi5Q6Rmq6ombA3EkzGJab5U6ZeY3V1mebHKA54jjwum6bcoluX09h8C5_Dn91T-Nu2YOskwldYAIzIhpPKqhoXjmxbN71cxljQjseIyzACIqRR0SypIrGLshJLDMPB0Q1hAZ74TLh0rR0T1H906w5O9kM64e45NMvcfcGS_EcVH041sHqo309Pu608ZSlSdb9tx_D8SE_LqIBqqAc6hFzk8W_S-EdaEMyWcGfY0FPimCToPUZEpljZktJc9tEsgrvqGvY02qHGdcH8XM_Ptmc-hlg-WIIGOfddDCz-R80eEKPD33K6blLeXP-1KOLMl87k4xRnwYN0cWOXErIAuiMQWRFRTqIQcc007NqaJ94NJRtrW7dKxRb9sQXUByWw4cgmXnsIDTyatQN1WV8vjiYF0ParatyPjcGiKfOyTKN5s-JQNz8T1wNCC8yx6N4hR0kb1fUbGnPLugY8xAomsMfVxrecsjwnqDrF8ewMokHUApdWHfK0Vqgh7lolqDL-3osFu_KiJP1V-R3WOITXxGqwujTH7uRePKASktRPefel2UJG2jxqFpu-JFmK54eJzwuGnpVIsV3H9UloW3NoGLPtW_Sr3OsYI76dcxYDI4l0BJz4Zr1B4tLCO8iUQFaxhdnylGHSZZhj-79lzKmBRYZILCrnNNvrOUNKfsVN-S87aZE-G0fNXOZIiYwBe85g0i2KTyRum635QN3aJ0ZfVqSP7IoV5MliQ6sVUowm4z5-2cptx4ijwHQN2QPOvXm8WGyga5WFZ7YrI7P8deDfNb9qD3Vn8DFh4vzlFUEiKYOcUR07HHyoh05J7ZH9SCyrfQ-jTqsM0mq6c6LFLKQFiwfqs2JSh3ZnX1IuFn6L-c-B5KoRYvUd_F_lz0e26N7MHKktb5ciGsFGi9KilgyWW4JGkb1wZVeBUNQR6qdyljV21hHQ72AHcqJa_U7AEt6IjX1Wb0tQu1yD6S1tskbnbX95JaskWUJIzt0rAyn4T0CMc_K_1dl6rzeftKUjJfq20sMu5sgKuFjbI5Z7k4QWXgn7WDYAj4wTSiivVkrmDZqQg8TyKV3e-3tOx5Y1uIQQnzMEMZy7C1dvrno-MCdqMzGcpRKkJrwsFedeRsz1s7ZYD5DMjB9u3FCJ3hT1TjqaUPoJ-LbrBinigRDnFYPUhIxiu9ATQS78LJ6z5pIoaxenBJAJoyyKKkAg1Xkiy76eTNq5BgmpsitLDN8K29xPmu7rYVqNDsRx2Gti3wC7YWsslNifCIcp0TZpmqgmZrjlcYIniYi_fSMvjlpWzYMCmXPtH4npW6BVIRniAUtX9xHdYqiA3ntrU_4XqOztewsf7tqRMOdJnxo44DRLeHKDfmpQgmJ8QIZhgRnr-RawgVikqB8YxbtcUpaGyMQxWcK40fuosOuudqqKYijw5AfqBkELBfpo-4CH0_zii_0ZpKEHhoUJYQDt27-RD1c8veQrywWoUJCkHeyeaB6NU19RXv1TY_CW1nYpOHZ7smkXopUWb57WT6Q9RRlGbgQjTWs_KVH80uyQ0GhAah2X8EA-exmpwKh_haTUJ5VDr9Iip6Oqb9TY_2rfmazzxrQLPoZrD_fs3iab51S0iGZSMFeAiPyr_A3Y1He5epCupXR5LfOu2JONWhv2m6Eh_izGb3FW6ZmJigrfwOXWuQj0ZuvLhBaKV9ooTM1xvYh2goEE-wJeJ6p5SuoebYAq4qyJi-i7s3vRDkNXW3mIeVJoFJoxT3glgIuYPo-CiJOlU11Twpt7ayOjgHfR9rUUennShFOP8LXRmLVeHWfFvNCJScuDwrdFqMl8PBzqhQoYk3R6X75N3jphV2-l5XVPDfUmEv47S0DCPIPCWVWMEx3rqTqtviSXyUgTU5vLMTPI7k0CVPVTm88Fep7ClObaYD9BdoyrB572w6UDJ72nBH1RvBF1Y9jZbpcVZ7gzCg2l7aWZprsdU4-I5BLypPpkQTY7-qoJ1VZUMkRsvrXIckcju_znmSKU91cg3-TIUZ9Zas_jDWs0Gx2VX0nO-YM_qq-FH2RMCEUIg6wiU2xTueN-9ghVnfD5xQ2SnyJRK_shwYnZYRtmIjcM2GJwYp4eqP7arkF2QLngpj-NUHnNc6uMXIRwlIay_4SDRq6GC_X8tEfuo0WLO8aVyTta7m3zyXubLGys6WNvB86ZtY5B7xGEIk7KdrnEKTcUrC9XOydVw6C8GN64Ld-LMO97Cu-f4QbHIguxDQOS75_qvohyhrlBf9JMJi_xWz6QlF4fgYynYAoYHyXddbegtwdFlofNaQp_FRnaAsvWw0go-ylSi3wR6yYUA7b3OvYb5LNYHwmGOMFWFeIWfvodZioFllOlOWoNAJxXXfJv_vvZpfUNLiCsuGRLO_Ul51nheD1hb8YWtWx1Etlf-5t5qwH1C-QbAM2tZ3MPdR6m5gnY-SHMyEkJYbFhBjRJEwBz6teTAhdQX1S4TQLnfgATdYhArvYzM7tpj92a1WmE9L__M4BhLLAmLCHb44VTyrPyjk96UDSWDdxw5u0CeMwSMuAaOjBLI_6GQ-0LlnMQKSCQUkyYU-Q0Pcyn79MDr7enEobmDtejo3XzIWUEDiDvAZJVjoGdHkQhLR3Famffan0JKvzha2MFMcxX-S0pipoWE9nPOgzeDIgcmp2jpCEZ1m9jB2AP-YoPPNY7acNOQJbyJ7PW2nhIGA_x5TJldb8XlvONhA6h5r7ENsdL4Pc6a7COmaWpIRKqoPplKywNn8g86aqQ_RiGzNLn0qnQgVocyr8tW5qTKDM_Z3C4h1YdOd4BF0JccnrEraaQ1zf3qzRhKeAqtsgk4IXekmICmbtlA6bN_ufkL4nI5_HmwKL_GVY_8i3nYYtqbVSLVvNx3Pog4xvAz34g4hS3K1okb8KDeIBz4q-PgkD1s2cuOK52DXllATOM1JwB8h1BFQFI7Vladeakuxb8v3AX4RW92rzIIo9hAesp0GLdx8zgI9snOEiYF4xfmJu9AyskF90oNViJIjaf5wNhhVIZScgC-8z9rfARmzdE7-WDXigYzqAxG_aCxrJiLK-XI-IzI5pobGm3dG8j_cC3EjRxxoPWIvw__siLhLH0wF0l-CTE4P9CWm9pMZCJ9QyYit2c2R8JBRNbiN_upywmao7Pc_AKZpFZ5O4xzXlVtcBa27TGYVdIwiyZGEK3WvbG3JDtzNpK_96uRuOdwBVgV9BiGX8tHyV9LaULE9_Wc1H8b6hviOpii4kS4VRZf1X6vRRva4wGPa91oh2fdSKgsi_oXZCJxsDtLeKv11gO-bnlyqSeKlrF_633r7GNulurrR9Pi3Cuq5UhSBkZfUPNx6D5Go_RBJS7H0nNjJQAzwTQASkcloYEH11NUHUjVrLm6bxDmtQrBsLt3EA3eI9DKsg0feoRrd1wtirDWKHhrh_Brtt0a2lSqrLQPuoehl1LWL8-6zmwQyE7prM8EqlRJ8xV52IbvPTcvZjiq_EUhA4Vo2vU2IQTBwnF0G4VG7ezz1HqDBiG9II--NRNY8OQ-o_AEWNOkcdMT5PgPzcREcW0dCngZpDwqh9aNw6K3GeeDmDJAie_1bVBTKAv5IjxfIBM2vICfPaWZ3DSUL6Mu6dQILaERNhX19uLpHZG90DwZpLvVSm3NXCgMrHOieSSPUdQHROIZ7bZyO-ZigM-F43-cHjitKnU_XkjR72i6oUGB7pyTeVF0zheZGILWda8JuGSOR0PtfsAfBaY5zn37fL2bhHQdBJ-dkDg4eJnWpMIAaH1k4_Pr1dt56iC_bRJoH-PX7h1mOdEOYLb4RICh0GaHkQlgzx_lP1Ly-V2LyHfpz6nwia7RNZReh5DmqCb_BAjlm4vrZM-pQ7IbGsz8GEKKIRPRX3BCLqA7rnm4lyIW9gpeXG-hXL2NTJjMBHkB6jpaNDQBRMOf-F5mxGa2-WiFt1-8d9wD7k30hZDisGTpIlgf4oip6wHAOrsLqZbpQNVkGivrbtN75UpiP8VASeofHBj1cvmHy04vWUq0VrjJy5IOgIUb3yLRXaCNx8eKEIq9Q9FYPS5NdiEwem1ZgxlUCfbKsP0ImcJaAnE9P-yHjWACXqLKm5CK1sB6Ny1QT37dnoY4GQShUwAqUQzql6x_F5-3ohqNucfB76ksz6-aoQMKAeTmiDe7aeuOJGTFHzTFviuYxBf-ObIWiSiIPyHBF2MI4pbMprRWVROENgh2GVRWu8md8MTZYO2fS4I7t4j-L8e5rym-UU5kgMv36pi-UT48KpRKWGFqsI87FNSwnJb4P7CtjsUdNRrQDPys-k0HYlxXESN_Rhcyahhz8fYnEJSSnW1sQVTvaoVI2jujAkxZzyvvUSP855QwQfUGX86naU0snNcLnSOB7mKk1XGFLBiaExUVZx1BgXvRVx7v9kswnC5NEy3AwQsxT-wtvrT1Ykt1FfzwaLSVxwGrGHliVF54QWHmh79d_wpAGHmzLBydqCblFyozfPP8x_dInJbjfLs2j-K1HAvcNgXdjdTpBc5YlfWhjv6EObe8xfqN8XyFURlxVF36bjYPnX3q4_yYxit5OghKwqf4Kxmh86_RGH304uxc-noigX2Bcu1Xdd0oeW8CNqafXOfzuG4lsf51Gmg-gTvlDJuPlk1Mt-XIQ08t1h7zD42mvfoyU8u87F-L0A80LR5FKIrjVn-Z96Ply0TaTqQdKy7n8rjrnDDMMrh9tdz8dJe1YkOKiN8hs_E1eIvIxX8RU7xk5yH1C-S5xS9pb1ITozuNJ7UCxw0HnL_A2RCYQBJ1bwgkNXXLloptZKNgAEy7LHfabGRzxEIa64zBGuSRtpajH4nxXEsvV3p2cA02tIzdUFuQf5pTUUVDnCVSHwB0eU1gHL86JEYP2sRsNc1nuQqIvaCKgliTvpqMos87toGIdSb8oL1yIhhWwpRwThDbjqXHgPC4Hmu8LeDEzHiSvSUx4mNNNL8Q38t6NCfvb0dr7mtlbZNnzbtvCtT-v8xum95GlUPE3KOeiKpg0qqw8hDRqQW7XY69p2s3PpswcaCs9BYlLc4pfRnZxAxE7cJAQ4Ibz7AOGtUe732rwpY7SQLufObeLrOZqayE42sv2FQD0KdruE5Exd06dEWDHC06YAhDXeY8Hkf7l-d_JgBF0lAGuegOm527ryoq6xZdRzWZF078_GivJJmiuNgbHebq4dH_-rApTJAE1FzDG-ZKqju6AWjeBOgsLTVfxDzVFBteIzn-bdpjzkhSfDC_4WhyXKuw1r_Ig79Fmu75dtb4SMcRw-8CBwSGnd8PjZ9DpxYMbpyZjJ-JQYrcooI7VTyehT4mtXI2oRDnkudMmerfdYC86KZ2Me4yJBxaipAAbzQ1mc9wIUCbGWp28bSYAK5_NiOCuGp7bXXIFfOJ3TOOGKafKaSbWhpKNC0N3wUX3oRc113Rmy4Zx4WIe2psy2HJYwdtkf8prwtNTPjNvDQwbIYGySBwM3TTJdS06V_B2xCf10F8it7jY8ItNnF07P87tTxflSKW3ZfEQNA-YVCjCeZanXA3zcThWOz80e4TRF3G47R6tFTHRv8wf2Da7HL4hvKSmBTq03vESo7YNtZPPUI8Iia8F3TAV7SpTW-Wd7hqL287hszvD0yfttq_PKNyr2ttTQamn1iCXOAfgmmQYFTIjIIwVtsF96aOFwgHM_KWYQtb-xSt1KbdWVXT3msaHSjcJIOgaHyAN1uJZ-4t1xmzmwFO8serh_RfYGEoA7eP9qBP8AF8xumW1iO-YsjGKBPtjoPYVVQlGwFxW5La0TPTj-28PwFoWBkGe00vuS_9WMfOfWFRUPpRdVYGhESehJTKZ4TeX5sjrQRwxG66urlt0Q7tbPCCiSg2zNdtGVr8ZibtHR4l4NY2tZifOtblWGHk2rixFiKqqlHRuQv90K4Ugx26kfpD3T3vt-zpInK0oILu2et1chfxrRndWIyagaBrxRVRsHI8V2C3ODhIdIJ7H9qXgZqTl-PozmO_kWgNz5g9kW9DjahTAL-DtJLvi16H7VbXX63Rzqh8zECU9GnMRmlbRquB-MG5iRFxWvA44y4gT0Imfpup9apVCgCQVcDt1h_XCPYh1c_T6CSGco6V1q6qUe5_tiHSeYsQmGS-rBJ_TAUmuHPIRro1nqG5vU5nI5QH6_hYzUCJ9YIjk6fBJt47Pzwq9mSJhfTq80CJTygghSDrO76MbwsT5ZWWx2UWchbktV4YDY5ZaIJFiF2jiloa9N_OFHfOdrbUD4re3xYKZPhjS8v0RNvgyCzAA9foxAQYOZaCutA0jSVlFDQ9YEKXogmqRCLnRcR7Wp5GA-yQ5GKIa3kmda3YCMSedkv0FZ6FDh2G0l9IZEarS59o1tMzOrRdqw6xW8fSkygeWv37jFF4M6_g1KK6MsREPEst1qWyu3R0U5BCs-QgvcfIynSxnsB_XHEMySs_jbc_leaLSH2qAfP-v0ZKAipRxxb73MprpYXJOXr9L8iunLfaRmzZtGOhpoIB4rVBHUCO5MN3XWBFxX16JsAEM9w71k7IdjwCwEHJ6_dm91J72pw41Mby5mBdn_V4seySPzfujZi88qqeAarGbpr3Q7s132ZMu0YefWWp3zAUZdLiN5-7dUP0ShNLp8TNbnjUXCz5j8oenAUWDHnHcUvQdzTX1OxkUnV_GMKy59LV16zeQlrt0RNWMsaK17LNq3sw2TqYl8fXpmQtpIBoNybQ-6Za_1LxXq44rVacf75G-rPxw6XH31Ihavz31kJd-646YH867becvcyMv0borrwT9SPiZIVKfFWvCnBkcXGkl4NVvyyH8QzaTykYOs4ZA2qp-fGrV8x8zq2JoIOTrVeGC36fXdpjMSHKhmBoPAFis6cZX-zIgQDzU94WceowmegCuteQoSgiKT5kryNAzrrbCwPhkfVbzqQowd9QAolFG8EJ4aEh8ID1rc4g3BinhJ5BPbPXThI-oEWzVdLSZSJf-0zF9-ok3b3J82-6ZvgO0RjW7j2UP2vEsV_AsyQ2w3stNUljPtygguo7wiGER5RsZNXUpUsT7yaDLMPgmDVm-s3kFU6qcuDHF1jkOyYxq3DgmbYTnnOG2UX0yt2jAzwuwiC0TAbWU7w_NfU9rHKt6XTQNvakppvZwLVXAPiAAlDHOtW7jYDdeDXICOKLc-irzYkxcrzkwml1RCTR8hMxwpTzOMJOCBI7f-eLRbQmM4GtkLfa7fZ05guYFAwNWDFZbL-dAba5irlgzkj1zLxer7LQw7C6G4pX3RjnWLufxpZjRflfrYVbIBAwlo5vE9cNBk4JEOKyjWvvXyUS4ps58gx_A8LfMWO42zZzwjBCMS3pVpMNMAKm1RQpVKQILJVUkvP9159uqSpt1wKq49ptZv_bE7exyWkTegD41H2bBM-53czqdQULwdxC9PTOyECA3XL-ifLpfXW2MdDhV5Mdw7b7Z8NjwWzWEV7DuRmY8HVfErSdw6lD9Z1Fy9Wx3rfjUGSkV0XbFXKgnL1M1qq2pO_zGpWJJ-ylEBiU4C40r4DypOT1XqBzUJIloihhqjjOiE7h5rMCHvFqv3tKVThTrYPw2WhyHUzL_iZGxc51BHiRolyPKWDjyDIC6t3q7ouENDIx29kkdG2AjXMKtAPYBWPgajU_Px8kS2QLyidTrSa74m-Ej_46TbTPE6TO0Cuq4GffHufWLReOjOaf_9Z34LJwi7G9VlDFEX6LY1ZPTdYBav3Ycxh7hSIiByxqZfXie_mUlS0TTIE8aYkaRBN7-E74KbIkUfGXTHDjViJtgaWz0KvolojIxNrHwNMdVHl5ioQEh_j50DE-6VCfEhQpuDplis7z9FdUAWvvjQb9DpMg4_NYAHPowqbZRRo3eor-SGB8nROQbQU7MApx8QFbulG1kpnkkC750Qz5LSUFe0xG2mBHal3ye8d6UplkSUW0xkB1-BzwTTSlUqLSqf5qbcL7hen9HFIu0xx_3OuoKtjyGeQVSSPPG8-LmOAtKjzTVLH-AXWuSrxD37o4r5EQNQu2o6UAY9HgYYTZyrZufK9TPuR6eFiosWgzVPE3Ik-zO5yaG7uMutjAFcXgDdxl9V-xLVpSrtE48v8UsomvtOq3U0evfgd7qLD8FramRmnNOOfk9xlKJ1ZD2NSDHAyK6QWH-KMc4Vjh6raGoPTif_hhWzUyMtHKTDoqWlqOf2DObDcEnobw_Mk6VzcvBY2LZt6Ggt761rCRQza0_d8Dl9ct63oBnX1lF-4XtPkD4c0W7-WyN2h8pBP2Wq-BPKfnHlQmur8mvj3POvVkVTNgPSmIXZIUXka3AWXUSats_yfROB0MNQmrZrS2WUd44mdXTcAPustE5wY86unDzV3Q7PJth6cLCdSMCzniO1sz7bBVyrk6X27d0AAO2K117EEb8aYtxqu49ke7W9DHFYD7Lx2yK8Ssd0lD4vialbrb6oU5Z-tELBrCCUgi_p-t6DcXN-uoqFt2j1dDnVD7bIfhWeiCBXszsg0PRBWpEBbmVltZnQwfUPFIv-6HPR-0PWAbL8fxsbJwTS0E1nQfKcfy65KaPt2IFY7S-BmuhW-hWznlaGmPdCuWFJaolvWCtavmag1_QPxTtKHVvrB8uD5Jdb_1aaFO3yHsgMJdLPNvrz5_L_0qntEi4AZhMbgl9hHDagMO9iPsCJWDzlkd2ZrC6gj5gkRcm13hvsShD4JF7v8W4EoYlXjuxR1WEb6IFAzca9g9Y5yikO7irfIJnnh8y-7QrZCCKhbhKl7_zMVY5oQIvjx28SX6ZB1-xXGLH9kPz0Jt3VIFoUG2WkS0p9zkw_h18nj6BHR7fUUs0BSTWuEQdMkZ4oYCtUrq_jpuDo1sRMJpJpv4kpDgrJvZ2EeznrghU3Zved7TUqZEPjydbuYJsDhYchKEHj_29FpEGSX97xY7-rG-LVEK4MMchr6zJSssATh-WNEYh_6Ohm7mX3_HBv4tSLx7SW2QPp_OkuvSz8-NL7-nzn9TkwcEO6WxzNdjfy2FXbMfx3QtYp0UYKnNmiN2OHkoSJGLIc6uaG6Sd86KBsctiJ5SVgEgjcevJMjEmHYFJr6zFKH4gqAZwGf7cJJPU2qIfka8sfUeJjgAHJ2zZ-k6r1PKxn8w7XPcHTpWS5vtzuiqUb1n3_YhwlSVxqigxX8tVjQ0kpvCTyAvgJ84a9jc2h7mqWR2PFJbVS_5aLT5cK-B5zm779HFAwTm-IGiYJsWuDhoBG20AatmulQc5vp1Yuo7LNtS7ThObflB5tZneDcazATHzLejLvuqjV4EjzPNF6U9FNpyAw2EXuvbTwXZ0Ou2D100jvv6fNBwNvnXOoyeWxXzHVwWkvff--MOoY-WquNBhqPJ899pHY0MFY650UKfLGmrx6bPNaecvDuVNoalLPu1ctS0KNR_6_CHg7c_30-QR95L_X2coF9CcKjgd4t2K1Xcv9fOoIdmAVt_arXwB4M_-DeVhfCnWRaylB9A_zU-_RukpgzCBgv8HUi1zzARZB18fGQ7tFWR7keXuirTmn9UtSmiF2QuwN8bcWnMn2qCunODoDz3dTBI2deKBGgBJSaUarg8dW6hY8OCMgRPGih4xrx56kETejBhjhZ-slEO4tlLxSalIPk7ZUPD6X5TceZOy7ISoD8HKa9RIYnKEo-94Rok-ymvxmE-at-5YJ7XvN0OBd4PnGo_MdTCQDNuvn8mFlIvdvWN8MB4yCGSumoxvy7OgXPTRamRGhEd67SKXT8densPXWgvP1Ue8TUmWgdOUckAguUnqXfh9TvNu43b2u1Myj2YG_YN6hNVxM4fOs1eBKqDAcw-pwnOq7ClMpgtLWiTPpsBFh4MgTStZKh1wqdDazcTapEDih5FbEtpKU5w-QvlvXEsp6SGnPrcOeAr2SMdAvdqMFqe-vgHr7TMPJiu9h3H1RPNqKblOrAwjtAGBf8PX19q3fLeMiMMrx2HxJ8F0QiFVMzy7Sa9x5II70gpnPNaEh7rP8vLoUzbQNeo3UxTfKjDd2vjb5PzeMnqfc85HhkW9EO1ZSbqm6N1qKoQbb332mRJRZZ6EZ6VPFgtj1QudLo5dONHkpZ5Viz2v1Bgtr9fVMnrzES67z8p1x3dvP8xHE_68eIZ6UsSpxCDYoLzK8GrzdrGL_qanoDgctJSRzPgF1FV2fVd6m3ZbMKF8kG04Yi_FcijYCCuTVRDsZMg4R8Pm48Vrp2IxMzjP8_kNpfmOiDLwl12ShoWb10IcjKB94r17A8fr46rYzbSLMnFDfh0wl-_-G0tGcWuiCPPpf-G-vvMLRo64DiEG8oT9ES6ndfTRfdnNdhUDmr5mcKT-CQJc77Gi0EOowa6UqD48J2n9feIrARAJIa0MFfkn7EeIkcuCo3wAvjIl1bpArG6RWIfHEj1Uea5afU_tAqY7NUh2Nv5kUD2ppADIKbDCuUeWnA4RZyilEdjOcglRGfiIggPYCf3OCsHANVGqBXbGpEuZs2EwRJq0ng9mIPrSKKNEjTT655EslmNKoJsSgPu8odsa9C6rhJZ8I4d7FpTwbiKyLls5k3dEWtP38JPc9flemz9jItPIsq0O1YCramBOoXrQrqiUWWVtv8XWPzntkBo3DmfZ1nfrGcTonHcy9Jkpok98f7cJIQUA6AgSLS_FqaGMHBefG6IKsx2_2TY25IEdTWnUE3JFsEuloVD7pmoVbxIZW4ruM6XObfoWrA6pqTjWyaPQhFPHn2cda-QVEPWGVwIXHfUrksiA4AZ9nbq6ymviQmKtt1MBjxndgzAu5mZ30CN7us9vV6b-dFayQanDbdQbfxy4xwu_3a5V35TLe1FWV6oCpuEM86iAxWe_Vzzn5Uwh13W1nnntnHEUktsXq5NZPTMWb7S2hmAPDVMHLN2aGyVvj5JOC7Rqqp8Vuw4SwC9gNfGZ45HbWppGiGgH-AR8Oih9E7slTZVQlNhjUDK-dBxRyfY3HwqS8ZPCgyuLMfT7rV86SeSj-63YYIgg4IEGWOaNAk2G_AffuUtJIIIBjMtrxBptBq5ijvCojc0dZYNWLl3VcVujmcvBJj47JRJ4NDm1wyUH5_HEnPRb0sXymPjDxp78FM9N0O0Rlq0YLOZsb8WBGTS_iDnUzP8yp6u4xxIjRUnJVSjbenlw-2ijY6sUzYSQEAHSUENd6HaCvRRmSZ85KdZlJ13OfNxrCD0dH5UHFCeUoMIlKElkKFiMHyz5t0c92gSlNgxp4eqc0V6Ag-MRLczj_m3OIZG4iYyhbOkbb4iqQ9p9Br6c3ejjRq-DjRo3uMb7rAne1w6XgbAP49tfef6z1gnJdN183yn49zdkLoSN6cSg4rSAJst4cYX1mBQrGRbakOLdKwOlWmx0c05xKryzsm16FCNZyupPTpG66gY8mq39oENRioC_5q27NFrXwuWDnoGZBCUk6ytZCVVTOFZShx5fU9s2qwIfZfS1nfQi6Db3yaVbNkyj90C2ZEWooxNMG_iXG06sPFeNNuQAgDuunYH3igwCTt746vy1Ha8ywiEGnXEFb__sf3iU55b7Z6Rj6jTp3W8-BPBL5PoPyxCj2thYt-VnPUZLVD91Gmd9KyOmdqauO4xTV_aDn0ZHBEJKlbscv4_2yCs75noq4WlTvJzsO5QrkLSJy0_uNfjdP2qn1hM2sJgh3X1vvbiJHoUzOL52eI5MfaBtkYm0h0xPd0DCD8b-BqFrAtMQ_nKVkaFT9siPB306Bo04UbiGZhg5wx67qgSVwoT2spLb6SygQ4WnEOU2ZEUH0-K_b3RSGG3G8Dga3Mr1sulMmoz-os0KUOXFsMMhFQyXjkolYSnGPXzMCM-gZoubqPpLTKfDk3p0s2b37CDD89QQupVpmJXGzOxrnrqdA9aqePQc-C5Xoy1xWwmcIn8QMBN1yf6VnmcyIK7wgG-OF04oVtIGiiH8PZKKv1OTTg88FvOZ8bLj0jyS51LW9yIUvzZWUFb-m9Q2h28xCXKDy9zo-KxcoHb011SiWC5bct6s8A1PgljMLZblN-SSqkPHK5NDzUKk5acIarlPz6mu2ugvLCEyDULR1Ln1h2H4qb0Dvl36qw1i87on514pz8Y0YG2iK6fr2afaLZQNR0tTLeUac4q44VbtK1iSsmJ38zsQVGU7oMsOfrDN6MDGb_H7qDRk8eiyEGYQcm0zivV1zW0mlL42A2cZ7rxPiUJpUlgYHxzLlHnc1khtLzFxPAc0iavgNNU79dxWsBC394BYF8BpAbXjjly87wjAC3jISGRSGgrVPkYuEqgTJEm2lgGR0QgRBMKiF5Aoyr4rjdb1gf1v1OvXPUOKHNOslo84ZgBCpkedoUvsl02tUDbN3p_L9GjaPQFEaFN_PE82CMXmzaS6f58U2s44YW86eg4XAmUEnQwyemFF5Qi-ILYsx1t9-6MOnIMIqaMEjvlsQKg5aKOKvhRxM0HtB73gxnmoLlsqMatlSyh9ITIaGMKUxKMbPrRt9chifDi82GyAnzCJSuHdXSirBz-RXkVLCMtG511bA3h3m_wpYYll9SLqM1m44b8Fc59YRVPAxHcWDDmicoOeqPJ9k2YBC9xiWBk2FDJuTt1PWRvqMzfMZtqGLHk7ygV7g_kDFpRgFfTBEHdvZIcaEH7N7WIsBpFc6AdmQPH71wVk9T9KkTp0EivGuIIrFwfyH6hJqmtiphpp2BPcownE41AmtCgT7xlG4V6S0RV77rs1sqIepPtfCS0sz8KyObHKMas8Oa5zJwjuJsUz316PseXkg9LiyQWJQbTJOQUSTczSrg-Xu5Um6LYUP4r3C7WIldi486xWxLxAnXNnzAacjjYgRwn-ksVDOW_cDKaK8JIZ2HZw5YaNpuIZSOeckY5MPwTlHRu4PC2ThxX5QVGaOahsv5g2Kj9x6KDcDYx0--apy07zCKGVJ3Oz219kakgtmLqgeGnvZOXFU6WS9eNxBkTJLqayFZ-gzm4NA1i8CN_aUAV-kx2tDaCAcmixYiu242JcmBUR89m4-bmRsDmX3HJ1IqMo4XukTiwqMqF7guvG79aaO6G2CyXzqXbuZFwjXX8jPqqARxYHjA4x3p8uB-PR5J38nW4MUa4fcsL3zKqqqaPSQnKVhbr8XYj0XYHbnBxAHWmxpu-WD2q3tgBxWZs6lWWwJpiZUN4zqymwnIxHmprGsetPf8SNW3SMZ21eQpP22tPmmQdv8CkeXhSxyH8Bw19_rejxGrSi0nx4oer6swHUqwQCuhw5p9acA_o2CmTN-GK7oy-_GMBSJjgnByGPjX-byISPOWnRai8PzoTvt6WEFyWVjyLznXtZADTAEjQ3TYaKUQebfDbD1WZnzfmw98KTjZUzdAt5ncNIkx-TiTHflSygkcGuLgjFuduh8evAmFYFzp4n6DKi-J6lXhcgRlLaFzMQ_FXLZG1t60CafttWozQwvkzqKvPCsk_LSJ2cTiTu-zTT2qLG0ViUcJGzao39aCQ3wiS0bl5Gd5vo00ZmJHzua4Hssh7OVIP5Y2bJ8JagqXoWpJxC5SvHp5TEUTjgBJKjf46j48ncDI4uN9sBtGQRhBbFPhBnbvNvVTOEc8e7W6-Nuq85nWHMQrSOKkUS23WSvTnpCmCZ6ATHNN2Ms4u1lvzrkfOYFxz7oCKpdT7S-PUPAUAEG2VlPn_6b0CS4J-Wd1W1pBCM4OWKWyLf6i7979yuErh2HRqNpXPP7Fl-kz1sV7jStZJsSgU501ueOiOE8vheoitk-6ONPWTAi-UyNc1Yx2t2lU0T84B7Blz-ExV58QoCVkVgw1D_HuAEDXuW8NiJjRGnsod5YUW-1dDLZnKbuJ3pAERvew0a_p4hlrl_WeKvcV8eEa9qfuIgfuhRntO8n28zMCcjakgFsSj5JN9bicDfd3_3TTdw7s5waScmiN5WD-EXseg0tMwveIJz0tG59TN2qYfYTfa7OeL4yIgowSf0aVp1Q3cbyBRs0XKMak6G9MCElsQ4kWN_MyVdrZ9lSEe_arSMYNAFyrt7OVu26Xx7uNmZNdYtI7UVF50LsZ58EW8Jkj18mZs2zMmmSF4MPerjO48iJEXqQq-Zdg-WDMb9gxh3Ka-DOlIGKaj8z6V1iJ7KiU5HSE73Oq8p94epobCvCphWNNYr7qivhSPWcZTIiHWl0pkvPNPD1MlQV4pTfaM0qtq5Y4NaCkUmSI687uneqZVg9iFC2iYX-RMO6dhMWQPbwSqwRllijzggMUFJIQm9XcgQByYNJvSpWl708m30M3pyi2DBbO_zby9UmrsbxG1JR3drb1S477x2UPjtOhu4YK4MZjzRGq49-0xvQsQorNFH9b2HlrGlL3LrWK_pVbjqrf3q16UDSBPBMjr0kSto40qT8PWyccZDCYrXRHjm7xcYO45_3vv1ATV4TwN70Xofamfw4ZGyks1Tt0XEJEsG0CQfQyLZ7UNXRNOQNAiaKrq5-O6HDqb8ir4I9x6Ep639IST6R-GFwQjAaqZ6twR2wJhcCn-VX56FLvRKFc45ZE0-j3_aSmwX4qh3X_i-uPm3ZtfZ2f1UuOp3akJvonf3CdgrP10ncBJJ6qB30lC9-jvsm6RnlXBGFZ_5dG2nDnUYD-94YUvPZqAi0dUVK1htxCGe18cIsZK5-Fl3Ke1UW731bRkiOlmMCpiRiosbph-XO8zNQkRd7WfHFPJ8SvlyOMKPbWRJRJSGdutWx6oJJ-IbUyLDCPRIu9xn2xS-UsHXyn3XkhOyu-hw5x8fVkEFYUQir8S95mVbBmTeiUoDQrwXSDv5UnmFmb728bxQuEF5Dp_k8ndnwR3AIQ5fA4Hs7P6GzgGWnjYyfaUwYNdEbb8jHjr0sbEKrCojmJ42a0EYshOOyfXhqUponguE3nAkbgrO29t9juMnjaLVoUDOg0SsAE0Gdu15FVMSyRUI6-VxIrSPycKl_vdvfYyzg09m--QAQ1PQoYCC6ZVi5dg7TsgAQ8ndd8q4D7JE2wTXQIw8I4bylK3LuftpMr0V729CZrKj16CKL9j0r5Giif1NQBA2Xcm1MURdm0xKqi8UGA17KELGim-yC0oRQNj2lQc9XzH-k5FNqS_LeHCXQ62nahQVX03FuuZbsdVowCNgEIXCq2bRQKovJJ8KpeeX3zICtBzxmQDm6oaEdfGXZDvLYLI0u34WeWzjfLDHNJUpWig_thuLkW6e6QkmhRSAAu8gc7z47wpSpH9J1ci0RmNFeadx_q7VEa8U7PxDTHFZkbysPXTiPYbwAaEEz3rTJ038h7m8vOKqXclC2mFarj6rFPYhV6lZXkR0Vkx6WQvWO4IvcR1AlXW7SCnaI8lPkBR8QsTr7meBknIqbDj3jb_dd9ThubfZp1qf38br9RTfgYeHN31jOvg11hHSLSV6FhI2AbQuCUPFVTUmEnOMBmcR49BCbzaiPIErwOAJFLeIy-zYC4fjdy5t3FNJZ-gMu8tCmuXeuppDwYcqxX-F58Lxc5jx2a6sumzGwEsBMuCxFfZDvGfF4uSVfJjxINSive-NJg-F880ge4Jg3iFL-JCHeTdNRrxfWaWLSFZS8r5U1wZqDWqJ9v3U35iBzDTf5SzqrOHLcqELMqDIJjaT-L2_hLKx7dzqNoWsPbQomeGXVgTuuk_TapmdbEJGoHsKtYFA8B6feFmAed6LZu1F_9unrK4OSOeAQOXLKElhTBhYs7pIK6orQLQPWdrhmYDoB-PvNcGHqmuvRaTSAIWVMheFqyRfEnwBRXgdgLTXyvJkKJqahxqoMl755Y5xMwOmCeZiuEis9L6NtRI6HYsVKYhcf66Z5C8R5ZCn1Dpaq6s_XNGskNhwdz78_4Nse4_QpS29GTs_7DO-VXVFzl6_q8eTf-zqL8duLOApjEkQrFVs7ukpoMno01Q27dvniqnYZ76Yw7o4ZeNil_uyTynKSpzWw98hqKn9PE2cjboetBaC0b5i5ep0yO7-J8EcbbGTEUDw==",
+        "summary": []
+      },
+      {
+        "id": "msg_008e1ca746030193016ac27a93e0e487d085a08d856913ffb6",
+        "type": "message",
+        "status": "completed",
+        "content": [
+          {
+            "type": "output_text",
+            "annotations": [],
+            "logprobs": [],
+            "text": "{\"derivation_version\":\"r22.2\",\"classification\":\"query\",\"unknown_reason\":\"\",\"operands\":{\"o0_entity\":{\"claim\":\"March 2022 spending\",\"node\":\"n3\"},\"o0_amount\":{\"claim\":572.2,\"node\":\"n2\"}},\"nodes\":[{\"id\":\"n0\",\"op\":\"source\",\"args\":[],\"params\":{\"root\":\"initial_state\",\"pointer\":\"/bank_account/transactions/0/amount\"}},{\"id\":\"n1\",\"op\":\"source\",\"args\":[],\"params\":{\"root\":\"initial_state\",\"pointer\":\"/bank_account/transactions/1/amount\"}},{\"id\":\"n2\",\"op\":\"add\",\"args\":[\"n0\",\"n1\"],\"params\":{}},{\"id\":\"n3\",\"op\":\"source\",\"args\":[],\"params\":{\"root\":\"scope\",\"pointer\":\"/common_scope/obligations/0/entity_binding/entity_label\"}}]}"
+          }
+        ],
+        "phase": "final_answer",
+        "role": "assistant"
+      }
+    ],
+    "parallel_tool_calls": true,
+    "presence_penalty": 0.0,
+    "previous_response_id": null,
+    "prompt_cache_key": null,
+    "prompt_cache_retention": "24h",
+    "reasoning": {
+      "context": "current_turn",
+      "effort": "low",
+      "mode": "standard",
+      "summary": null
+    },
+    "safety_identifier": null,
+    "service_tier": "default",
+    "store": false,
+    "temperature": 1.0,
+    "text": {
+      "format": {
+        "type": "json_schema",
+        "description": null,
+        "name": "edbt_r22_source_derivation",
+        "schema": {
+          "type": "object",
+          "properties": {
+            "derivation_version": {
+              "type": "string",
+              "enum": [
+                "r22.2"
+              ]
+            },
+            "classification": {
+              "type": "string",
+              "enum": [
+                "state",
+                "query",
+                "unknown"
+              ]
+            },
+            "unknown_reason": {
+              "type": "string"
+            },
+            "operands": {
+              "type": "object",
+              "properties": {
+                "o0_entity": {
+                  "type": "object",
+                  "properties": {
+                    "claim": {
+                      "type": "string"
+                    },
+                    "node": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "pattern": "^[a-z][a-z0-9_]{0,31}$"
+                    }
+                  },
+                  "required": [
+                    "claim",
+                    "node"
+                  ],
+                  "additionalProperties": false
+                },
+                "o0_amount": {
+                  "type": "object",
+                  "properties": {
+                    "claim": {
+                      "type": "number"
+                    },
+                    "node": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "pattern": "^[a-z][a-z0-9_]{0,31}$"
+                    }
+                  },
+                  "required": [
+                    "claim",
+                    "node"
+                  ],
+                  "additionalProperties": false
+                }
+              },
+              "required": [
+                "o0_entity",
+                "o0_amount"
+              ],
+              "additionalProperties": false
+            },
+            "nodes": {
+              "type": "array",
+              "maxItems": 64,
+              "items": {
+                "anyOf": [
+                  {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string",
+                        "pattern": "^[a-z][a-z0-9_]{0,31}$"
+                      },
+                      "op": {
+                        "type": "string",
+                        "enum": [
+                          "source"
+                        ]
+                      },
+                      "args": {
+                        "type": "array",
+                        "minItems": 0,
+                        "maxItems": 0,
+                        "items": {
+                          "type": "string",
+                          "pattern": "^[a-z][a-z0-9_]{0,31}$"
+                        }
+                      },
+                      "params": {
+                        "type": "object",
+                        "properties": {
+                          "root": {
+                            "type": "string",
+                            "enum": [
+                              "initial_state",
+                              "request",
+                              "scope",
+                              "facts"
+                            ]
+                          },
+                          "pointer": {
+                            "type": "string",
+                            "maxLength": 256,
+                            "pattern": "^(?:|/.*)$"
+                          }
+                        },
+                        "required": [
+                          "root",
+                          "pointer"
+                        ],
+                        "additionalProperties": false
+                      }
+                    },
+                    "required": [
+                      "id",
+                      "op",
+                      "args",
+                      "params"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string",
+                        "pattern": "^[a-z][a-z0-9_]{0,31}$"
+                      },
+                      "op": {
+                        "type": "string",
+                        "enum": [
+                          "request_span"
+                        ]
+                      },
+                      "args": {
+                        "type": "array",
+                        "minItems": 0,
+                        "maxItems": 0,
+                        "items": {
+                          "type": "string",
+                          "pattern": "^[a-z][a-z0-9_]{0,31}$"
+                        }
+                      },
+                      "params": {
+                        "type": "object",
+                        "properties": {
+                          "start": {
+                            "type": "integer",
+                            "minimum": 0,
+                            "maximum": 1000000
+                          },
+                          "end": {
+                            "type": "integer",
+                            "minimum": 0,
+                            "maximum": 1000000
+                          }
+                        },
+                        "required": [
+                          "start",
+                          "end"
+                        ],
+                        "additionalProperties": false
+                      }
+                    },
+                    "required": [
+                      "id",
+                      "op",
+                      "args",
+                      "params"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string",
+                        "pattern": "^[a-z][a-z0-9_]{0,31}$"
+                      },
+                      "op": {
+                        "type": "string",
+                        "enum": [
+                          "text_between"
+                        ]
+                      },
+                      "args": {
+                        "type": "array",
+                        "minItems": 1,
+                        "maxItems": 1,
+                        "items": {
+                          "type": "string",
+                          "pattern": "^[a-z][a-z0-9_]{0,31}$"
+                        }
+                      },
+                      "params": {
+                        "type": "object",
+                        "properties": {
+                          "left": {
+                            "type": "string",
+                            "maxLength": 4096
+                          },
+                          "right": {
+                            "type": "string",
+                            "maxLength": 4096
+                          },
+                          "trim": {
+                            "type": "boolean"
+                          }
+                        },
+                        "required": [
+                          "left",
+                          "right",
+                          "trim"
+                        ],
+                        "additionalProperties": false
+                      }
+                    },
+                    "required": [
+                      "id",
+                      "op",
+                      "args",
+                      "params"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string",
+                        "pattern": "^[a-z][a-z0-9_]{0,31}$"
+                      },
+                      "op": {
+                        "type": "string",
+                        "enum": [
+                          "extract_decimal"
+                        ]
+                      },
+                      "args": {
+                        "type": "array",
+                        "minItems": 1,
+                        "maxItems": 1,
+                        "items": {
+                          "type": "string",
+                          "pattern": "^[a-z][a-z0-9_]{0,31}$"
+                        }
+                      },
+                      "params": {
+                        "type": "object",
+                        "properties": {
+                          "anchor": {
+                            "type": "string",
+                            "maxLength": 4096
+                          }
+                        },
+                        "required": [
+                          "anchor"
+                        ],
+                        "additionalProperties": false
+                      }
+                    },
+                    "required": [
+                      "id",
+                      "op",
+                      "args",
+                      "params"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string",
+                        "pattern": "^[a-z][a-z0-9_]{0,31}$"
+                      },
+                      "op": {
+                        "type": "string",
+                        "enum": [
+                          "constant"
+                        ]
+                      },
+                      "args": {
+                        "type": "array",
+                        "minItems": 0,
+                        "maxItems": 0,
+                        "items": {
+                          "type": "string",
+                          "pattern": "^[a-z][a-z0-9_]{0,31}$"
+                        }
+                      },
+                      "params": {
+                        "type": "object",
+                        "properties": {
+                          "value": {
+                            "anyOf": [
+                              {
+                                "type": "integer",
+                                "enum": [
+                                  0,
+                                  1,
+                                  100
+                                ]
+                              },
+                              {
+                                "type": "boolean"
+                              }
+                            ]
+                          }
+                        },
+                        "required": [
+                          "value"
+                        ],
+                        "additionalProperties": false
+                      }
+                    },
+                    "required": [
+                      "id",
+                      "op",
+                      "args",
+                      "params"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string",
+                        "pattern": "^[a-z][a-z0-9_]{0,31}$"
+                      },
+                      "op": {
+                        "type": "string",
+                        "enum": [
+                          "get"
+                        ]
+                      },
+                      "args": {
+                        "type": "array",
+                        "minItems": 1,
+                        "maxItems": 1,
+                        "items": {
+                          "type": "string",
+                          "pattern": "^[a-z][a-z0-9_]{0,31}$"
+                        }
+                      },
+                      "params": {
+                        "type": "object",
+                        "properties": {
+                          "pointer": {
+                            "type": "string",
+                            "maxLength": 256,
+                            "pattern": "^(?:|/.*)$"
+                          }
+                        },
+                        "required": [
+                          "pointer"
+                        ],
+                        "additionalProperties": false
+                      }
+                    },
+                    "required": [
+                      "id",
+                      "op",
+                      "args",
+                      "params"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string",
+                        "pattern": "^[a-z][a-z0-9_]{0,31}$"
+                      },
+                      "op": {
+                        "type": "string",
+                        "enum": [
+                          "at"
+                        ]
+                      },
+                      "args": {
+                        "type": "array",
+                        "minItems": 1,
+                        "maxItems": 1,
+                        "items": {
+                          "type": "string",
+                          "pattern": "^[a-z][a-z0-9_]{0,31}$"
+                        }
+                      },
+                      "params": {
+                        "type": "object",
+                        "properties": {
+                          "index": {
+                            "type": "integer",
+                            "minimum": 0,
+                            "maximum": 31
+                          }
+                        },
+                        "required": [
+                          "index"
+                        ],
+                        "additionalProperties": false
+                      }
+                    },
+                    "required": [
+                      "id",
+                      "op",
+                      "args",
+                      "params"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string",
+                        "pattern": "^[a-z][a-z0-9_]{0,31}$"
+                      },
+                      "op": {
+                        "type": "string",
+                        "enum": [
+                          "unique"
+                        ]
+                      },
+                      "args": {
+                        "type": "array",
+                        "minItems": 1,
+                        "maxItems": 1,
+                        "items": {
+                          "type": "string",
+                          "pattern": "^[a-z][a-z0-9_]{0,31}$"
+                        }
+                      },
+                      "params": {
+                        "type": "object",
+                        "properties": {},
+                        "required": [],
+                        "additionalProperties": false
+                      }
+                    },
+                    "required": [
+                      "id",
+                      "op",
+                      "args",
+                      "params"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string",
+                        "pattern": "^[a-z][a-z0-9_]{0,31}$"
+                      },
+                      "op": {
+                        "type": "string",
+                        "enum": [
+                          "filter"
+                        ]
+                      },
+                      "args": {
+                        "type": "array",
+                        "minItems": 2,
+                        "maxItems": 2,
+                        "items": {
+                          "type": "string",
+                          "pattern": "^[a-z][a-z0-9_]{0,31}$"
+                        }
+                      },
+                      "params": {
+                        "type": "object",
+                        "properties": {
+                          "pointer": {
+                            "type": "string",
+                            "maxLength": 256,
+                            "pattern": "^(?:|/.*)$"
+                          },
+                          "relation": {
+                            "type": "string",
+                            "enum": [
+                              "equals",
+                              "not_equals",
+                              "contains",
+                              "not_contains",
+                              "prefix",
+                              "gt",
+                              "ge",
+                              "lt",
+                              "le"
+                            ]
+                          },
+                          "casefold": {
+                            "type": "boolean"
+                          }
+                        },
+                        "required": [
+                          "pointer",
+                          "relation",
+                          "casefold"
+                        ],
+                        "additionalProperties": false
+                      }
+                    },
+                    "required": [
+                      "id",
+                      "op",
+                      "args",
+                      "params"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string",
+                        "pattern": "^[a-z][a-z0-9_]{0,31}$"
+                      },
+                      "op": {
+                        "type": "string",
+                        "enum": [
+                          "project"
+                        ]
+                      },
+                      "args": {
+                        "type": "array",
+                        "minItems": 1,
+                        "maxItems": 1,
+                        "items": {
+                          "type": "string",
+                          "pattern": "^[a-z][a-z0-9_]{0,31}$"
+                        }
+                      },
+                      "params": {
+                        "type": "object",
+                        "properties": {
+                          "pointer": {
+                            "type": "string",
+                            "maxLength": 256,
+                            "pattern": "^(?:|/.*)$"
+                          }
+                        },
+                        "required": [
+                          "pointer"
+                        ],
+                        "additionalProperties": false
+                      }
+                    },
+                    "required": [
+                      "id",
+                      "op",
+                      "args",
+                      "params"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string",
+                        "pattern": "^[a-z][a-z0-9_]{0,31}$"
+                      },
+                      "op": {
+                        "type": "string",
+                        "enum": [
+                          "lookup_many"
+                        ]
+                      },
+                      "args": {
+                        "type": "array",
+                        "minItems": 2,
+                        "maxItems": 2,
+                        "items": {
+                          "type": "string",
+                          "pattern": "^[a-z][a-z0-9_]{0,31}$"
+                        }
+                      },
+                      "params": {
+                        "type": "object",
+                        "properties": {
+                          "missing": {
+                            "type": "string",
+                            "enum": [
+                              "unknown",
+                              "empty_array"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "missing"
+                        ],
+                        "additionalProperties": false
+                      }
+                    },
+                    "required": [
+                      "id",
+                      "op",
+                      "args",
+                      "params"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string",
+                        "pattern": "^[a-z][a-z0-9_]{0,31}$"
+                      },
+                      "op": {
+                        "type": "string",
+                        "enum": [
+                          "flatten"
+                        ]
+                      },
+                      "args": {
+                        "type": "array",
+                        "minItems": 1,
+                        "maxItems": 1,
+                        "items": {
+                          "type": "string",
+                          "pattern": "^[a-z][a-z0-9_]{0,31}$"
+                        }
+                      },
+                      "params": {
+                        "type": "object",
+                        "properties": {},
+                        "required": [],
+                        "additionalProperties": false
+                      }
+                    },
+                    "required": [
+                      "id",
+                      "op",
+                      "args",
+                      "params"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string",
+                        "pattern": "^[a-z][a-z0-9_]{0,31}$"
+                      },
+                      "op": {
+                        "type": "string",
+                        "enum": [
+                          "zip"
+                        ]
+                      },
+                      "args": {
+                        "type": "array",
+                        "minItems": 2,
+                        "maxItems": 2,
+                        "items": {
+                          "type": "string",
+                          "pattern": "^[a-z][a-z0-9_]{0,31}$"
+                        }
+                      },
+                      "params": {
+                        "type": "object",
+                        "properties": {
+                          "left_name": {
+                            "type": "string",
+                            "maxLength": 4096
+                          },
+                          "right_name": {
+                            "type": "string",
+                            "maxLength": 4096
+                          }
+                        },
+                        "required": [
+                          "left_name",
+                          "right_name"
+                        ],
+                        "additionalProperties": false
+                      }
+                    },
+                    "required": [
+                      "id",
+                      "op",
+                      "args",
+                      "params"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string",
+                        "pattern": "^[a-z][a-z0-9_]{0,31}$"
+                      },
+                      "op": {
+                        "type": "string",
+                        "enum": [
+                          "group_count"
+                        ]
+                      },
+                      "args": {
+                        "type": "array",
+                        "minItems": 2,
+                        "maxItems": 2,
+                        "items": {
+                          "type": "string",
+                          "pattern": "^[a-z][a-z0-9_]{0,31}$"
+                        }
+                      },
+                      "params": {
+                        "type": "object",
+                        "properties": {
+                          "pointer": {
+                            "type": "string",
+                            "maxLength": 256,
+                            "pattern": "^(?:|/.*)$"
+                          },
+                          "unmatched": {
+                            "type": "string",
+                            "enum": [
+                              "ignore",
+                              "unknown"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "pointer",
+                          "unmatched"
+                        ],
+                        "additionalProperties": false
+                      }
+                    },
+                    "required": [
+                      "id",
+                      "op",
+                      "args",
+                      "params"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string",
+                        "pattern": "^[a-z][a-z0-9_]{0,31}$"
+                      },
+                      "op": {
+                        "type": "string",
+                        "enum": [
+                          "count"
+                        ]
+                      },
+                      "args": {
+                        "type": "array",
+                        "minItems": 1,
+                        "maxItems": 1,
+                        "items": {
+                          "type": "string",
+                          "pattern": "^[a-z][a-z0-9_]{0,31}$"
+                        }
+                      },
+                      "params": {
+                        "type": "object",
+                        "properties": {},
+                        "required": [],
+                        "additionalProperties": false
+                      }
+                    },
+                    "required": [
+                      "id",
+                      "op",
+                      "args",
+                      "params"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string",
+                        "pattern": "^[a-z][a-z0-9_]{0,31}$"
+                      },
+                      "op": {
+                        "type": "string",
+                        "enum": [
+                          "sum"
+                        ]
+                      },
+                      "args": {
+                        "type": "array",
+                        "minItems": 1,
+                        "maxItems": 1,
+                        "items": {
+                          "type": "string",
+                          "pattern": "^[a-z][a-z0-9_]{0,31}$"
+                        }
+                      },
+                      "params": {
+                        "type": "object",
+                        "properties": {},
+                        "required": [],
+                        "additionalProperties": false
+                      }
+                    },
+                    "required": [
+                      "id",
+                      "op",
+                      "args",
+                      "params"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string",
+                        "pattern": "^[a-z][a-z0-9_]{0,31}$"
+                      },
+                      "op": {
+                        "type": "string",
+                        "enum": [
+                          "argmin"
+                        ]
+                      },
+                      "args": {
+                        "type": "array",
+                        "minItems": 1,
+                        "maxItems": 1,
+                        "items": {
+                          "type": "string",
+                          "pattern": "^[a-z][a-z0-9_]{0,31}$"
+                        }
+                      },
+                      "params": {
+                        "type": "object",
+                        "properties": {
+                          "pointer": {
+                            "type": "string",
+                            "maxLength": 256,
+                            "pattern": "^(?:|/.*)$"
+                          },
+                          "ties": {
+                            "type": "string",
+                            "enum": [
+                              "unknown"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "pointer",
+                          "ties"
+                        ],
+                        "additionalProperties": false
+                      }
+                    },
+                    "required": [
+                      "id",
+                      "op",
+                      "args",
+                      "params"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string",
+                        "pattern": "^[a-z][a-z0-9_]{0,31}$"
+                      },
+                      "op": {
+                        "type": "string",
+                        "enum": [
+                          "argmax"
+                        ]
+                      },
+                      "args": {
+                        "type": "array",
+                        "minItems": 1,
+                        "maxItems": 1,
+                        "items": {
+                          "type": "string",
+                          "pattern": "^[a-z][a-z0-9_]{0,31}$"
+                        }
+                      },
+                      "params": {
+                        "type": "object",
+                        "properties": {
+                          "pointer": {
+                            "type": "string",
+                            "maxLength": 256,
+                            "pattern": "^(?:|/.*)$"
+                          },
+                          "ties": {
+                            "type": "string",
+                            "enum": [
+                              "unknown"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "pointer",
+                          "ties"
+                        ],
+                        "additionalProperties": false
+                      }
+                    },
+                    "required": [
+                      "id",
+                      "op",
+                      "args",
+                      "params"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string",
+                        "pattern": "^[a-z][a-z0-9_]{0,31}$"
+                      },
+                      "op": {
+                        "type": "string",
+                        "enum": [
+                          "sort"
+                        ]
+                      },
+                      "args": {
+                        "type": "array",
+                        "minItems": 1,
+                        "maxItems": 1,
+                        "items": {
+                          "type": "string",
+                          "pattern": "^[a-z][a-z0-9_]{0,31}$"
+                        }
+                      },
+                      "params": {
+                        "type": "object",
+                        "properties": {
+                          "keys": {
+                            "type": "array",
+                            "minItems": 1,
+                            "maxItems": 3,
+                            "items": {
+                              "type": "object",
+                              "properties": {
+                                "pointer": {
+                                  "type": "string",
+                                  "maxLength": 256,
+                                  "pattern": "^(?:|/.*)$"
+                                },
+                                "direction": {
+                                  "type": "string",
+                                  "enum": [
+                                    "asc",
+                                    "desc"
+                                  ]
+                                }
+                              },
+                              "required": [
+                                "pointer",
+                                "direction"
+                              ],
+                              "additionalProperties": false
+                            }
+                          }
+                        },
+                        "required": [
+                          "keys"
+                        ],
+                        "additionalProperties": false
+                      }
+                    },
+                    "required": [
+                      "id",
+                      "op",
+                      "args",
+                      "params"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string",
+                        "pattern": "^[a-z][a-z0-9_]{0,31}$"
+                      },
+                      "op": {
+                        "type": "string",
+                        "enum": [
+                          "enumerate"
+                        ]
+                      },
+                      "args": {
+                        "type": "array",
+                        "minItems": 1,
+                        "maxItems": 1,
+                        "items": {
+                          "type": "string",
+                          "pattern": "^[a-z][a-z0-9_]{0,31}$"
+                        }
+                      },
+                      "params": {
+                        "type": "object",
+                        "properties": {
+                          "index_name": {
+                            "type": "string",
+                            "maxLength": 4096
+                          }
+                        },
+                        "required": [
+                          "index_name"
+                        ],
+                        "additionalProperties": false
+                      }
+                    },
+                    "required": [
+                      "id",
+                      "op",
+                      "args",
+                      "params"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string",
+                        "pattern": "^[a-z][a-z0-9_]{0,31}$"
+                      },
+                      "op": {
+                        "type": "string",
+                        "enum": [
+                          "parse_decimal"
+                        ]
+                      },
+                      "args": {
+                        "type": "array",
+                        "minItems": 1,
+                        "maxItems": 1,
+                        "items": {
+                          "type": "string",
+                          "pattern": "^[a-z][a-z0-9_]{0,31}$"
+                        }
+                      },
+                      "params": {
+                        "type": "object",
+                        "properties": {},
+                        "required": [],
+                        "additionalProperties": false
+                      }
+                    },
+                    "required": [
+                      "id",
+                      "op",
+                      "args",
+                      "params"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string",
+                        "pattern": "^[a-z][a-z0-9_]{0,31}$"
+                      },
+                      "op": {
+                        "type": "string",
+                        "enum": [
+                          "add"
+                        ]
+                      },
+                      "args": {
+                        "type": "array",
+                        "minItems": 2,
+                        "maxItems": 2,
+                        "items": {
+                          "type": "string",
+                          "pattern": "^[a-z][a-z0-9_]{0,31}$"
+                        }
+                      },
+                      "params": {
+                        "type": "object",
+                        "properties": {},
+                        "required": [],
+                        "additionalProperties": false
+                      }
+                    },
+                    "required": [
+                      "id",
+                      "op",
+                      "args",
+                      "params"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string",
+                        "pattern": "^[a-z][a-z0-9_]{0,31}$"
+                      },
+                      "op": {
+                        "type": "string",
+                        "enum": [
+                          "subtract"
+                        ]
+                      },
+                      "args": {
+                        "type": "array",
+                        "minItems": 2,
+                        "maxItems": 2,
+                        "items": {
+                          "type": "string",
+                          "pattern": "^[a-z][a-z0-9_]{0,31}$"
+                        }
+                      },
+                      "params": {
+                        "type": "object",
+                        "properties": {},
+                        "required": [],
+                        "additionalProperties": false
+                      }
+                    },
+                    "required": [
+                      "id",
+                      "op",
+                      "args",
+                      "params"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string",
+                        "pattern": "^[a-z][a-z0-9_]{0,31}$"
+                      },
+                      "op": {
+                        "type": "string",
+                        "enum": [
+                          "multiply"
+                        ]
+                      },
+                      "args": {
+                        "type": "array",
+                        "minItems": 2,
+                        "maxItems": 2,
+                        "items": {
+                          "type": "string",
+                          "pattern": "^[a-z][a-z0-9_]{0,31}$"
+                        }
+                      },
+                      "params": {
+                        "type": "object",
+                        "properties": {},
+                        "required": [],
+                        "additionalProperties": false
+                      }
+                    },
+                    "required": [
+                      "id",
+                      "op",
+                      "args",
+                      "params"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string",
+                        "pattern": "^[a-z][a-z0-9_]{0,31}$"
+                      },
+                      "op": {
+                        "type": "string",
+                        "enum": [
+                          "divide"
+                        ]
+                      },
+                      "args": {
+                        "type": "array",
+                        "minItems": 2,
+                        "maxItems": 2,
+                        "items": {
+                          "type": "string",
+                          "pattern": "^[a-z][a-z0-9_]{0,31}$"
+                        }
+                      },
+                      "params": {
+                        "type": "object",
+                        "properties": {},
+                        "required": [],
+                        "additionalProperties": false
+                      }
+                    },
+                    "required": [
+                      "id",
+                      "op",
+                      "args",
+                      "params"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string",
+                        "pattern": "^[a-z][a-z0-9_]{0,31}$"
+                      },
+                      "op": {
+                        "type": "string",
+                        "enum": [
+                          "quantize"
+                        ]
+                      },
+                      "args": {
+                        "type": "array",
+                        "minItems": 1,
+                        "maxItems": 1,
+                        "items": {
+                          "type": "string",
+                          "pattern": "^[a-z][a-z0-9_]{0,31}$"
+                        }
+                      },
+                      "params": {
+                        "type": "object",
+                        "properties": {
+                          "places": {
+                            "type": "integer",
+                            "minimum": 0,
+                            "maximum": 6
+                          },
+                          "rounding": {
+                            "type": "string",
+                            "enum": [
+                              "half_even",
+                              "half_up"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "places",
+                          "rounding"
+                        ],
+                        "additionalProperties": false
+                      }
+                    },
+                    "required": [
+                      "id",
+                      "op",
+                      "args",
+                      "params"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string",
+                        "pattern": "^[a-z][a-z0-9_]{0,31}$"
+                      },
+                      "op": {
+                        "type": "string",
+                        "enum": [
+                          "string"
+                        ]
+                      },
+                      "args": {
+                        "type": "array",
+                        "minItems": 1,
+                        "maxItems": 1,
+                        "items": {
+                          "type": "string",
+                          "pattern": "^[a-z][a-z0-9_]{0,31}$"
+                        }
+                      },
+                      "params": {
+                        "type": "object",
+                        "properties": {},
+                        "required": [],
+                        "additionalProperties": false
+                      }
+                    },
+                    "required": [
+                      "id",
+                      "op",
+                      "args",
+                      "params"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string",
+                        "pattern": "^[a-z][a-z0-9_]{0,31}$"
+                      },
+                      "op": {
+                        "type": "string",
+                        "enum": [
+                          "concat"
+                        ]
+                      },
+                      "args": {
+                        "type": "array",
+                        "minItems": 2,
+                        "maxItems": 8,
+                        "items": {
+                          "type": "string",
+                          "pattern": "^[a-z][a-z0-9_]{0,31}$"
+                        }
+                      },
+                      "params": {
+                        "type": "object",
+                        "properties": {},
+                        "required": [],
+                        "additionalProperties": false
+                      }
+                    },
+                    "required": [
+                      "id",
+                      "op",
+                      "args",
+                      "params"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string",
+                        "pattern": "^[a-z][a-z0-9_]{0,31}$"
+                      },
+                      "op": {
+                        "type": "string",
+                        "enum": [
+                          "replace_once"
+                        ]
+                      },
+                      "args": {
+                        "type": "array",
+                        "minItems": 2,
+                        "maxItems": 2,
+                        "items": {
+                          "type": "string",
+                          "pattern": "^[a-z][a-z0-9_]{0,31}$"
+                        }
+                      },
+                      "params": {
+                        "type": "object",
+                        "properties": {
+                          "needle": {
+                            "type": "string",
+                            "maxLength": 4096
+                          }
+                        },
+                        "required": [
+                          "needle"
+                        ],
+                        "additionalProperties": false
+                      }
+                    },
+                    "required": [
+                      "id",
+                      "op",
+                      "args",
+                      "params"
+                    ],
+                    "additionalProperties": false
+                  }
+                ]
+              }
+            }
+          },
+          "required": [
+            "derivation_version",
+            "classification",
+            "unknown_reason",
+            "operands",
+            "nodes"
+          ],
+          "additionalProperties": false
+        },
+        "strict": true
+      },
+      "verbosity": "medium"
+    },
+    "tool_choice": "auto",
+    "tool_usage": {
+      "image_gen": {
+        "input_tokens": 0,
+        "input_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "output_tokens": 0,
+        "output_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "total_tokens": 0
+      },
+      "web_search": {
+        "num_requests": 0
+      }
+    },
+    "tools": [],
+    "top_logprobs": 0,
+    "top_p": 0.98,
+    "truncation": "disabled",
+    "usage": {
+      "input_tokens": 6477,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 5888
+      },
+      "output_tokens": 2561,
+      "output_tokens_details": {
+        "reasoning_tokens": 2368
+      },
+      "total_tokens": 9038
+    },
+    "user": null,
+    "metadata": {}
+  },
+  "resolved_model_id": "gpt-5.4-mini-2026-03-17",
+  "response_id": "resp_008e1ca746030193016ac27a83c65087d09e8fbd9f9bad45f3",
+  "usage": {
+    "input_tokens": 6477,
+    "input_tokens_details": {
+      "cache_write_tokens": 0,
+      "cached_tokens": 5888
+    },
+    "output_tokens": 2561,
+    "output_tokens_details": {
+      "reasoning_tokens": 2368
+    },
+    "total_tokens": 9038
+  },
+  "provider_status": "completed",
+  "pricing_model_id": "gpt-5.4-mini-2026-03-17",
+  "annotation": {
+    "derivation_version": "r22.2",
+    "classification": "query",
+    "unknown_reason": "",
+    "operands": {
+      "o0_entity": {
+        "claim": "March 2022 spending",
+        "node": "n3"
+      },
+      "o0_amount": {
+        "claim": 572.2,
+        "node": "n2"
+      }
+    },
+    "nodes": [
+      {
+        "id": "n0",
+        "op": "source",
+        "args": [],
+        "params": {
+          "root": "initial_state",
+          "pointer": "/bank_account/transactions/0/amount"
+        }
+      },
+      {
+        "id": "n1",
+        "op": "source",
+        "args": [],
+        "params": {
+          "root": "initial_state",
+          "pointer": "/bank_account/transactions/1/amount"
+        }
+      },
+      {
+        "id": "n2",
+        "op": "add",
+        "args": [
+          "n0",
+          "n1"
+        ],
+        "params": {}
+      },
+      {
+        "id": "n3",
+        "op": "source",
+        "args": [],
+        "params": {
+          "root": "scope",
+          "pointer": "/common_scope/obligations/0/entity_binding/entity_label"
+        }
+      }
+    ]
+  },
+  "wall_seconds": 17.472544846124947
+}

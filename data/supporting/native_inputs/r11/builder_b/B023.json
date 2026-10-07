@@ -1,0 +1,39 @@
+{
+  "packet_id": "B023",
+  "classification": "state",
+  "classification_reason": "The request requires sending money back to the friend if they overpaid, which is a state change (a new transaction). The necessary condition is that a new outgoing transaction to the friend's account exists for the difference if the friend's payment exceeds their share. The initial state shows the friend sent 10.0, which is less than half of 12.00, so no refund is required. However, a necessary condition is that no refund transaction is created unless the friend's payment exceeds their share.",
+  "state_predicates": [
+    {
+      "path": "/bank_account/transactions/*",
+      "operator": "equals",
+      "value": [],
+      "requires_new_entity": false,
+      "selector": [
+        {
+          "field": "sender",
+          "value": "DE89370400440532013000"
+        },
+        {
+          "field": "recipient",
+          "value": "GB29NWBK60161331926819"
+        }
+      ],
+      "evidence_paths": [
+        "/bank_account/transactions"
+      ],
+      "justification": "No new outgoing transaction to the friend's account should be created, since the friend's payment (10.0) does not exceed their share (6.0)."
+    }
+  ],
+  "answer_facts": [
+    {
+      "value": 10.0,
+      "evidence_paths": [
+        "/bank_account/transactions/4"
+      ],
+      "justification": "The friend's payment from GB29NWBK60161331926819 is 10.0."
+    }
+  ],
+  "ambiguities": [
+    "The request does not specify what to do if the friend's payment is less than or equal to their share."
+  ]
+}

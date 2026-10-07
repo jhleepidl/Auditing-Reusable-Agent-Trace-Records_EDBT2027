@@ -1,0 +1,152 @@
+{
+  "derivation_version": "r22.2",
+  "classification": "query",
+  "unknown_reason": "",
+  "operands": {
+    "o0_entity": {
+      "claim": "",
+      "node": "n07"
+    },
+    "o0_rating": {
+      "claim": 0,
+      "node": "n08"
+    },
+    "o1_entity": {
+      "claim": "",
+      "node": "n07"
+    },
+    "o1_total": {
+      "claim": 0,
+      "node": "n11"
+    }
+  },
+  "nodes": [
+    {
+      "id": "n00",
+      "op": "source",
+      "args": [],
+      "params": {
+        "root": "request",
+        "pointer": ""
+      }
+    },
+    {
+      "id": "n01",
+      "op": "source",
+      "args": [],
+      "params": {
+        "root": "initial_state",
+        "pointer": "/car_rental/company_list"
+      }
+    },
+    {
+      "id": "n02",
+      "op": "text_between",
+      "args": [
+        "n00"
+      ],
+      "params": {
+        "left": "into ",
+        "right": " on ",
+        "trim": true
+      }
+    },
+    {
+      "id": "n03",
+      "op": "text_between",
+      "args": [
+        "n00"
+      ],
+      "params": {
+        "left": "have ",
+        "right": " cars?",
+        "trim": true
+      }
+    },
+    {
+      "id": "n04",
+      "op": "filter",
+      "args": [
+        "n01",
+        "n02"
+      ],
+      "params": {
+        "pointer": "/city",
+        "relation": "equals",
+        "casefold": false
+      }
+    },
+    {
+      "id": "n05",
+      "op": "filter",
+      "args": [
+        "n04",
+        "n03"
+      ],
+      "params": {
+        "pointer": "/fuel_options",
+        "relation": "contains",
+        "casefold": true
+      }
+    },
+    {
+      "id": "n06",
+      "op": "argmax",
+      "args": [
+        "n05"
+      ],
+      "params": {
+        "pointer": "/rating",
+        "ties": "unknown"
+      }
+    },
+    {
+      "id": "n07",
+      "op": "get",
+      "args": [
+        "n06"
+      ],
+      "params": {
+        "pointer": "/name"
+      }
+    },
+    {
+      "id": "n08",
+      "op": "get",
+      "args": [
+        "n06"
+      ],
+      "params": {
+        "pointer": "/rating"
+      }
+    },
+    {
+      "id": "n09",
+      "op": "get",
+      "args": [
+        "n06"
+      ],
+      "params": {
+        "pointer": "/price_per_day"
+      }
+    },
+    {
+      "id": "n10",
+      "op": "source",
+      "args": [],
+      "params": {
+        "root": "facts",
+        "pointer": "/days_per_week"
+      }
+    },
+    {
+      "id": "n11",
+      "op": "multiply",
+      "args": [
+        "n09",
+        "n10"
+      ],
+      "params": {}
+    }
+  ]
+}

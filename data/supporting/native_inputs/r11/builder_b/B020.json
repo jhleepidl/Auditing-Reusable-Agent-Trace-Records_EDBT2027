@@ -1,0 +1,45 @@
+{
+  "packet_id": "B020",
+  "classification": "state",
+  "classification_reason": "The request requires that Bob receives a direct message containing information about the type of food served at a restaurant mentioned in a message in the general channel. The initial state contains a message in 'general' about a restaurant near the office, and the restaurant's website provides details about the cuisine. A necessary condition is that Bob's inbox contains a new direct message with this information.",
+  "state_predicates": [
+    {
+      "path": "/slack/user_inbox/Bob/*",
+      "operator": "equals",
+      "value": "The restaurant near the office (Zurich Restaurant) serves authentic Swiss cuisine, including cheese fondue, rösti, and chocolate fondue for dessert.",
+      "requires_new_entity": true,
+      "selector": [
+        {
+          "field": "sender",
+          "value": "*"
+        },
+        {
+          "field": "recipient",
+          "value": "Bob"
+        },
+        {
+          "field": "body",
+          "value": "The restaurant near the office (Zurich Restaurant) serves authentic Swiss cuisine, including cheese fondue, rösti, and chocolate fondue for dessert."
+        }
+      ],
+      "evidence_paths": [
+        "/slack/channel_inbox/general/2/body",
+        "/web/web_content/www.restaurant-zurich.com"
+      ],
+      "justification": "The message in 'general' references a restaurant near the office and its website, which describes the cuisine. The request requires Bob to receive information about what kind of food they serve."
+    }
+  ],
+  "answer_facts": [
+    {
+      "value": "Zurich Restaurant serves authentic Swiss cuisine, including cheese fondue, rösti, and chocolate fondue for dessert.",
+      "evidence_paths": [
+        "/web/web_content/www.restaurant-zurich.com"
+      ],
+      "justification": "This is the type of food served at the restaurant mentioned in the general channel message."
+    }
+  ],
+  "ambiguities": [
+    "The exact wording of the message to Bob is not specified; paraphrasing may be acceptable as long as the required information about the cuisine is included.",
+    "It is not specified who should send the message to Bob, but the sender must be someone with access to direct message Bob."
+  ]
+}

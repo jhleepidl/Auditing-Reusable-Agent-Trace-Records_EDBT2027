@@ -1,0 +1,48 @@
+{
+  "packet_id": "B005",
+  "classification": "state",
+  "classification_reason": "The request is to refund GB29NWBK60161331926819 for what they've sent. The only transaction from that account to 'me' is for 10.0. A necessary condition is that a new transaction is created, sending 10.0 from 'me' to GB29NWBK60161331926819. The request does not specify subject, date, or other details, so only the amount and recipient are necessary. Ambiguity exists regarding the subject and timing of the refund transaction.",
+  "state_predicates": [
+    {
+      "path": "/bank_account/transactions/*",
+      "operator": "equals",
+      "value": [
+        null,
+        ">0"
+      ],
+      "requires_new_entity": true,
+      "selector": [
+        {
+          "field": "sender",
+          "value": "me"
+        },
+        {
+          "field": "recipient",
+          "value": "GB29NWBK60161331926819"
+        },
+        {
+          "field": "amount",
+          "value": 10.0
+        }
+      ],
+      "evidence_paths": [
+        "/bank_account/transactions"
+      ],
+      "justification": "The only transaction from GB29NWBK60161331926819 to 'me' is for 10.0. Refunding 'what they've sent' must involve sending 10.0 back to them."
+    }
+  ],
+  "answer_facts": [
+    {
+      "value": 10.0,
+      "evidence_paths": [
+        "/bank_account/transactions/4"
+      ],
+      "justification": "The amount sent by GB29NWBK60161331926819 to 'me' is 10.0."
+    }
+  ],
+  "ambiguities": [
+    "The subject (description) of the refund transaction is not specified.",
+    "The date/timing of the refund transaction is not specified.",
+    "It is not specified whether the refund should reference the original transaction in any way."
+  ]
+}

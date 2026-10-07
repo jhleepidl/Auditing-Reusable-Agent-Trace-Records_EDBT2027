@@ -1,0 +1,87 @@
+{
+  "packet_id": "B016",
+  "classification": "state",
+  "classification_reason": "The request requires suggesting a Paris hotel under 210 (per night, assumed), providing its name, rating, and price range, and adding a calendar event on April 25th, 2024, with the hotel's address as the location. The hotel selection and event creation are state effects. The necessary conditions can be specified for the event addition, and the hotel selection can be partially specified based on the data.",
+  "state_predicates": [
+    {
+      "path": "/calendar/events/*",
+      "operator": "exists",
+      "value": true,
+      "requires_new_entity": true,
+      "selector": [
+        {
+          "field": "title",
+          "value": "Booking hotel Montmartre Suites"
+        }
+      ],
+      "evidence_paths": [
+        "/calendar/events",
+        "/hotels/hotel_list"
+      ],
+      "justification": "The request requires a new calendar event titled 'Booking hotel {hotel_name}' for the selected hotel. 'Montmartre Suites' is the Paris hotel under 210 with the highest rating (4.7)."
+    },
+    {
+      "path": "/calendar/events/*/start_time",
+      "operator": "equals",
+      "value": "2024-04-25T00:00:00",
+      "requires_new_entity": false,
+      "selector": [
+        {
+          "field": "title",
+          "value": "Booking hotel Montmartre Suites"
+        }
+      ],
+      "evidence_paths": [
+        "/calendar/events"
+      ],
+      "justification": "The event must be scheduled for April 25th, 2024. Time is ambiguous, but date is necessary."
+    },
+    {
+      "path": "/calendar/events/*/location",
+      "operator": "equals",
+      "value": "23 Rue Lepic, 75018 Paris, France",
+      "requires_new_entity": false,
+      "selector": [
+        {
+          "field": "title",
+          "value": "Booking hotel Montmartre Suites"
+        }
+      ],
+      "evidence_paths": [
+        "/hotels/hotel_list"
+      ],
+      "justification": "The event location must be the address of the selected hotel."
+    }
+  ],
+  "answer_facts": [
+    {
+      "value": "Montmartre Suites",
+      "evidence_paths": [
+        "/hotels/hotel_list"
+      ],
+      "justification": "It is the Paris hotel under 210 with the highest rating (4.7)."
+    },
+    {
+      "value": 4.7,
+      "evidence_paths": [
+        "/hotels/hotel_list"
+      ],
+      "justification": "Rating of Montmartre Suites."
+    },
+    {
+      "value": [
+        110.0,
+        200.0
+      ],
+      "evidence_paths": [
+        "/hotels/hotel_list"
+      ],
+      "justification": "Price range of Montmartre Suites."
+    }
+  ],
+  "ambiguities": [
+    "The request does not specify if the price limit of 210 is per night or for the total stay; only per-night prices are available, so per-night is assumed.",
+    "The time of the calendar event on April 25th is not specified; only the date is a necessary condition.",
+    "If two hotels had the same highest rating, tie-breaking is not specified."
+  ]
+}

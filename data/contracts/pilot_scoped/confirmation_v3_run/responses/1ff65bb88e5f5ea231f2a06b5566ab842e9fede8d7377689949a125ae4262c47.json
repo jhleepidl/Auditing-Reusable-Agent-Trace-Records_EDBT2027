@@ -1,0 +1,78 @@
+{
+  "request_id": "1ff65bb88e5f5ea231f2a06b5566ab842e9fede8d7377689949a125ae4262c47",
+  "task_key": "slack/user_task_19",
+  "method": "direct",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "seed": 47,
+  "phase": "confirmation",
+  "request_sha256": "9752caf962197bfa3bae4c378bf9e52ee3077f1c8908a9602d97e148ec6a12a0",
+  "started_utc": "2026-10-04T13:54:20.238162+00:00",
+  "status": "completed",
+  "api_attempted": true,
+  "cost_usd": 0.0011264,
+  "trustworthy_usage_priced": true,
+  "http_status": 200,
+  "provider_request_id": "req_e5331ad83f2b4e09b85f1c7bcfe39e4d",
+  "raw_response": {
+    "id": "chatcmpl-EVGxQCAIujWqY5t866i9BQOMqqKml",
+    "object": "chat.completion",
+    "created": 1791122060,
+    "model": "gpt-4.1-mini-2025-04-14",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\"ir_version\":\"r21.2\",\"scope_id\":\"slack__user_task_19__common_source_v2\",\"classification\":\"unknown\",\"clauses\":[],\"unknown_reason\":\"No obligations are selected for this task in the common source scope, so no partial evaluation contract can be constructed.\"}",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2580,
+      "completion_tokens": 59,
+      "total_tokens": 2639,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_972c397bd9"
+  },
+  "finish_reason": "stop",
+  "annotation": {
+    "ir_version": "r21.2",
+    "scope_id": "slack__user_task_19__common_source_v2",
+    "classification": "unknown",
+    "clauses": [],
+    "unknown_reason": "No obligations are selected for this task in the common source scope, so no partial evaluation contract can be constructed."
+  },
+  "usage": {
+    "prompt_tokens": 2580,
+    "completion_tokens": 59,
+    "total_tokens": 2639,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+    }
+  },
+  "resolved_model_id": "gpt-4.1-mini-2025-04-14",
+  "system_fingerprint": "fp_972c397bd9",
+  "wall_seconds": 1.0451015196740627
+}

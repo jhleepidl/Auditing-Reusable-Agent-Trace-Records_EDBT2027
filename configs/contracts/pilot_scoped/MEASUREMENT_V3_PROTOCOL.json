@@ -1,0 +1,96 @@
+{
+  "version": "measurement_v3",
+  "designation": "separate versioned measurement replication; original R21A raw results retained, not replaced",
+  "primary_question": "Under one public scope, typed IR and executor, does evidence-bound construction reduce false passes while retaining valid cases compared with direct construction?",
+  "models": [
+    "gpt-4.1-mini-2025-04-14",
+    "gpt-4.1-2025-04-14"
+  ],
+  "construction_arms": [
+    "direct",
+    "schema_only",
+    "evidence_bound"
+  ],
+  "common_controls": [
+    "value-free scope metadata",
+    "source request and initial state",
+    "strict output JSON Schema",
+    "temperature 0.2",
+    "max 3000 output tokens",
+    "one attempt, no repair or retry",
+    "same core scope admission and executor"
+  ],
+  "development": {
+    "tasks": 30,
+    "supported_tasks": 12,
+    "seeds": [
+      13
+    ],
+    "max_versions": 3,
+    "old_cases": "diagnostic/development use only; recompute under explicit new observation policy"
+  },
+  "confirmation": {
+    "primary_tasks": 23,
+    "supported_primary_tasks": 14,
+    "separate_composite_tasks": 4,
+    "supported_composite_tasks": 1,
+    "seeds": [
+      13,
+      29,
+      47
+    ],
+    "construction_calls": 486,
+    "new_native_case_mechanisms_generated_only_after_final_method_freeze": true,
+    "no_claim_of_unseen_benchmark_tasks": true
+  },
+  "smoke": {
+    "calls": 6,
+    "task": "banking/user_task_0",
+    "designation": "infrastructure diagnostic, excluded from development/confirmation counts"
+  },
+  "selection": {
+    "utility": "task-macro valid retention minus false-pass rate, averaged equally across models",
+    "tie_break": "higher retention, then earlier version",
+    "joint_gain_target": "both models have nonnegative retention difference and nonpositive false-pass difference relative to direct, with at least one strict improvement",
+    "reject_blanket_solution": "all-unknown safety cannot satisfy retained-valid improvement",
+    "preserve_all_attempts_and_negative_results": true,
+    "no_final_confirmation_tuning": true
+  },
+  "primary_admission": "scope",
+  "secondary_admission": "scope_source, crossed with every construction arm; literal request quote and structural source paths are checked, semantic necessity is not certified",
+  "analysis": {
+    "unit": "task; seeds averaged within task",
+    "risk_and_retention_denominator": "supported primary tasks, per-task equal weight",
+    "coverage_denominator": "all primary tasks",
+    "confidence_intervals": "paired task bootstrap, 10000 resamples, fixed seed 20261004",
+    "primary_contrast": "evidence_bound vs direct for each model under scope admission; joint safety/retention, no pooling of composite or development",
+    "other_contrasts": "exploratory, including source-admission policy",
+    "errors_unknowns_missing_inputs_retained": true
+  },
+  "budget": {
+    "authorized_total_usd": 30,
+    "prior_R20_usage_usd": 8.1957672,
+    "maximum_new_remaining_usd": 21.8042328,
+    "conservative_uncached_input_plus_output_cap_preflight": true
+  },
+  "human_annotations": 0,
+  "local_gpu_required": false,
+  "authority_limits": [
+    "source-defined selected partial obligations, not full benchmark utility",
+    "no model or programmatic reference is a semantic oracle",
+    "new observation policy is versioned, not retroactive R20 label replacement",
+    "recognized complete answer absence differs from unavailable observation",
+    "new confirmations use new case realizations on exposed tasks"
+  ],
+  "study_id": "R21B_CORRECTED_MEASUREMENT_CONFIRMATION",
+  "original_protocol_sha256": "14fe894a339e84ead8c703f9aef02e4f8aa66dd5affcc7eae277122df7a6b6eb",
+  "measurement_changes": [
+    "explicit value-free airline-name entity form matching native field/source-reference for travel16 flight role",
+    "ignore quotation for assertion contradiction; quoted wrong units do not assert facts",
+    "parse currency plus people/person/passenger duration qualifier"
+  ],
+  "method_selection": "Existing V2 construction instructions retained except common flight subject convention. No model-output performance tuning or new developmental model calls.",
+  "new_developmental_model_calls": 0,
+  "repair_cases": "Old204 confirmation cases exposed as repair fixtures. New204 native realizations allocated and frozen independently after measurement repair. Tasks remain previously exposed.",
+  "original_results_ineligible_for_standalone_construction_inference": true
+}

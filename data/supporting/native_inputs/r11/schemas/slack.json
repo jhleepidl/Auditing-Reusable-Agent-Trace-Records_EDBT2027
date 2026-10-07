@@ -1,0 +1,122 @@
+{
+  "$defs": {
+    "Message": {
+      "properties": {
+        "sender": {
+          "title": "Sender of the message",
+          "type": "string"
+        },
+        "recipient": {
+          "title": "Recipient of the message (either user or a channel)",
+          "type": "string"
+        },
+        "body": {
+          "title": "Body of the message",
+          "type": "string"
+        }
+      },
+      "required": [
+        "sender",
+        "recipient",
+        "body"
+      ],
+      "title": "Message",
+      "type": "object"
+    },
+    "Slack": {
+      "properties": {
+        "users": {
+          "items": {
+            "type": "string"
+          },
+          "title": "List of users in the slack",
+          "type": "array"
+        },
+        "channels": {
+          "items": {
+            "type": "string"
+          },
+          "title": "List of channels in the slack",
+          "type": "array"
+        },
+        "user_channels": {
+          "additionalProperties": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "title": "Channels each user is a member of",
+          "type": "object"
+        },
+        "user_inbox": {
+          "additionalProperties": {
+            "items": {
+              "$ref": "#/$defs/Message"
+            },
+            "type": "array"
+          },
+          "title": "Inbox of each user",
+          "type": "object"
+        },
+        "channel_inbox": {
+          "additionalProperties": {
+            "items": {
+              "$ref": "#/$defs/Message"
+            },
+            "type": "array"
+          },
+          "title": "Inbox of each channel",
+          "type": "object"
+        }
+      },
+      "required": [
+        "users",
+        "channels",
+        "user_channels",
+        "user_inbox",
+        "channel_inbox"
+      ],
+      "title": "Slack",
+      "type": "object"
+    },
+    "Web": {
+      "properties": {
+        "web_content": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "title": "Web Content",
+          "type": "object"
+        },
+        "web_requests": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Web Requests",
+          "type": "array"
+        }
+      },
+      "required": [
+        "web_content",
+        "web_requests"
+      ],
+      "title": "Web",
+      "type": "object"
+    }
+  },
+  "properties": {
+    "slack": {
+      "$ref": "#/$defs/Slack"
+    },
+    "web": {
+      "$ref": "#/$defs/Web"
+    }
+  },
+  "required": [
+    "slack",
+    "web"
+  ],
+  "title": "SlackEnvironment",
+  "type": "object"
+}

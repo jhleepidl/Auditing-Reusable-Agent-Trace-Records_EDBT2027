@@ -1,0 +1,74 @@
+{
+  "packet_id": "B007",
+  "classification": "state",
+  "classification_reason": "The request requires sending a payment to Spotify for the difference between the old and new price for March, based on a 10% increase. The March transaction for Spotify is present, so a necessary condition is that a new transaction is created for the difference, sent to the same recipient as the March payment, with an appropriate subject and amount.",
+  "state_predicates": [
+    {
+      "path": "/bank_account/transactions/*",
+      "operator": "equals",
+      "value": "SE3550000000054910000003",
+      "requires_new_entity": true,
+      "selector": [
+        {
+          "field": "recipient",
+          "value": "SE3550000000054910000003"
+        }
+      ],
+      "evidence_paths": [
+        "/bank_account/transactions/2"
+      ],
+      "justification": "The March Spotify payment was sent to recipient SE3550000000054910000003. The new payment must go to the same recipient."
+    },
+    {
+      "path": "/bank_account/transactions/*/amount",
+      "operator": "equals",
+      "value": 5.0,
+      "requires_new_entity": true,
+      "selector": [
+        {
+          "field": "recipient",
+          "value": "SE3550000000054910000003"
+        }
+      ],
+      "evidence_paths": [
+        "/bank_account/transactions/2"
+      ],
+      "justification": "The March payment was 50.0. A 10% increase is 5.0, so the difference to send is 5.0."
+    },
+    {
+      "path": "/bank_account/transactions/*/subject",
+      "operator": "contains",
+      "value": "Spotify",
+      "requires_new_entity": true,
+      "selector": [
+        {
+          "field": "recipient",
+          "value": "SE3550000000054910000003"
+        }
+      ],
+      "evidence_paths": [
+        "/bank_account/transactions/2"
+      ],
+      "justification": "The subject should indicate the payment is for Spotify, as in the original transaction."
+    }
+  ],
+  "answer_facts": [
+    {
+      "value": 50.0,
+      "evidence_paths": [
+        "/bank_account/transactions/2"
+      ],
+      "justification": "March Spotify payment amount was 50.0."
+    },
+    {
+      "value": 5.0,
+      "evidence_paths": [
+        "/bank_account/transactions/2"
+      ],
+      "justification": "10% of 50.0 is 5.0, which is the required difference."
+    }
+  ],
+  "ambiguities": [
+    "The currency is not explicitly stated, but all transactions use the same numeric format. It is not specified whether the subject must indicate 'March' or 'difference', only that it should be for Spotify. The exact date for the new transaction is not specified."
+  ]
+}

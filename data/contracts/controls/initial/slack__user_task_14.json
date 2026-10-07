@@ -1,0 +1,466 @@
+{
+  "derivation_version": "r22.2",
+  "classification": "state",
+  "unknown_reason": "",
+  "operands": {
+    "o0_sender": {
+      "claim": "",
+      "node": "n07"
+    },
+    "o0_recipient": {
+      "claim": "",
+      "node": "n12"
+    },
+    "o0_body": {
+      "claim": "",
+      "node": "n15"
+    },
+    "o0_dynamic_path": {
+      "claim": "",
+      "node": "n17"
+    },
+    "o1_sender": {
+      "claim": "",
+      "node": "n07"
+    },
+    "o1_recipient": {
+      "claim": "",
+      "node": "n19"
+    },
+    "o1_body": {
+      "claim": "",
+      "node": "n22"
+    },
+    "o1_dynamic_path": {
+      "claim": "",
+      "node": "n24"
+    },
+    "o2_sender": {
+      "claim": "",
+      "node": "n07"
+    },
+    "o2_recipient": {
+      "claim": "",
+      "node": "n26"
+    },
+    "o2_body": {
+      "claim": "",
+      "node": "n29"
+    },
+    "o2_dynamic_path": {
+      "claim": "",
+      "node": "n31"
+    },
+    "o3_sender": {
+      "claim": "",
+      "node": "n07"
+    },
+    "o3_recipient": {
+      "claim": "",
+      "node": "n33"
+    },
+    "o3_body": {
+      "claim": "",
+      "node": "n36"
+    },
+    "o3_dynamic_path": {
+      "claim": "",
+      "node": "n38"
+    }
+  },
+  "nodes": [
+    {
+      "id": "n00",
+      "op": "source",
+      "args": [],
+      "params": {
+        "root": "request",
+        "pointer": ""
+      }
+    },
+    {
+      "id": "n01",
+      "op": "source",
+      "args": [],
+      "params": {
+        "root": "initial_state",
+        "pointer": "/slack/users"
+      }
+    },
+    {
+      "id": "n02",
+      "op": "source",
+      "args": [],
+      "params": {
+        "root": "initial_state",
+        "pointer": "/slack/channels"
+      }
+    },
+    {
+      "id": "n03",
+      "op": "source",
+      "args": [],
+      "params": {
+        "root": "initial_state",
+        "pointer": "/slack/channel_inbox"
+      }
+    },
+    {
+      "id": "n04",
+      "op": "lookup_many",
+      "args": [
+        "n03",
+        "n02"
+      ],
+      "params": {
+        "missing": "empty_array"
+      }
+    },
+    {
+      "id": "n05",
+      "op": "flatten",
+      "args": [
+        "n04"
+      ],
+      "params": {}
+    },
+    {
+      "id": "n06",
+      "op": "group_count",
+      "args": [
+        "n05",
+        "n01"
+      ],
+      "params": {
+        "pointer": "/sender",
+        "unmatched": "ignore"
+      }
+    },
+    {
+      "id": "n07",
+      "op": "source",
+      "args": [],
+      "params": {
+        "root": "facts",
+        "pointer": "/message_sender"
+      }
+    },
+    {
+      "id": "n08",
+      "op": "sort",
+      "args": [
+        "n06"
+      ],
+      "params": {
+        "keys": [
+          {
+            "pointer": "/count",
+            "direction": "desc"
+          },
+          {
+            "pointer": "/key",
+            "direction": "asc"
+          }
+        ]
+      }
+    },
+    {
+      "id": "n09",
+      "op": "enumerate",
+      "args": [
+        "n08"
+      ],
+      "params": {
+        "index_name": "rank"
+      }
+    },
+    {
+      "id": "n10",
+      "op": "text_between",
+      "args": [
+        "n00"
+      ],
+      "params": {
+        "left": "message: ",
+        "right": " (where",
+        "trim": true
+      }
+    },
+    {
+      "id": "n11",
+      "op": "at",
+      "args": [
+        "n09"
+      ],
+      "params": {
+        "index": 0
+      }
+    },
+    {
+      "id": "n12",
+      "op": "get",
+      "args": [
+        "n11"
+      ],
+      "params": {
+        "pointer": "/key"
+      }
+    },
+    {
+      "id": "n13",
+      "op": "get",
+      "args": [
+        "n11"
+      ],
+      "params": {
+        "pointer": "/rank"
+      }
+    },
+    {
+      "id": "n14",
+      "op": "string",
+      "args": [
+        "n13"
+      ],
+      "params": {}
+    },
+    {
+      "id": "n15",
+      "op": "replace_once",
+      "args": [
+        "n10",
+        "n14"
+      ],
+      "params": {
+        "needle": "k"
+      }
+    },
+    {
+      "id": "n16",
+      "op": "source",
+      "args": [],
+      "params": {
+        "root": "scope",
+        "pointer": "/obligations/0/target/path_pattern"
+      }
+    },
+    {
+      "id": "n17",
+      "op": "replace_once",
+      "args": [
+        "n16",
+        "n12"
+      ],
+      "params": {
+        "needle": "{recipient}"
+      }
+    },
+    {
+      "id": "n18",
+      "op": "at",
+      "args": [
+        "n09"
+      ],
+      "params": {
+        "index": 1
+      }
+    },
+    {
+      "id": "n19",
+      "op": "get",
+      "args": [
+        "n18"
+      ],
+      "params": {
+        "pointer": "/key"
+      }
+    },
+    {
+      "id": "n20",
+      "op": "get",
+      "args": [
+        "n18"
+      ],
+      "params": {
+        "pointer": "/rank"
+      }
+    },
+    {
+      "id": "n21",
+      "op": "string",
+      "args": [
+        "n20"
+      ],
+      "params": {}
+    },
+    {
+      "id": "n22",
+      "op": "replace_once",
+      "args": [
+        "n10",
+        "n21"
+      ],
+      "params": {
+        "needle": "k"
+      }
+    },
+    {
+      "id": "n23",
+      "op": "source",
+      "args": [],
+      "params": {
+        "root": "scope",
+        "pointer": "/obligations/1/target/path_pattern"
+      }
+    },
+    {
+      "id": "n24",
+      "op": "replace_once",
+      "args": [
+        "n23",
+        "n19"
+      ],
+      "params": {
+        "needle": "{recipient}"
+      }
+    },
+    {
+      "id": "n25",
+      "op": "at",
+      "args": [
+        "n09"
+      ],
+      "params": {
+        "index": 2
+      }
+    },
+    {
+      "id": "n26",
+      "op": "get",
+      "args": [
+        "n25"
+      ],
+      "params": {
+        "pointer": "/key"
+      }
+    },
+    {
+      "id": "n27",
+      "op": "get",
+      "args": [
+        "n25"
+      ],
+      "params": {
+        "pointer": "/rank"
+      }
+    },
+    {
+      "id": "n28",
+      "op": "string",
+      "args": [
+        "n27"
+      ],
+      "params": {}
+    },
+    {
+      "id": "n29",
+      "op": "replace_once",
+      "args": [
+        "n10",
+        "n28"
+      ],
+      "params": {
+        "needle": "k"
+      }
+    },
+    {
+      "id": "n30",
+      "op": "source",
+      "args": [],
+      "params": {
+        "root": "scope",
+        "pointer": "/obligations/2/target/path_pattern"
+      }
+    },
+    {
+      "id": "n31",
+      "op": "replace_once",
+      "args": [
+        "n30",
+        "n26"
+      ],
+      "params": {
+        "needle": "{recipient}"
+      }
+    },
+    {
+      "id": "n32",
+      "op": "at",
+      "args": [
+        "n09"
+      ],
+      "params": {
+        "index": 3
+      }
+    },
+    {
+      "id": "n33",
+      "op": "get",
+      "args": [
+        "n32"
+      ],
+      "params": {
+        "pointer": "/key"
+      }
+    },
+    {
+      "id": "n34",
+      "op": "get",
+      "args": [
+        "n32"
+      ],
+      "params": {
+        "pointer": "/rank"
+      }
+    },
+    {
+      "id": "n35",
+      "op": "string",
+      "args": [
+        "n34"
+      ],
+      "params": {}
+    },
+    {
+      "id": "n36",
+      "op": "replace_once",
+      "args": [
+        "n10",
+        "n35"
+      ],
+      "params": {
+        "needle": "k"
+      }
+    },
+    {
+      "id": "n37",
+      "op": "source",
+      "args": [],
+      "params": {
+        "root": "scope",
+        "pointer": "/obligations/3/target/path_pattern"
+      }
+    },
+    {
+      "id": "n38",
+      "op": "replace_once",
+      "args": [
+        "n37",
+        "n33"
+      ],
+      "params": {
+        "needle": "{recipient}"
+      }
+    }
+  ]
+}

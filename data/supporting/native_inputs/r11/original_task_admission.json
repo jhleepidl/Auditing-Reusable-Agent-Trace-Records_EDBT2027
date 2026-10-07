@@ -1,0 +1,3536 @@
+[
+  {
+    "suite": "banking",
+    "task_id": "user_task_0",
+    "packet_id": "B012",
+    "a_class": "state",
+    "b_class": "state",
+    "a": {
+      "initial": {
+        "admitted": true,
+        "issues": []
+      },
+      "schema": {
+        "admitted": true,
+        "issues": [],
+        "schema_path_witnesses": [
+          {
+            "predicate": 0,
+            "path": "/bank_account/transactions/*/recipient",
+            "declared_types": [
+              "string"
+            ]
+          },
+          {
+            "predicate": 1,
+            "path": "/bank_account/transactions/*/amount",
+            "declared_types": [
+              "number"
+            ]
+          }
+        ]
+      },
+      "hybrid": {
+        "admitted": true,
+        "issues": [],
+        "observed_admitted": true,
+        "schema_admitted": true,
+        "discharged_observed_issues": [],
+        "schema_path_witnesses": [
+          {
+            "predicate": 0,
+            "path": "/bank_account/transactions/*/recipient",
+            "declared_types": [
+              "string"
+            ]
+          },
+          {
+            "predicate": 1,
+            "path": "/bank_account/transactions/*/amount",
+            "declared_types": [
+              "number"
+            ]
+          }
+        ]
+      }
+    },
+    "b": {
+      "initial": {
+        "admitted": false,
+        "issues": [
+          {
+            "predicate": 0,
+            "code": "observed_type_incompatible",
+            "path": "/bank_account/transactions/*"
+          }
+        ]
+      },
+      "schema": {
+        "admitted": false,
+        "issues": [
+          {
+            "predicate": 0,
+            "path": "/bank_account/transactions/*",
+            "code": "declared_type_incompatible"
+          }
+        ],
+        "schema_path_witnesses": [
+          {
+            "predicate": 0,
+            "path": "/bank_account/transactions/*",
+            "declared_types": [
+              "object"
+            ]
+          }
+        ]
+      },
+      "hybrid": {
+        "admitted": false,
+        "issues": [
+          {
+            "predicate": 0,
+            "code": "observed_type_incompatible",
+            "path": "/bank_account/transactions/*"
+          },
+          {
+            "predicate": 0,
+            "path": "/bank_account/transactions/*",
+            "code": "declared_type_incompatible"
+          }
+        ],
+        "observed_admitted": false,
+        "schema_admitted": false,
+        "discharged_observed_issues": [],
+        "schema_path_witnesses": [
+          {
+            "predicate": 0,
+            "path": "/bank_account/transactions/*",
+            "declared_types": [
+              "object"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "suite": "banking",
+    "task_id": "user_task_1",
+    "packet_id": "B010",
+    "a_class": "query",
+    "b_class": "query",
+    "a": {
+      "initial": {
+        "admitted": false,
+        "issues": [
+          {
+            "code": "non_state_not_executable"
+          }
+        ]
+      },
+      "schema": {
+        "admitted": false,
+        "issues": [
+          {
+            "code": "non_state_not_executable"
+          }
+        ]
+      },
+      "hybrid": {
+        "admitted": false,
+        "issues": [
+          {
+            "code": "non_state_not_executable"
+          },
+          {
+            "code": "non_state_not_executable"
+          }
+        ],
+        "observed_admitted": false,
+        "schema_admitted": false,
+        "discharged_observed_issues": [],
+        "schema_path_witnesses": []
+      }
+    },
+    "b": {
+      "initial": {
+        "admitted": false,
+        "issues": [
+          {
+            "code": "non_state_not_executable"
+          }
+        ]
+      },
+      "schema": {
+        "admitted": false,
+        "issues": [
+          {
+            "code": "non_state_not_executable"
+          }
+        ]
+      },
+      "hybrid": {
+        "admitted": false,
+        "issues": [
+          {
+            "code": "non_state_not_executable"
+          },
+          {
+            "code": "non_state_not_executable"
+          }
+        ],
+        "observed_admitted": false,
+        "schema_admitted": false,
+        "discharged_observed_issues": [],
+        "schema_path_witnesses": []
+      }
+    }
+  },
+  {
+    "suite": "banking",
+    "task_id": "user_task_2",
+    "packet_id": "B030",
+    "a_class": "state",
+    "b_class": "state",
+    "a": {
+      "initial": {
+        "admitted": true,
+        "issues": []
+      },
+      "schema": {
+        "admitted": true,
+        "issues": [],
+        "schema_path_witnesses": [
+          {
+            "predicate": 0,
+            "path": "/bank_account/scheduled_transactions/*/amount",
+            "declared_types": [
+              "number"
+            ]
+          }
+        ]
+      },
+      "hybrid": {
+        "admitted": true,
+        "issues": [],
+        "observed_admitted": true,
+        "schema_admitted": true,
+        "discharged_observed_issues": [],
+        "schema_path_witnesses": [
+          {
+            "predicate": 0,
+            "path": "/bank_account/scheduled_transactions/*/amount",
+            "declared_types": [
+              "number"
+            ]
+          }
+        ]
+      }
+    },
+    "b": {
+      "initial": {
+        "admitted": false,
+        "issues": [
+          {
+            "predicate": 0,
+            "code": "observed_type_incompatible",
+            "path": "/bank_account/scheduled_transactions/*"
+          }
+        ]
+      },
+      "schema": {
+        "admitted": false,
+        "issues": [
+          {
+            "predicate": 0,
+            "path": "/bank_account/scheduled_transactions/*",
+            "code": "declared_type_incompatible"
+          }
+        ],
+        "schema_path_witnesses": [
+          {
+            "predicate": 0,
+            "path": "/bank_account/scheduled_transactions/*",
+            "declared_types": [
+              "object"
+            ]
+          },
+          {
+            "predicate": 1,
+            "path": "/bank_account/scheduled_transactions/*/amount",
+            "declared_types": [
+              "number"
+            ]
+          }
+        ]
+      },
+      "hybrid": {
+        "admitted": false,
+        "issues": [
+          {
+            "predicate": 0,
+            "code": "observed_type_incompatible",
+            "path": "/bank_account/scheduled_transactions/*"
+          },
+          {
+            "predicate": 0,
+            "path": "/bank_account/scheduled_transactions/*",
+            "code": "declared_type_incompatible"
+          }
+        ],
+        "observed_admitted": false,
+        "schema_admitted": false,
+        "discharged_observed_issues": [],
+        "schema_path_witnesses": [
+          {
+            "predicate": 0,
+            "path": "/bank_account/scheduled_transactions/*",
+            "declared_types": [
+              "object"
+            ]
+          },
+          {
+            "predicate": 1,
+            "path": "/bank_account/scheduled_transactions/*/amount",
+            "declared_types": [
+              "number"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "suite": "banking",
+    "task_id": "user_task_3",
+    "packet_id": "B023",
+    "a_class": "excluded",
+    "b_class": "state",
+    "a": {
+      "initial": {
+        "admitted": false,
+        "issues": [
+          {
+            "code": "non_state_not_executable"
+          }
+        ]
+      },
+      "schema": {
+        "admitted": false,
+        "issues": [
+          {
+            "code": "non_state_not_executable"
+          }
+        ]
+      },
+      "hybrid": {
+        "admitted": false,
+        "issues": [
+          {
+            "code": "non_state_not_executable"
+          },
+          {
+            "code": "non_state_not_executable"
+          }
+        ],
+        "observed_admitted": false,
+        "schema_admitted": false,
+        "discharged_observed_issues": [],
+        "schema_path_witnesses": []
+      }
+    },
+    "b": {
+      "initial": {
+        "admitted": false,
+        "issues": [
+          {
+            "predicate": 0,
+            "code": "observed_type_incompatible",
+            "path": "/bank_account/transactions/*"
+          }
+        ]
+      },
+      "schema": {
+        "admitted": false,
+        "issues": [
+          {
+            "predicate": 0,
+            "path": "/bank_account/transactions/*",
+            "code": "declared_type_incompatible"
+          }
+        ],
+        "schema_path_witnesses": [
+          {
+            "predicate": 0,
+            "path": "/bank_account/transactions/*",
+            "declared_types": [
+              "object"
+            ]
+          }
+        ]
+      },
+      "hybrid": {
+        "admitted": false,
+        "issues": [
+          {
+            "predicate": 0,
+            "code": "observed_type_incompatible",
+            "path": "/bank_account/transactions/*"
+          },
+          {
+            "predicate": 0,
+            "path": "/bank_account/transactions/*",
+            "code": "declared_type_incompatible"
+          }
+        ],
+        "observed_admitted": false,
+        "schema_admitted": false,
+        "discharged_observed_issues": [],
+        "schema_path_witnesses": [
+          {
+            "predicate": 0,
+            "path": "/bank_account/transactions/*",
+            "declared_types": [
+              "object"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "suite": "banking",
+    "task_id": "user_task_4",
+    "packet_id": "B005",
+    "a_class": "state",
+    "b_class": "state",
+    "a": {
+      "initial": {
+        "admitted": true,
+        "issues": []
+      },
+      "schema": {
+        "admitted": true,
+        "issues": [],
+        "schema_path_witnesses": [
+          {
+            "predicate": 0,
+            "path": "/bank_account/transactions/*/recipient",
+            "declared_types": [
+              "string"
+            ]
+          },
+          {
+            "predicate": 1,
+            "path": "/bank_account/transactions/*/amount",
+            "declared_types": [
+              "number"
+            ]
+          }
+        ]
+      },
+      "hybrid": {
+        "admitted": true,
+        "issues": [],
+        "observed_admitted": true,
+        "schema_admitted": true,
+        "discharged_observed_issues": [],
+        "schema_path_witnesses": [
+          {
+            "predicate": 0,
+            "path": "/bank_account/transactions/*/recipient",
+            "declared_types": [
+              "string"
+            ]
+          },
+          {
+            "predicate": 1,
+            "path": "/bank_account/transactions/*/amount",
+            "declared_types": [
+              "number"
+            ]
+          }
+        ]
+      }
+    },
+    "b": {
+      "initial": {
+        "admitted": false,
+        "issues": [
+          {
+            "predicate": 0,
+            "code": "observed_type_incompatible",
+            "path": "/bank_account/transactions/*"
+          }
+        ]
+      },
+      "schema": {
+        "admitted": false,
+        "issues": [
+          {
+            "predicate": 0,
+            "path": "/bank_account/transactions/*",
+            "code": "declared_type_incompatible"
+          }
+        ],
+        "schema_path_witnesses": [
+          {
+            "predicate": 0,
+            "path": "/bank_account/transactions/*",
+            "declared_types": [
+              "object"
+            ]
+          }
+        ]
+      },
+      "hybrid": {
+        "admitted": false,
+        "issues": [
+          {
+            "predicate": 0,
+            "code": "observed_type_incompatible",
+            "path": "/bank_account/transactions/*"
+          },
+          {
+            "predicate": 0,
+            "path": "/bank_account/transactions/*",
+            "code": "declared_type_incompatible"
+          }
+        ],
+        "observed_admitted": false,
+        "schema_admitted": false,
+        "discharged_observed_issues": [],
+        "schema_path_witnesses": [
+          {
+            "predicate": 0,
+            "path": "/bank_account/transactions/*",
+            "declared_types": [
+              "object"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "suite": "banking",
+    "task_id": "user_task_5",
+    "packet_id": "B007",
+    "a_class": "state",
+    "b_class": "state",
+    "a": {
+      "initial": {
+        "admitted": true,
+        "issues": []
+      },
+      "schema": {
+        "admitted": true,
+        "issues": [],
+        "schema_path_witnesses": [
+          {
+            "predicate": 0,
+            "path": "/bank_account/transactions/*/recipient",
+            "declared_types": [
+              "string"
+            ]
+          },
+          {
+            "predicate": 1,
+            "path": "/bank_account/transactions/*/amount",
+            "declared_types": [
+              "number"
+            ]
+          }
+        ]
+      },
+      "hybrid": {
+        "admitted": true,
+        "issues": [],
+        "observed_admitted": true,
+        "schema_admitted": true,
+        "discharged_observed_issues": [],
+        "schema_path_witnesses": [
+          {
+            "predicate": 0,
+            "path": "/bank_account/transactions/*/recipient",
+            "declared_types": [
+              "string"
+            ]
+          },
+          {
+            "predicate": 1,
+            "path": "/bank_account/transactions/*/amount",
+            "declared_types": [
+              "number"
+            ]
+          }
+        ]
+      }
+    },
+    "b": {
+      "initial": {
+        "admitted": false,
+        "issues": [
+          {
+            "predicate": 0,
+            "code": "observed_type_incompatible",
+            "path": "/bank_account/transactions/*"
+          }
+        ]
+      },
+      "schema": {
+        "admitted": false,
+        "issues": [
+          {
+            "predicate": 0,
+            "path": "/bank_account/transactions/*",
+            "code": "declared_type_incompatible"
+          }
+        ],
+        "schema_path_witnesses": [
+          {
+            "predicate": 0,
+            "path": "/bank_account/transactions/*",
+            "declared_types": [
+              "object"
+            ]
+          },
+          {
+            "predicate": 1,
+            "path": "/bank_account/transactions/*/amount",
+            "declared_types": [
+              "number"
+            ]
+          },
+          {
+            "predicate": 2,
+            "path": "/bank_account/transactions/*/subject",
+            "declared_types": [
+              "string"
+            ]
+          }
+        ]
+      },
+      "hybrid": {
+        "admitted": false,
+        "issues": [
+          {
+            "predicate": 0,
+            "code": "observed_type_incompatible",
+            "path": "/bank_account/transactions/*"
+          },
+          {
+            "predicate": 0,
+            "path": "/bank_account/transactions/*",
+            "code": "declared_type_incompatible"
+          }
+        ],
+        "observed_admitted": false,
+        "schema_admitted": false,
+        "discharged_observed_issues": [],
+        "schema_path_witnesses": [
+          {
+            "predicate": 0,
+            "path": "/bank_account/transactions/*",
+            "declared_types": [
+              "object"
+            ]
+          },
+          {
+            "predicate": 1,
+            "path": "/bank_account/transactions/*/amount",
+            "declared_types": [
+              "number"
+            ]
+          },
+          {
+            "predicate": 2,
+            "path": "/bank_account/transactions/*/subject",
+            "declared_types": [
+              "string"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "suite": "banking",
+    "task_id": "user_task_6",
+    "packet_id": "B003",
+    "a_class": "state",
+    "b_class": "state",
+    "a": {
+      "initial": {
+        "admitted": true,
+        "issues": []
+      },
+      "schema": {
+        "admitted": true,
+        "issues": [],
+        "schema_path_witnesses": [
+          {
+            "predicate": 0,
+            "path": "/bank_account/scheduled_transactions/*/recipient",
+            "declared_types": [
+              "string"
+            ]
+          },
+          {
+            "predicate": 1,
+            "path": "/bank_account/scheduled_transactions/*/amount",
+            "declared_types": [
+              "number"
+            ]
+          },
+          {
+            "predicate": 2,
+            "path": "/bank_account/scheduled_transactions/*/recurring",
+            "declared_types": [
+              "boolean"
+            ]
+          }
+        ]
+      },
+      "hybrid": {
+        "admitted": true,
+        "issues": [],
+        "observed_admitted": true,
+        "schema_admitted": true,
+        "discharged_observed_issues": [],
+        "schema_path_witnesses": [
+          {
+            "predicate": 0,
+            "path": "/bank_account/scheduled_transactions/*/recipient",
+            "declared_types": [
+              "string"
+            ]
+          },
+          {
+            "predicate": 1,
+            "path": "/bank_account/scheduled_transactions/*/amount",
+            "declared_types": [
+              "number"
+            ]
+          },
+          {
+            "predicate": 2,
+            "path": "/bank_account/scheduled_transactions/*/recurring",
+            "declared_types": [
+              "boolean"
+            ]
+          }
+        ]
+      }
+    },
+    "b": {
+      "initial": {
+        "admitted": false,
+        "issues": [
+          {
+            "predicate": 0,
+            "code": "observed_type_incompatible",
+            "path": "/bank_account/scheduled_transactions/*"
+          }
+        ]
+      },
+      "schema": {
+        "admitted": false,
+        "issues": [
+          {
+            "predicate": 0,
+            "path": "/bank_account/scheduled_transactions/*",
+            "code": "declared_type_incompatible"
+          }
+        ],
+        "schema_path_witnesses": [
+          {
+            "predicate": 0,
+            "path": "/bank_account/scheduled_transactions/*",
+            "declared_types": [
+              "object"
+            ]
+          },
+          {
+            "predicate": 1,
+            "path": "/bank_account/scheduled_transactions/*/amount",
+            "declared_types": [
+              "number"
+            ]
+          },
+          {
+            "predicate": 2,
+            "path": "/bank_account/scheduled_transactions/*/recurring",
+            "declared_types": [
+              "boolean"
+            ]
+          }
+        ]
+      },
+      "hybrid": {
+        "admitted": false,
+        "issues": [
+          {
+            "predicate": 0,
+            "code": "observed_type_incompatible",
+            "path": "/bank_account/scheduled_transactions/*"
+          },
+          {
+            "predicate": 0,
+            "path": "/bank_account/scheduled_transactions/*",
+            "code": "declared_type_incompatible"
+          }
+        ],
+        "observed_admitted": false,
+        "schema_admitted": false,
+        "discharged_observed_issues": [],
+        "schema_path_witnesses": [
+          {
+            "predicate": 0,
+            "path": "/bank_account/scheduled_transactions/*",
+            "declared_types": [
+              "object"
+            ]
+          },
+          {
+            "predicate": 1,
+            "path": "/bank_account/scheduled_transactions/*/amount",
+            "declared_types": [
+              "number"
+            ]
+          },
+          {
+            "predicate": 2,
+            "path": "/bank_account/scheduled_transactions/*/recurring",
+            "declared_types": [
+              "boolean"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "suite": "banking",
+    "task_id": "user_task_7",
+    "packet_id": "B001",
+    "a_class": "query",
+    "b_class": "query",
+    "a": {
+      "initial": {
+        "admitted": false,
+        "issues": [
+          {
+            "code": "non_state_not_executable"
+          }
+        ]
+      },
+      "schema": {
+        "admitted": false,
+        "issues": [
+          {
+            "code": "non_state_not_executable"
+          }
+        ]
+      },
+      "hybrid": {
+        "admitted": false,
+        "issues": [
+          {
+            "code": "non_state_not_executable"
+          },
+          {
+            "code": "non_state_not_executable"
+          }
+        ],
+        "observed_admitted": false,
+        "schema_admitted": false,
+        "discharged_observed_issues": [],
+        "schema_path_witnesses": []
+      }
+    },
+    "b": {
+      "initial": {
+        "admitted": false,
+        "issues": [
+          {
+            "code": "non_state_not_executable"
+          }
+        ]
+      },
+      "schema": {
+        "admitted": false,
+        "issues": [
+          {
+            "code": "non_state_not_executable"
+          }
+        ]
+      },
+      "hybrid": {
+        "admitted": false,
+        "issues": [
+          {
+            "code": "non_state_not_executable"
+          },
+          {
+            "code": "non_state_not_executable"
+          }
+        ],
+        "observed_admitted": false,
+        "schema_admitted": false,
+        "discharged_observed_issues": [],
+        "schema_path_witnesses": []
+      }
+    }
+  },
+  {
+    "suite": "banking",
+    "task_id": "user_task_8",
+    "packet_id": "B028",
+    "a_class": "excluded",
+    "b_class": "query",
+    "a": {
+      "initial": {
+        "admitted": false,
+        "issues": [
+          {
+            "code": "non_state_not_executable"
+          }
+        ]
+      },
+      "schema": {
+        "admitted": false,
+        "issues": [
+          {
+            "code": "non_state_not_executable"
+          }
+        ]
+      },
+      "hybrid": {
+        "admitted": false,
+        "issues": [
+          {
+            "code": "non_state_not_executable"
+          },
+          {
+            "code": "non_state_not_executable"
+          }
+        ],
+        "observed_admitted": false,
+        "schema_admitted": false,
+        "discharged_observed_issues": [],
+        "schema_path_witnesses": []
+      }
+    },
+    "b": {
+      "initial": {
+        "admitted": false,
+        "issues": [
+          {
+            "code": "non_state_not_executable"
+          }
+        ]
+      },
+      "schema": {
+        "admitted": false,
+        "issues": [
+          {
+            "code": "non_state_not_executable"
+          }
+        ]
+      },
+      "hybrid": {
+        "admitted": false,
+        "issues": [
+          {
+            "code": "non_state_not_executable"
+          },
+          {
+            "code": "non_state_not_executable"
+          }
+        ],
+        "observed_admitted": false,
+        "schema_admitted": false,
+        "discharged_observed_issues": [],
+        "schema_path_witnesses": []
+      }
+    }
+  },
+  {
+    "suite": "banking",
+    "task_id": "user_task_9",
+    "packet_id": "B006",
+    "a_class": "excluded",
+    "b_class": "state",
+    "a": {
+      "initial": {
+        "admitted": false,
+        "issues": [
+          {
+            "code": "non_state_not_executable"
+          }
+        ]
+      },
+      "schema": {
+        "admitted": false,
+        "issues": [
+          {
+            "code": "non_state_not_executable"
+          }
+        ]
+      },
+      "hybrid": {
+        "admitted": false,
+        "issues": [
+          {
+            "code": "non_state_not_executable"
+          },
+          {
+            "code": "non_state_not_executable"
+          }
+        ],
+        "observed_admitted": false,
+        "schema_admitted": false,
+        "discharged_observed_issues": [],
+        "schema_path_witnesses": []
+      }
+    },
+    "b": {
+      "initial": {
+        "admitted": false,
+        "issues": [
+          {
+            "predicate": 0,
+            "code": "observed_type_incompatible",
+            "path": "/bank_account/scheduled_transactions/*"
+          }
+        ]
+      },
+      "schema": {
+        "admitted": false,
+        "issues": [
+          {
+            "predicate": 0,
+            "path": "/bank_account/scheduled_transactions/*",
+            "code": "declared_type_incompatible"
+          }
+        ],
+        "schema_path_witnesses": [
+          {
+            "predicate": 0,
+            "path": "/bank_account/scheduled_transactions/*",
+            "declared_types": [
+              "object"
+            ]
+          },
+          {
+            "predicate": 1,
+            "path": "/bank_account/scheduled_transactions/*/amount",
+            "declared_types": [
+              "number"
+            ]
+          }
+        ]
+      },
+      "hybrid": {
+        "admitted": false,
+        "issues": [
+          {
+            "predicate": 0,
+            "code": "observed_type_incompatible",
+            "path": "/bank_account/scheduled_transactions/*"
+          },
+          {
+            "predicate": 0,
+            "path": "/bank_account/scheduled_transactions/*",
+            "code": "declared_type_incompatible"
+          }
+        ],
+        "observed_admitted": false,
+        "schema_admitted": false,
+        "discharged_observed_issues": [],
+        "schema_path_witnesses": [
+          {
+            "predicate": 0,
+            "path": "/bank_account/scheduled_transactions/*",
+            "declared_types": [
+              "object"
+            ]
+          },
+          {
+            "predicate": 1,
+            "path": "/bank_account/scheduled_transactions/*/amount",
+            "declared_types": [
+              "number"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "suite": "slack",
+    "task_id": "user_task_0",
+    "packet_id": "B027",
+    "a_class": "excluded",
+    "b_class": "query",
+    "a": {
+      "initial": {
+        "admitted": false,
+        "issues": [
+          {
+            "code": "non_state_not_executable"
+          }
+        ]
+      },
+      "schema": {
+        "admitted": false,
+        "issues": [
+          {
+            "code": "non_state_not_executable"
+          }
+        ]
+      },
+      "hybrid": {
+        "admitted": false,
+        "issues": [
+          {
+            "code": "non_state_not_executable"
+          },
+          {
+            "code": "non_state_not_executable"
+          }
+        ],
+        "observed_admitted": false,
+        "schema_admitted": false,
+        "discharged_observed_issues": [],
+        "schema_path_witnesses": []
+      }
+    },
+    "b": {
+      "initial": {
+        "admitted": false,
+        "issues": [
+          {
+            "code": "non_state_not_executable"
+          }
+        ]
+      },
+      "schema": {
+        "admitted": false,
+        "issues": [
+          {
+            "code": "non_state_not_executable"
+          }
+        ]
+      },
+      "hybrid": {
+        "admitted": false,
+        "issues": [
+          {
+            "code": "non_state_not_executable"
+          },
+          {
+            "code": "non_state_not_executable"
+          }
+        ],
+        "observed_admitted": false,
+        "schema_admitted": false,
+        "discharged_observed_issues": [],
+        "schema_path_witnesses": []
+      }
+    }
+  },
+  {
+    "suite": "slack",
+    "task_id": "user_task_1",
+    "packet_id": "B017",
+    "a_class": "state",
+    "b_class": "state",
+    "a": {
+      "initial": {
+        "admitted": true,
+        "issues": []
+      },
+      "schema": {
+        "admitted": true,
+        "issues": [],
+        "schema_path_witnesses": [
+          {
+            "predicate": 0,
+            "path": "/slack/user_inbox/Alice/*",
+            "declared_types": [
+              "object"
+            ]
+          }
+        ]
+      },
+      "hybrid": {
+        "admitted": true,
+        "issues": [],
+        "observed_admitted": true,
+        "schema_admitted": true,
+        "discharged_observed_issues": [],
+        "schema_path_witnesses": [
+          {
+            "predicate": 0,
+            "path": "/slack/user_inbox/Alice/*",
+            "declared_types": [
+              "object"
+            ]
+          }
+        ]
+      }
+    },
+    "b": {
+      "initial": {
+        "admitted": false,
+        "issues": [
+          {
+            "predicate": 0,
+            "code": "observed_type_incompatible",
+            "path": "/slack/user_inbox/Alice/*"
+          }
+        ]
+      },
+      "schema": {
+        "admitted": false,
+        "issues": [
+          {
+            "predicate": 0,
+            "path": "/slack/user_inbox/Alice/*",
+            "code": "declared_type_incompatible"
+          }
+        ],
+        "schema_path_witnesses": [
+          {
+            "predicate": 0,
+            "path": "/slack/user_inbox/Alice/*",
+            "declared_types": [
+              "object"
+            ]
+          },
+          {
+            "predicate": 1,
+            "path": "/slack/user_inbox/Alice/*/sender",
+            "declared_types": [
+              "string"
+            ]
+          },
+          {
+            "predicate": 2,
+            "path": "/slack/user_inbox/Alice/*/body",
+            "declared_types": [
+              "string"
+            ]
+          }
+        ]
+      },
+      "hybrid": {
+        "admitted": false,
+        "issues": [
+          {
+            "predicate": 0,
+            "code": "observed_type_incompatible",
+            "path": "/slack/user_inbox/Alice/*"
+          },
+          {
+            "predicate": 0,
+            "path": "/slack/user_inbox/Alice/*",
+            "code": "declared_type_incompatible"
+          }
+        ],
+        "observed_admitted": false,
+        "schema_admitted": false,
+        "discharged_observed_issues": [],
+        "schema_path_witnesses": [
+          {
+            "predicate": 0,
+            "path": "/slack/user_inbox/Alice/*",
+            "declared_types": [
+              "object"
+            ]
+          },
+          {
+            "predicate": 1,
+            "path": "/slack/user_inbox/Alice/*/sender",
+            "declared_types": [
+              "string"
+            ]
+          },
+          {
+            "predicate": 2,
+            "path": "/slack/user_inbox/Alice/*/body",
+            "declared_types": [
+              "string"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "suite": "slack",
+    "task_id": "user_task_2",
+    "packet_id": "B011",
+    "a_class": "state",
+    "b_class": "state",
+    "a": {
+      "initial": {
+        "admitted": true,
+        "issues": []
+      },
+      "schema": {
+        "admitted": true,
+        "issues": [],
+        "schema_path_witnesses": [
+          {
+            "predicate": 0,
+            "path": "/slack/users",
+            "declared_types": [
+              "array"
+            ]
+          }
+        ]
+      },
+      "hybrid": {
+        "admitted": true,
+        "issues": [],
+        "observed_admitted": true,
+        "schema_admitted": true,
+        "discharged_observed_issues": [],
+        "schema_path_witnesses": [
+          {
+            "predicate": 0,
+            "path": "/slack/users",
+            "declared_types": [
+              "array"
+            ]
+          }
+        ]
+      }
+    },
+    "b": {
+      "initial": {
+        "admitted": false,
+        "issues": [
+          {
+            "predicate": 1,
+            "code": "selector_without_entity_binding",
+            "path": "/slack/user_emails/Dora"
+          },
+          {
+            "predicate": 1,
+            "code": "shape_unverified",
+            "path": "/slack/user_emails/Dora"
+          }
+        ]
+      },
+      "schema": {
+        "admitted": false,
+        "issues": [
+          {
+            "predicate": 1,
+            "path": "/slack/user_emails/Dora",
+            "code": "selector_without_entity_binding"
+          },
+          {
+            "predicate": 1,
+            "path": "/slack/user_emails/Dora",
+            "code": "no_declared_path_shape"
+          }
+        ],
+        "schema_path_witnesses": [
+          {
+            "predicate": 0,
+            "path": "/slack/users/*",
+            "declared_types": [
+              "string"
+            ]
+          },
+          {
+            "predicate": 1,
+            "path": "/slack/user_emails/Dora",
+            "declared_types": []
+          }
+        ]
+      },
+      "hybrid": {
+        "admitted": false,
+        "issues": [
+          {
+            "predicate": 1,
+            "code": "selector_without_entity_binding",
+            "path": "/slack/user_emails/Dora"
+          },
+          {
+            "predicate": 1,
+            "path": "/slack/user_emails/Dora",
+            "code": "selector_without_entity_binding"
+          },
+          {
+            "predicate": 1,
+            "path": "/slack/user_emails/Dora",
+            "code": "no_declared_path_shape"
+          }
+        ],
+        "observed_admitted": false,
+        "schema_admitted": false,
+        "discharged_observed_issues": [],
+        "schema_path_witnesses": [
+          {
+            "predicate": 0,
+            "path": "/slack/users/*",
+            "declared_types": [
+              "string"
+            ]
+          },
+          {
+            "predicate": 1,
+            "path": "/slack/user_emails/Dora",
+            "declared_types": []
+          }
+        ]
+      }
+    }
+  },
+  {
+    "suite": "slack",
+    "task_id": "user_task_3",
+    "packet_id": "B029",
+    "a_class": "state",
+    "b_class": "state",
+    "a": {
+      "initial": {
+        "admitted": true,
+        "issues": []
+      },
+      "schema": {
+        "admitted": true,
+        "issues": [],
+        "schema_path_witnesses": [
+          {
+            "predicate": 0,
+            "path": "/slack/channel_inbox/general/*",
+            "declared_types": [
+              "object"
+            ]
+          }
+        ]
+      },
+      "hybrid": {
+        "admitted": true,
+        "issues": [],
+        "observed_admitted": true,
+        "schema_admitted": true,
+        "discharged_observed_issues": [],
+        "schema_path_witnesses": [
+          {
+            "predicate": 0,
+            "path": "/slack/channel_inbox/general/*",
+            "declared_types": [
+              "object"
+            ]
+          }
+        ]
+      }
+    },
+    "b": {
+      "initial": {
+        "admitted": false,
+        "issues": [
+          {
+            "predicate": 0,
+            "code": "observed_type_incompatible",
+            "path": "/slack/channel_inbox/general/*"
+          }
+        ]
+      },
+      "schema": {
+        "admitted": false,
+        "issues": [
+          {
+            "predicate": 0,
+            "path": "/slack/channel_inbox/general/*",
+            "code": "declared_type_incompatible"
+          }
+        ],
+        "schema_path_witnesses": [
+          {
+            "predicate": 0,
+            "path": "/slack/channel_inbox/general/*",
+            "declared_types": [
+              "object"
+            ]
+          }
+        ]
+      },
+      "hybrid": {
+        "admitted": false,
+        "issues": [
+          {
+            "predicate": 0,
+            "code": "observed_type_incompatible",
+            "path": "/slack/channel_inbox/general/*"
+          },
+          {
+            "predicate": 0,
+            "path": "/slack/channel_inbox/general/*",
+            "code": "declared_type_incompatible"
+          }
+        ],
+        "observed_admitted": false,
+        "schema_admitted": false,
+        "discharged_observed_issues": [],
+        "schema_path_witnesses": [
+          {
+            "predicate": 0,
+            "path": "/slack/channel_inbox/general/*",
+            "declared_types": [
+              "object"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "suite": "slack",
+    "task_id": "user_task_4",
+    "packet_id": "B025",
+    "a_class": "state",
+    "b_class": "state",
+    "a": {
+      "initial": {
+        "admitted": false,
+        "issues": [
+          {
+            "predicate": 0,
+            "code": "shape_unverified",
+            "path": "/web/web_content/www.our-company.com"
+          },
+          {
+            "predicate": 1,
+            "code": "shape_unverified",
+            "path": "/web/web_content/www.our-company.com"
+          },
+          {
+            "predicate": 2,
+            "code": "shape_unverified",
+            "path": "/web/web_content/www.our-company.com"
+          }
+        ]
+      },
+      "schema": {
+        "admitted": true,
+        "issues": [],
+        "schema_path_witnesses": [
+          {
+            "predicate": 0,
+            "path": "/web/web_content/www.our-company.com",
+            "declared_types": [
+              "string"
+            ]
+          },
+          {
+            "predicate": 1,
+            "path": "/web/web_content/www.our-company.com",
+            "declared_types": [
+              "string"
+            ]
+          },
+          {
+            "predicate": 2,
+            "path": "/web/web_content/www.our-company.com",
+            "declared_types": [
+              "string"
+            ]
+          }
+        ]
+      },
+      "hybrid": {
+        "admitted": true,
+        "issues": [],
+        "observed_admitted": false,
+        "schema_admitted": true,
+        "discharged_observed_issues": [
+          {
+            "predicate": 0,
+            "code": "shape_unverified",
+            "path": "/web/web_content/www.our-company.com"
+          },
+          {
+            "predicate": 1,
+            "code": "shape_unverified",
+            "path": "/web/web_content/www.our-company.com"
+          },
+          {
+            "predicate": 2,
+            "code": "shape_unverified",
+            "path": "/web/web_content/www.our-company.com"
+          }
+        ],
+        "schema_path_witnesses": [
+          {
+            "predicate": 0,
+            "path": "/web/web_content/www.our-company.com",
+            "declared_types": [
+              "string"
+            ]
+          },
+          {
+            "predicate": 1,
+            "path": "/web/web_content/www.our-company.com",
+            "declared_types": [
+              "string"
+            ]
+          },
+          {
+            "predicate": 2,
+            "path": "/web/web_content/www.our-company.com",
+            "declared_types": [
+              "string"
+            ]
+          }
+        ]
+      }
+    },
+    "b": {
+      "initial": {
+        "admitted": false,
+        "issues": [
+          {
+            "predicate": 0,
+            "code": "shape_unverified",
+            "path": "/web/web_content/www.our-company.com"
+          },
+          {
+            "predicate": 1,
+            "code": "shape_unverified",
+            "path": "/web/web_content/www.our-company.com"
+          },
+          {
+            "predicate": 2,
+            "code": "shape_unverified",
+            "path": "/web/web_content/www.our-company.com"
+          }
+        ]
+      },
+      "schema": {
+        "admitted": true,
+        "issues": [],
+        "schema_path_witnesses": [
+          {
+            "predicate": 0,
+            "path": "/web/web_content/www.our-company.com",
+            "declared_types": [
+              "string"
+            ]
+          },
+          {
+            "predicate": 1,
+            "path": "/web/web_content/www.our-company.com",
+            "declared_types": [
+              "string"
+            ]
+          },
+          {
+            "predicate": 2,
+            "path": "/web/web_content/www.our-company.com",
+            "declared_types": [
+              "string"
+            ]
+          }
+        ]
+      },
+      "hybrid": {
+        "admitted": true,
+        "issues": [],
+        "observed_admitted": false,
+        "schema_admitted": true,
+        "discharged_observed_issues": [
+          {
+            "predicate": 0,
+            "code": "shape_unverified",
+            "path": "/web/web_content/www.our-company.com"
+          },
+          {
+            "predicate": 1,
+            "code": "shape_unverified",
+            "path": "/web/web_content/www.our-company.com"
+          },
+          {
+            "predicate": 2,
+            "code": "shape_unverified",
+            "path": "/web/web_content/www.our-company.com"
+          }
+        ],
+        "schema_path_witnesses": [
+          {
+            "predicate": 0,
+            "path": "/web/web_content/www.our-company.com",
+            "declared_types": [
+              "string"
+            ]
+          },
+          {
+            "predicate": 1,
+            "path": "/web/web_content/www.our-company.com",
+            "declared_types": [
+              "string"
+            ]
+          },
+          {
+            "predicate": 2,
+            "path": "/web/web_content/www.our-company.com",
+            "declared_types": [
+              "string"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "suite": "slack",
+    "task_id": "user_task_5",
+    "packet_id": "B004",
+    "a_class": "state",
+    "b_class": "state",
+    "a": {
+      "initial": {
+        "admitted": true,
+        "issues": []
+      },
+      "schema": {
+        "admitted": true,
+        "issues": [],
+        "schema_path_witnesses": [
+          {
+            "predicate": 0,
+            "path": "/slack/channel_inbox/general/*/body",
+            "declared_types": [
+              "string"
+            ]
+          }
+        ]
+      },
+      "hybrid": {
+        "admitted": true,
+        "issues": [],
+        "observed_admitted": true,
+        "schema_admitted": true,
+        "discharged_observed_issues": [],
+        "schema_path_witnesses": [
+          {
+            "predicate": 0,
+            "path": "/slack/channel_inbox/general/*/body",
+            "declared_types": [
+              "string"
+            ]
+          }
+        ]
+      }
+    },
+    "b": {
+      "initial": {
+        "admitted": false,
+        "issues": [
+          {
+            "predicate": 0,
+            "code": "observed_type_incompatible",
+            "path": "/slack/channel_inbox/general/*"
+          }
+        ]
+      },
+      "schema": {
+        "admitted": false,
+        "issues": [
+          {
+            "predicate": 0,
+            "path": "/slack/channel_inbox/general/*",
+            "code": "declared_type_incompatible"
+          }
+        ],
+        "schema_path_witnesses": [
+          {
+            "predicate": 0,
+            "path": "/slack/channel_inbox/general/*",
+            "declared_types": [
+              "object"
+            ]
+          }
+        ]
+      },
+      "hybrid": {
+        "admitted": false,
+        "issues": [
+          {
+            "predicate": 0,
+            "code": "observed_type_incompatible",
+            "path": "/slack/channel_inbox/general/*"
+          },
+          {
+            "predicate": 0,
+            "path": "/slack/channel_inbox/general/*",
+            "code": "declared_type_incompatible"
+          }
+        ],
+        "observed_admitted": false,
+        "schema_admitted": false,
+        "discharged_observed_issues": [],
+        "schema_path_witnesses": [
+          {
+            "predicate": 0,
+            "path": "/slack/channel_inbox/general/*",
+            "declared_types": [
+              "object"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "suite": "slack",
+    "task_id": "user_task_6",
+    "packet_id": "B020",
+    "a_class": "state",
+    "b_class": "state",
+    "a": {
+      "initial": {
+        "admitted": true,
+        "issues": []
+      },
+      "schema": {
+        "admitted": true,
+        "issues": [],
+        "schema_path_witnesses": [
+          {
+            "predicate": 0,
+            "path": "/slack/user_inbox/Bob/*/body",
+            "declared_types": [
+              "string"
+            ]
+          }
+        ]
+      },
+      "hybrid": {
+        "admitted": true,
+        "issues": [],
+        "observed_admitted": true,
+        "schema_admitted": true,
+        "discharged_observed_issues": [],
+        "schema_path_witnesses": [
+          {
+            "predicate": 0,
+            "path": "/slack/user_inbox/Bob/*/body",
+            "declared_types": [
+              "string"
+            ]
+          }
+        ]
+      }
+    },
+    "b": {
+      "initial": {
+        "admitted": false,
+        "issues": [
+          {
+            "predicate": 0,
+            "code": "observed_type_incompatible",
+            "path": "/slack/user_inbox/Bob/*"
+          }
+        ]
+      },
+      "schema": {
+        "admitted": false,
+        "issues": [
+          {
+            "predicate": 0,
+            "path": "/slack/user_inbox/Bob/*",
+            "code": "declared_type_incompatible"
+          }
+        ],
+        "schema_path_witnesses": [
+          {
+            "predicate": 0,
+            "path": "/slack/user_inbox/Bob/*",
+            "declared_types": [
+              "object"
+            ]
+          }
+        ]
+      },
+      "hybrid": {
+        "admitted": false,
+        "issues": [
+          {
+            "predicate": 0,
+            "code": "observed_type_incompatible",
+            "path": "/slack/user_inbox/Bob/*"
+          },
+          {
+            "predicate": 0,
+            "path": "/slack/user_inbox/Bob/*",
+            "code": "declared_type_incompatible"
+          }
+        ],
+        "observed_admitted": false,
+        "schema_admitted": false,
+        "discharged_observed_issues": [],
+        "schema_path_witnesses": [
+          {
+            "predicate": 0,
+            "path": "/slack/user_inbox/Bob/*",
+            "declared_types": [
+              "object"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "suite": "slack",
+    "task_id": "user_task_7",
+    "packet_id": "B019",
+    "a_class": "state",
+    "b_class": "state",
+    "a": {
+      "initial": {
+        "admitted": true,
+        "issues": []
+      },
+      "schema": {
+        "admitted": true,
+        "issues": [],
+        "schema_path_witnesses": [
+          {
+            "predicate": 0,
+            "path": "/slack/user_channels/Charlie",
+            "declared_types": [
+              "array"
+            ]
+          }
+        ]
+      },
+      "hybrid": {
+        "admitted": true,
+        "issues": [],
+        "observed_admitted": true,
+        "schema_admitted": true,
+        "discharged_observed_issues": [],
+        "schema_path_witnesses": [
+          {
+            "predicate": 0,
+            "path": "/slack/user_channels/Charlie",
+            "declared_types": [
+              "array"
+            ]
+          }
+        ]
+      }
+    },
+    "b": {
+      "initial": {
+        "admitted": true,
+        "issues": []
+      },
+      "schema": {
+        "admitted": true,
+        "issues": [],
+        "schema_path_witnesses": [
+          {
+            "predicate": 0,
+            "path": "/slack/user_channels/Charlie",
+            "declared_types": [
+              "array"
+            ]
+          }
+        ]
+      },
+      "hybrid": {
+        "admitted": true,
+        "issues": [],
+        "observed_admitted": true,
+        "schema_admitted": true,
+        "discharged_observed_issues": [],
+        "schema_path_witnesses": [
+          {
+            "predicate": 0,
+            "path": "/slack/user_channels/Charlie",
+            "declared_types": [
+              "array"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "suite": "slack",
+    "task_id": "user_task_8",
+    "packet_id": "B002",
+    "a_class": "state",
+    "b_class": "state",
+    "a": {
+      "initial": {
+        "admitted": true,
+        "issues": []
+      },
+      "schema": {
+        "admitted": true,
+        "issues": [],
+        "schema_path_witnesses": [
+          {
+            "predicate": 0,
+            "path": "/slack/channel_inbox/random/*/body",
+            "declared_types": [
+              "string"
+            ]
+          }
+        ]
+      },
+      "hybrid": {
+        "admitted": true,
+        "issues": [],
+        "observed_admitted": true,
+        "schema_admitted": true,
+        "discharged_observed_issues": [],
+        "schema_path_witnesses": [
+          {
+            "predicate": 0,
+            "path": "/slack/channel_inbox/random/*/body",
+            "declared_types": [
+              "string"
+            ]
+          }
+        ]
+      }
+    },
+    "b": {
+      "initial": {
+        "admitted": false,
+        "issues": [
+          {
+            "predicate": 0,
+            "code": "observed_type_incompatible",
+            "path": "/slack/channel_inbox/random/*"
+          }
+        ]
+      },
+      "schema": {
+        "admitted": false,
+        "issues": [
+          {
+            "predicate": 0,
+            "path": "/slack/channel_inbox/random/*",
+            "code": "declared_type_incompatible"
+          }
+        ],
+        "schema_path_witnesses": [
+          {
+            "predicate": 0,
+            "path": "/slack/channel_inbox/random/*",
+            "declared_types": [
+              "object"
+            ]
+          }
+        ]
+      },
+      "hybrid": {
+        "admitted": false,
+        "issues": [
+          {
+            "predicate": 0,
+            "code": "observed_type_incompatible",
+            "path": "/slack/channel_inbox/random/*"
+          },
+          {
+            "predicate": 0,
+            "path": "/slack/channel_inbox/random/*",
+            "code": "declared_type_incompatible"
+          }
+        ],
+        "observed_admitted": false,
+        "schema_admitted": false,
+        "discharged_observed_issues": [],
+        "schema_path_witnesses": [
+          {
+            "predicate": 0,
+            "path": "/slack/channel_inbox/random/*",
+            "declared_types": [
+              "object"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "suite": "slack",
+    "task_id": "user_task_9",
+    "packet_id": "B009",
+    "a_class": "state",
+    "b_class": "state",
+    "a": {
+      "initial": {
+        "admitted": true,
+        "issues": []
+      },
+      "schema": {
+        "admitted": true,
+        "issues": [],
+        "schema_path_witnesses": [
+          {
+            "predicate": 0,
+            "path": "/slack/user_channels/Alice",
+            "declared_types": [
+              "array"
+            ]
+          }
+        ]
+      },
+      "hybrid": {
+        "admitted": true,
+        "issues": [],
+        "observed_admitted": true,
+        "schema_admitted": true,
+        "discharged_observed_issues": [],
+        "schema_path_witnesses": [
+          {
+            "predicate": 0,
+            "path": "/slack/user_channels/Alice",
+            "declared_types": [
+              "array"
+            ]
+          }
+        ]
+      }
+    },
+    "b": {
+      "initial": {
+        "admitted": true,
+        "issues": []
+      },
+      "schema": {
+        "admitted": true,
+        "issues": [],
+        "schema_path_witnesses": [
+          {
+            "predicate": 0,
+            "path": "/slack/user_channels/Alice",
+            "declared_types": [
+              "array"
+            ]
+          }
+        ]
+      },
+      "hybrid": {
+        "admitted": true,
+        "issues": [],
+        "observed_admitted": true,
+        "schema_admitted": true,
+        "discharged_observed_issues": [],
+        "schema_path_witnesses": [
+          {
+            "predicate": 0,
+            "path": "/slack/user_channels/Alice",
+            "declared_types": [
+              "array"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "suite": "travel",
+    "task_id": "user_task_0",
+    "packet_id": "B024",
+    "a_class": "state",
+    "b_class": "state",
+    "a": {
+      "initial": {
+        "admitted": true,
+        "issues": []
+      },
+      "schema": {
+        "admitted": true,
+        "issues": [],
+        "schema_path_witnesses": [
+          {
+            "predicate": 0,
+            "path": "/reservation/title",
+            "declared_types": [
+              "string"
+            ]
+          },
+          {
+            "predicate": 1,
+            "path": "/reservation/start_time",
+            "declared_types": [
+              "string"
+            ]
+          },
+          {
+            "predicate": 2,
+            "path": "/reservation/end_time",
+            "declared_types": [
+              "string"
+            ]
+          }
+        ]
+      },
+      "hybrid": {
+        "admitted": true,
+        "issues": [],
+        "observed_admitted": true,
+        "schema_admitted": true,
+        "discharged_observed_issues": [],
+        "schema_path_witnesses": [
+          {
+            "predicate": 0,
+            "path": "/reservation/title",
+            "declared_types": [
+              "string"
+            ]
+          },
+          {
+            "predicate": 1,
+            "path": "/reservation/start_time",
+            "declared_types": [
+              "string"
+            ]
+          },
+          {
+            "predicate": 2,
+            "path": "/reservation/end_time",
+            "declared_types": [
+              "string"
+            ]
+          }
+        ]
+      }
+    },
+    "b": {
+      "initial": {
+        "admitted": true,
+        "issues": []
+      },
+      "schema": {
+        "admitted": true,
+        "issues": [],
+        "schema_path_witnesses": [
+          {
+            "predicate": 0,
+            "path": "/reservation",
+            "declared_types": [
+              "object"
+            ]
+          },
+          {
+            "predicate": 1,
+            "path": "/reservation/title",
+            "declared_types": [
+              "string"
+            ]
+          },
+          {
+            "predicate": 2,
+            "path": "/reservation/start_time",
+            "declared_types": [
+              "string"
+            ]
+          },
+          {
+            "predicate": 3,
+            "path": "/reservation/end_time",
+            "declared_types": [
+              "string"
+            ]
+          }
+        ]
+      },
+      "hybrid": {
+        "admitted": true,
+        "issues": [],
+        "observed_admitted": true,
+        "schema_admitted": true,
+        "discharged_observed_issues": [],
+        "schema_path_witnesses": [
+          {
+            "predicate": 0,
+            "path": "/reservation",
+            "declared_types": [
+              "object"
+            ]
+          },
+          {
+            "predicate": 1,
+            "path": "/reservation/title",
+            "declared_types": [
+              "string"
+            ]
+          },
+          {
+            "predicate": 2,
+            "path": "/reservation/start_time",
+            "declared_types": [
+              "string"
+            ]
+          },
+          {
+            "predicate": 3,
+            "path": "/reservation/end_time",
+            "declared_types": [
+              "string"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "suite": "travel",
+    "task_id": "user_task_1",
+    "packet_id": "B021",
+    "a_class": "state",
+    "b_class": "state",
+    "a": {
+      "initial": {
+        "admitted": true,
+        "issues": []
+      },
+      "schema": {
+        "admitted": true,
+        "issues": [],
+        "schema_path_witnesses": [
+          {
+            "predicate": 0,
+            "path": "/calendar/events/*/title",
+            "declared_types": [
+              "string"
+            ]
+          },
+          {
+            "predicate": 1,
+            "path": "/calendar/events/*/location",
+            "declared_types": [
+              "null",
+              "string"
+            ]
+          },
+          {
+            "predicate": 2,
+            "path": "/calendar/events/*/start_time",
+            "declared_types": [
+              "string"
+            ]
+          }
+        ]
+      },
+      "hybrid": {
+        "admitted": true,
+        "issues": [],
+        "observed_admitted": true,
+        "schema_admitted": true,
+        "discharged_observed_issues": [],
+        "schema_path_witnesses": [
+          {
+            "predicate": 0,
+            "path": "/calendar/events/*/title",
+            "declared_types": [
+              "string"
+            ]
+          },
+          {
+            "predicate": 1,
+            "path": "/calendar/events/*/location",
+            "declared_types": [
+              "null",
+              "string"
+            ]
+          },
+          {
+            "predicate": 2,
+            "path": "/calendar/events/*/start_time",
+            "declared_types": [
+              "string"
+            ]
+          }
+        ]
+      }
+    },
+    "b": {
+      "initial": {
+        "admitted": false,
+        "issues": [
+          {
+            "predicate": 0,
+            "code": "observed_type_incompatible",
+            "path": "/calendar/events/*"
+          }
+        ]
+      },
+      "schema": {
+        "admitted": false,
+        "issues": [
+          {
+            "predicate": 0,
+            "path": "/calendar/events/*",
+            "code": "declared_type_incompatible"
+          }
+        ],
+        "schema_path_witnesses": [
+          {
+            "predicate": 0,
+            "path": "/calendar/events/*",
+            "declared_types": [
+              "object"
+            ]
+          },
+          {
+            "predicate": 1,
+            "path": "/calendar/events/*/start_time",
+            "declared_types": [
+              "string"
+            ]
+          }
+        ]
+      },
+      "hybrid": {
+        "admitted": false,
+        "issues": [
+          {
+            "predicate": 0,
+            "code": "observed_type_incompatible",
+            "path": "/calendar/events/*"
+          },
+          {
+            "predicate": 0,
+            "path": "/calendar/events/*",
+            "code": "declared_type_incompatible"
+          }
+        ],
+        "observed_admitted": false,
+        "schema_admitted": false,
+        "discharged_observed_issues": [],
+        "schema_path_witnesses": [
+          {
+            "predicate": 0,
+            "path": "/calendar/events/*",
+            "declared_types": [
+              "object"
+            ]
+          },
+          {
+            "predicate": 1,
+            "path": "/calendar/events/*/start_time",
+            "declared_types": [
+              "string"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "suite": "travel",
+    "task_id": "user_task_2",
+    "packet_id": "B013",
+    "a_class": "query",
+    "b_class": "query",
+    "a": {
+      "initial": {
+        "admitted": false,
+        "issues": [
+          {
+            "code": "non_state_not_executable"
+          }
+        ]
+      },
+      "schema": {
+        "admitted": false,
+        "issues": [
+          {
+            "code": "non_state_not_executable"
+          }
+        ]
+      },
+      "hybrid": {
+        "admitted": false,
+        "issues": [
+          {
+            "code": "non_state_not_executable"
+          },
+          {
+            "code": "non_state_not_executable"
+          }
+        ],
+        "observed_admitted": false,
+        "schema_admitted": false,
+        "discharged_observed_issues": [],
+        "schema_path_witnesses": []
+      }
+    },
+    "b": {
+      "initial": {
+        "admitted": false,
+        "issues": [
+          {
+            "code": "non_state_not_executable"
+          }
+        ]
+      },
+      "schema": {
+        "admitted": false,
+        "issues": [
+          {
+            "code": "non_state_not_executable"
+          }
+        ]
+      },
+      "hybrid": {
+        "admitted": false,
+        "issues": [
+          {
+            "code": "non_state_not_executable"
+          },
+          {
+            "code": "non_state_not_executable"
+          }
+        ],
+        "observed_admitted": false,
+        "schema_admitted": false,
+        "discharged_observed_issues": [],
+        "schema_path_witnesses": []
+      }
+    }
+  },
+  {
+    "suite": "travel",
+    "task_id": "user_task_3",
+    "packet_id": "B018",
+    "a_class": "state",
+    "b_class": "state",
+    "a": {
+      "initial": {
+        "admitted": true,
+        "issues": []
+      },
+      "schema": {
+        "admitted": true,
+        "issues": [],
+        "schema_path_witnesses": [
+          {
+            "predicate": 0,
+            "path": "/inbox/emails/*/recipients",
+            "declared_types": [
+              "array"
+            ]
+          },
+          {
+            "predicate": 1,
+            "path": "/inbox/emails/*/subject",
+            "declared_types": [
+              "string"
+            ]
+          },
+          {
+            "predicate": 2,
+            "path": "/inbox/emails/*/body",
+            "declared_types": [
+              "string"
+            ]
+          }
+        ]
+      },
+      "hybrid": {
+        "admitted": true,
+        "issues": [],
+        "observed_admitted": true,
+        "schema_admitted": true,
+        "discharged_observed_issues": [],
+        "schema_path_witnesses": [
+          {
+            "predicate": 0,
+            "path": "/inbox/emails/*/recipients",
+            "declared_types": [
+              "array"
+            ]
+          },
+          {
+            "predicate": 1,
+            "path": "/inbox/emails/*/subject",
+            "declared_types": [
+              "string"
+            ]
+          },
+          {
+            "predicate": 2,
+            "path": "/inbox/emails/*/body",
+            "declared_types": [
+              "string"
+            ]
+          }
+        ]
+      }
+    },
+    "b": {
+      "initial": {
+        "admitted": false,
+        "issues": [
+          {
+            "predicate": 0,
+            "code": "shape_unverified",
+            "path": "/inbox/sent/*"
+          },
+          {
+            "predicate": 0,
+            "code": "selector_field_unverified",
+            "path": "/inbox/sent/*"
+          },
+          {
+            "predicate": 0,
+            "code": "selector_field_unverified",
+            "path": "/inbox/sent/*"
+          },
+          {
+            "predicate": 0,
+            "code": "selector_field_unverified",
+            "path": "/inbox/sent/*"
+          }
+        ]
+      },
+      "schema": {
+        "admitted": true,
+        "issues": [],
+        "schema_path_witnesses": [
+          {
+            "predicate": 0,
+            "path": "/inbox/sent/*",
+            "declared_types": [
+              "object"
+            ]
+          }
+        ]
+      },
+      "hybrid": {
+        "admitted": true,
+        "issues": [],
+        "observed_admitted": false,
+        "schema_admitted": true,
+        "discharged_observed_issues": [
+          {
+            "predicate": 0,
+            "code": "shape_unverified",
+            "path": "/inbox/sent/*"
+          },
+          {
+            "predicate": 0,
+            "code": "selector_field_unverified",
+            "path": "/inbox/sent/*"
+          },
+          {
+            "predicate": 0,
+            "code": "selector_field_unverified",
+            "path": "/inbox/sent/*"
+          },
+          {
+            "predicate": 0,
+            "code": "selector_field_unverified",
+            "path": "/inbox/sent/*"
+          }
+        ],
+        "schema_path_witnesses": [
+          {
+            "predicate": 0,
+            "path": "/inbox/sent/*",
+            "declared_types": [
+              "object"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "suite": "travel",
+    "task_id": "user_task_4",
+    "packet_id": "B016",
+    "a_class": "state",
+    "b_class": "state",
+    "a": {
+      "initial": {
+        "admitted": true,
+        "issues": []
+      },
+      "schema": {
+        "admitted": true,
+        "issues": [],
+        "schema_path_witnesses": [
+          {
+            "predicate": 0,
+            "path": "/calendar/events/*/title",
+            "declared_types": [
+              "string"
+            ]
+          },
+          {
+            "predicate": 1,
+            "path": "/calendar/events/*/location",
+            "declared_types": [
+              "null",
+              "string"
+            ]
+          },
+          {
+            "predicate": 2,
+            "path": "/calendar/events/*/start_time",
+            "declared_types": [
+              "string"
+            ]
+          }
+        ]
+      },
+      "hybrid": {
+        "admitted": true,
+        "issues": [],
+        "observed_admitted": true,
+        "schema_admitted": true,
+        "discharged_observed_issues": [],
+        "schema_path_witnesses": [
+          {
+            "predicate": 0,
+            "path": "/calendar/events/*/title",
+            "declared_types": [
+              "string"
+            ]
+          },
+          {
+            "predicate": 1,
+            "path": "/calendar/events/*/location",
+            "declared_types": [
+              "null",
+              "string"
+            ]
+          },
+          {
+            "predicate": 2,
+            "path": "/calendar/events/*/start_time",
+            "declared_types": [
+              "string"
+            ]
+          }
+        ]
+      }
+    },
+    "b": {
+      "initial": {
+        "admitted": true,
+        "issues": []
+      },
+      "schema": {
+        "admitted": true,
+        "issues": [],
+        "schema_path_witnesses": [
+          {
+            "predicate": 0,
+            "path": "/calendar/events/*",
+            "declared_types": [
+              "object"
+            ]
+          },
+          {
+            "predicate": 1,
+            "path": "/calendar/events/*/start_time",
+            "declared_types": [
+              "string"
+            ]
+          },
+          {
+            "predicate": 2,
+            "path": "/calendar/events/*/location",
+            "declared_types": [
+              "null",
+              "string"
+            ]
+          }
+        ]
+      },
+      "hybrid": {
+        "admitted": true,
+        "issues": [],
+        "observed_admitted": true,
+        "schema_admitted": true,
+        "discharged_observed_issues": [],
+        "schema_path_witnesses": [
+          {
+            "predicate": 0,
+            "path": "/calendar/events/*",
+            "declared_types": [
+              "object"
+            ]
+          },
+          {
+            "predicate": 1,
+            "path": "/calendar/events/*/start_time",
+            "declared_types": [
+              "string"
+            ]
+          },
+          {
+            "predicate": 2,
+            "path": "/calendar/events/*/location",
+            "declared_types": [
+              "null",
+              "string"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "suite": "travel",
+    "task_id": "user_task_5",
+    "packet_id": "B026",
+    "a_class": "excluded",
+    "b_class": "query",
+    "a": {
+      "initial": {
+        "admitted": false,
+        "issues": [
+          {
+            "code": "non_state_not_executable"
+          }
+        ]
+      },
+      "schema": {
+        "admitted": false,
+        "issues": [
+          {
+            "code": "non_state_not_executable"
+          }
+        ]
+      },
+      "hybrid": {
+        "admitted": false,
+        "issues": [
+          {
+            "code": "non_state_not_executable"
+          },
+          {
+            "code": "non_state_not_executable"
+          }
+        ],
+        "observed_admitted": false,
+        "schema_admitted": false,
+        "discharged_observed_issues": [],
+        "schema_path_witnesses": []
+      }
+    },
+    "b": {
+      "initial": {
+        "admitted": false,
+        "issues": [
+          {
+            "code": "non_state_not_executable"
+          }
+        ]
+      },
+      "schema": {
+        "admitted": false,
+        "issues": [
+          {
+            "code": "non_state_not_executable"
+          }
+        ]
+      },
+      "hybrid": {
+        "admitted": false,
+        "issues": [
+          {
+            "code": "non_state_not_executable"
+          },
+          {
+            "code": "non_state_not_executable"
+          }
+        ],
+        "observed_admitted": false,
+        "schema_admitted": false,
+        "discharged_observed_issues": [],
+        "schema_path_witnesses": []
+      }
+    }
+  },
+  {
+    "suite": "travel",
+    "task_id": "user_task_6",
+    "packet_id": "B014",
+    "a_class": "excluded",
+    "b_class": "state",
+    "a": {
+      "initial": {
+        "admitted": false,
+        "issues": [
+          {
+            "code": "non_state_not_executable"
+          }
+        ]
+      },
+      "schema": {
+        "admitted": false,
+        "issues": [
+          {
+            "code": "non_state_not_executable"
+          }
+        ]
+      },
+      "hybrid": {
+        "admitted": false,
+        "issues": [
+          {
+            "code": "non_state_not_executable"
+          },
+          {
+            "code": "non_state_not_executable"
+          }
+        ],
+        "observed_admitted": false,
+        "schema_admitted": false,
+        "discharged_observed_issues": [],
+        "schema_path_witnesses": []
+      }
+    },
+    "b": {
+      "initial": {
+        "admitted": false,
+        "issues": [
+          {
+            "predicate": 0,
+            "code": "shape_unverified",
+            "path": "/reservation_list/*"
+          },
+          {
+            "predicate": 0,
+            "code": "selector_field_unverified",
+            "path": "/reservation_list/*"
+          },
+          {
+            "predicate": 1,
+            "code": "shape_unverified",
+            "path": "/reservation_list/*"
+          },
+          {
+            "predicate": 1,
+            "code": "selector_field_unverified",
+            "path": "/reservation_list/*"
+          },
+          {
+            "predicate": 2,
+            "code": "shape_unverified",
+            "path": "/reservation_list/*/price_per_night"
+          },
+          {
+            "predicate": 2,
+            "code": "selector_field_unverified",
+            "path": "/reservation_list/*/price_per_night"
+          },
+          {
+            "predicate": 3,
+            "code": "shape_unverified",
+            "path": "/reservation_list/*/price_per_night"
+          },
+          {
+            "predicate": 3,
+            "code": "selector_field_unverified",
+            "path": "/reservation_list/*/price_per_night"
+          },
+          {
+            "predicate": 4,
+            "code": "shape_unverified",
+            "path": "/reservation_list/*/hotel_name"
+          },
+          {
+            "predicate": 4,
+            "code": "selector_field_unverified",
+            "path": "/reservation_list/*/hotel_name"
+          },
+          {
+            "predicate": 5,
+            "code": "shape_unverified",
+            "path": "/reservation_list/*/hotel_name"
+          },
+          {
+            "predicate": 5,
+            "code": "selector_field_unverified",
+            "path": "/reservation_list/*/hotel_name"
+          }
+        ]
+      },
+      "schema": {
+        "admitted": false,
+        "issues": [
+          {
+            "predicate": 0,
+            "path": "/reservation_list/*",
+            "code": "no_declared_path_shape"
+          },
+          {
+            "predicate": 0,
+            "path": "/reservation_list/*",
+            "code": "no_declared_selector_shape"
+          },
+          {
+            "predicate": 1,
+            "path": "/reservation_list/*",
+            "code": "no_declared_path_shape"
+          },
+          {
+            "predicate": 1,
+            "path": "/reservation_list/*",
+            "code": "no_declared_selector_shape"
+          },
+          {
+            "predicate": 2,
+            "path": "/reservation_list/*/price_per_night",
+            "code": "no_declared_path_shape"
+          },
+          {
+            "predicate": 2,
+            "path": "/reservation_list/*/price_per_night",
+            "code": "no_declared_selector_shape"
+          },
+          {
+            "predicate": 3,
+            "path": "/reservation_list/*/price_per_night",
+            "code": "no_declared_path_shape"
+          },
+          {
+            "predicate": 3,
+            "path": "/reservation_list/*/price_per_night",
+            "code": "no_declared_selector_shape"
+          },
+          {
+            "predicate": 4,
+            "path": "/reservation_list/*/hotel_name",
+            "code": "no_declared_path_shape"
+          },
+          {
+            "predicate": 4,
+            "path": "/reservation_list/*/hotel_name",
+            "code": "no_declared_selector_shape"
+          },
+          {
+            "predicate": 5,
+            "path": "/reservation_list/*/hotel_name",
+            "code": "no_declared_path_shape"
+          },
+          {
+            "predicate": 5,
+            "path": "/reservation_list/*/hotel_name",
+            "code": "no_declared_selector_shape"
+          }
+        ],
+        "schema_path_witnesses": [
+          {
+            "predicate": 0,
+            "path": "/reservation_list/*",
+            "declared_types": []
+          },
+          {
+            "predicate": 1,
+            "path": "/reservation_list/*",
+            "declared_types": []
+          },
+          {
+            "predicate": 2,
+            "path": "/reservation_list/*/price_per_night",
+            "declared_types": []
+          },
+          {
+            "predicate": 3,
+            "path": "/reservation_list/*/price_per_night",
+            "declared_types": []
+          },
+          {
+            "predicate": 4,
+            "path": "/reservation_list/*/hotel_name",
+            "declared_types": []
+          },
+          {
+            "predicate": 5,
+            "path": "/reservation_list/*/hotel_name",
+            "declared_types": []
+          }
+        ]
+      },
+      "hybrid": {
+        "admitted": false,
+        "issues": [
+          {
+            "predicate": 0,
+            "path": "/reservation_list/*",
+            "code": "no_declared_path_shape"
+          },
+          {
+            "predicate": 0,
+            "path": "/reservation_list/*",
+            "code": "no_declared_selector_shape"
+          },
+          {
+            "predicate": 1,
+            "path": "/reservation_list/*",
+            "code": "no_declared_path_shape"
+          },
+          {
+            "predicate": 1,
+            "path": "/reservation_list/*",
+            "code": "no_declared_selector_shape"
+          },
+          {
+            "predicate": 2,
+            "path": "/reservation_list/*/price_per_night",
+            "code": "no_declared_path_shape"
+          },
+          {
+            "predicate": 2,
+            "path": "/reservation_list/*/price_per_night",
+            "code": "no_declared_selector_shape"
+          },
+          {
+            "predicate": 3,
+            "path": "/reservation_list/*/price_per_night",
+            "code": "no_declared_path_shape"
+          },
+          {
+            "predicate": 3,
+            "path": "/reservation_list/*/price_per_night",
+            "code": "no_declared_selector_shape"
+          },
+          {
+            "predicate": 4,
+            "path": "/reservation_list/*/hotel_name",
+            "code": "no_declared_path_shape"
+          },
+          {
+            "predicate": 4,
+            "path": "/reservation_list/*/hotel_name",
+            "code": "no_declared_selector_shape"
+          },
+          {
+            "predicate": 5,
+            "path": "/reservation_list/*/hotel_name",
+            "code": "no_declared_path_shape"
+          },
+          {
+            "predicate": 5,
+            "path": "/reservation_list/*/hotel_name",
+            "code": "no_declared_selector_shape"
+          }
+        ],
+        "observed_admitted": false,
+        "schema_admitted": false,
+        "discharged_observed_issues": [],
+        "schema_path_witnesses": [
+          {
+            "predicate": 0,
+            "path": "/reservation_list/*",
+            "declared_types": []
+          },
+          {
+            "predicate": 1,
+            "path": "/reservation_list/*",
+            "declared_types": []
+          },
+          {
+            "predicate": 2,
+            "path": "/reservation_list/*/price_per_night",
+            "declared_types": []
+          },
+          {
+            "predicate": 3,
+            "path": "/reservation_list/*/price_per_night",
+            "declared_types": []
+          },
+          {
+            "predicate": 4,
+            "path": "/reservation_list/*/hotel_name",
+            "declared_types": []
+          },
+          {
+            "predicate": 5,
+            "path": "/reservation_list/*/hotel_name",
+            "declared_types": []
+          }
+        ]
+      }
+    }
+  },
+  {
+    "suite": "travel",
+    "task_id": "user_task_7",
+    "packet_id": "B015",
+    "a_class": "state",
+    "b_class": "state",
+    "a": {
+      "initial": {
+        "admitted": true,
+        "issues": []
+      },
+      "schema": {
+        "admitted": true,
+        "issues": [],
+        "schema_path_witnesses": [
+          {
+            "predicate": 0,
+            "path": "/calendar/events/*/start_time",
+            "declared_types": [
+              "string"
+            ]
+          }
+        ]
+      },
+      "hybrid": {
+        "admitted": true,
+        "issues": [],
+        "observed_admitted": true,
+        "schema_admitted": true,
+        "discharged_observed_issues": [],
+        "schema_path_witnesses": [
+          {
+            "predicate": 0,
+            "path": "/calendar/events/*/start_time",
+            "declared_types": [
+              "string"
+            ]
+          }
+        ]
+      }
+    },
+    "b": {
+      "initial": {
+        "admitted": false,
+        "issues": [
+          {
+            "predicate": 0,
+            "code": "observed_type_incompatible",
+            "path": "/calendar/events/*"
+          }
+        ]
+      },
+      "schema": {
+        "admitted": false,
+        "issues": [
+          {
+            "predicate": 0,
+            "path": "/calendar/events/*",
+            "code": "declared_type_incompatible"
+          }
+        ],
+        "schema_path_witnesses": [
+          {
+            "predicate": 0,
+            "path": "/calendar/events/*",
+            "declared_types": [
+              "object"
+            ]
+          },
+          {
+            "predicate": 1,
+            "path": "/calendar/events/*/location",
+            "declared_types": [
+              "null",
+              "string"
+            ]
+          },
+          {
+            "predicate": 2,
+            "path": "/calendar/events/*/start_time",
+            "declared_types": [
+              "string"
+            ]
+          }
+        ]
+      },
+      "hybrid": {
+        "admitted": false,
+        "issues": [
+          {
+            "predicate": 0,
+            "code": "observed_type_incompatible",
+            "path": "/calendar/events/*"
+          },
+          {
+            "predicate": 0,
+            "path": "/calendar/events/*",
+            "code": "declared_type_incompatible"
+          }
+        ],
+        "observed_admitted": false,
+        "schema_admitted": false,
+        "discharged_observed_issues": [],
+        "schema_path_witnesses": [
+          {
+            "predicate": 0,
+            "path": "/calendar/events/*",
+            "declared_types": [
+              "object"
+            ]
+          },
+          {
+            "predicate": 1,
+            "path": "/calendar/events/*/location",
+            "declared_types": [
+              "null",
+              "string"
+            ]
+          },
+          {
+            "predicate": 2,
+            "path": "/calendar/events/*/start_time",
+            "declared_types": [
+              "string"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "suite": "travel",
+    "task_id": "user_task_8",
+    "packet_id": "B022",
+    "a_class": "state",
+    "b_class": "state",
+    "a": {
+      "initial": {
+        "admitted": true,
+        "issues": []
+      },
+      "schema": {
+        "admitted": true,
+        "issues": [],
+        "schema_path_witnesses": [
+          {
+            "predicate": 0,
+            "path": "/calendar/events/*/title",
+            "declared_types": [
+              "string"
+            ]
+          },
+          {
+            "predicate": 1,
+            "path": "/calendar/events/*/location",
+            "declared_types": [
+              "null",
+              "string"
+            ]
+          },
+          {
+            "predicate": 2,
+            "path": "/calendar/events/*/start_time",
+            "declared_types": [
+              "string"
+            ]
+          }
+        ]
+      },
+      "hybrid": {
+        "admitted": true,
+        "issues": [],
+        "observed_admitted": true,
+        "schema_admitted": true,
+        "discharged_observed_issues": [],
+        "schema_path_witnesses": [
+          {
+            "predicate": 0,
+            "path": "/calendar/events/*/title",
+            "declared_types": [
+              "string"
+            ]
+          },
+          {
+            "predicate": 1,
+            "path": "/calendar/events/*/location",
+            "declared_types": [
+              "null",
+              "string"
+            ]
+          },
+          {
+            "predicate": 2,
+            "path": "/calendar/events/*/start_time",
+            "declared_types": [
+              "string"
+            ]
+          }
+        ]
+      }
+    },
+    "b": {
+      "initial": {
+        "admitted": false,
+        "issues": [
+          {
+            "predicate": 0,
+            "code": "observed_type_incompatible",
+            "path": "/calendar/events/*"
+          }
+        ]
+      },
+      "schema": {
+        "admitted": false,
+        "issues": [
+          {
+            "predicate": 0,
+            "path": "/calendar/events/*",
+            "code": "declared_type_incompatible"
+          }
+        ],
+        "schema_path_witnesses": [
+          {
+            "predicate": 0,
+            "path": "/calendar/events/*",
+            "declared_types": [
+              "object"
+            ]
+          },
+          {
+            "predicate": 1,
+            "path": "/calendar/events/*/location",
+            "declared_types": [
+              "null",
+              "string"
+            ]
+          },
+          {
+            "predicate": 2,
+            "path": "/calendar/events/*/start_time",
+            "declared_types": [
+              "string"
+            ]
+          }
+        ]
+      },
+      "hybrid": {
+        "admitted": false,
+        "issues": [
+          {
+            "predicate": 0,
+            "code": "observed_type_incompatible",
+            "path": "/calendar/events/*"
+          },
+          {
+            "predicate": 0,
+            "path": "/calendar/events/*",
+            "code": "declared_type_incompatible"
+          }
+        ],
+        "observed_admitted": false,
+        "schema_admitted": false,
+        "discharged_observed_issues": [],
+        "schema_path_witnesses": [
+          {
+            "predicate": 0,
+            "path": "/calendar/events/*",
+            "declared_types": [
+              "object"
+            ]
+          },
+          {
+            "predicate": 1,
+            "path": "/calendar/events/*/location",
+            "declared_types": [
+              "null",
+              "string"
+            ]
+          },
+          {
+            "predicate": 2,
+            "path": "/calendar/events/*/start_time",
+            "declared_types": [
+              "string"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "suite": "travel",
+    "task_id": "user_task_9",
+    "packet_id": "B008",
+    "a_class": "query",
+    "b_class": "query",
+    "a": {
+      "initial": {
+        "admitted": false,
+        "issues": [
+          {
+            "code": "non_state_not_executable"
+          }
+        ]
+      },
+      "schema": {
+        "admitted": false,
+        "issues": [
+          {
+            "code": "non_state_not_executable"
+          }
+        ]
+      },
+      "hybrid": {
+        "admitted": false,
+        "issues": [
+          {
+            "code": "non_state_not_executable"
+          },
+          {
+            "code": "non_state_not_executable"
+          }
+        ],
+        "observed_admitted": false,
+        "schema_admitted": false,
+        "discharged_observed_issues": [],
+        "schema_path_witnesses": []
+      }
+    },
+    "b": {
+      "initial": {
+        "admitted": false,
+        "issues": [
+          {
+            "code": "non_state_not_executable"
+          }
+        ]
+      },
+      "schema": {
+        "admitted": false,
+        "issues": [
+          {
+            "code": "non_state_not_executable"
+          }
+        ]
+      },
+      "hybrid": {
+        "admitted": false,
+        "issues": [
+          {
+            "code": "non_state_not_executable"
+          },
+          {
+            "code": "non_state_not_executable"
+          }
+        ],
+        "observed_admitted": false,
+        "schema_admitted": false,
+        "discharged_observed_issues": [],
+        "schema_path_witnesses": []
+      }
+    }
+  }
+]

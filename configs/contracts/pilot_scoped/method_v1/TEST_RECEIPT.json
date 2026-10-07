@@ -1,0 +1,349 @@
+{
+  "status": "PASS",
+  "tests_run": 21,
+  "failures": 0,
+  "errors": 0,
+  "targeted_regressions_met": 7,
+  "targeted_regressions_total": 7,
+  "results": [
+    {
+      "name": "post_not_observed",
+      "actual": {
+        "verdict": "unknown",
+        "reason": "common_scope_aggregation",
+        "admission": {
+          "construction_valid": true,
+          "clauses": {
+            "o": {
+              "admitted": true,
+              "issues": []
+            }
+          },
+          "coverage": {
+            "missing": [],
+            "additional": []
+          },
+          "issues": [],
+          "admitted": true
+        },
+        "obligations": {
+          "o": {
+            "verdict": "unknown",
+            "reason": "missing_post_observation"
+          }
+        },
+        "version": "r21.1"
+      },
+      "desired": "unknown",
+      "meets_requirement": true
+    },
+    {
+      "name": "absence_cannot_be_proved_from_missing_snapshot",
+      "actual": {
+        "verdict": "unknown",
+        "reason": "common_scope_aggregation",
+        "admission": {
+          "construction_valid": true,
+          "clauses": {
+            "o": {
+              "admitted": true,
+              "issues": []
+            }
+          },
+          "coverage": {
+            "missing": [],
+            "additional": []
+          },
+          "issues": [],
+          "admitted": true
+        },
+        "obligations": {
+          "o": {
+            "verdict": "unknown",
+            "reason": "missing_post_observation"
+          }
+        },
+        "version": "r21.1"
+      },
+      "desired": "unknown",
+      "meets_requirement": true
+    },
+    {
+      "name": "query_control",
+      "actual": {
+        "verdict": "pass",
+        "reason": "common_scope_aggregation",
+        "admission": {
+          "construction_valid": true,
+          "clauses": {
+            "q": {
+              "admitted": true,
+              "issues": []
+            },
+            "t": {
+              "admitted": true,
+              "issues": []
+            },
+            "n": {
+              "admitted": true,
+              "issues": []
+            }
+          },
+          "coverage": {
+            "missing": [],
+            "additional": []
+          },
+          "issues": [],
+          "admitted": true
+        },
+        "obligations": {
+          "q": {
+            "verdict": "pass",
+            "reason": "bound_assertion",
+            "currency_certified": null
+          },
+          "t": {
+            "verdict": "pass",
+            "reason": "bound_assertion",
+            "currency_certified": false
+          },
+          "n": {
+            "verdict": "pass",
+            "reason": "bound_assertion",
+            "currency_certified": null
+          }
+        },
+        "version": "r21.1"
+      },
+      "desired": "pass",
+      "meets_requirement": true
+    },
+    {
+      "name": "query_field_value_swap",
+      "actual": {
+        "verdict": "fail",
+        "reason": "common_scope_aggregation",
+        "admission": {
+          "construction_valid": true,
+          "clauses": {
+            "q": {
+              "admitted": true,
+              "issues": []
+            },
+            "t": {
+              "admitted": true,
+              "issues": []
+            },
+            "n": {
+              "admitted": true,
+              "issues": []
+            }
+          },
+          "coverage": {
+            "missing": [],
+            "additional": []
+          },
+          "issues": [],
+          "admitted": true
+        },
+        "obligations": {
+          "q": {
+            "verdict": "fail",
+            "reason": "explicit_bound_contradiction",
+            "contradictions": [
+              {
+                "entity": "speedy rentals",
+                "property": "rating",
+                "value": "336",
+                "polarity": "positive",
+                "unit": null,
+                "temporal_scope": null,
+                "role": null
+              }
+            ]
+          },
+          "t": {
+            "verdict": "fail",
+            "reason": "explicit_bound_contradiction",
+            "contradictions": [
+              {
+                "entity": "speedy rentals",
+                "property": "total",
+                "value": "4.5",
+                "polarity": "positive",
+                "unit": null,
+                "temporal_scope": null,
+                "role": null
+              }
+            ]
+          },
+          "n": {
+            "verdict": "pass",
+            "reason": "bound_assertion",
+            "currency_certified": null
+          }
+        },
+        "version": "r21.1"
+      },
+      "desired": "fail",
+      "meets_requirement": true
+    },
+    {
+      "name": "query_conflicting_assertions",
+      "actual": {
+        "verdict": "fail",
+        "reason": "common_scope_aggregation",
+        "admission": {
+          "construction_valid": true,
+          "clauses": {
+            "q": {
+              "admitted": true,
+              "issues": []
+            },
+            "t": {
+              "admitted": true,
+              "issues": []
+            },
+            "n": {
+              "admitted": true,
+              "issues": []
+            }
+          },
+          "coverage": {
+            "missing": [],
+            "additional": []
+          },
+          "issues": [],
+          "admitted": true
+        },
+        "obligations": {
+          "q": {
+            "verdict": "fail",
+            "reason": "explicit_bound_contradiction",
+            "contradictions": [
+              {
+                "entity": "speedy rentals",
+                "property": "rating",
+                "value": "1.0",
+                "polarity": "positive",
+                "unit": null,
+                "temporal_scope": null,
+                "role": null
+              }
+            ]
+          },
+          "t": {
+            "verdict": "pass",
+            "reason": "bound_assertion",
+            "currency_certified": false
+          },
+          "n": {
+            "verdict": "pass",
+            "reason": "bound_assertion",
+            "currency_certified": null
+          }
+        },
+        "version": "r21.1"
+      },
+      "desired": "fail",
+      "meets_requirement": true
+    },
+    {
+      "name": "new_entity_first",
+      "actual": {
+        "verdict": "pass",
+        "reason": "common_scope_aggregation",
+        "admission": {
+          "construction_valid": true,
+          "clauses": {
+            "o": {
+              "admitted": true,
+              "issues": []
+            }
+          },
+          "coverage": {
+            "missing": [],
+            "additional": []
+          },
+          "issues": [],
+          "admitted": true
+        },
+        "obligations": {
+          "o": {
+            "verdict": "pass",
+            "reason": "same_entity_conjunction",
+            "entities": [
+              {
+                "verdict": "pass",
+                "identity": "('id', 'int', 2)",
+                "checks": [
+                  {
+                    "property": "amount",
+                    "verdict": "pass",
+                    "reason": "typed_equality"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        "version": "r21.1"
+      },
+      "desired": "pass",
+      "meets_requirement": true
+    },
+    {
+      "name": "new_entity_last",
+      "actual": {
+        "verdict": "pass",
+        "reason": "common_scope_aggregation",
+        "admission": {
+          "construction_valid": true,
+          "clauses": {
+            "o": {
+              "admitted": true,
+              "issues": []
+            }
+          },
+          "coverage": {
+            "missing": [],
+            "additional": []
+          },
+          "issues": [],
+          "admitted": true
+        },
+        "obligations": {
+          "o": {
+            "verdict": "pass",
+            "reason": "same_entity_conjunction",
+            "entities": [
+              {
+                "verdict": "pass",
+                "identity": "('id', 'int', 2)",
+                "checks": [
+                  {
+                    "property": "amount",
+                    "verdict": "pass",
+                    "reason": "typed_equality"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        "version": "r21.1"
+      },
+      "desired": "pass",
+      "meets_requirement": true
+    }
+  ],
+  "api_calls": 0,
+  "jsonschema_version": "4.25.1",
+  "files": {
+    "contract_executor.py": "8d27dbe5c03a8a14263253952f692cce27386d80e8f14fb52a9eec3e901f3470",
+    "output_schema.json": "5d652330f875e3020b25857c8cdc3638252c8d8d96e6cf0207074598f36166c4",
+    "test_executor.py": "61646c4716408edbf4783eff8db477eab665547baf5d8c629bfb56c0a29f01fe",
+    "IR_SPEC.md": "4d6883f2b9ff5e29822a16f8488b8784de184c8f93b2076a9206e716907ffabc"
+  },
+  "designation": "EXPOSED_GENERIC_DEVELOPMENT_REGRESSIONS_NOT_CONFIRMATION_OR_SEMANTIC_GOLD"
+}

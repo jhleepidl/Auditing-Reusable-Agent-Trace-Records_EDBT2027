@@ -1,0 +1,18 @@
+{
+  "packet_id": "B010",
+  "classification": "query",
+  "classification_reason": "The request is for a factual answer: the user's total spending in March 2022. This can be derived from the initial state's transaction data. No state change is requested, only information.",
+  "state_predicates": [],
+  "answer_facts": [
+    {
+      "value": 1050.0,
+      "evidence_paths": [
+        "/bank_account/transactions"
+      ],
+      "justification": "Sum of amounts for transactions in March 2022 where sender is 'me': 50.0 (2022-03-01) + 1000.0 (2022-03-04) = 1050.0."
+    }
+  ],
+  "ambiguities": [
+    "It is ambiguous whether 'spending' should include only outgoing transactions where sender is 'me', or also other types of debits. Here, only transactions with sender 'me' are counted as spending."
+  ]
+}

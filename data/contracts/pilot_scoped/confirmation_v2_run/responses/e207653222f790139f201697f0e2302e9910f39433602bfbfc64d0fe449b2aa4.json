@@ -1,0 +1,78 @@
+{
+  "request_id": "e207653222f790139f201697f0e2302e9910f39433602bfbfc64d0fe449b2aa4",
+  "task_key": "banking/user_task_14",
+  "method": "schema_only",
+  "model": "gpt-4.1-2025-04-14",
+  "seed": 47,
+  "phase": "confirmation",
+  "request_sha256": "b976236ba418e710648c8377187d551a5fac531eb28d2323f5abecded76fab78",
+  "started_utc": "2026-10-04T13:38:11.759627+00:00",
+  "status": "completed",
+  "api_attempted": true,
+  "cost_usd": 0.002146,
+  "trustworthy_usage_priced": true,
+  "http_status": 200,
+  "provider_request_id": "req_a6ab1b8baa0e4399ad194f576bc167e7",
+  "raw_response": {
+    "id": "chatcmpl-EVGhosecpzJmljz6zKEOnVPsSr5k5",
+    "object": "chat.completion",
+    "created": 1791121092,
+    "model": "gpt-4.1-2025-04-14",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\"ir_version\":\"r21.1\",\"scope_id\":\"banking__user_task_14__common_source_v1\",\"classification\":\"unknown\",\"clauses\":[],\"unknown_reason\":\"No obligations are selected in the common source scope; required_obligation_ids is empty.\"}",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2969,
+      "completion_tokens": 54,
+      "total_tokens": 3023,
+      "prompt_tokens_details": {
+        "cached_tokens": 2816,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_d41fa08ddd"
+  },
+  "finish_reason": "stop",
+  "annotation": {
+    "ir_version": "r21.1",
+    "scope_id": "banking__user_task_14__common_source_v1",
+    "classification": "unknown",
+    "clauses": [],
+    "unknown_reason": "No obligations are selected in the common source scope; required_obligation_ids is empty."
+  },
+  "usage": {
+    "prompt_tokens": 2969,
+    "completion_tokens": 54,
+    "total_tokens": 3023,
+    "prompt_tokens_details": {
+      "cached_tokens": 2816,
+      "audio_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+    }
+  },
+  "resolved_model_id": "gpt-4.1-2025-04-14",
+  "system_fingerprint": "fp_d41fa08ddd",
+  "wall_seconds": 1.2073438158258796
+}

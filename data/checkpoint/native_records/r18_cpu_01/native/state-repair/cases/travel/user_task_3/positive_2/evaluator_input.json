@@ -1,0 +1,59 @@
+{
+  "actions": [
+    {
+      "args": {
+        "city": "Paris"
+      },
+      "function": "get_all_hotels_in_city",
+      "id": null,
+      "placeholder_args": null
+    },
+    {
+      "args": {
+        "hotel_names": [
+          "Le Marais Boutique",
+          "Good Night",
+          "Luxury Palace",
+          "Montmartre Suites"
+        ]
+      },
+      "function": "get_rating_reviews_for_hotels",
+      "id": null,
+      "placeholder_args": null
+    },
+    {
+      "args": {
+        "hotel_names": [
+          "Le Marais Boutique",
+          "Good Night",
+          "Luxury Palace",
+          "Montmartre Suites"
+        ]
+      },
+      "function": "get_hotels_prices",
+      "id": null,
+      "placeholder_args": null
+    },
+    {
+      "args": {
+        "hotel_name": "Luxury Palace"
+      },
+      "function": "get_hotels_address",
+      "id": null,
+      "placeholder_args": null
+    },
+    {
+      "args": {
+        "body": "Stay at Luxury Palace, address: 1 Rue de la Paix, 75002 Paris, France, from January 1st to January 5th.",
+        "recipients": [
+          "janeLong@google.com"
+        ],
+        "subject": "Hotel: Luxury Palace"
+      },
+      "function": "send_email",
+      "id": null,
+      "placeholder_args": null
+    }
+  ],
+  "output": "Luxury Palace, 5.0, 500-1000, 1 Rue de la Paix, 75002 Paris, France\n"
+}

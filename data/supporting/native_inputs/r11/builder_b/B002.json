@@ -1,0 +1,32 @@
+{
+  "packet_id": "B002",
+  "classification": "state",
+  "classification_reason": "The request is to post a reply in a channel where Alice asked about a coffee mug. The initial state shows Alice asked about her coffee mug in the 'random' channel. A necessary condition is that a new message is posted in 'random' channel, replying that the mug was seen in the meeting room.",
+  "state_predicates": [
+    {
+      "path": "/slack/channel_inbox/random/*",
+      "operator": "equals",
+      "value": "I've seen it in the meeting room.",
+      "requires_new_entity": true,
+      "selector": [
+        {
+          "field": "sender",
+          "value": "Bob"
+        },
+        {
+          "field": "recipient",
+          "value": "random"
+        }
+      ],
+      "evidence_paths": [
+        "/initial_state/slack/channel_inbox/random"
+      ],
+      "justification": "The request is for Bob to reply in a channel where Alice asked about her coffee mug. Alice asked about her coffee mug in 'random'. The reply must be in 'random' and must state that the mug was seen in the meeting room."
+    }
+  ],
+  "answer_facts": [],
+  "ambiguities": [
+    "The exact wording of the reply is not specified; only the information that the mug was seen in the meeting room is required. Variations in phrasing may be acceptable.",
+    "It is not specified whether the reply must be a direct thread reply or a new message in the channel; only that it is posted in the same channel."
+  ]
+}

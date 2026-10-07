@@ -1,0 +1,18 @@
+{
+ "study_id":"R18_NATIVE_NO_HUMAN_V1",
+ "status_at_design":"NOT_EXECUTED; imports require the provided frozen benchmark dependencies",
+ "upstream_revision":"089ed468cf3ed0322acc66b0211f26d9d90dbf60",
+ "source":"Byte-copied AgentDojo source from the user-provided R3 release, not a moving main branch",
+ "sweep_versions":["v1","v1.1.1","v1.2.2"],
+ "suites":["workspace","banking","slack","travel"],
+ "selection":"Every registered user task in each selected version. Freeze ID manifest before native execution. Versions share task identities and are not independent replicas.",
+ "endpoints":["Official ground_truth through actual tool code and utility", "Post-state JSON hydration changes and label changes", "Full-engine cross-check of every local output-only utility test", "Replay all 20 recorded workspace action sequences without model calls", "Three source-literal necessary-condition repair targets, 16 generated cases each"],
+ "reference_policy":"Official controls are self-consistency references only. Repair references concern explicit prompt recipient/date and independently checked realized tool effects. No human labels, no AI agreement gold, no full semantic accuracy claim.",
+ "patch_policy":"Native endpoint AND necessary-field check. Hand-authored scoped supplement, not automatic program repair. Preserve original native endpoint and full post-states. Required-field satisfaction alone does not certify all requested effects.",
+ "challenge":"4 scoped-compliant variants and 12 violating variants per target; targets banking6/travel3/travel4 are exposed historical defects. Fixed RNG seed 20260927. All cases are native-tool generated, not model-generated episodes. This is an outcome-informed bounded repair study, not blinded held-out defect discovery.",
+ "controls":"No silent replacement of tool/evaluator exceptions with task failure. Report errors separately. Preserve official-scaffold conflicts and before/after values. Network sockets blocked.",
+ "human_annotations":0,
+ "api_calls":0,
+ "gpu_required":false,
+ "inference_cost":0
+}

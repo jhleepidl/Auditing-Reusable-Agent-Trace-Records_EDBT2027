@@ -1,0 +1,20 @@
+{
+  "study_id": "R21_E1_PAIRED_WARM_CPU_FORMAT_COSTS_36_V1",
+  "created_utc": "2026-10-04T12:51:42.753116+00:00",
+  "arms": [
+    "json_only",
+    "type_order",
+    "alias_endpoint_types",
+    "full_witness",
+    "trusted_pickle",
+    "v4_control"
+  ],
+  "programs": 36,
+  "warmups": 2,
+  "paired_repetitions": 7,
+  "arm_order": "Deterministic rotating order by fixture index and paired repetition",
+  "compression": "gzip level9, mtime0, each complete format compressed as one stream",
+  "scope": "Bytes are actual canonical whole format or pickle protocol5. Full sidecar/state ratio is only canonical uncompressed data. Capture/restore exclude I/O/tool replay/network; same process warm repetitions; common endpoint checks outside timer, reader intrinsic verification inside timer.",
+  "no_external_pickle_loads": true,
+  "all_failures_retained": true
+}

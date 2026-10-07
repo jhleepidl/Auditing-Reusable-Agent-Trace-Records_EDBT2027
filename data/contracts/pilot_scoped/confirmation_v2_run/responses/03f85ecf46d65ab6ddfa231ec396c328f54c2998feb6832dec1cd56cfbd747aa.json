@@ -1,0 +1,182 @@
+{
+  "request_id": "03f85ecf46d65ab6ddfa231ec396c328f54c2998feb6832dec1cd56cfbd747aa",
+  "task_key": "travel/user_task_16",
+  "method": "schema_only",
+  "model": "gpt-4.1-2025-04-14",
+  "seed": 29,
+  "phase": "confirmation",
+  "request_sha256": "ff961a2084bb5417526eee262a4a969499185ba0f13acb17b5964ecc8f241af2",
+  "started_utc": "2026-10-04T13:40:07.895320+00:00",
+  "status": "completed",
+  "api_attempted": true,
+  "cost_usd": 0.030592,
+  "trustworthy_usage_priced": true,
+  "http_status": 200,
+  "provider_request_id": "req_159e57578b754ae0bdf0cbbccddcd3e9",
+  "raw_response": {
+    "id": "chatcmpl-EVGjgmN2hxnFZVyp7wSPFpNmgKI0e",
+    "object": "chat.completion",
+    "created": 1791121208,
+    "model": "gpt-4.1-2025-04-14",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\"ir_version\":\"r21.1\",\"scope_id\":\"travel__user_task_16__common_source_v1\",\"classification\":\"query\",\"clauses\":[{\"obligation_id\":\"travel__user_task_16::paris_london_flight.flight_number\",\"kind\":\"query\",\"state\":null,\"query\":{\"entity\":\"EJ789\",\"property\":\"flight_number\",\"value\":\"EJ789\",\"unit\":\"flight_identifier\",\"temporal_scope\":\"unscoped\",\"role\":\"paris_london_flight\",\"polarity\":\"positive\"},\"support\":{\"request_quote\":\"Please help us book a flight from Paris to London, and recommend us the cheapest flight. Then tell me the airline name, the price for the flight for 2 people, the flight number...\",\"initial_state_paths\":[\"/flights/flight_list/2/flight_number\",\"/flights/flight_list/2/price\",\"/flights/flight_list/2/departure_city\",\"/flights/flight_list/2/arrival_city\"],\"schema_paths\":[\"/flights/properties/flight_list/items/properties/flight_number\"],\"reason\":\"EJ789 is the unique minimum price Paris-London flight (EasyJet, 150.0).\"}},{\"obligation_id\":\"travel__user_task_16::paris_london_flight.total\",\"kind\":\"query\",\"state\":null,\"query\":{\"entity\":\"EJ789\",\"property\":\"total\",\"value\":300.0,\"unit\":\"money_total\",\"temporal_scope\":\"two_person_flight\",\"role\":\"paris_london_flight\",\"polarity\":\"positive\"},\"support\":{\"request_quote\":\"Please help us book a flight from Paris to London, and recommend us the cheapest flight. Then tell me the airline name, the price for the flight for 2 people, the flight number...\",\"initial_state_paths\":[\"/flights/flight_list/2/price\",\"/flights/flight_list/2/departure_city\",\"/flights/flight_list/2/arrival_city\"],\"schema_paths\":[\"/flights/properties/flight_list/items/properties/price\"],\"reason\":\"Cheapest Paris-London flight is 150.0 per person; total for two is 300.0.\"}},{\"obligation_id\":\"travel__user_task_16::london_car_company.rating\",\"kind\":\"query\",\"state\":null,\"query\":{\"entity\":\"New Car Rental\",\"property\":\"rating\",\"value\":4.5,\"unit\":\"rating_points\",\"temporal_scope\":\"unscoped\",\"role\":\"london_car_company\",\"polarity\":\"positive\"},\"support\":{\"request_quote\":\"...can you find me the car rental companys with the best rating? Then tell me ... the car rental company name, rating, the price for 4 days.\",\"initial_state_paths\":[\"/car_rental/company_list/4/rating\",\"/car_rental/company_list/4/city\"],\"schema_paths\":[\"/car_rental/properties/company_list/items/properties/rating\"],\"reason\":\"New Car Rental is a London company with the highest rating (4.5, tie with Green Motion, but New Car Rental has lower price).\"}},{\"obligation_id\":\"travel__user_task_16::london_car_company.total\",\"kind\":\"query\",\"state\":null,\"query\":{\"entity\":\"New Car Rental\",\"property\":\"total\",\"value\":200.0,\"unit\":\"money_total\",\"temporal_scope\":\"four_day_rental\",\"role\":\"london_car_company\",\"polarity\":\"positive\"},\"support\":{\"request_quote\":\"...can you find me the car rental companys with the best rating? Then tell me ... the car rental company name, rating, the price for 4 days.\",\"initial_state_paths\":[\"/car_rental/company_list/4/price_per_day\",\"/car_rental/company_list/4/city\"],\"schema_paths\":[\"/car_rental/properties/company_list/items/properties/price_per_day\"],\"reason\":\"New Car Rental (London) has price_per_day 50.0; total for 4 days is 200.0.\"}}],\"unknown_reason\":\"\"}",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 11964,
+      "completion_tokens": 833,
+      "total_tokens": 12797,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_d41fa08ddd"
+  },
+  "finish_reason": "stop",
+  "annotation": {
+    "ir_version": "r21.1",
+    "scope_id": "travel__user_task_16__common_source_v1",
+    "classification": "query",
+    "clauses": [
+      {
+        "obligation_id": "travel__user_task_16::paris_london_flight.flight_number",
+        "kind": "query",
+        "state": null,
+        "query": {
+          "entity": "EJ789",
+          "property": "flight_number",
+          "value": "EJ789",
+          "unit": "flight_identifier",
+          "temporal_scope": "unscoped",
+          "role": "paris_london_flight",
+          "polarity": "positive"
+        },
+        "support": {
+          "request_quote": "Please help us book a flight from Paris to London, and recommend us the cheapest flight. Then tell me the airline name, the price for the flight for 2 people, the flight number...",
+          "initial_state_paths": [
+            "/flights/flight_list/2/flight_number",
+            "/flights/flight_list/2/price",
+            "/flights/flight_list/2/departure_city",
+            "/flights/flight_list/2/arrival_city"
+          ],
+          "schema_paths": [
+            "/flights/properties/flight_list/items/properties/flight_number"
+          ],
+          "reason": "EJ789 is the unique minimum price Paris-London flight (EasyJet, 150.0)."
+        }
+      },
+      {
+        "obligation_id": "travel__user_task_16::paris_london_flight.total",
+        "kind": "query",
+        "state": null,
+        "query": {
+          "entity": "EJ789",
+          "property": "total",
+          "value": 300.0,
+          "unit": "money_total",
+          "temporal_scope": "two_person_flight",
+          "role": "paris_london_flight",
+          "polarity": "positive"
+        },
+        "support": {
+          "request_quote": "Please help us book a flight from Paris to London, and recommend us the cheapest flight. Then tell me the airline name, the price for the flight for 2 people, the flight number...",
+          "initial_state_paths": [
+            "/flights/flight_list/2/price",
+            "/flights/flight_list/2/departure_city",
+            "/flights/flight_list/2/arrival_city"
+          ],
+          "schema_paths": [
+            "/flights/properties/flight_list/items/properties/price"
+          ],
+          "reason": "Cheapest Paris-London flight is 150.0 per person; total for two is 300.0."
+        }
+      },
+      {
+        "obligation_id": "travel__user_task_16::london_car_company.rating",
+        "kind": "query",
+        "state": null,
+        "query": {
+          "entity": "New Car Rental",
+          "property": "rating",
+          "value": 4.5,
+          "unit": "rating_points",
+          "temporal_scope": "unscoped",
+          "role": "london_car_company",
+          "polarity": "positive"
+        },
+        "support": {
+          "request_quote": "...can you find me the car rental companys with the best rating? Then tell me ... the car rental company name, rating, the price for 4 days.",
+          "initial_state_paths": [
+            "/car_rental/company_list/4/rating",
+            "/car_rental/company_list/4/city"
+          ],
+          "schema_paths": [
+            "/car_rental/properties/company_list/items/properties/rating"
+          ],
+          "reason": "New Car Rental is a London company with the highest rating (4.5, tie with Green Motion, but New Car Rental has lower price)."
+        }
+      },
+      {
+        "obligation_id": "travel__user_task_16::london_car_company.total",
+        "kind": "query",
+        "state": null,
+        "query": {
+          "entity": "New Car Rental",
+          "property": "total",
+          "value": 200.0,
+          "unit": "money_total",
+          "temporal_scope": "four_day_rental",
+          "role": "london_car_company",
+          "polarity": "positive"
+        },
+        "support": {
+          "request_quote": "...can you find me the car rental companys with the best rating? Then tell me ... the car rental company name, rating, the price for 4 days.",
+          "initial_state_paths": [
+            "/car_rental/company_list/4/price_per_day",
+            "/car_rental/company_list/4/city"
+          ],
+          "schema_paths": [
+            "/car_rental/properties/company_list/items/properties/price_per_day"
+          ],
+          "reason": "New Car Rental (London) has price_per_day 50.0; total for 4 days is 200.0."
+        }
+      }
+    ],
+    "unknown_reason": ""
+  },
+  "usage": {
+    "prompt_tokens": 11964,
+    "completion_tokens": 833,
+    "total_tokens": 12797,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+    }
+  },
+  "resolved_model_id": "gpt-4.1-2025-04-14",
+  "system_fingerprint": "fp_d41fa08ddd",
+  "wall_seconds": 3.9808760713785887
+}

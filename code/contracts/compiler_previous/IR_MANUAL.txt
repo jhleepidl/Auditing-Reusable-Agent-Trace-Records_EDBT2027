@@ -1,0 +1,199 @@
+R22 BOUNDED SOURCE DERIVATION IR, r22.1
+
+# R22 bounded source derivation interface, design v1
+
+All arms receive the same request, initial_state, public_scope, native state_schema,
+public facts, IR manual and output_schema.json, under one shared model-call budget.
+This is exposed-task measurement replication. All eight task templates have been
+seen: banking 1/4/5/11, Slack 10/13/14, travel 14. No unseen-task claim is made.
+
+The identical strict output shape is `{derivation_version:"r22.1", contract,
+nodes, bindings}`. `contract` is the ordinary strict r22.1 contract evaluated by
+the separately repaired executor. The literal arm requires `nodes=[]` and
+`bindings=[]`; the derived arm executes its declared DAG and substitutes operands.
+No emitted Python or task ID/answer table is executed. Nodes contain only an ID,
+one enumerated operation, references to earlier nodes, and strict typed parameters.
+
+Runtime API: `compile_annotation(annotation, packet, public_task, *, mode="derived",
+public_facts=None, required_targets=None)` returns `{status, contract,
+provenance, diagnostics}`. Status is `ok`, `unknown` or `error`; an unavailable or
+ambiguous derivation is construction UNKNOWN, not task FAIL. Malformed IR is a
+construction ERROR. Only an `ok` contract is passed to the repaired task executor.
+The secondary `mode="verified"` reuses exactly the derived model response and
+compares its literal operand claims with computed operands before substitution.
+A known claim mismatch returns construction UNKNOWN with a distinct mismatch
+reason. It does not turn that mismatch into a task-level FAIL. Literal and derived
+claims remain preserved in all receipts.
+
+`packet` contains `task_request` (or request), `initial_state`, optionally
+`state_schema`. `public_task` is the public common scope. No reference/compiler
+expected values enter these arguments. `public_facts` supplies equally public
+native facts if needed, e.g. `{"message_sender":"bot"}` from the registered
+message tool's fixed actor. These are shared source inputs, not runtime answer
+constants. Runtime source nodes read roots initial_state/request/scope/facts.
+Canonical packet/scope and facts hashes bind every receipt; transfer binds a new
+packet explicitly while preserving the emitted program exactly.
+
+Bindings target scalar ordinary-contract operands: check/selector values,
+query entity/value, and dynamic path/property strings. They cannot change
+obligation IDs, operators, profile, newness or role. Derived coverage requires
+all check/selector values and query entity/value, plus state paths/properties
+that the public scope declares dynamic. The caller may supply the same explicit
+value-free required_targets list to both representations. Static structure stays
+under the common repaired scope admission policy. A correct computation from an
+incorrect selected source field remains possible and is tested independently.
+Execution/provenance is not semantic certification.
+
+The DAG provides source/span reads, projection/filter/unique, lookup_many,
+flatten/zip, zero-filled group_count over an explicit domain, argmin/argmax,
+sort/enumerate, Decimal arithmetic and bounded text construction. Every operation
+is generic. `lookup_many(missing="empty_array")` explicitly makes a fully observed
+absent map key an empty bucket; it cannot convert an unavailable map to empty.
+This supports listed empty channels. Numeric ties in argmin/argmax abstain.
+Ranking uses an explicit total sort key (count descending, name ascending);
+unknown/incomparable or duplicate total keys abstain. Booleans are not numbers.
+No free prose, external network, regex, automatic selection, fallback answers,
+reference labels or gold tables are used by runtime.
+
+Structural budgets: 64 nodes, 128 bindings, DAG depth 16, 10,000 row visits,
+10,000 intermediate items, 1 MiB aggregate source JSON, strings at most 16 KiB,
+Decimal precision 40, magnitude at most 1e12, no nonfinite values. Request numeric
+constants come from exact start/end spans and parse_decimal; arithmetic constants
+0/1/100 and booleans are the only direct constants. Parameters such as source
+pointers, filter fields, bounded indices and text replacement needles are
+candidate choices, never resolved answers. Literal selectors may be brittle;
+source permutations and independently computed transfer targets expose this.
+
+Development uses original exposed packets. Methods/programs are frozen before
+confirmation. The preregistered five new source worlds per template use fixed
+program transfer with no API adaptation; worlds 1–3 additionally use fresh paired
+construction with the same mutated packets and shared budget. Cardinality and
+common obligation shapes stay fixed (Slack10 has three nonmembers; Slack14 four
+rank slots). Root authors new source worlds/native states/references independently
+of this runtime. Valid, invalid and unavailable observations remain distinct.
+Source-sanity programs and controls live outside runtime and never become a
+competitive arm or model prompt input.
+
+
+OPERATIONS (args are earlier node IDs; every params object has exactly these keys):
+
+source | arity 0
+params schema: {"pointer": {"maxLength": 256, "pattern": "^(?:|/.*)$", "type": "string"}, "root": {"enum": ["initial_state", "request", "scope", "facts"], "type": "string"}}
+Read the supplied public root at an exact RFC6901 pointer. Missing/None data abstains.
+
+request_span | arity 0
+params schema: {"end": {"maximum": 1000000, "minimum": 0, "type": "integer"}, "start": {"maximum": 1000000, "minimum": 0, "type": "integer"}}
+Read request[start:end], exact character indices. Out-of-range abstains.
+
+text_between | arity 1
+params schema: {"left": {"maxLength": 4096, "type": "string"}, "right": {"maxLength": 4096, "type": "string"}, "trim": {"type": "boolean"}}
+Read after unique left anchor and before unique right anchor (empty anchor means boundary), optionally strip whitespace.
+
+extract_decimal | arity 1
+params schema: {"anchor": {"maxLength": 4096, "type": "string"}}
+Read the first adjacent numeric token after a UNIQUE literal source-text anchor, ignoring leading whitespace. Anchor chooses syntax; it does not infer a semantic role.
+
+constant | arity 0
+params schema: {"value": {"anyOf": [{"enum": [0, 1, 100], "type": "integer"}, {"type": "boolean"}]}}
+Only universal structural 0,1,100 and booleans; output bindings must retain a source dependency.
+
+get | arity 1
+params schema: {"pointer": {"maxLength": 256, "pattern": "^(?:|/.*)$", "type": "string"}}
+Project an exact RFC6901 pointer from one computed record/value.
+
+at | arity 1
+params schema: {"index": {"maximum": 31, "minimum": 0, "type": "integer"}}
+Select bounded index 0..31 from computed array; absent index abstains.
+
+unique | arity 1
+params schema: {}
+Select only if the array has exactly one element; zero/multiple abstain.
+
+filter | arity 2
+params schema: {"casefold": {"type": "boolean"}, "pointer": {"maxLength": 256, "pattern": "^(?:|/.*)$", "type": "string"}, "relation": {"enum": ["equals", "not_equals", "contains", "not_contains", "prefix", "gt", "ge", "lt", "le"], "type": "string"}}
+Keep rows whose selected field compares with the second argument. casefold applies only to strings.
+
+project | arity 1
+params schema: {"pointer": {"maxLength": 256, "pattern": "^(?:|/.*)$", "type": "string"}}
+Project one exact field pointer from every row, preserving row order.
+
+lookup_many | arity 2
+params schema: {"missing": {"enum": ["unknown", "empty_array"], "type": "string"}}
+Lookup map values for each explicit key, in key order. Missing empty_array is explicit known-empty policy; None stays unavailable.
+
+flatten | arity 1
+params schema: {}
+Flatten exactly one array-of-arrays layer.
+
+zip | arity 2
+params schema: {"left_name": {"maxLength": 4096, "type": "string"}, "right_name": {"maxLength": 4096, "type": "string"}}
+Build records {left_name:left[i],right_name:right[i]} from equally long arrays.
+
+group_count | arity 2
+params schema: {"pointer": {"maxLength": 256, "pattern": "^(?:|/.*)$", "type": "string"}, "unmatched": {"enum": ["ignore", "unknown"], "type": "string"}}
+Count records by field over the explicit domain; output {key,count} for EVERY domain member, including zero. Duplicate domain identities abstain.
+
+count | arity 1
+params schema: {}
+Length of an observed array.
+
+sum | arity 1
+params schema: {}
+Exact Decimal sum of numeric array; boolean is not a number.
+
+argmin | arity 1
+params schema: {"pointer": {"maxLength": 256, "pattern": "^(?:|/.*)$", "type": "string"}, "ties": {"enum": ["unknown"], "type": "string"}}
+Select unique row with minimum field; no rows/ties abstain.
+
+argmax | arity 1
+params schema: {"pointer": {"maxLength": 256, "pattern": "^(?:|/.*)$", "type": "string"}, "ties": {"enum": ["unknown"], "type": "string"}}
+Select unique row with maximum field; no rows/ties abstain.
+
+sort | arity 1
+params schema: {"keys": {"items": {"additionalProperties": false, "properties": {"direction": {"enum": ["asc", "desc"], "type": "string"}, "pointer": {"maxLength": 256, "pattern": "^(?:|/.*)$", "type": "string"}}, "required": ["pointer", "direction"], "type": "object"}, "maxItems": 3, "minItems": 1, "type": "array"}}
+Explicit lexicographic keys; numeric or Unicode string comparisons. Duplicate full keys abstain.
+
+enumerate | arity 1
+params schema: {"index_name": {"maxLength": 4096, "type": "string"}}
+Add one-based integer index_name to each record; preexisting field is rejected.
+
+parse_decimal | arity 1
+params schema: {}
+Parse a COMPLETE stripped numeric string using the fixed decimal token grammar.
+
+add | arity 2
+params schema: {}
+Exact Decimal arg0 + arg1.
+
+subtract | arity 2
+params schema: {}
+Exact Decimal arg0 - arg1.
+
+multiply | arity 2
+params schema: {}
+Exact Decimal arg0 * arg1.
+
+divide | arity 2
+params schema: {}
+Decimal arg0 / arg1; zero denominator abstains.
+
+quantize | arity 1
+params schema: {"places": {"maximum": 6, "minimum": 0, "type": "integer"}, "rounding": {"enum": ["half_even", "half_up"], "type": "string"}}
+Explicit decimal places and half_even/half_up rounding; no implicit money rounding.
+
+string | arity 1
+params schema: {}
+Cast number to plain decimal text; strings unchanged; booleans rejected.
+
+concat | arity 2..8
+params schema: {}
+Concatenate only strings.
+
+replace_once | arity 2
+params schema: {"needle": {"maxLength": 4096, "type": "string"}}
+Replace the UNIQUE literal needle in first string with second string; no/ambiguous match abstains.
+
+Examples are synthetic and not benchmark answers. See generic_example.json.
+Compilation API is compile_annotation from runtime.py. It does not evaluate post-state/output or access task references.
+Fresh paired construction is primary. Snapshot-bound literal reuse abstains after source hash changes; any naive authority-rebound literal is only a separately labelled diagnostic.
+Frozen-program transfer requires an explicitly recorded header-only scope rebinding by the caller, with original/effective hashes and no node/binding/operand edits. Every derivation reexecution creates a new source-bound artifact; it does not carry semantic authority automatically.

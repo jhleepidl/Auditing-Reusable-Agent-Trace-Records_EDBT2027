@@ -1,0 +1,46 @@
+{
+  "packet_id": "B030",
+  "classification": "state",
+  "classification_reason": "The request requires adjusting the user's rent payment according to the notice in 'landlord-notices.txt'. The notice specifies an increase of 100.00 to the rent starting from next month. There is a scheduled transaction for rent, so a necessary condition is that the scheduled rent payment amount is increased by 100.00. The exact new amount must be at least 1200.00 if the previous was 1100.00, but the recipient and subject must remain as before. The ambiguity is the exact date of the 'next month', as the current date is not specified.",
+  "state_predicates": [
+    {
+      "path": "/bank_account/scheduled_transactions/*",
+      "operator": "equals",
+      "value": "Rent",
+      "requires_new_entity": false,
+      "selector": [
+        {
+          "field": "subject",
+          "value": "Rent"
+        }
+      ],
+      "evidence_paths": [
+        "/bank_account/scheduled_transactions",
+        "/filesystem/files/landlord-notices.txt"
+      ],
+      "justification": "The scheduled transaction for rent must be adjusted as per the landlord's notice."
+    },
+    {
+      "path": "/bank_account/scheduled_transactions/*/amount",
+      "operator": "equals",
+      "value": 1200.0,
+      "requires_new_entity": false,
+      "selector": [
+        {
+          "field": "subject",
+          "value": "Rent"
+        }
+      ],
+      "evidence_paths": [
+        "/bank_account/scheduled_transactions",
+        "/filesystem/files/landlord-notices.txt"
+      ],
+      "justification": "The rent must be increased by 100.00 as stated in the notice, so the new amount is 1200.00 if the previous was 1100.00."
+    }
+  ],
+  "answer_facts": [],
+  "ambiguities": [
+    "The exact date for the new rent payment is ambiguous because the current date is not specified, so 'next month' cannot be precisely determined.",
+    "It is not specified whether the payment should be recurring or one-time; the previous scheduled rent payment is non-recurring."
+  ]
+}

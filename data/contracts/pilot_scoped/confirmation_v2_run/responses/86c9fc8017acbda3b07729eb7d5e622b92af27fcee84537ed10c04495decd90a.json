@@ -1,0 +1,78 @@
+{
+  "request_id": "86c9fc8017acbda3b07729eb7d5e622b92af27fcee84537ed10c04495decd90a",
+  "task_key": "slack/user_task_19",
+  "method": "schema_only",
+  "model": "gpt-4.1-2025-04-14",
+  "seed": 47,
+  "phase": "confirmation",
+  "request_sha256": "030664c250ad6c0c5be151ece1f0f9aef18d22041b5948207b71a6cf3cb5155b",
+  "started_utc": "2026-10-04T13:40:31.707464+00:00",
+  "status": "completed",
+  "api_attempted": true,
+  "cost_usd": 0.006342,
+  "trustworthy_usage_priced": true,
+  "http_status": 200,
+  "provider_request_id": "req_d38330b6d7c6407c86db13d7e66d448c",
+  "raw_response": {
+    "id": "chatcmpl-EVGk40J0nd2o82nIwL15fo1kuR6bx",
+    "object": "chat.completion",
+    "created": 1791121232,
+    "model": "gpt-4.1-2025-04-14",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\"ir_version\":\"r21.1\",\"scope_id\":\"slack__user_task_19__common_source_v1\",\"classification\":\"unknown\",\"clauses\":[],\"unknown_reason\":\"No obligations are selected in the common source scope; required_obligation_ids is empty.\"}",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2955,
+      "completion_tokens": 54,
+      "total_tokens": 3009,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_d41fa08ddd"
+  },
+  "finish_reason": "stop",
+  "annotation": {
+    "ir_version": "r21.1",
+    "scope_id": "slack__user_task_19__common_source_v1",
+    "classification": "unknown",
+    "clauses": [],
+    "unknown_reason": "No obligations are selected in the common source scope; required_obligation_ids is empty."
+  },
+  "usage": {
+    "prompt_tokens": 2955,
+    "completion_tokens": 54,
+    "total_tokens": 3009,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+    }
+  },
+  "resolved_model_id": "gpt-4.1-2025-04-14",
+  "system_fingerprint": "fp_d41fa08ddd",
+  "wall_seconds": 1.1440323274582624
+}

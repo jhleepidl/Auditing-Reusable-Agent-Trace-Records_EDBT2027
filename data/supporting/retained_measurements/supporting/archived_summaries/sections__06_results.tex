@@ -1,0 +1,65 @@
+\section{Results}
+\label{sec:results}
+\subsection{Distinct failures require distinct repairs}
+The controlled sequence contains six evaluated terminal cells. Five end with the exact six-field semantic frame, but only two satisfy their original certification rules; stopping rules make these diagnostic cases rather than accuracy estimates. One cell has wrong semantics. Others preserve correct local semantics but fail because review and evaluation relations disagree, an opaque identifier is truncated, or a redundant global Boolean contradicts six correct local rows. A stale study-identity prefix supplies the analogous protocol case. The same endpoint bit therefore hides repairs that target different objects: model/task semantics, evaluator relation, provenance binding, derived aggregation, or protocol identity.
+
+\subsection{Finite evaluator suites expose singleton fragility}
+The core benchmark contains 1,260 preserving and 2,844 corrupting mutations generated before evaluator scoring. The singleton evaluator accepts only 216/1,260 preserving cases (17.1\%). The relation-aware evaluator accepts 1,260/1,260 preserving cases and rejects 2,844/2,844 corrupting cases. These are perfect \emph{suite-agreement} counts, not unrestricted completeness or soundness.
+
+The public adapters reproduce the same qualitative pattern (Table~\ref{tab:public-metamorphic}). Across 24 BFCL and $\tau$-bench records, relation-aware adapters accept all 80 preserving mutations and reject all 72 corrupting mutations, while singleton rules accept 0/80 preserving mutations. These are constructive counterexamples to exact-match evaluation under documented public contract semantics, not estimates of how often public trajectories are wrong.
+
+\begin{table}[t]
+\centering
+\small
+\caption{API-free public evaluator stress tests.}
+\label{tab:public-metamorphic}
+\begin{tabular}{@{}lrrrr@{}}
+\toprule
+Adapter & Records & Preserve & Corrupt & Singleton preserve \\
+\midrule
+BFCL & 16 & 48/48 & 48/48 & 0/48 \\
+$\tau$-bench & 8 & 32/32 & 24/24 & 0/32 \\
+\textbf{Total} & \textbf{24} & \textbf{80/80} & \textbf{72/72} & \textbf{0/80} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+A separate 36-task public bank is reconstructable from the frozen excerpts in 36/36 cases. Its 216 API-free mutations obtain 100\% tested-suite relation agreement, while singleton acceptance on preserving variants is 50\%. Yet a one-shot \texttt{gpt-5.6-sol} probe yields no substantive noncanonical realization (0/36 after post-hoc classification), even though nine $\tau$-bench rows permit one at the contract level. Waiting for models to naturally exercise evaluator blind spots is therefore a weak stress strategy; direct metamorphic construction reaches the relevant boundary more reliably.
+
+\input{generated/cross_suite_results}
+
+\input{generated/second_builder_results}
+
+\input{generated/contract_execution_results}
+
+\input{generated/public_trajectory_results}
+
+\subsection{Interface controls separate plumbing from behavior}
+The explicit-target factorial looks perfect: the model satisfies the allowed relation in 48/48 requests. A deterministic parser that reads the visible target label and returns the displayed action array also obtains 48/48. The result therefore establishes end-to-end schema compliance but not latent task interpretation; counterbalancing order does not remove a shortcut when the target itself is visible.
+
+After target removal, the feasibility study yields 47/48 correct decision categories and 43/48 valid complete action relations. The strongest declared state-blind baseline reaches 12/48 (25.0\%), below the pre-specified 0.55 gate. At the family unit, 8/12 families have all four cells relation-valid (exact 95\% binomial interval approximately 0.35--0.90). This supports only a bounded claim for the frozen model, task bank, and enumerated baselines; one realization per cell cannot estimate stochastic reliability.
+
+A family-disjoint 96-request study initially appears stronger (87/96 relation-valid; 17/24 complete families), but post-run auditing finds 18 requests whose intended sentence was serialized as a character array. Defect status is confounded with task family, so the intended-interface claim is protocol-ineligible rather than ``adjusted.'' The preserved failure demonstrates why byte-level reproducibility is insufficient when the reproduced bytes encode the wrong experimental object.
+
+\subsection{Audit evidence distinguishes repair targets}
+Table~\ref{tab:decision-impact} maps observed evidence to suggested repair or review targets that a single endpoint cannot distinguish. These are diagnostic consequences, not measured improvements in user decisions, repair outcomes, or downstream learning.
+
+\begin{table}[t]
+\centering
+\scriptsize
+\caption{Suggested repair or review targets, conditional on the stated audit evidence. Repair outcomes were not measured.}
+\label{tab:decision-impact}
+\begin{tabular}{@{}p{0.25\columnwidth}p{0.27\columnwidth}p{0.36\columnwidth}@{}}
+\toprule
+Observed endpoint & Audit diagnosis & Suggested next step \\
+\midrule
+Singleton says fail & output is relation-valid & repair evaluator; do not retrain/rerun model \\
+AgentDojo says pass & required effect/recipient predicate fails & review predicate and evaluator; withhold assurance \\
+AgentDojo v1 says fail & same trace passes official v1.1.1; v1 positive control is inconsistent & version/inspect evaluator before attributing agent failure \\
+Candidate contract says fail & contract shape/type is unsupported & return unknown; review specification/interpreter \\
+96-request run is reproducible & 18 requests violate intended serialization & fix serializer and rerun intended protocol \\
+Explicit-target says pass & deterministic copier also passes 48/48 & redesign interface; do not infer reasoning \\
+\bottomrule
+\end{tabular}
+\end{table}
+

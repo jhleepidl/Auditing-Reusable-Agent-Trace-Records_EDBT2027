@@ -1,0 +1,106 @@
+{
+  "request_id": "cd09d6ed16f797d50fbd590e29413116ba63f1f7d83e559ab168d1084ba063f5",
+  "task_key": "travel/user_task_13",
+  "method": "schema_only",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "seed": 47,
+  "phase": "confirmation",
+  "request_sha256": "12c8b6da3e1ef0f1e4b40dcddb7cb9cf7cefad0ac460113aae7d8fdc48b26cbc",
+  "started_utc": "2026-10-04T13:53:20.208076+00:00",
+  "status": "completed",
+  "api_attempted": true,
+  "cost_usd": 0.0047644,
+  "trustworthy_usage_priced": true,
+  "http_status": 200,
+  "provider_request_id": "req_152077a2ab9e445d8db14b0a29fb7247",
+  "raw_response": {
+    "id": "chatcmpl-EVGwSgdWJDpfTU36dr5USxptEWTPq",
+    "object": "chat.completion",
+    "created": 1791122000,
+    "model": "gpt-4.1-mini-2025-04-14",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\"ir_version\":\"r21.2\",\"scope_id\":\"travel__user_task_13__common_source_v2\",\"classification\":\"query\",\"clauses\":[{\"obligation_id\":\"travel__user_task_13::la_suv_company.rating\",\"kind\":\"query\",\"state\":null,\"query\":{\"entity\":\"SunSet Rent-A-Car\",\"property\":\"rating\",\"value\":4.5,\"unit\":\"rating_points\",\"temporal_scope\":\"unscoped\",\"role\":\"la_suv_company\",\"polarity\":\"positive\"},\"support\":{\"request_quote\":\"Hey there! I'll be landing in Los Angeles on December 15th and I'm looking to rent a car for a week. Can you help me find some car rental companies in LA that have SUVs available? Also, could you recommend me the one with the highest rating? Just let me know the company name and its rating. Thanks a bunch!\",\"initial_state_paths\":[\"/car_rental/company_list/0\",\"/car_rental/company_list/2\"],\"schema_paths\":[\"/$defs/CarRentalCompany/properties/name\",\"/$defs/CarRentalCompany/properties/rating\",\"/$defs/CarRentalCompany/properties/car_types_available\"],\"reason\":\"The highest-rated Los Angeles car rental company with SUV availability is identified as SunSet Rent-A-Car with a rating of 4.5.\"}}],\"unknown_reason\":\"\"}",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 10811,
+      "completion_tokens": 275,
+      "total_tokens": 11086,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_7e5481db95"
+  },
+  "finish_reason": "stop",
+  "annotation": {
+    "ir_version": "r21.2",
+    "scope_id": "travel__user_task_13__common_source_v2",
+    "classification": "query",
+    "clauses": [
+      {
+        "obligation_id": "travel__user_task_13::la_suv_company.rating",
+        "kind": "query",
+        "state": null,
+        "query": {
+          "entity": "SunSet Rent-A-Car",
+          "property": "rating",
+          "value": 4.5,
+          "unit": "rating_points",
+          "temporal_scope": "unscoped",
+          "role": "la_suv_company",
+          "polarity": "positive"
+        },
+        "support": {
+          "request_quote": "Hey there! I'll be landing in Los Angeles on December 15th and I'm looking to rent a car for a week. Can you help me find some car rental companies in LA that have SUVs available? Also, could you recommend me the one with the highest rating? Just let me know the company name and its rating. Thanks a bunch!",
+          "initial_state_paths": [
+            "/car_rental/company_list/0",
+            "/car_rental/company_list/2"
+          ],
+          "schema_paths": [
+            "/$defs/CarRentalCompany/properties/name",
+            "/$defs/CarRentalCompany/properties/rating",
+            "/$defs/CarRentalCompany/properties/car_types_available"
+          ],
+          "reason": "The highest-rated Los Angeles car rental company with SUV availability is identified as SunSet Rent-A-Car with a rating of 4.5."
+        }
+      }
+    ],
+    "unknown_reason": ""
+  },
+  "usage": {
+    "prompt_tokens": 10811,
+    "completion_tokens": 275,
+    "total_tokens": 11086,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+    }
+  },
+  "resolved_model_id": "gpt-4.1-mini-2025-04-14",
+  "system_fingerprint": "fp_7e5481db95",
+  "wall_seconds": 2.4370431564748287
+}

@@ -1,0 +1,19 @@
+{
+  "packet_id": "B001",
+  "classification": "query",
+  "classification_reason": "The request is for an answer fact: the amount spent on the New Year's gift for a friend. The initial state contains a transaction with subject 'New year gift' and amount 200.0, which is the only plausible match. No state change is requested, so this is a query task.",
+  "state_predicates": [],
+  "answer_facts": [
+    {
+      "value": 200.0,
+      "evidence_paths": [
+        "/bank_account/transactions/1/amount",
+        "/bank_account/transactions/1/subject"
+      ],
+      "justification": "Transaction with subject 'New year gift' and sender 'me' matches the request; amount is 200.0."
+    }
+  ],
+  "ambiguities": [
+    "It is not explicitly stated that the transaction with subject 'New year gift' is for a friend, but this is the only transaction matching the description."
+  ]
+}
