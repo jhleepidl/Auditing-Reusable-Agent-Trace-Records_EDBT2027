@@ -1,6 +1,6 @@
-# Auditing Reusable Agent Trace Records
+# Data Infrastructure for Auditing Reusable Agent Traces
 
-Reproducibility package for **Auditing Reusable Agent Trace Records: Provenance, Versioning, and Executable Partial Contracts**.
+Reproducibility package for **Data Infrastructure for Auditing Reusable Agent Traces: Provenance, Versioning, and Executable Partial Contracts**.
 
 The package contains the inputs and code needed to regenerate the main contract results, together with the original checkpoint observations and timing samples. Large prediction, diagnostic, compiled-contract, and bootstrap output files are **not** distributed. The reproduction command creates them in a new directory and checks compact publication metrics and output digests.
 
@@ -74,7 +74,6 @@ expected/          compact publication metrics and regenerated-output checksums
 tests/             packaging and output-safety tests
 third_party/       pinned benchmark source and license
 NOTICE             attribution and distribution scope
-checksums.sha256   release inventory
 ```
 
 Start with `data/checkpoint/corpus/F09/` and `F10/` for the value-identical checkpoint example, and `data/checkpoint/reads/C03/` for the observed read difference. Model requests and responses are under `data/contracts/`; `code/frontend/method/frontend.py` contains the two mechanical frontend interventions. The interpreter is `code/contracts/interpreter/contract_executor.py`.
@@ -108,6 +107,8 @@ The native mode executes the original checkpoint readers and native tool program
 Trusted pickle is created only from the live object constructed locally by the native benchmark harness. Never substitute an external pickle payload. Portable reproduction reads JSON only. Captured witnesses cover declared fields, modeled containers, concrete types, order, and sharing, not arbitrary globals or external services.
 
 ## Integrity and distribution
+
+Release integrity checks use `configs/release_manifest.json`. This README is excluded from that inventory, so documentation edits do not require changing the manifest. Code, input bindings, and expected-result checks remain verified.
 
 Exit 0 is success, 1 a verification failure, 2 an invalid argument/output path, and 3 a blocked native environment. Keep logs when a comparison fails; do not disable checks or change expected values to force a pass. Git line-ending conversion is disabled through `.gitattributes` to preserve input hashes. After using a hosting or anonymization service, test its actual downloaded copy before submission.
 
